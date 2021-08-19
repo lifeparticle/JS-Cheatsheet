@@ -168,4 +168,43 @@ Array methods.
 | 36 | values()			    |								|
 
 # Function
-TODO
+
+```js
+function hello() {
+    return "hello world";
+}
+
+hello();
+```
+
+```js
+function hello(name) {
+    return name;
+}
+
+hello("hello world");
+```
+
+```
+const hello = () => {
+    return "hello world";
+}
+
+hello();
+```
+
+```js
+const hello = () => "hello world";
+
+hello();
+```
+
+Function expression
+
+```js
+const hello = function() {
+    return "hello world";
+};
+
+hello();
+```
