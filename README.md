@@ -210,3 +210,33 @@ const hello = function() {
 
 hello();
 ```
+
+Callback functions
+
+```js
+const getData = (callBackFunc) => {
+    console.log("loading data.....");
+    let data = "data data data";
+    callBackFunc(data);
+}
+
+getData((data) => {
+    console.log(data);
+});
+```
+
+```js
+const getData = (callBackFunc) => {
+    console.log("loading data.....");
+    let data = "data data data";
+    callBackFunc(data);
+}
+
+const showData = (data) => {
+    console.log(data);   
+}
+
+getData(showData);
+```
+
+
