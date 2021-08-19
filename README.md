@@ -169,6 +169,7 @@ Array methods.
 
 # Function
 
+Regular function
 ```js
 function hello() {
     return "hello world";
@@ -185,6 +186,7 @@ function hello(name) {
 hello("hello world");
 ```
 
+Arrow function
 ```
 const hello = () => {
     return "hello world";
