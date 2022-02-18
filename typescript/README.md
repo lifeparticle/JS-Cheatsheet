@@ -95,7 +95,8 @@ tsconfig.json
 		"outDir": "./dist", // save the .js generated file in the dist folder
 		"noEmitOnError": true, // if there are any compilaton error then don't generate .js files
 		"target": "es5", // transfile into es5 syntax
-		"watch": true // on every file change new .js files will be generated automatically
+		"watch": true, // on every file change new .js files will be generated automatically
+		"lib": ["dom"] // other libraries
 	}
 }
 ```
@@ -170,5 +171,22 @@ function sum(a: number, b: number): void {
 ```tsx
 const person: Person[] = [];
 ```
+
+## Type annotations
+
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| string      | text                                    |
+| boolean     | true/false                              |
+| number      | number                                  |
+| symbol      |                                         |
+| any         | can hold different types of data        |
+| unknown     |                                         |
+| never       |                                         |
+| void        |                                         |
+
+
+
 
 
