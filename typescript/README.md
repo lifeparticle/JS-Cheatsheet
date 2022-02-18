@@ -91,9 +91,11 @@ tsconfig.json
 ```json
 {
 	"compilerOptions": {
-		"baseUrl": ".",
-		"outDir": "./dist",
-		"noEmitOnError": true
+		"baseUrl": ".", //transpile .ts files in the currebt folder
+		"outDir": "./dist", // save the .js generated file in the dist folder
+		"noEmitOnError": true, // if there are any compilaton error then don't generate .js files
+		"target": "es5", // transfile into es5 syntax
+		"watch": true // on every file change new .js files will be generated automatically
 	}
 }
 ```
