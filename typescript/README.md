@@ -111,46 +111,7 @@ tsc
 tsc --init
 ```
 
-## Custom type
 
-```tsx
-type TileType = "Mr" | "Mrs" | "Miss";
-
-let title : TileType;
-```
-
-```tsx
-interface Person {
-  title: TileType;
-  first: string;
-  last: string;
-}
-
-const p1 : Person = {
-  title: "Mr",
-  first: "Mahbub",
-  last: "Zaman"
-}
-```
-
-### Add aditinal property
-
-```tsx
-interface Person {
-	title: TileType;
-	first: string;
-	last: string;
-	[key: string]: any;
-}
-
-const p1: Person = {
-	title: "Mr",
-	first: "Mahbub",
-	last: "Zaman",
-	id: 10,
-	dob: "1 Jan 2000",
-};
-```
 
 ## Function
 
@@ -186,7 +147,83 @@ const person: Person[] = [];
 | never       |                                         |
 | void        |                                         |
 
+### Union type
+
+```tsx
+let id = string | number;
+```
+
+### Custom type
+
+```tsx
+type TileType = "Mr" | "Mrs" | "Miss";
+
+let title : TileType;
+```
+
+```tsx
+type Person {
+  title: TileType;
+  first: string;
+  last: string;
+}
+
+let p1 : Person = {
+  title: "Mr",
+  first: "Mahbub",
+  last: "Zaman"
+}
+```
+
+## Interface
+
+```tsx
+interface Person {
+  title: TileType;
+  first: string;
+  last: string;
+}
+
+const p1 : Person = {
+  title: "Mr",
+  first: "Mahbub",
+  last: "Zaman"
+}
+```
+
+### Optional property
+
+```tsx
+interface Person {
+	title: TileType;
+	first: string;
+	last: string;
+	age?: number;
+}
+
+const p1: Person = {
+	title: "Mr",
+	first: "Mahbub",
+	last: "Zaman"
+};
+```
 
 
+### Add aditinal property
 
+```tsx
+interface Person {
+	title: TileType;
+	first: string;
+	last: string;
+	[key: string]: any;
+}
 
+const p1: Person = {
+	title: "Mr",
+	first: "Mahbub",
+	last: "Zaman",
+	id: 10,
+	dob: "1 Jan 2000",
+};
+```
