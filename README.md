@@ -178,7 +178,7 @@ Rand.newRandomNumFunctionName();
 
 # Array
 
-Array methods.
+## Array methods
 
 | No | Name | When to use |
 |---|---|---|
@@ -219,9 +219,40 @@ Array methods.
 | 35 | unshift()			  | 							|
 | 36 | values()			    |								|
 
+
+## Array destructuring
+
+```js
+let num = [123, 44, 65];
+let [first, second] = num;
+```
+
+# Object destructuring
+
+```js
+let user = {
+  id: 1,
+  firstName: 'bob',
+  lastName: 'rob'
+};
+
+
+let {firstName} = user;
+
+
+function userId({id}) {
+  return id;
+}
+
+userId(user);
+```
+
 # Function
 
-Regular function
+## Regular function
+
+You can use functions before you create them. So they are hoisted.
+
 ```js
 function hello() {
     return "hello world";
@@ -238,7 +269,22 @@ function hello(name) {
 hello("hello world");
 ```
 
-Arrow function
+## Function expression
+
+You can't use function expressions before you create them. So they are not hoisted.
+
+```js
+const hello = function() {
+    return "hello world";
+};
+
+hello();
+```
+
+## Arrow function
+
+// with block body, we need explicit return
+
 ```
 const hello = () => {
     return "hello world";
@@ -247,18 +293,9 @@ const hello = () => {
 hello();
 ```
 
+// with concise body, we can have implicit return
 ```js
 const hello = () => "hello world";
-
-hello();
-```
-
-Function expression
-
-```js
-const hello = function() {
-    return "hello world";
-};
 
 hello();
 ```
