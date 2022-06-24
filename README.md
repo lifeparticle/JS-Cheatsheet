@@ -18,7 +18,6 @@ ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES201
 | 8 | Object    | let a = {a: 'test'}      | [link](https://developer.mozilla.org/en-US/docs/Glossary/Object)    |
 
 
-
 # JavaScript Variables
 
 ```js
@@ -359,32 +358,18 @@ const hello = () => "hello world";
 hello(); // 'hello world'
 ```
 
-Callback functions
+# Callback functions
+
+A callback function (A) is a function passed into another function (B) as an argument, which can be called by that function (B).
 
 ```js
-const getData = (callBackFunc) => {
-    console.log("loading data.....");
-    let data = "data data data";
-    callBackFunc(data);
-}
-
-getData((data) => {
-    console.log(data);
-});
+todo
 ```
 
+# Promises
+
 ```js
-const getData = (callBackFunc) => {
-    console.log("loading data.....");
-    let data = "data data data";
-    callBackFunc(data);
-}
-
-const showData = (data) => {
-    console.log(data);   
-}
-
-getData(showData);
+todo
 ```
 
 # Tools
