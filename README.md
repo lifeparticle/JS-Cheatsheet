@@ -66,7 +66,6 @@ result = 'foo' || 4;   // 'foo'
 
 We can export functions, var, let, const, and classes. Exported items needs to be top-level items. We can't export items from a function.
 
-
 1. We can use the `export` statement to give access to module features.
 
 ```js
@@ -76,7 +75,7 @@ export const ONE = 1
 export const ZERO = 0
 ```
 
-There is only one default export allowed per module.
+There is only zero or one default export allowed per module and zero or more Named Exports. 
 
 ```js
 // ./modules/random.js
@@ -173,6 +172,14 @@ Rand.newRandomFloatFunctionName();
 Rand.newRandomNumFunctionName();
 ```
 
+5. No relative path
+
+The code will look for the modules under the folder called `node_modules`.
+
+```js
+import { Card } from "antd";
+```
+
 [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
 # Array
@@ -262,6 +269,24 @@ function userId({id}) {
 }
 
 userId(user);
+```
+
+# Object property shorthand
+
+ We can use the object property shorthand, when property value has the same name as the property key.
+ 
+```js
+let user = {
+  id: id,
+  firstName: firstName,
+  lastName: lastName
+};
+
+let user = {
+  id,
+  firstName,
+  lastName
+};
 ```
 
 # Spread syntax (...)
@@ -367,6 +392,12 @@ todo
 ```
 
 # Promises
+
+```js
+todo
+```
+
+# Async & Await 
 
 ```js
 todo
