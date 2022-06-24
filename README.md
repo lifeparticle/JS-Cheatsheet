@@ -409,3 +409,6 @@ todo
 2. [Polyfill](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill)
 3. [Babel-polyfill](https://babeljs.io/docs/en/babel-polyfill/)
 
+# Resources
+
+1. [javascript-the-react-parts](https://reacttraining.com/blog/javascript-the-react-parts/)
