@@ -17,6 +17,52 @@ ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES201
 | 7 | undefined | let a = undefined        | [link](https://developer.mozilla.org/en-US/docs/Glossary/undefined) |
 | 8 | Object    | let a = {a: 'test'}      | [link](https://developer.mozilla.org/en-US/docs/Glossary/Object)    |
 
+
+
+# JavaScript Variables
+
+```js
+var
+let
+const
+```
+
+# Logical AND (&&)
+
+Logical AND (&&) evaluates operands from left to right. It returns value of the first falsy operand. If all values are truthy, it returns value of the last operand.
+
+Examples falsy:
+
+```
+false;
+null;
+NaN;
+0;
+empty string ("" or '' or ``);
+undefined.
+```
+
+```js
+result = '' && 'foo';  // ""
+result = 2 && 0;       // 0
+result = 'foo' && 4;   // 4
+```
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)
+
+# Logical OR (||)
+
+Logical OR (||) evaluates operands from left to right. It returns value of the first truthy operand. If all values are falsy, it returns value of the last operand. 
+
+
+```js
+result = '' || 'foo';  //  'foo'
+result = 2 || 0;       // 2
+result = 'foo' || 4;   // 'foo'
+```
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+
 # JavaScript modules
 
 We can export functions, var, let, const, and classes. Exported items needs to be top-level items. We can't export items from a function.
@@ -247,5 +293,7 @@ getData(showData);
 
 # Tools
 
-1. [webpack](https://webpack.js.org/concepts/why-webpack/)
+1. [Webpack](https://webpack.js.org/concepts/why-webpack/)
+2. [Polyfill](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill)
+3. [Babel-polyfill](https://babeljs.io/docs/en/babel-polyfill/)
 
