@@ -412,3 +412,5 @@ todo
 # Resources
 
 1. [javascript-the-react-parts](https://reacttraining.com/blog/javascript-the-react-parts/)
+2. [Learn Typescript for free](https://scrimba.com/learn/typescript)
+3. [Learn JavaScript for free](https://scrimba.com/learn/learnjavascript)
