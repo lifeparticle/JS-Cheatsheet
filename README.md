@@ -283,7 +283,7 @@ function userId({id, ...rest}) {
   }
 }
 
-userId(user);
+userId(user); // {id: 2, firstName: 'bob', lastName: 'rob'}
 ```
 
 # Rest syntax (parameters) (...)
@@ -299,10 +299,10 @@ let user = {
 
 function userId({id, ...rest}) {
   console.log(rest); // {firstName: 'bob', lastName: 'rob'}
-  return `${id} ${rest.firstName} ${rest.lastName}`; // '1 bob rob'
+  return `${id} ${rest.firstName} ${rest.lastName}`;
 }
 
-userId(user);
+userId(user); // '1 bob rob'
 ```
 
 # Function
