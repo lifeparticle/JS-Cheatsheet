@@ -316,7 +316,7 @@ function hello() {
     return "hello world";
 }
 
-hello();
+hello(); // 'hello world'
 ```
 
 ```js
@@ -324,7 +324,7 @@ function hello(name) {
     return name;
 }
 
-hello("hello world");
+hello("hello world"); // 'hello world'
 ```
 
 ## Function expression
@@ -336,26 +336,27 @@ const hello = function() {
     return "hello world";
 };
 
-hello();
+hello(); // 'hello world'
 ```
 
 ## Arrow function
 
-// with block body, we need explicit return
+With block body, we need explicit return.
 
 ```
 const hello = () => {
     return "hello world";
 }
 
-hello();
+hello(); // 'hello world'
 ```
 
-// with concise body, we can have implicit return
+With concise body, we can have implicit return.
+
 ```js
 const hello = () => "hello world";
 
-hello();
+hello(); // 'hello world'
 ```
 
 Callback functions
