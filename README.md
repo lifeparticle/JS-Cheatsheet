@@ -225,6 +225,19 @@ Rand.newRandomNumFunctionName();
 ```js
 let num = [123, 44, 65];
 let [first, second] = num;
+
+
+/*
+function firstNum(num) {
+  return num[0];
+}
+*/
+
+function firstNum([first]) {
+  return first;
+}
+
+firstNum(num);
 ```
 
 # Object destructuring
@@ -239,9 +252,33 @@ let user = {
 
 let {firstName} = user;
 
+/*
+function userId(user) {
+  return user.id;
+}
+*/
 
 function userId({id}) {
   return id;
+}
+
+userId(user);
+```
+
+# Spread syntax (...)
+
+# Rest syntax (parameters) (...)
+
+```js
+let user = {
+  id: 1,
+  firstName: 'bob',
+  lastName: 'rob'
+};
+
+function userId({id, ...rest}) {
+  console.log(rest); // {firstName: 'bob', lastName: 'rob'}
+  return `${id} ${rest.firstName} ${rest.lastName}`; // '1 bob rob'
 }
 
 userId(user);
