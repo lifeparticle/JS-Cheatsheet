@@ -267,7 +267,28 @@ userId(user);
 
 # Spread syntax (...)
 
+TODO
+
+```js
+let user = {
+  id: 1,
+  firstName: 'bob',
+  lastName: 'rob'
+};
+
+function userId({id, ...rest}) {
+  return {
+    id: id + 1,
+    ...rest
+  }
+}
+
+userId(user);
+```
+
 # Rest syntax (parameters) (...)
+
+The rest parameter syntax (last parameter in a function) allows a function to accept an indefinite number of arguments.
 
 ```js
 let user = {
