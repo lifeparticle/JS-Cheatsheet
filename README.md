@@ -39,6 +39,67 @@ Array.isArray({a: 'test'}); // false
 const arr = Array();
 const arr = []
 ```
+### Array methods
+
+| No | Name | When to use |
+|---|---|---|
+| 1  | at()					    |								|
+| 2  | concat()			    |								|
+| 3  | copyWithin()	    |								|
+| 4  | entries()		    |								|
+| 5  | every()			    |								|
+| 6  | fill()				    |								|
+| 7  | filter()			    |								|
+| 8  | findIndex()	    |								|
+| 9  | find()				    |								|
+| 10 | flat()				    |								|
+| 11 | flatMap()		    |								|
+| 12 | forEach()		    |								|
+| 13 | from()				    |								|
+| 14 | includes()		    |								|
+| 15 | indexOf()		    |								|
+| 16 | isArray()		    |								|
+| 17 | join()				    |								|
+| 18 | keys()				    |								|
+| 19 | lastIndexOf()    |								|
+| 20 | map()				    |								|
+| 21 | of()					    |								|
+| 22 | pop()				    |								|
+| 23 | push()				    |								|
+| 24 | reduce()			    |								|
+| 25 | reduceRight()    |								|
+| 26 | reverse()		    |								|
+| 27 | shift()			    |								|
+| 28 | slice()			    |								|
+| 29 | some()				    |								|
+| 30 | sort()				    |								|
+| 31 | splice()				  |								|
+| 32 | toLocaleString() |								|
+| 33 | toSource()			  |								|
+| 34 | toString()			  |								|
+| 35 | unshift()			  | 							|
+| 36 | values()			    |								|
+
+
+### Array destructuring
+
+```js
+let num = [123, 44, 65];
+let [first, second] = num;
+
+
+/*
+function firstNum(num) {
+  return num[0];
+}
+*/
+
+function firstNum([first]) {
+  return first;
+}
+
+firstNum(num);
+```
 
 ```js
 // split
@@ -310,69 +371,7 @@ import { Card } from "antd";
 
 [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
-# Array
 
-## Array methods
-
-| No | Name | When to use |
-|---|---|---|
-| 1  | at()					    |								|
-| 2  | concat()			    |								|
-| 3  | copyWithin()	    |								|
-| 4  | entries()		    |								|
-| 5  | every()			    |								|
-| 6  | fill()				    |								|
-| 7  | filter()			    |								|
-| 8  | findIndex()	    |								|
-| 9  | find()				    |								|
-| 10 | flat()				    |								|
-| 11 | flatMap()		    |								|
-| 12 | forEach()		    |								|
-| 13 | from()				    |								|
-| 14 | includes()		    |								|
-| 15 | indexOf()		    |								|
-| 16 | isArray()		    |								|
-| 17 | join()				    |								|
-| 18 | keys()				    |								|
-| 19 | lastIndexOf()    |								|
-| 20 | map()				    |								|
-| 21 | of()					    |								|
-| 22 | pop()				    |								|
-| 23 | push()				    |								|
-| 24 | reduce()			    |								|
-| 25 | reduceRight()    |								|
-| 26 | reverse()		    |								|
-| 27 | shift()			    |								|
-| 28 | slice()			    |								|
-| 29 | some()				    |								|
-| 30 | sort()				    |								|
-| 31 | splice()				  |								|
-| 32 | toLocaleString() |								|
-| 33 | toSource()			  |								|
-| 34 | toString()			  |								|
-| 35 | unshift()			  | 							|
-| 36 | values()			    |								|
-
-
-## Array destructuring
-
-```js
-let num = [123, 44, 65];
-let [first, second] = num;
-
-
-/*
-function firstNum(num) {
-  return num[0];
-}
-*/
-
-function firstNum([first]) {
-  return first;
-}
-
-firstNum(num);
-```
 
 # Object destructuring
 
