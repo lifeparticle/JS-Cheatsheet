@@ -6,17 +6,75 @@ ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES201
 
 # Data types
 
-| No | Type  | Example  | Doc  |
-|---|---|---|---|
-| 1 | Number    | let a = 17               | [link](https://developer.mozilla.org/en-US/docs/Glossary/Number)    |
-| 2 | BigInt    | let a = 348378344239489n | [link](https://developer.mozilla.org/en-US/docs/Glossary/BigInt)    |
-| 3 | String    | let a = "Hello universe" | [link](https://developer.mozilla.org/en-US/docs/Glossary/String)    |
-| 4 | Boolean   | let a = true             | [link](https://developer.mozilla.org/en-US/docs/Glossary/Boolean)   |
-| 5 | Symbol    | let sym = Symbol()       | [link](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)    |
-| 6 | null      | let a = null             | [link](https://developer.mozilla.org/en-US/docs/Glossary/Null)      |
-| 7 | undefined | let a = undefined        | [link](https://developer.mozilla.org/en-US/docs/Glossary/undefined) |
-| 8 | Object    | let a = {a: 'test'}      | [link](https://developer.mozilla.org/en-US/docs/Glossary/Object)    |
+| No | Name  | Example  | Doc  | Data Type
+|---|---|---|---|---|
+| 1 | Number    | let a = 17               | [link](https://developer.mozilla.org/en-US/docs/Glossary/Number)    | Primitive data     |
+| 2 | BigInt    | let a = 348378344239489n | [link](https://developer.mozilla.org/en-US/docs/Glossary/BigInt)    | Primitive data     |
+| 3 | String    | let a = "Hello universe" | [link](https://developer.mozilla.org/en-US/docs/Glossary/String)    | Primitive data     |
+| 4 | Boolean   | let a = true             | [link](https://developer.mozilla.org/en-US/docs/Glossary/Boolean)   | Primitive data     |
+| 5 | Symbol    | let sym = Symbol()       | [link](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)    | Primitive data     |
+| 6 | null      | let a = null             | [link](https://developer.mozilla.org/en-US/docs/Glossary/Null)      | Primitive data     |
+| 7 | undefined | let a = undefined        | [link](https://developer.mozilla.org/en-US/docs/Glossary/undefined) | Primitive data     |
+| 8 | Object    | let a = {a: 'test'}      | [link](https://developer.mozilla.org/en-US/docs/Glossary/Object)    | Non-primitive data |
 
+## How to check the data type
+
+```js
+typeof 17 // 'number'
+typeof 348378344239489n // 'bigint'
+typeof "Hello universe" // 'string'
+typeof true // 'boolean'
+typeof Symbol() // 'symbol'
+typeof null // 'object' -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null
+typeof undefined // 'undefined'
+typeof {a: 'test'} // 'object'
+typeof [17, 18] // 'object'
+Array.isArray([17, 18]); // true
+Array.isArray({a: 'test'}); // false
+```
+
+## Array
+
+```js
+const arr = Array();
+const arr = []
+```
+
+```js
+// split
+let sentence = "ThereIsNoSpoon";
+let words = sentence.split(/(?=[A-Z])/);
+console.log(words); // ['There', 'Is', 'No', 'Spoon']
+
+// fill
+const arr = Array(10).fill(0);
+console.log(arr); // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+// concat
+const arr1 = [1, 2, 3];
+const arr2 = [1, 4, 5];
+const arr3 = arr1.concat(arr2);
+console.log(arr3); // [1, 2, 3, 1, 4, 5]
+// or 
+const arr3 = [...arr1, ...arr2];
+console.log(arr3); // [1, 2, 3, 1, 4, 5]
+
+// length
+console.log(arr3.length); // 6
+
+// indexOf
+console.log(arr3.indexOf(1)); // 0
+console.log(arr3.indexOf(6)); // -1
+console.log(arr3.indexOf(5)); // 5
+
+// lastIndexOf
+console.log(arr3.lastIndexOf(1)); // 3
+
+// includes
+console.log(arr3.includes(1)); // true
+console.log(arr3.includes(6)); // false
+console.log(arr3.includes(5)); // true
+```
 
 # JavaScript Variables
 
@@ -25,6 +83,10 @@ var
 let
 const
 ```
+
+## Scope
+todo
+
 
 # Logical AND (&&)
 
