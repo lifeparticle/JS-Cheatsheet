@@ -74,6 +74,72 @@ console.log(arr3.lastIndexOf(1)); // 3
 console.log(arr3.includes(1)); // true
 console.log(arr3.includes(6)); // false
 console.log(arr3.includes(5)); // true
+
+// toString
+console.log(arr3.toString()); // 1,2,3,1,4,5
+
+// join
+const words = ['There', 'Is', 'No', 'Spoon'];
+console.log(words.join(", ")); // There, Is, No, Spoon
+
+// slice
+// The slice(start, end) method where end is exclusive, returns a shallow copy of a part of an array and returns a new array. It does not change the original array.
+let num = [1, 2, 3, 1, 4, 5];
+console.log(num.slice(3, 4)); // [1]
+console.log(num); // [1, 2, 3, 1, 4, 5]
+// other variations
+console.log(num.slice()); // [1, 2, 3, 1, 4, 5]
+console.log(num.slice(3)); // [1, 4, 5]
+
+// splice
+// The splice(start, deleteCount, item1, item2, itemN) returns an array containing the deleted element. It modifies the original array by removing or adding additional items.
+let num = [1, 2, 3, 1, 4, 5];
+console.log(num.splice(1, 6, 1, 1, 1, 1, 1, 1)); // [2, 3, 1, 4, 5]
+console.log(num); // [1, 1, 1, 1, 1, 1, 1]
+// other variations
+let num = [1, 2, 3, 1, 4, 5];
+console.log(num.splice(2)); // [3, 1, 4, 5]
+console.log(num); // [1, 2]
+let num = [1, 2, 3, 1, 4, 5];
+console.log(num.splice(1, 1)); // [2]
+console.log(num); // [1, 3, 1, 4, 5]
+let num = [1, 2, 3, 1, 4, 5];
+console.log(num.splice(0, 2, 4566)); // [1, 2]
+console.log(num); // [4566, 3, 1, 4, 5]
+
+// push
+// Add an item at the end
+let num = [1, 2, 3, 1, 4, 5];
+num.push(1234);
+console.log(num); // [1, 2, 3, 1, 4, 5, 1234]
+
+// pop
+// Remove an item from the end
+let num = [1, 2, 3, 1, 4, 5, 1234];
+num.pop();
+console.log(num); // [1, 2, 3, 1, 4, 5]
+
+// unshift
+// Add an item at the beginning and shift rest of elements to the right
+let num = [1, 2, 3, 1, 4, 5];
+num.unshift(1234);
+console.log(num); // [1234, 1, 2, 3, 1, 4, 5]
+
+// shift
+// Remove an item at the beginning and shift rest of elements to the left
+let num = [1234, 1, 2, 3, 1, 4, 5];
+num.shift();
+console.log(num); // [1, 2, 3, 1, 4, 5]
+
+// reverse
+let num = [1, 2, 5666, 22, 45, 7, 0];
+num.reverse();
+console.log(num); // [0, 7, 45, 22, 5666, 2, 1]
+
+// sort
+let num = [1, 2, 5666, 22, 45, 7, 0];
+num.sort();
+console.log(num); // [0, 1, 2, 22, 45, 5666, 7]
 ```
 
 # JavaScript Variables
