@@ -116,7 +116,7 @@ const arr1 = [1, 2, 3];
 const arr2 = [1, 4, 5];
 const arr3 = arr1.concat(arr2);
 console.log(arr3); // [1, 2, 3, 1, 4, 5]
-// or 
+// or
 const arr3 = [...arr1, ...arr2];
 console.log(arr3); // [1, 2, 3, 1, 4, 5]
 
@@ -224,7 +224,7 @@ let num = 89;
 if (num === 89) {
 	console.log("89");
 } else if (num === 90) {
-console.log("90");
+	console.log("90");
 } else {
 	console.log("Not 89 or 90");
 }
@@ -297,7 +297,7 @@ result = 'foo' && 4;   // 4
 
 # Logical OR (||)
 
-Logical OR (||) evaluates operands from left to right. It returns value of the first truthy operand. If all values are falsy, it returns value of the last operand. 
+Logical OR (||) evaluates operands from left to right. It returns value of the first truthy operand. If all values are falsy, it returns value of the last operand.
 
 
 ```js
@@ -321,7 +321,7 @@ export const ONE = 1
 export const ZERO = 0
 ```
 
-There is only zero or one default export allowed per module and zero or more Named Exports. 
+There is only zero or one default export allowed per module and zero or more Named Exports.
 
 ```js
 // ./modules/random.js
@@ -367,7 +367,7 @@ export { randomString, randomFloat };
 import { PI, ONE, ZERO } from './modules/constants.js';
 ```
 
- 
+
 ```js
 // main.js
 import {randomString, randomFloat} from './modules/random.js';
@@ -458,7 +458,7 @@ userId(user);
 # Object property shorthand
 
  We can use the object property shorthand, when property value has the same name as the property key.
- 
+
 ```js
 let user = {
   id: id,
@@ -581,7 +581,7 @@ todo
 todo
 ```
 
-# Async & Await 
+# Async & Await
 
 ```js
 todo
