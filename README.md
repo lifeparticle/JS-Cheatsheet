@@ -203,6 +203,56 @@ num.sort();
 console.log(num); // [0, 1, 2, 22, 45, 5666, 7]
 ```
 
+### Two dimensional array
+
+```js
+let nums = [
+  [1, 2, 3],
+  [4, 5, 6]
+];
+
+console.log(nums[0]); // [1, 2, 3]
+console.log(nums[1]); // [4, 5, 6]
+console.log(nums[0][1]); // 2
+```
+
+# Conditinal statements
+
+```js
+let num = 89;
+
+if (num === 89) {
+	console.log("89");
+} else if (num === 90) {
+console.log("90");
+} else {
+	console.log("Not 89 or 90");
+}
+```
+
+```js
+let num = 89;
+
+switch (num) {
+	case 89:
+		console.log("89");
+		break;
+	case 90:
+		console.log("90");
+		break;
+	default:
+		console.log("Not 89 or 90");
+}
+```
+
+
+```js
+let num = 89;
+
+let is89 = num === 89 ? true : false;
+console.log(is89);
+```
+
 # JavaScript Variables
 
 ```js
@@ -214,6 +264,13 @@ const
 ## Scope
 todo
 
+
+# Loops
+
+```js
+
+
+```
 
 # Logical AND (&&)
 
