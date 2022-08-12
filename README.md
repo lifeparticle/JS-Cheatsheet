@@ -361,20 +361,9 @@ for (let num = 1; num <= 10; num++) {
   console.log('Looking at', num);
 }
 
-let names1 = ["Dariana Trahan", "Lillie Earl", "Esther Yeager", "Marianna Brownlee", "Sara Tong", "Clint Winslow", "Efrain Popp", "Anya Aiello", "Sergio Truitt", "Keyshawn Apodaca"];
-let names2 = ["Carlee Simms","Maximus Felix","Leonardo Medina","Sahara Dawkins","Esther Yeager","Miah Estrella","Rafael Harp","Eileen Bach","Gianni Kenyon","Theo Ferry"];
 
-outerLoop:
-for (let outer = 0; outer < names1.length; outer++) {
-	innerLoop:
-	for (let inner = 0; inner < names2.length; inner++) {
-	  if (names2[inner] === names1[outer]) {
-	     console.log('Found the number', theNum);
-	     break outerLoop;
-	  }
-	  console.log('Looking at', names1[outer]);
-	}
-}
+// todo
+
 
 // labeled statement
 // labeled statement is used with break or continue statements.
@@ -382,12 +371,64 @@ for (let outer = 0; outer < names1.length; outer++) {
 label:
   statement
   
-// for...in statement
+// todo
+  
+// for...in statement iterates over object literals to get the index/keys of the object.
 
+for (variable in object)
+  statement
+  
+let names = ["Dariana Trahan", "Lillie Earl", "Esther Yeager", "Marianna Brownlee", "Sara Tong", "Clint Winslow", "Efrain Popp", "Anya Aiello", "Sergio Truitt", "Keyshawn Apodaca"];
 
-// for...of statement
+for (const i in names) {
+  console.log(names[i]);
+}
+
+let person = {
+  name: "Dariana Trahan",
+  age: 21,
+  address: "localhost"
+}
+
+for (const key in person) {
+  console.log(key,":",person[key]);
+}
+
+// for...of statement iterates over iterable objects including String, Array, TypedArray, Map, Set, and Intl.Segments to get the property values.
+
+for (variable of object)
+  statement
+  
+let names = ["Dariana Trahan", "Lillie Earl", "Esther Yeager", "Marianna Brownlee", "Sara Tong", "Clint Winslow", "Efrain Popp", "Anya Aiello", "Sergio Truitt", "Keyshawn Apodaca"];
+
+for (const name of names) {
+  console.log(name);
+}
+
+let person = {
+  name: "Dariana Trahan",
+  age: 21,
+  address: "localhost"
+}
+  
+for (const value of Object.values(person)) {
+  console.log(value);
+}
+
+// forEach function
+forEach((element) => { /* … */ })
+forEach((element, index) => { /* … */ })
+forEach((element, index, array) => { /* … */ })
+// element = The current element being processed in the array.
+// index = The index of element in the array.
+// array = The array forEach() was called upon.
+
+let names = ["Dariana Trahan", "Lillie Earl", "Esther Yeager", "Marianna Brownlee", "Sara Tong", "Clint Winslow", "Efrain Popp", "Anya Aiello", "Sergio Truitt", "Keyshawn Apodaca"];
+
+names.forEach((name) => console.log(name));
+names.forEach((name, index) => console.log(index,":",name));
+names.forEach((name, index, array) => console.log(index,":",name,"-",array[index]));
 ```
-
 
 # Logical AND (&&)
 
