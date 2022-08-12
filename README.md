@@ -262,8 +262,35 @@ const
 ```
 
 ## Scope
-todo
 
+
+### Global scope
+
+```js
+let name = "Dariana Trahan"; // let name = "Dariana Trahan"; const name = "Dariana Trahan"; 
+console.log(name);
+
+function getName() {
+  console.log(name);
+}
+
+console.log(name);
+```
+
+### Local scope
+
+```js
+// can't access here
+console.log(name);
+
+function getName() {
+  let name = "Dariana Trahan";
+  console.log(name);
+}
+
+// can't access here
+console.log(name);
+```
 
 # Loops
 
