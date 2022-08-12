@@ -353,9 +353,9 @@ console.log(getName()); // Dariana Trahan
 
 # Function
 
-## Regular function
+## Regular / Named function 
 
-You can use functions before you create them. So they are hoisted.
+You can use functions before you create them. Because they are hoisted.
 
 ```js
 function hello() {
@@ -403,6 +403,23 @@ With concise body, we can have implicit return.
 const hello = () => "hello world";
 
 hello(); // 'hello world'
+```
+
+## Immediately invoked function expression
+
+```js
+(function() {
+    return "hello world";
+})()
+
+
+(() => {
+    return "hello world";
+})();
+
+(async () => {
+    return "hello world";
+})();
 ```
 
 ## Callback functions
