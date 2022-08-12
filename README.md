@@ -269,8 +269,125 @@ todo
 
 ```js
 
+// for statement
 
+for ([initialExpression]; [conditionExpression]; [incrementExpression])
+  statement
+
+for (let num = 1; num <= 10; num++) {
+  console.log('#', num);
+}
+
+// do...while statement
+// do...while can be useful when you want to execute the statment at least once
+
+do
+  statement
+while (condition);
+
+let num = 1;
+do {
+  console.log('#', num);
+  num += 1;
+} while (num <= 10);
+
+
+// while statement
+while (condition)
+  statement
+
+let num = 1;
+while (num <= 10) {
+  console.log('#', num);
+  num += 1;
+}
+
+// break statement
+// break without a label terminates the innermost enclosing while, do-while, for, or switch immediately and transfers control to the following statement
+
+break;
+break label;
+
+let theNum = 5;
+for (let num = 1; num <= 10; num++) {
+  if (num === theNum) {
+     console.log('Found the number', theNum);
+     break;
+  }
+   console.log('Looking at', num);
+}
+
+// The following code will break the inner loop 10 times and print "Found the number 5" 10 times
+let theNum = 5;
+for (let outer = 1; outer <= 10; outer++) {
+	for (let inner = 1; inner <= 10; inner++) {
+	  if (inner === theNum) {
+	     console.log('Found the number', theNum);
+	     break;
+	  }
+	  console.log('Looking at', inner);
+	}
+}
+
+
+// The following code will break the inner and outer loop and print "Found the number 5" once.
+let theNum = 5;
+outerLoop:
+for (let outer = 1; outer <= 10; outer++) {
+	innerLoop:
+	for (let inner = 1; inner <= 10; inner++) {
+	  if (inner === theNum) {
+	     console.log('Found the number', theNum);
+	     break outerLoop;
+	  }
+	  console.log('Looking at', inner);
+	}
+}
+
+
+// continue statement
+// continue without a label terminates the innermost enclosing while, do-while, for, or switch immediately and continues execution of the loop with the next iteration.
+
+continue;
+continue label;
+
+// Look at the all numbers.
+let theNum = 5;
+for (let num = 1; num <= 10; num++) {
+  if (num === theNum) {
+     console.log('Found the number', theNum);
+     continue;
+  }
+  console.log('Looking at', num);
+}
+
+let names1 = ["Dariana Trahan", "Lillie Earl", "Esther Yeager", "Marianna Brownlee", "Sara Tong", "Clint Winslow", "Efrain Popp", "Anya Aiello", "Sergio Truitt", "Keyshawn Apodaca"];
+let names2 = ["Carlee Simms","Maximus Felix","Leonardo Medina","Sahara Dawkins","Esther Yeager","Miah Estrella","Rafael Harp","Eileen Bach","Gianni Kenyon","Theo Ferry"];
+
+outerLoop:
+for (let outer = 0; outer < names1.length; outer++) {
+	innerLoop:
+	for (let inner = 0; inner < names2.length; inner++) {
+	  if (names2[inner] === names1[outer]) {
+	     console.log('Found the number', theNum);
+	     break outerLoop;
+	  }
+	  console.log('Looking at', names1[outer]);
+	}
+}
+
+// labeled statement
+// labeled statement is used with break or continue statements.
+
+label:
+  statement
+  
+// for...in statement
+
+
+// for...of statement
 ```
+
 
 # Logical AND (&&)
 
@@ -598,3 +715,4 @@ todo
 1. [javascript-the-react-parts](https://reacttraining.com/blog/javascript-the-react-parts/)
 2. [Learn Typescript for free](https://scrimba.com/learn/typescript)
 3. [Learn JavaScript for free](https://scrimba.com/learn/learnjavascript)
+4. [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
