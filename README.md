@@ -590,7 +590,7 @@ import { Card } from "antd";
 
 # Object
 
-### Object destructuring
+## Object destructuring
 
 ```js
 let user = {
@@ -615,7 +615,7 @@ function userId({id}) {
 userId(user);
 ```
 
-### Object property shorthand
+## Object property shorthand
 
  We can use the object property shorthand, when property value has the same name as the property key.
 
@@ -633,7 +633,7 @@ let user = {
 };
 ```
 
-# Spread syntax (...)
+## Spread syntax (...)
 
 TODO
 
@@ -654,7 +654,7 @@ function userId({id, ...rest}) {
 userId(user); // {id: 2, firstName: 'bob', lastName: 'rob'}
 ```
 
-### Rest syntax (parameters) (...)
+## Rest syntax (parameters) (...)
 
 The rest parameter syntax (last parameter in a function) allows a function to accept an indefinite number of arguments.
 
@@ -675,7 +675,7 @@ userId(user); // '1 bob rob'
 
 # Function
 
-### Regular function
+## Regular function
 
 You can use functions before you create them. So they are hoisted.
 
@@ -695,7 +695,7 @@ function hello(name) {
 hello("hello world"); // 'hello world'
 ```
 
-### Function expression
+## Function expression
 
 You can't use function expressions before you create them. So they are not hoisted.
 
@@ -707,7 +707,7 @@ const hello = function() {
 hello(); // 'hello world'
 ```
 
-### Arrow function
+## Arrow function
 
 With block body, we need explicit return.
 
@@ -727,7 +727,7 @@ const hello = () => "hello world";
 hello(); // 'hello world'
 ```
 
-### Callback functions
+## Callback functions
 
 A callback function (A) is a function passed into another function (B) as an argument, which can be called by that function (B).
 
@@ -735,13 +735,13 @@ A callback function (A) is a function passed into another function (B) as an arg
 todo
 ```
 
-### Promises
+## Promises
 
 ```js
 todo
 ```
 
-### Async & Await
+## Async & Await
 
 ```js
 todo
