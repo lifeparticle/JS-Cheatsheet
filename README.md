@@ -261,35 +261,156 @@ let
 const
 ```
 
+`let` and `const` behave the same, except `const` can not be changed later. So use `let` if the value will change over time and `const` for constant value.
+
 ## Scope
 
 
 ### Global scope
 
 ```js
-let name = "Dariana Trahan"; // let name = "Dariana Trahan"; const name = "Dariana Trahan"; 
-console.log(name);
+let name = "Dariana Trahan"; // var name = "Dariana Trahan"; const name = "Dariana Trahan"; 
+console.log(name); // Dariana Trahan
 
 function getName() {
-  console.log(name);
+  console.log(name); // Dariana Trahan
 }
 
-console.log(name);
+console.log(name); // Dariana Trahan
 ```
 
 ### Local scope
 
+Code in between two curly brackets `{}` is called a block.
+
+#### Function block
 ```js
 // can't access here
-console.log(name);
+console.log(name); // undefined
+
 
 function getName() {
   let name = "Dariana Trahan";
-  console.log(name);
+  console.log(name); // Dariana Trahan
 }
 
 // can't access here
+console.log(name); // undefined
+```
+
+#### Block scope
+```js
+if (true) {
+  let name = "Dariana Trahan"; // const name = "Dariana Trahan"; 
+  console.log(name);
+}
+
+console.log(name); // undefined
+```
+
+```js
+if (true) {
+  var name = "Dariana Trahan";
+  console.log(name);
+}
+
+console.log(name); // Dariana Trahan 
+```
+
+Prior to the execution of the code, the interpreter move the definition of functions, variables, or classes to the top of their scope. This process is known as JavaScript hoisting. It does not take the value.
+
+```js
+name = "Dariana Trahan";
 console.log(name);
+var name;
+```
+
+```js
+console.log(getName());
+
+function getName() {
+  console.log(name); // Dariana Trahan
+}
+```
+
+We can avoid hoisting and save sapce using anonymous function expression .
+
+```js
+console.log(getName()); // Uncaught ReferenceError: getName is not defined
+
+const getName = () => {
+  console.log(name); // Dariana Trahan
+}
+```
+
+```js
+const getName = () => {
+  console.log(name); // Dariana Trahan
+}
+
+console.log(getName()); // Dariana Trahan
+```
+
+# Function
+
+## Regular function
+
+You can use functions before you create them. So they are hoisted.
+
+```js
+function hello() {
+    return "hello world";
+}
+
+hello(); // 'hello world'
+```
+
+```js
+function hello(name) {
+    return name;
+}
+
+hello("hello world"); // 'hello world'
+```
+
+## Function expression
+
+You can't use function expressions before you create them. So they are not hoisted.
+
+```js
+const hello = function() {
+    return "hello world";
+};
+
+hello(); // 'hello world'
+```
+
+## Arrow function
+
+With block body, we need explicit return.
+
+```
+const hello = () => {
+    return "hello world";
+}
+
+hello(); // 'hello world'
+```
+
+With concise body, we can have implicit return.
+
+```js
+const hello = () => "hello world";
+
+hello(); // 'hello world'
+```
+
+## Callback functions
+
+A callback function (A) is a function passed into another function (B) as an argument, which can be called by that function (B).
+
+```js
+todo
 ```
 
 # Loops
@@ -700,75 +821,13 @@ function userId({id, ...rest}) {
 userId(user); // '1 bob rob'
 ```
 
-# Function
-
-## Regular function
-
-You can use functions before you create them. So they are hoisted.
-
-```js
-function hello() {
-    return "hello world";
-}
-
-hello(); // 'hello world'
-```
-
-```js
-function hello(name) {
-    return name;
-}
-
-hello("hello world"); // 'hello world'
-```
-
-## Function expression
-
-You can't use function expressions before you create them. So they are not hoisted.
-
-```js
-const hello = function() {
-    return "hello world";
-};
-
-hello(); // 'hello world'
-```
-
-## Arrow function
-
-With block body, we need explicit return.
-
-```
-const hello = () => {
-    return "hello world";
-}
-
-hello(); // 'hello world'
-```
-
-With concise body, we can have implicit return.
-
-```js
-const hello = () => "hello world";
-
-hello(); // 'hello world'
-```
-
-## Callback functions
-
-A callback function (A) is a function passed into another function (B) as an argument, which can be called by that function (B).
+# Promises
 
 ```js
 todo
 ```
 
-## Promises
-
-```js
-todo
-```
-
-## Async & Await
+# Async & Await
 
 ```js
 todo
