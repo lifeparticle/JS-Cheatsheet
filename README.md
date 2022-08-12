@@ -392,7 +392,7 @@ With block body, we need explicit return.
 ```
 const hello = () => {
     return "hello world";
-}
+};
 
 hello(); // 'hello world'
 ```
@@ -410,7 +410,7 @@ hello(); // 'hello world'
 ```js
 (function() {
     return "hello world";
-})()
+})();
 
 
 (() => {
