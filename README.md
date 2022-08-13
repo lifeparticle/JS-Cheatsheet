@@ -351,6 +351,12 @@ console.log(getName()); // Dariana Trahan
 
 # Function
 
+- Regular / Named function
+- Function expression / Anonymous function
+- Arrow function
+- Immediately invoked function expression
+- Callback functions
+
 ## Regular / Named function
 
 You can use functions before you create them. Because they are hoisted.
@@ -417,6 +423,15 @@ hello(); // 'hello world'
 (async () => {
 	return "hello world";
 })();
+```
+
+Store the return value.
+
+```js
+let result = (function () {
+	return "hello world";
+})();
+console.log(result); // hello world
 ```
 
 ## Callback functions
@@ -749,26 +764,68 @@ import { Card } from "antd";
 
 # Object
 
+## Empty object.
+
 ```js
-const person = {};
+const user = {};
 ```
 
-## Object destructuring
+## Object with values and method.
 
 ```js
 let user = {
 	id: 1,
 	firstName: "bob",
 	lastName: "rob",
+	getFullName: function () {
+		return `${this.firstName} ${this.lastName}`;
+	},
 };
+```
+
+## Get all the keys.
+
+```js
+const keys = Object.keys(user);
+console.log(keys); // ['id', 'firstName', 'lastName', 'getFullName']
+```
+
+## Get all the values.
+
+```js
+const values = Object.values(user);
+console.log(values); // [1, 'bob', 'rob', ƒ]
+```
+
+## Checking properties.
+
+```js
+console.log(user.hasOwnProperty("id")); // true
+console.log(user.hasOwnProperty("age")); // false
+```
+
+## Get all the keys and values.
+
+```js
+const entries = Object.entries(user);
+console.log(entries);
+
+// 0: (2) ['id', 1]
+// 1: (2) ['firstName', 'bob']
+// 2: (2) ['lastName', 'rob']
+// 3: (2) ['getFullName', ƒ]
+```
+
+## Object destructuring
+
+```js
+let firstName = user.firstName;
 
 let { firstName } = user;
 
-/*
 function userId(user) {
-  return user.id;
+	return user.id;
 }
-*/
 
 function userId({ id }) {
 	return id;
@@ -859,4 +916,3 @@ todo;
 2. [Learn Typescript for free](https://scrimba.com/learn/typescript)
 3. [Learn JavaScript for free](https://scrimba.com/learn/learnjavascript)
 4. [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
-
