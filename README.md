@@ -6,87 +6,86 @@ ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES201
 
 # Data types
 
-| No | Name  | Example  | Doc  | Data Type
-|---|---|---|---|---|
-| 1 | Number    | let a = 17               | [link](https://developer.mozilla.org/en-US/docs/Glossary/Number)    | Primitive data     |
-| 2 | BigInt    | let a = 348378344239489n | [link](https://developer.mozilla.org/en-US/docs/Glossary/BigInt)    | Primitive data     |
-| 3 | String    | let a = "Hello universe" | [link](https://developer.mozilla.org/en-US/docs/Glossary/String)    | Primitive data     |
-| 4 | Boolean   | let a = true             | [link](https://developer.mozilla.org/en-US/docs/Glossary/Boolean)   | Primitive data     |
-| 5 | Symbol    | let sym = Symbol()       | [link](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)    | Primitive data     |
-| 6 | null      | let a = null             | [link](https://developer.mozilla.org/en-US/docs/Glossary/Null)      | Primitive data     |
-| 7 | undefined | let a = undefined        | [link](https://developer.mozilla.org/en-US/docs/Glossary/undefined) | Primitive data     |
-| 8 | Object    | let a = {a: 'test'}      | [link](https://developer.mozilla.org/en-US/docs/Glossary/Object)    | Non-primitive data |
+| No  | Name      | Example                  | Doc                                                                 | Data Type          |
+| --- | --------- | ------------------------ | ------------------------------------------------------------------- | ------------------ |
+| 1   | Number    | let a = 17               | [link](https://developer.mozilla.org/en-US/docs/Glossary/Number)    | Primitive data     |
+| 2   | BigInt    | let a = 348378344239489n | [link](https://developer.mozilla.org/en-US/docs/Glossary/BigInt)    | Primitive data     |
+| 3   | String    | let a = "Hello universe" | [link](https://developer.mozilla.org/en-US/docs/Glossary/String)    | Primitive data     |
+| 4   | Boolean   | let a = true             | [link](https://developer.mozilla.org/en-US/docs/Glossary/Boolean)   | Primitive data     |
+| 5   | Symbol    | let sym = Symbol()       | [link](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)    | Primitive data     |
+| 6   | null      | let a = null             | [link](https://developer.mozilla.org/en-US/docs/Glossary/Null)      | Primitive data     |
+| 7   | undefined | let a = undefined        | [link](https://developer.mozilla.org/en-US/docs/Glossary/undefined) | Primitive data     |
+| 8   | Object    | let a = {a: 'test'}      | [link](https://developer.mozilla.org/en-US/docs/Glossary/Object)    | Non-primitive data |
 
 ## How to check the data type
 
 ```js
-typeof 17 // 'number'
-typeof 348378344239489n // 'bigint'
-typeof "Hello universe" // 'string'
-typeof true // 'boolean'
-typeof Symbol() // 'symbol'
-typeof null // 'object' -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null
-typeof undefined // 'undefined'
-typeof {a: 'test'} // 'object'
-typeof [17, 18] // 'object'
+typeof 17; // 'number'
+typeof 348378344239489n; // 'bigint'
+typeof "Hello universe"; // 'string'
+typeof true; // 'boolean'
+typeof Symbol(); // 'symbol'
+typeof null; // 'object' -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null
+typeof undefined; // 'undefined'
+typeof { a: "test" }; // 'object'
+typeof [17, 18]; // 'object'
 Array.isArray([17, 18]); // true
-Array.isArray({a: 'test'}); // false
+Array.isArray({ a: "test" }); // false
 ```
 
 ## Array
 
 ```js
 const arr = Array();
-const arr = []
+const arr = [];
 ```
+
 ### Array methods
 
-| No | Name | When to use |
-|---|---|---|
-| 1  | at()					    |								|
-| 2  | concat()			    |								|
-| 3  | copyWithin()	    |								|
-| 4  | entries()		    |								|
-| 5  | every()			    |								|
-| 6  | fill()				    |								|
-| 7  | filter()			    |								|
-| 8  | findIndex()	    |								|
-| 9  | find()				    |								|
-| 10 | flat()				    |								|
-| 11 | flatMap()		    |								|
-| 12 | forEach()		    |								|
-| 13 | from()				    |								|
-| 14 | includes()		    |								|
-| 15 | indexOf()		    |								|
-| 16 | isArray()		    |								|
-| 17 | join()				    |								|
-| 18 | keys()				    |								|
-| 19 | lastIndexOf()    |								|
-| 20 | map()				    |								|
-| 21 | of()					    |								|
-| 22 | pop()				    |								|
-| 23 | push()				    |								|
-| 24 | reduce()			    |								|
-| 25 | reduceRight()    |								|
-| 26 | reverse()		    |								|
-| 27 | shift()			    |								|
-| 28 | slice()			    |								|
-| 29 | some()				    |								|
-| 30 | sort()				    |								|
-| 31 | splice()				  |								|
-| 32 | toLocaleString() |								|
-| 33 | toSource()			  |								|
-| 34 | toString()			  |								|
-| 35 | unshift()			  | 							|
-| 36 | values()			    |								|
-
+| No  | Name             | When to use |
+| --- | ---------------- | ----------- |
+| 1   | at()             |             |
+| 2   | concat()         |             |
+| 3   | copyWithin()     |             |
+| 4   | entries()        |             |
+| 5   | every()          |             |
+| 6   | fill()           |             |
+| 7   | filter()         |             |
+| 8   | findIndex()      |             |
+| 9   | find()           |             |
+| 10  | flat()           |             |
+| 11  | flatMap()        |             |
+| 12  | forEach()        |             |
+| 13  | from()           |             |
+| 14  | includes()       |             |
+| 15  | indexOf()        |             |
+| 16  | isArray()        |             |
+| 17  | join()           |             |
+| 18  | keys()           |             |
+| 19  | lastIndexOf()    |             |
+| 20  | map()            |             |
+| 21  | of()             |             |
+| 22  | pop()            |             |
+| 23  | push()           |             |
+| 24  | reduce()         |             |
+| 25  | reduceRight()    |             |
+| 26  | reverse()        |             |
+| 27  | shift()          |             |
+| 28  | slice()          |             |
+| 29  | some()           |             |
+| 30  | sort()           |             |
+| 31  | splice()         |             |
+| 32  | toLocaleString() |             |
+| 33  | toSource()       |             |
+| 34  | toString()       |             |
+| 35  | unshift()        |             |
+| 36  | values()         |             |
 
 ### Array destructuring
 
 ```js
 let num = [123, 44, 65];
 let [first, second] = num;
-
 
 /*
 function firstNum(num) {
@@ -95,7 +94,7 @@ function firstNum(num) {
 */
 
 function firstNum([first]) {
-  return first;
+	return first;
 }
 
 firstNum(num);
@@ -140,7 +139,7 @@ console.log(arr3.includes(5)); // true
 console.log(arr3.toString()); // 1,2,3,1,4,5
 
 // join
-const words = ['There', 'Is', 'No', 'Spoon'];
+const words = ["There", "Is", "No", "Spoon"];
 console.log(words.join(", ")); // There, Is, No, Spoon
 
 // slice
@@ -207,8 +206,8 @@ console.log(num); // [0, 1, 2, 22, 45, 5666, 7]
 
 ```js
 let nums = [
-  [1, 2, 3],
-  [4, 5, 6]
+	[1, 2, 3],
+	[4, 5, 6],
 ];
 
 console.log(nums[0]); // [1, 2, 3]
@@ -245,7 +244,6 @@ switch (num) {
 }
 ```
 
-
 ```js
 let num = 89;
 
@@ -265,15 +263,14 @@ const
 
 ## Scope
 
-
 ### Global scope
 
 ```js
-let name = "Dariana Trahan"; // var name = "Dariana Trahan"; const name = "Dariana Trahan"; 
+let name = "Dariana Trahan"; // var name = "Dariana Trahan"; const name = "Dariana Trahan";
 console.log(name); // Dariana Trahan
 
 function getName() {
-  console.log(name); // Dariana Trahan
+	console.log(name); // Dariana Trahan
 }
 
 console.log(name); // Dariana Trahan
@@ -284,14 +281,14 @@ console.log(name); // Dariana Trahan
 Code in between two curly brackets `{}` is called a block.
 
 #### Function block
+
 ```js
 // can't access here
 console.log(name); // undefined
 
-
 function getName() {
-  let name = "Dariana Trahan";
-  console.log(name); // Dariana Trahan
+	let name = "Dariana Trahan";
+	console.log(name); // Dariana Trahan
 }
 
 // can't access here
@@ -299,10 +296,11 @@ console.log(name); // undefined
 ```
 
 #### Block scope
+
 ```js
 if (true) {
-  let name = "Dariana Trahan"; // const name = "Dariana Trahan"; 
-  console.log(name);
+	let name = "Dariana Trahan"; // const name = "Dariana Trahan";
+	console.log(name);
 }
 
 console.log(name); // undefined
@@ -310,11 +308,11 @@ console.log(name); // undefined
 
 ```js
 if (true) {
-  var name = "Dariana Trahan";
-  console.log(name);
+	var name = "Dariana Trahan";
+	console.log(name);
 }
 
-console.log(name); // Dariana Trahan 
+console.log(name); // Dariana Trahan
 ```
 
 Prior to the execution of the code, the interpreter move the definition of functions, variables, or classes to the top of their scope. This process is known as JavaScript hoisting. It does not take the value.
@@ -329,7 +327,7 @@ var name;
 console.log(getName());
 
 function getName() {
-  console.log(name); // Dariana Trahan
+	console.log(name); // Dariana Trahan
 }
 ```
 
@@ -339,27 +337,27 @@ We can avoid hoisting and save sapce using anonymous function expression .
 console.log(getName()); // Uncaught ReferenceError: getName is not defined
 
 const getName = () => {
-  console.log(name); // Dariana Trahan
-}
+	console.log(name); // Dariana Trahan
+};
 ```
 
 ```js
 const getName = () => {
-  console.log(name); // Dariana Trahan
-}
+	console.log(name); // Dariana Trahan
+};
 
 console.log(getName()); // Dariana Trahan
 ```
 
 # Function
 
-## Regular / Named function 
+## Regular / Named function
 
 You can use functions before you create them. Because they are hoisted.
 
 ```js
 function hello() {
-    return "hello world";
+	return "hello world";
 }
 
 hello(); // 'hello world'
@@ -367,7 +365,7 @@ hello(); // 'hello world'
 
 ```js
 function hello(name) {
-    return name;
+	return name;
 }
 
 hello("hello world"); // 'hello world'
@@ -378,8 +376,8 @@ hello("hello world"); // 'hello world'
 You can't use function expressions before you create them. So they are not hoisted.
 
 ```js
-const hello = function() {
-    return "hello world";
+const hello = function () {
+	return "hello world";
 };
 
 hello(); // 'hello world'
@@ -408,17 +406,16 @@ hello(); // 'hello world'
 ## Immediately invoked function expression
 
 ```js
-(function() {
-    return "hello world";
+(function () {
+	return "hello world";
 })();
 
-
 (() => {
-    return "hello world";
+	return "hello world";
 })();
 
 (async () => {
-    return "hello world";
+	return "hello world";
 })();
 ```
 
@@ -427,7 +424,7 @@ hello(); // 'hello world'
 A callback function (A) is a function passed into another function (B) as an argument, which can be called by that function (B).
 
 ```js
-todo
+todo;
 ```
 
 # Loops
@@ -535,14 +532,14 @@ for (let num = 1; num <= 10; num++) {
 
 label:
   statement
-  
+
 // todo
-  
+
 // for...in statement iterates over object literals to get the index/keys of the object.
 
 for (variable in object)
   statement
-  
+
 let names = ["Dariana Trahan", "Lillie Earl", "Esther Yeager", "Marianna Brownlee", "Sara Tong", "Clint Winslow", "Efrain Popp", "Anya Aiello", "Sergio Truitt", "Keyshawn Apodaca"];
 
 for (const i in names) {
@@ -563,7 +560,7 @@ for (const key in person) {
 
 for (variable of object)
   statement
-  
+
 let names = ["Dariana Trahan", "Lillie Earl", "Esther Yeager", "Marianna Brownlee", "Sara Tong", "Clint Winslow", "Efrain Popp", "Anya Aiello", "Sergio Truitt", "Keyshawn Apodaca"];
 
 for (const name of names) {
@@ -575,7 +572,7 @@ let person = {
   age: 21,
   address: "localhost"
 }
-  
+
 for (const value of Object.values(person)) {
   console.log(value);
 }
@@ -611,9 +608,9 @@ undefined.
 ```
 
 ```js
-result = '' && 'foo';  // ""
-result = 2 && 0;       // 0
-result = 'foo' && 4;   // 4
+result = "" && "foo"; // ""
+result = 2 && 0; // 0
+result = "foo" && 4; // 4
 ```
 
 [Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)
@@ -622,11 +619,10 @@ result = 'foo' && 4;   // 4
 
 Logical OR (||) evaluates operands from left to right. It returns value of the first truthy operand. If all values are falsy, it returns value of the last operand.
 
-
 ```js
-result = '' || 'foo';  //  'foo'
-result = 2 || 0;       // 2
-result = 'foo' || 4;   // 'foo'
+result = "" || "foo"; //  'foo'
+result = 2 || 0; // 2
+result = "foo" || 4; // 'foo'
 ```
 
 [Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
@@ -639,9 +635,9 @@ We can export functions, var, let, const, and classes. Exported items needs to b
 
 ```js
 // ./modules/constants.js
-export const PI = 3.14
-export const ONE = 1
-export const ZERO = 0
+export const PI = 3.14;
+export const ONE = 1;
+export const ZERO = 0;
 ```
 
 There is only zero or one default export allowed per module and zero or more Named Exports.
@@ -687,18 +683,16 @@ export { randomString, randomFloat };
 
 ```js
 // main.js
-import { PI, ONE, ZERO } from './modules/constants.js';
+import { PI, ONE, ZERO } from "./modules/constants.js";
 ```
-
 
 ```js
 // main.js
-import {randomString, randomFloat} from './modules/random.js';
-import randomNum from './modules/random.js';
+import { randomString, randomFloat } from "./modules/random.js";
+import randomNum from "./modules/random.js";
 ```
 
 3. Renaming imports and exports
-
 
 ```js
 // ./modules/random.js
@@ -726,9 +720,11 @@ export {
 
 ```js
 // main.js
-import { newRandomStringFunctionName as randS,
-         newRandomFloatFunctionName as randF,
-         newRandomNumFunctionName as randN } from './modules/random.js';
+import {
+	newRandomStringFunctionName as randS,
+	newRandomFloatFunctionName as randF,
+	newRandomNumFunctionName as randN,
+} from "./modules/random.js";
 ```
 
 4. Creating a module object
@@ -751,21 +747,22 @@ import { Card } from "antd";
 
 [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
-
-
 # Object
+
+```js
+const person = {};
+```
 
 ## Object destructuring
 
 ```js
 let user = {
-  id: 1,
-  firstName: 'bob',
-  lastName: 'rob'
+	id: 1,
+	firstName: "bob",
+	lastName: "rob",
 };
 
-
-let {firstName} = user;
+let { firstName } = user;
 
 /*
 function userId(user) {
@@ -773,8 +770,8 @@ function userId(user) {
 }
 */
 
-function userId({id}) {
-  return id;
+function userId({ id }) {
+	return id;
 }
 
 userId(user);
@@ -782,19 +779,19 @@ userId(user);
 
 ## Object property shorthand
 
- We can use the object property shorthand, when property value has the same name as the property key.
+We can use the object property shorthand, when property value has the same name as the property key.
 
 ```js
 let user = {
-  id: id,
-  firstName: firstName,
-  lastName: lastName
+	id: id,
+	firstName: firstName,
+	lastName: lastName,
 };
 
 let user = {
-  id,
-  firstName,
-  lastName
+	id,
+	firstName,
+	lastName,
 };
 ```
 
@@ -804,16 +801,16 @@ TODO
 
 ```js
 let user = {
-  id: 1,
-  firstName: 'bob',
-  lastName: 'rob'
+	id: 1,
+	firstName: "bob",
+	lastName: "rob",
 };
 
-function userId({id, ...rest}) {
-  return {
-    id: id + 1,
-    ...rest
-  }
+function userId({ id, ...rest }) {
+	return {
+		id: id + 1,
+		...rest,
+	};
 }
 
 userId(user); // {id: 2, firstName: 'bob', lastName: 'rob'}
@@ -825,14 +822,14 @@ The rest parameter syntax (last parameter in a function) allows a function to ac
 
 ```js
 let user = {
-  id: 1,
-  firstName: 'bob',
-  lastName: 'rob'
+	id: 1,
+	firstName: "bob",
+	lastName: "rob",
 };
 
-function userId({id, ...rest}) {
-  console.log(rest); // {firstName: 'bob', lastName: 'rob'}
-  return `${id} ${rest.firstName} ${rest.lastName}`;
+function userId({ id, ...rest }) {
+	console.log(rest); // {firstName: 'bob', lastName: 'rob'}
+	return `${id} ${rest.firstName} ${rest.lastName}`;
 }
 
 userId(user); // '1 bob rob'
@@ -841,13 +838,13 @@ userId(user); // '1 bob rob'
 # Promises
 
 ```js
-todo
+todo;
 ```
 
 # Async & Await
 
 ```js
-todo
+todo;
 ```
 
 # Tools
