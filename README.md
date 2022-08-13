@@ -916,3 +916,4 @@ todo;
 2. [Learn Typescript for free](https://scrimba.com/learn/typescript)
 3. [Learn JavaScript for free](https://scrimba.com/learn/learnjavascript)
 4. [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+5. [Javascript refresher](https://github.com/Asabeneh/30-Days-Of-React/blob/master/01_Day_JavaScript_Refresher/01_javascript_refresher.md)
