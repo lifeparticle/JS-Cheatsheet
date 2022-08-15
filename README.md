@@ -1087,23 +1087,38 @@ todo;
 
 ```js
 class Person {
+    static #PRIVATE_STATIC_FIELD;
+	
+	// private fields
+	#firstName;
+	#lastName;
 	constructor(firstName, lastName, age = 0) {
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.#firstName = firstName;
+		this.#lastName = lastName;
 		this.age = age;
 		this.addresses = [];
 	}
 	getFullName() {
-		return this.firstName + ' ' + this.lastName;;
-	}	
+		return this.#firstName + ' ' + this.#lastName;;
+	}
+	
+	// private method
+	#privateMethod () {
+		return 'hello world';
+	}
+	
+	// private static method
+	static #privateStaticMethod() {
+		return 'hello world';
+	}
 }
 
 class User extends Person {
-	static userCount = 0;
+	static USER_COUNT = 0;
 	// default value for age and set address with an intial value
 	constructor(firstName, lastName, age = 0) {
 		super(firstName, lastName, age);
-		User.userCount++;
+		User.USER_COUNT++;
 	}
 
 	setAddress(address) {
@@ -1111,12 +1126,12 @@ class User extends Person {
 	}
 	
 	static getTotalUser() {
-		return this.userCount;
+		return this.USER_COUNT;
 	}
 }
 
 let user = new User('Bob', 'Rob');
-console.log(user); // {firstName: 'Bob', lastName: 'Rob', age: 0, addresses: Array(0)}
+console.log(user); // {age: 0, addresses: Array(2), #firstName: 'Bob', #lastName: 'Rob'}
 console.log(user.getFullName()); // Bob Rob
 
 user.setAddress('15 160th Road, Wathena,ks, 66090  United States');
@@ -1124,7 +1139,7 @@ user.setAddress('13 Central Avenue, Albany,ny, 12205  United States');
 
 console.log(user.addresses); // ['15 160th Road, Wathena,ks, 66090  United States', '13 Central Avenue, Albany,ny, 12205  United States']
 
-console.log(User.userCount); // 1
+console.log(User.USER_COUNT); // 1
 ```
 
 # Tools
