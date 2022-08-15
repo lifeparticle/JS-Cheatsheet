@@ -886,6 +886,21 @@ console.log(entries);
 ## Object destructuring
 
 ```js
+let user = {
+	id: 1,
+	firstName: "bob",
+	lastName: "rob",
+	address: {
+		unit: 2,
+		city: "The City",
+		country: "The Country"
+	},
+	getFullName: function () {
+		return `${this.firstName} ${this.lastName}`;
+	},
+};
+
+
 let firstName = user.firstName;
 
 let { firstName } = user;
@@ -899,6 +914,13 @@ function userId({ id }) {
 }
 
 userId(user);
+
+// Rename
+
+let { firstName: fName } = user;
+// fName = 'bob'
+
+let {address: {unit, city, country} } = user;
 ```
 
 ## Object property shorthand
