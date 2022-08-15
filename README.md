@@ -124,20 +124,20 @@ for (const [first, second, third] of nums) {
 }
 ```
 
-## split
+### split
 ```js
 let sentence = "ThereIsNoSpoon";
 let words = sentence.split(/(?=[A-Z])/);
 console.log(words); // ['There', 'Is', 'No', 'Spoon']
 ```
 
-## fill
+### fill
 ```js
 const arr = Array(10).fill(0);
 console.log(arr); // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ```
 
-## concat
+### concat
 ```js
 const arr1 = [1, 2, 3];
 const arr2 = [1, 4, 5];
@@ -148,42 +148,42 @@ const arr3 = [...arr1, ...arr2];
 console.log(arr3); // [1, 2, 3, 1, 4, 5]
 ```
 
-## length
+### length
 ```js
 console.log(arr3.length); // 6
 ```
 
-## indexOf
+### indexOf
 ```js
 console.log(arr3.indexOf(1)); // 0
 console.log(arr3.indexOf(6)); // -1
 console.log(arr3.indexOf(5)); // 5
 ```
 
-## lastIndexOf
+### lastIndexOf
 ```js
 console.log(arr3.lastIndexOf(1)); // 3
 ```
 
-## includes
+### includes
 ```js
 console.log(arr3.includes(1)); // true
 console.log(arr3.includes(6)); // false
 console.log(arr3.includes(5)); // true
 ```
 
-## toString
+### toString
 ```js
 console.log(arr3.toString()); // 1,2,3,1,4,5
 ```
 
-## join
+### join
 ```js
 const words = ["There", "Is", "No", "Spoon"];
 console.log(words.join(", ")); // There, Is, No, Spoon
 ```
 
-## slice
+### slice
 ```js
 // The slice(start, end) method where end is exclusive, returns a shallow copy of a part of an array and returns a new array. It does not change the original array.
 let num = [1, 2, 3, 1, 4, 5];
@@ -194,7 +194,7 @@ console.log(num.slice()); // [1, 2, 3, 1, 4, 5]
 console.log(num.slice(3)); // [1, 4, 5]
 ```
 
-## splice
+### splice
 ```js
 // The splice(start, deleteCount, item1, item2, itemN) returns an array containing the deleted element. It modifies the original array by removing or adding additional items.
 let num = [1, 2, 3, 1, 4, 5];
@@ -212,7 +212,7 @@ console.log(num.splice(0, 2, 4566)); // [1, 2]
 console.log(num); // [4566, 3, 1, 4, 5]
 ```
 
-## push
+### push
 ```js
 // Add an item at the end
 let num = [1, 2, 3, 1, 4, 5];
@@ -220,7 +220,7 @@ num.push(1234);
 console.log(num); // [1, 2, 3, 1, 4, 5, 1234]
 ```
 
-## pop
+### pop
 ```js
 // Remove an item from the end
 let num = [1, 2, 3, 1, 4, 5, 1234];
@@ -228,7 +228,7 @@ num.pop();
 console.log(num); // [1, 2, 3, 1, 4, 5]
 ```
 
-## unshift
+### unshift
 ```js
 // Add an item at the beginning and shift rest of elements to the right
 let num = [1, 2, 3, 1, 4, 5];
@@ -236,7 +236,7 @@ num.unshift(1234);
 console.log(num); // [1234, 1, 2, 3, 1, 4, 5]
 ```
 
-## shift
+### shift
 ```js
 // Remove an item at the beginning and shift rest of elements to the left
 let num = [1234, 1, 2, 3, 1, 4, 5];
@@ -244,65 +244,79 @@ num.shift();
 console.log(num); // [1, 2, 3, 1, 4, 5]
 ```
 
-## reverse
+### reverse
 ```js
 let num = [1, 2, 5666, 22, 45, 7, 0];
 num.reverse();
 console.log(num); // [0, 7, 45, 22, 5666, 2, 1]
 ```
 
-## sort
+### sort
 ```js
 let num = [1, 2, 5666, 22, 45, 7, 0];
 num.sort();
 console.log(num); // [0, 1, 2, 22, 45, 5666, 7]
 ```
 
-## map
-
+### map
 ```js
-
+let letters = ['a', 'b', 'c'];
+let upperCaseLetters = letters.map((letter) => letter.toUpperCase());
+console.log(letters+"/"+upperCaseLetters); // a,b,c/A,B,C
 ```
 
-## filter
-
+### filter
 ```js
-
+let fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Apple'];
+let filter = fruits.filter((fruit) => fruit.toLowerCase().includes('apple'));
+console.log(fruits+"/"+filter); // Apple,Banana,Orange,Mango/Apple,Apple
 ```
 
-## reduce
-
+### reduce
 ```js
+let num = [1, 2, 5666, 22, 45, 7, 0];
+const sum = num.reduce((acc, cur) => acc + cur);
+console.log(num+"/"+sum); // 1,2,5666,22,45,7,0/5743
 
+let letters = ['a', 'b', 'c'];
+const join = letters.reduce((acc, cur) => acc + cur);
+console.log(letters+"/"+join); // a,b,c/abc
 ```
 
-## find
-
+### find
+Return the first occurrence of an item.
 ```js
-
+let fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Apple'];
+let find = fruits.find((fruit) => fruit.toLowerCase().includes('apple'));
+console.log(fruits+"/"+find); // Apple,Banana,Orange,Mango/Apple
 ```
 
-## findIndex
-
+### findIndex
 ```js
-
+let fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Apple'];
+let findIndex = fruits.findIndex((fruit) => fruit.toLowerCase().includes('apple'));
+console.log(fruits+"/"+findIndex); // Apple,Banana,Orange,Mango/0
 ```
 
-## some
-
+### some
 ```js
-
+let fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Apple'];
+let some = fruits.some((fruit) => fruit.toLowerCase().includes('apple'));
+console.log(fruits+"/"+some); // Apple,Banana,Orange,Mango/true
 ```
 
-
-## every
-
+### every
 ```js
+let fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Apple'];
+let every = fruits.every((fruit) => fruit.toLowerCase().includes('apple'));
+console.log(fruits+"/"+every); // Apple,Banana,Orange,Mango/false
 
+let fruits = ['Apple', 'Apple', 'Apple', 'Apple', 'Apple'];
+let every = fruits.every((fruit) => fruit.toLowerCase().includes('apple'));
+console.log(fruits+"/"+every); // Apple,Apple,Apple,Apple,Apple/true
 ```
 
-
-## forEach function
+### forEach function
 ```js
 forEach((element) => { /* … */ })
 forEach((element, index) => { /* … */ })
@@ -317,9 +331,6 @@ names.forEach((name) => console.log(name));
 names.forEach((name, index) => console.log(index,":",name));
 names.forEach((name, index, array) => console.log(index,":",name,"-",array[index]));
 ```
-
-
-
 
 ### Two dimensional array
 
