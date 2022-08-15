@@ -475,18 +475,17 @@ setTimeout(callBackThisFunction, 1000);
 
 # Loops
 
+## for statement
 ```js
-
-// for statement
-
 for ([initialExpression]; [conditionExpression]; [incrementExpression])
   statement
 
 for (let num = 1; num <= 10; num++) {
   console.log('#', num);
 }
+```
 
-// do...while statement
+## do...while statement
 // do...while can be useful when you want to execute the statment at least once
 
 do
@@ -498,9 +497,10 @@ do {
   console.log('#', num);
   num += 1;
 } while (num <= 10);
+```
 
-
-// while statement
+## while statement
+```js
 while (condition)
   statement
 
@@ -509,8 +509,11 @@ while (num <= 10) {
   console.log('#', num);
   num += 1;
 }
+```
 
-// break statement
+## break statement
+
+```js
 // break without a label terminates the innermost enclosing while, do-while, for, or switch immediately and transfers control to the following statement
 
 break;
@@ -551,9 +554,11 @@ for (let outer = 1; outer <= 10; outer++) {
 	  console.log('Looking at', inner);
 	}
 }
+```
 
+## continue statement
 
-// continue statement
+```js
 // continue without a label terminates the innermost enclosing while, do-while, for, or switch immediately and continues execution of the loop with the next iteration.
 
 continue;
@@ -571,18 +576,20 @@ for (let num = 1; num <= 10; num++) {
 
 
 // todo
+```
 
-
-// labeled statement
+## labeled statement
+```js
 // labeled statement is used with break or continue statements.
 
 label:
   statement
 
 // todo
+```
 
-// for...in statement iterates over object literals to get the index/keys of the object.
-
+## for...in statement iterates over object literals to get the index/keys of the object.
+```js
 for (variable in object)
   statement
 
@@ -601,9 +608,10 @@ let person = {
 for (const key in person) {
   console.log(key,":",person[key]);
 }
+```
 
-// for...of statement iterates over iterable objects including String, Array, TypedArray, Map, Set, and Intl.Segments to get the property values.
-
+## for...of statement iterates over iterable objects including String, Array, TypedArray, Map, Set, and Intl.Segments to get the property values.
+```js
 for (variable of object)
   statement
 
@@ -622,8 +630,10 @@ let person = {
 for (const value of Object.values(person)) {
   console.log(value);
 }
+```
 
-// forEach function
+## forEach function
+```js
 forEach((element) => { /* … */ })
 forEach((element, index) => { /* … */ })
 forEach((element, index, array) => { /* … */ })
