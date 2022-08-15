@@ -486,6 +486,8 @@ for (let num = 1; num <= 10; num++) {
 ```
 
 ## do...while statement
+
+```js
 // do...while can be useful when you want to execute the statment at least once
 
 do
