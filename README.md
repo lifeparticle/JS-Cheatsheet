@@ -98,6 +98,30 @@ function firstNum([first]) {
 }
 
 firstNum(num);
+
+// Skip
+let [first, , third] = num;
+
+// Rest of the array
+let [first, ...others] = num;
+// others = [44, 65]
+
+// Skip and rest of the array
+let [first, , ...others] = num;
+// others = [65]
+
+let nums = [
+	[1, 2, 3],
+	[4, 5, 6],
+];
+
+let [row1, row2] = nums;
+console.log(row1 +" "+row2);
+
+
+for (const [first, second, third] of nums) {
+  console.log(first, second, third)
+}
 ```
 
 ```js
