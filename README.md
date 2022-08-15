@@ -258,6 +258,69 @@ num.sort();
 console.log(num); // [0, 1, 2, 22, 45, 5666, 7]
 ```
 
+## map
+
+```js
+
+```
+
+## filter
+
+```js
+
+```
+
+## reduce
+
+```js
+
+```
+
+## find
+
+```js
+
+```
+
+## findIndex
+
+```js
+
+```
+
+## some
+
+```js
+
+```
+
+
+## every
+
+```js
+
+```
+
+
+## forEach function
+```js
+forEach((element) => { /* … */ })
+forEach((element, index) => { /* … */ })
+forEach((element, index, array) => { /* … */ })
+// element = The current element being processed in the array.
+// index = The index of element in the array.
+// array = The array forEach() was called upon.
+
+let names = ["Dariana Trahan", "Lillie Earl", "Esther Yeager", "Marianna Brownlee", "Sara Tong", "Clint Winslow", "Efrain Popp", "Anya Aiello", "Sergio Truitt", "Keyshawn Apodaca"];
+
+names.forEach((name) => console.log(name));
+names.forEach((name, index) => console.log(index,":",name));
+names.forEach((name, index, array) => console.log(index,":",name,"-",array[index]));
+```
+
+
+
+
 ### Two dimensional array
 
 ```js
@@ -688,22 +751,6 @@ let person = {
 for (const value of Object.values(person)) {
   console.log(value);
 }
-```
-
-## forEach function
-```js
-forEach((element) => { /* … */ })
-forEach((element, index) => { /* … */ })
-forEach((element, index, array) => { /* … */ })
-// element = The current element being processed in the array.
-// index = The index of element in the array.
-// array = The array forEach() was called upon.
-
-let names = ["Dariana Trahan", "Lillie Earl", "Esther Yeager", "Marianna Brownlee", "Sara Tong", "Clint Winslow", "Efrain Popp", "Anya Aiello", "Sergio Truitt", "Keyshawn Apodaca"];
-
-names.forEach((name) => console.log(name));
-names.forEach((name, index) => console.log(index,":",name));
-names.forEach((name, index, array) => console.log(index,":",name,"-",array[index]));
 ```
 
 # Logical AND (&&)
