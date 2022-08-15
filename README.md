@@ -1083,6 +1083,50 @@ todo;
 todo;
 ```
 
+# Class
+
+```js
+class Person {
+	constructor(firstName, lastName, age = 0) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.addresses = [];
+	}
+	getFullName() {
+		return this.firstName + ' ' + this.lastName;;
+	}	
+}
+
+class User extends Person {
+	static userCount = 0;
+	// default value for age and set address with an intial value
+	constructor(firstName, lastName, age = 0) {
+		super(firstName, lastName, age);
+		User.userCount++;
+	}
+
+	setAddress(address) {
+		this.addresses.push(address);
+	}
+	
+	static getTotalUser() {
+		return this.userCount;
+	}
+}
+
+let user = new User('Bob', 'Rob');
+console.log(user); // {firstName: 'Bob', lastName: 'Rob', age: 0, addresses: Array(0)}
+console.log(user.getFullName()); // Bob Rob
+
+user.setAddress('15 160th Road, Wathena,ks, 66090  United States');
+user.setAddress('13 Central Avenue, Albany,ny, 12205  United States');
+
+console.log(user.addresses); // ['15 160th Road, Wathena,ks, 66090  United States', '13 Central Avenue, Albany,ny, 12205  United States']
+
+console.log(User.userCount); // 1
+```
+
 # Tools
 
 1. [Webpack](https://webpack.js.org/concepts/why-webpack/)
