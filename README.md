@@ -453,6 +453,26 @@ const hello = (callback, name) => {
 console.log(hello(callBackThisFunction, "Bob"));
 ```
 
+# Delay
+
+## Print "Hello, World" in every 1 second
+```js
+const callBackThisFunction = (name) => {
+	console.log("Hello, World");
+}
+
+setInterval(callBackThisFunction, 1000);
+```
+
+## Print "Hello, World" after 1 second
+```js
+const callBackThisFunction = (name) => {
+	console.log("Hello, World");
+}
+
+setTimeout(callBackThisFunction, 1000);
+```
+
 # Loops
 
 ```js
