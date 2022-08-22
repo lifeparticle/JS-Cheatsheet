@@ -1,5 +1,8 @@
-# JSX
+# Introduction
 
+React is a JavaScript library for building composable user interfaces. React uses only one HTML file called `index.html` to load the entire application. That is why it's called a single page application.
+
+# JSX
 
 JSX (JavaScript XML) is used to describe the UI using React. It creates React elements.
 
