@@ -1,8 +1,6 @@
 # Introduction
 
-[ECMAScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources)
-
-Ecma (European Computer Manufacturers Association) International creates standardization of information and communication systems. You can find all the standards over [here](https://www.ecma-international.org/publications-and-standards/standards/). One of the standards is called [ecma-262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/). This refers to the specification for ECMAScript programming language 2022. On the other hand, JavaScript is an implementation of that specification. Below we have a list of ECMAScript language specifications.
+Ecma (European Computer Manufacturers Association) International creates standardization of information and communication systems. You can find all the standards over [here](https://www.ecma-international.org/publications-and-standards/standards/). One of the standards is called [ecma-262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/). This refers to the specification for [ECMAScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources) programming language 2022. On the other hand, JavaScript is an implementation of that specification. Below we have a list of ECMAScript language specifications.
 
 ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES2016, ES2017, ES2018, ES2019, ES2020, ES2022
 
