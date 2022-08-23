@@ -8,14 +8,57 @@ ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES201
 
 JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, Safari) and server-side (Node.js).
 
-
 # How to add JavaScript to a web page
 
-##
+## Everything between script tags will be executed by the web browser
 
+```js
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		Hello, World!
+	</body>
 
-##
+	<script type="text/javascript">
+		alert("Hello, World!");
+	</script>
+</html>
+```
 
+## Link an external file to a web page
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body>
+		Hello, World!
+	</body>
+</html>
+```
+
+# Comments
+
+```js
+// single line comment
+```
+
+```js
+multiline;
+comment;
+```
 
 # Data types
 
@@ -129,15 +172,15 @@ let nums = [
 ];
 
 let [row1, row2] = nums;
-console.log(row1 +" "+row2);
-
+console.log(row1 + " " + row2);
 
 for (const [first, second, third] of nums) {
-  console.log(first, second, third)
+	console.log(first, second, third);
 }
 ```
 
 ### split
+
 ```js
 let sentence = "ThereIsNoSpoon";
 let words = sentence.split(/(?=[A-Z])/);
@@ -145,12 +188,14 @@ console.log(words); // ['There', 'Is', 'No', 'Spoon']
 ```
 
 ### fill
+
 ```js
 const arr = Array(10).fill(0);
 console.log(arr); // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ```
 
 ### concat
+
 ```js
 const arr1 = [1, 2, 3];
 const arr2 = [1, 4, 5];
@@ -162,11 +207,13 @@ console.log(arr3); // [1, 2, 3, 1, 4, 5]
 ```
 
 ### length
+
 ```js
 console.log(arr3.length); // 6
 ```
 
 ### indexOf
+
 ```js
 console.log(arr3.indexOf(1)); // 0
 console.log(arr3.indexOf(6)); // -1
@@ -174,11 +221,13 @@ console.log(arr3.indexOf(5)); // 5
 ```
 
 ### lastIndexOf
+
 ```js
 console.log(arr3.lastIndexOf(1)); // 3
 ```
 
 ### includes
+
 ```js
 console.log(arr3.includes(1)); // true
 console.log(arr3.includes(6)); // false
@@ -186,17 +235,20 @@ console.log(arr3.includes(5)); // true
 ```
 
 ### toString
+
 ```js
 console.log(arr3.toString()); // 1,2,3,1,4,5
 ```
 
 ### join
+
 ```js
 const words = ["There", "Is", "No", "Spoon"];
 console.log(words.join(", ")); // There, Is, No, Spoon
 ```
 
 ### slice
+
 ```js
 // The slice(start, end) method where the end is exclusive returns a shallow copy of a part of an array and returns a new array. It does not change the original array.
 let num = [1, 2, 3, 1, 4, 5];
@@ -208,6 +260,7 @@ console.log(num.slice(3)); // [1, 4, 5]
 ```
 
 ### splice
+
 ```js
 // The splice(start, deleteCount, item1, item2, itemN) returns an array containing the deleted element. It modifies the original array by removing or adding additional items.
 let num = [1, 2, 3, 1, 4, 5];
@@ -226,6 +279,7 @@ console.log(num); // [4566, 3, 1, 4, 5]
 ```
 
 ### push
+
 ```js
 // Add an item at the end
 let num = [1, 2, 3, 1, 4, 5];
@@ -234,6 +288,7 @@ console.log(num); // [1, 2, 3, 1, 4, 5, 1234]
 ```
 
 ### pop
+
 ```js
 // Remove an item from the end
 let num = [1, 2, 3, 1, 4, 5, 1234];
@@ -242,6 +297,7 @@ console.log(num); // [1, 2, 3, 1, 4, 5]
 ```
 
 ### unshift
+
 ```js
 // Add an item at the beginning and shift rest of the elements to the right
 let num = [1, 2, 3, 1, 4, 5];
@@ -250,6 +306,7 @@ console.log(num); // [1234, 1, 2, 3, 1, 4, 5]
 ```
 
 ### shift
+
 ```js
 // Remove an item at the beginning and shift rest of the elements to the left
 let num = [1234, 1, 2, 3, 1, 4, 5];
@@ -258,6 +315,7 @@ console.log(num); // [1, 2, 3, 1, 4, 5]
 ```
 
 ### reverse
+
 ```js
 let num = [1, 2, 5666, 22, 45, 7, 0];
 num.reverse();
@@ -265,6 +323,7 @@ console.log(num); // [0, 7, 45, 22, 5666, 2, 1]
 ```
 
 ### sort
+
 ```js
 let num = [1, 2, 5666, 22, 45, 7, 0];
 num.sort();
@@ -272,77 +331,107 @@ console.log(num); // [0, 1, 2, 22, 45, 5666, 7]
 ```
 
 ### map
+
 ```js
-let letters = ['a', 'b', 'c'];
+let letters = ["a", "b", "c"];
 let upperCaseLetters = letters.map((letter) => letter.toUpperCase());
-console.log(letters+"/"+upperCaseLetters); // a,b,c/A,B,C
+console.log(letters + "/" + upperCaseLetters); // a,b,c/A,B,C
 ```
 
 ### filter
+
 ```js
-let fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Apple'];
-let filter = fruits.filter((fruit) => fruit.toLowerCase().includes('apple'));
-console.log(fruits+"/"+filter); // Apple,Banana,Orange,Mango/Apple,Apple
+let fruits = ["Apple", "Banana", "Orange", "Mango", "Apple"];
+let filter = fruits.filter((fruit) => fruit.toLowerCase().includes("apple"));
+console.log(fruits + "/" + filter); // Apple,Banana,Orange,Mango/Apple,Apple
 ```
 
 ### reduce
+
 ```js
 let num = [1, 2, 5666, 22, 45, 7, 0];
 const sum = num.reduce((acc, cur) => acc + cur);
-console.log(num+"/"+sum); // 1,2,5666,22,45,7,0/5743
+console.log(num + "/" + sum); // 1,2,5666,22,45,7,0/5743
 
-let letters = ['a', 'b', 'c'];
+let letters = ["a", "b", "c"];
 const join = letters.reduce((acc, cur) => acc + cur);
-console.log(letters+"/"+join); // a,b,c/abc
+console.log(letters + "/" + join); // a,b,c/abc
 ```
 
 ### find
+
 Return the first occurrence of an item.
+
 ```js
-let fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Apple'];
-let find = fruits.find((fruit) => fruit.toLowerCase().includes('apple'));
-console.log(fruits+"/"+find); // Apple,Banana,Orange,Mango/Apple
+let fruits = ["Apple", "Banana", "Orange", "Mango", "Apple"];
+let find = fruits.find((fruit) => fruit.toLowerCase().includes("apple"));
+console.log(fruits + "/" + find); // Apple,Banana,Orange,Mango/Apple
 ```
 
 ### findIndex
+
 ```js
-let fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Apple'];
-let findIndex = fruits.findIndex((fruit) => fruit.toLowerCase().includes('apple'));
-console.log(fruits+"/"+findIndex); // Apple,Banana,Orange,Mango/0
+let fruits = ["Apple", "Banana", "Orange", "Mango", "Apple"];
+let findIndex = fruits.findIndex((fruit) =>
+	fruit.toLowerCase().includes("apple")
+);
+console.log(fruits + "/" + findIndex); // Apple,Banana,Orange,Mango/0
 ```
 
 ### some
+
 ```js
-let fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Apple'];
-let some = fruits.some((fruit) => fruit.toLowerCase().includes('apple'));
-console.log(fruits+"/"+some); // Apple,Banana,Orange,Mango/true
+let fruits = ["Apple", "Banana", "Orange", "Mango", "Apple"];
+let some = fruits.some((fruit) => fruit.toLowerCase().includes("apple"));
+console.log(fruits + "/" + some); // Apple,Banana,Orange,Mango/true
 ```
 
 ### every
-```js
-let fruits = ['Apple', 'Banana', 'Orange', 'Mango', 'Apple'];
-let every = fruits.every((fruit) => fruit.toLowerCase().includes('apple'));
-console.log(fruits+"/"+every); // Apple,Banana,Orange,Mango/false
 
-let fruits = ['Apple', 'Apple', 'Apple', 'Apple', 'Apple'];
-let every = fruits.every((fruit) => fruit.toLowerCase().includes('apple'));
-console.log(fruits+"/"+every); // Apple,Apple,Apple,Apple,Apple/true
+```js
+let fruits = ["Apple", "Banana", "Orange", "Mango", "Apple"];
+let every = fruits.every((fruit) => fruit.toLowerCase().includes("apple"));
+console.log(fruits + "/" + every); // Apple,Banana,Orange,Mango/false
+
+let fruits = ["Apple", "Apple", "Apple", "Apple", "Apple"];
+let every = fruits.every((fruit) => fruit.toLowerCase().includes("apple"));
+console.log(fruits + "/" + every); // Apple,Apple,Apple,Apple,Apple/true
 ```
 
 ### forEach function
+
 ```js
-forEach((element) => { /* … */ })
-forEach((element, index) => { /* … */ })
-forEach((element, index, array) => { /* … */ })
+forEach((element) => {
+	/* … */
+});
+forEach((element, index) => {
+	/* … */
+});
+forEach((element, index, array) => {
+	/* … */
+});
 // element = The current element being processed in the array.
 // index = The index of element in the array.
 // array = The array forEach() was called upon.
 
-let names = ["Dariana Trahan", "Lillie Earl", "Esther Yeager", "Marianna Brownlee", "Sara Tong", "Clint Winslow", "Efrain Popp", "Anya Aiello", "Sergio Truitt", "Keyshawn Apodaca"];
+let names = [
+	"Dariana Trahan",
+	"Lillie Earl",
+	"Esther Yeager",
+	"Marianna Brownlee",
+	"Sara Tong",
+	"Clint Winslow",
+	"Efrain Popp",
+	"Anya Aiello",
+	"Sergio Truitt",
+	"Keyshawn Apodaca",
+];
 
 names.forEach((name) => console.log(name));
-names.forEach((name, index) => console.log(index,":",name));
-names.forEach((name, index, array) => console.log(index,":",name,"-",array[index]));
+names.forEach((name, index) => console.log(index, ":", name));
+names.forEach((name, index, array) =>
+	console.log(index, ":", name, "-", array[index])
+);
 ```
 
 ### Two-dimensional array
@@ -582,16 +671,15 @@ console.log(result); // hello world
 A callback function (A) is a function passed into another function (B) as an argument, which can be called by that function (B).
 
 ```js
-
 // A
 const callBackThisFunction = (name) => {
 	return "Hello, " + name;
-}
+};
 
 // B
 const hello = (callback, name) => {
 	return callBackThisFunction(name);
-}
+};
 
 console.log(hello(callBackThisFunction, "Bob"));
 ```
@@ -599,19 +687,21 @@ console.log(hello(callBackThisFunction, "Bob"));
 # Delay
 
 ## Print "Hello, World" every 1 second
+
 ```js
 const callBackThisFunction = (name) => {
 	console.log("Hello, World");
-}
+};
 
 setInterval(callBackThisFunction, 1000);
 ```
 
 ## Print "Hello, World" after 1 second
+
 ```js
 const callBackThisFunction = (name) => {
 	console.log("Hello, World");
-}
+};
 
 setTimeout(callBackThisFunction, 1000);
 ```
@@ -619,12 +709,13 @@ setTimeout(callBackThisFunction, 1000);
 # Loops
 
 ## for statement
+
 ```js
 for ([initialExpression]; [conditionExpression]; [incrementExpression])
-  statement
+	statement;
 
 for (let num = 1; num <= 10; num++) {
-  console.log('#', num);
+	console.log("#", num);
 }
 ```
 
@@ -633,26 +724,25 @@ for (let num = 1; num <= 10; num++) {
 ```js
 // do...while can be useful when you want to execute the statement at least once
 
-do
-  statement
+do statement;
 while (condition);
 
 let num = 1;
 do {
-  console.log('#', num);
-  num += 1;
+	console.log("#", num);
+	num += 1;
 } while (num <= 10);
 ```
 
 ## while statement
+
 ```js
-while (condition)
-  statement
+while (condition) statement;
 
 let num = 1;
 while (num <= 10) {
-  console.log('#', num);
-  num += 1;
+	console.log("#", num);
+	num += 1;
 }
 ```
 
@@ -724,56 +814,78 @@ for (let num = 1; num <= 10; num++) {
 ```
 
 ## labeled statement
+
 ```js
 // labeled statement is used with a break or continue statements.
 
-label:
-  statement
+label: statement;
 
 // todo
 ```
 
 ## for...in statement iterates over object literals to get the index/keys of the object.
-```js
-for (variable in object)
-  statement
 
-let names = ["Dariana Trahan", "Lillie Earl", "Esther Yeager", "Marianna Brownlee", "Sara Tong", "Clint Winslow", "Efrain Popp", "Anya Aiello", "Sergio Truitt", "Keyshawn Apodaca"];
+```js
+for (variable in object) statement;
+
+let names = [
+	"Dariana Trahan",
+	"Lillie Earl",
+	"Esther Yeager",
+	"Marianna Brownlee",
+	"Sara Tong",
+	"Clint Winslow",
+	"Efrain Popp",
+	"Anya Aiello",
+	"Sergio Truitt",
+	"Keyshawn Apodaca",
+];
 
 for (const i in names) {
-  console.log(names[i]);
+	console.log(names[i]);
 }
 
 let person = {
-  name: "Dariana Trahan",
-  age: 21,
-  address: "localhost"
-}
+	name: "Dariana Trahan",
+	age: 21,
+	address: "localhost",
+};
 
 for (const key in person) {
-  console.log(key,":",person[key]);
+	console.log(key, ":", person[key]);
 }
 ```
 
 ## for...of statement iterates over iterable objects including String, Array, TypedArray, Map, Set, and Intl. Segments to get the property values.
-```js
-for (variable of object)
-  statement
 
-let names = ["Dariana Trahan", "Lillie Earl", "Esther Yeager", "Marianna Brownlee", "Sara Tong", "Clint Winslow", "Efrain Popp", "Anya Aiello", "Sergio Truitt", "Keyshawn Apodaca"];
+```js
+for (variable of object) statement;
+
+let names = [
+	"Dariana Trahan",
+	"Lillie Earl",
+	"Esther Yeager",
+	"Marianna Brownlee",
+	"Sara Tong",
+	"Clint Winslow",
+	"Efrain Popp",
+	"Anya Aiello",
+	"Sergio Truitt",
+	"Keyshawn Apodaca",
+];
 
 for (const name of names) {
-  console.log(name);
+	console.log(name);
 }
 
 let person = {
-  name: "Dariana Trahan",
-  age: 21,
-  address: "localhost"
-}
+	name: "Dariana Trahan",
+	age: 21,
+	address: "localhost",
+};
 
 for (const value of Object.values(person)) {
-  console.log(value);
+	console.log(value);
 }
 ```
 
@@ -996,13 +1108,12 @@ let user = {
 	address: {
 		unit: 2,
 		city: "The City",
-		country: "The Country"
+		country: "The Country",
 	},
 	getFullName: function () {
 		return `${this.firstName} ${this.lastName}`;
 	},
 };
-
 
 let firstName = user.firstName;
 
@@ -1023,7 +1134,9 @@ userId(user);
 let { firstName: fName } = user;
 // fName = 'bob'
 
-let {address: {unit, city, country} } = user;
+let {
+	address: { unit, city, country },
+} = user;
 ```
 
 ## Object property shorthand
@@ -1100,8 +1213,8 @@ todo;
 
 ```js
 class Person {
-    static #PRIVATE_STATIC_FIELD;
-	
+	static #PRIVATE_STATIC_FIELD;
+
 	// private fields
 	#firstName;
 	#lastName;
@@ -1112,17 +1225,17 @@ class Person {
 		this.addresses = [];
 	}
 	getFullName() {
-		return this.#firstName + ' ' + this.#lastName;;
+		return this.#firstName + " " + this.#lastName;
 	}
-	
+
 	// private method
-	#privateMethod () {
-		return 'hello world';
+	#privateMethod() {
+		return "hello world";
 	}
-	
+
 	// private static method
 	static #privateStaticMethod() {
-		return 'hello world';
+		return "hello world";
 	}
 }
 
@@ -1137,18 +1250,18 @@ class User extends Person {
 	setAddress(address) {
 		this.addresses.push(address);
 	}
-	
+
 	static getTotalUser() {
 		return this.USER_COUNT;
 	}
 }
 
-let user = new User('Bob', 'Rob');
+let user = new User("Bob", "Rob");
 console.log(user); // {age: 0, addresses: Array(2), #firstName: 'Bob', #lastName: 'Rob'}
 console.log(user.getFullName()); // Bob Rob
 
-user.setAddress('15 160th Road, Wathena,ks, 66090  United States');
-user.setAddress('13 Central Avenue, Albany,ny, 12205  United States');
+user.setAddress("15 160th Road, Wathena,ks, 66090  United States");
+user.setAddress("13 Central Avenue, Albany,ny, 12205  United States");
 
 console.log(user.addresses); // ['15 160th Road, Wathena,ks, 66090  United States', '13 Central Avenue, Albany,ny, 12205  United States']
 
