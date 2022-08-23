@@ -54,8 +54,10 @@ JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, S
 ```
 
 ```js
+/*
 multiline;
 comment;
+*/
 ```
 
 # Data types
