@@ -2,7 +2,20 @@
 
 [ECMAScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources)
 
-ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES2016, ES2017, ES2018, ES2019, ES2020, ES2021
+Ecma (European Computer Manufacturers Association) International creates standardization of information and communication systems. You can find all the standards over [here](https://www.ecma-international.org/publications-and-standards/standards/). One of the standards is called [ecma-262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/). This refers to the specification for ECMAScript programming language 2022. On the other hand, JavaScript is an implementation of that specification. Below we have a list of ECMAScript language specifications.
+
+ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES2016, ES2017, ES2018, ES2019, ES2020, ES2022
+
+JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, Safari) and server-side (Node.js).
+
+
+# How to add JavaScript to a web page
+
+##
+
+
+##
+
 
 # Data types
 
@@ -185,7 +198,7 @@ console.log(words.join(", ")); // There, Is, No, Spoon
 
 ### slice
 ```js
-// The slice(start, end) method where end is exclusive, returns a shallow copy of a part of an array and returns a new array. It does not change the original array.
+// The slice(start, end) method where the end is exclusive returns a shallow copy of a part of an array and returns a new array. It does not change the original array.
 let num = [1, 2, 3, 1, 4, 5];
 console.log(num.slice(3, 4)); // [1]
 console.log(num); // [1, 2, 3, 1, 4, 5]
@@ -230,7 +243,7 @@ console.log(num); // [1, 2, 3, 1, 4, 5]
 
 ### unshift
 ```js
-// Add an item at the beginning and shift rest of elements to the right
+// Add an item at the beginning and shift rest of the elements to the right
 let num = [1, 2, 3, 1, 4, 5];
 num.unshift(1234);
 console.log(num); // [1234, 1, 2, 3, 1, 4, 5]
@@ -238,7 +251,7 @@ console.log(num); // [1234, 1, 2, 3, 1, 4, 5]
 
 ### shift
 ```js
-// Remove an item at the beginning and shift rest of elements to the left
+// Remove an item at the beginning and shift rest of the elements to the left
 let num = [1234, 1, 2, 3, 1, 4, 5];
 num.shift();
 console.log(num); // [1, 2, 3, 1, 4, 5]
@@ -332,7 +345,7 @@ names.forEach((name, index) => console.log(index,":",name));
 names.forEach((name, index, array) => console.log(index,":",name,"-",array[index]));
 ```
 
-### Two dimensional array
+### Two-dimensional array
 
 ```js
 let nums = [
@@ -389,7 +402,7 @@ let
 const
 ```
 
-`let` and `const` behave the same, except `const` can not be changed later. So use `let` if the value will change over time and `const` for constant value.
+`let` and `const` behave the same, except `const` can not be changed later. So use `let` if the value will change over time and `const` for a constant value.
 
 ## Scope
 
@@ -413,7 +426,7 @@ Code in between two curly brackets `{}` is called a block.
 #### Function block
 
 ```js
-// can't access here
+// can't access it here
 console.log(name); // undefined
 
 function getName() {
@@ -421,7 +434,7 @@ function getName() {
 	console.log(name); // Dariana Trahan
 }
 
-// can't access here
+// can't access it here
 console.log(name); // undefined
 ```
 
@@ -445,7 +458,7 @@ if (true) {
 console.log(name); // Dariana Trahan
 ```
 
-Prior to the execution of the code, the interpreter move the definition of functions, variables, or classes to the top of their scope. This process is known as JavaScript hoisting. It does not take the value.
+Prior to the execution of the code, the interpreter moves the definition of functions, variables, or classes to the top of their scope. This process is known as JavaScript hoisting. It does not take the value.
 
 ```js
 name = "Dariana Trahan";
@@ -461,7 +474,7 @@ function getName() {
 }
 ```
 
-We can avoid hoisting and save sapce using anonymous function expression .
+We can avoid hoisting and save space using anonymous function expression.
 
 ```js
 console.log(getName()); // Uncaught ReferenceError: getName is not defined
@@ -489,7 +502,7 @@ console.log(getName()); // Dariana Trahan
 
 ## Regular / Named function
 
-You can use functions before you create them. Because they are hoisted.
+You can use functions before you create them because they are hoisted.
 
 ```js
 function hello() {
@@ -531,7 +544,7 @@ const hello = () => {
 hello(); // 'hello world'
 ```
 
-With concise body, we can have implicit return.
+With a concise body, we can have an implicit return.
 
 ```js
 const hello = () => "hello world";
@@ -585,7 +598,7 @@ console.log(hello(callBackThisFunction, "Bob"));
 
 # Delay
 
-## Print "Hello, World" in every 1 second
+## Print "Hello, World" every 1 second
 ```js
 const callBackThisFunction = (name) => {
 	console.log("Hello, World");
@@ -618,7 +631,7 @@ for (let num = 1; num <= 10; num++) {
 ## do...while statement
 
 ```js
-// do...while can be useful when you want to execute the statment at least once
+// do...while can be useful when you want to execute the statement at least once
 
 do
   statement
@@ -696,7 +709,7 @@ for (let outer = 1; outer <= 10; outer++) {
 continue;
 continue label;
 
-// Look at the all numbers.
+// Look at all the numbers.
 let theNum = 5;
 for (let num = 1; num <= 10; num++) {
   if (num === theNum) {
@@ -712,7 +725,7 @@ for (let num = 1; num <= 10; num++) {
 
 ## labeled statement
 ```js
-// labeled statement is used with break or continue statements.
+// labeled statement is used with a break or continue statements.
 
 label:
   statement
@@ -742,7 +755,7 @@ for (const key in person) {
 }
 ```
 
-## for...of statement iterates over iterable objects including String, Array, TypedArray, Map, Set, and Intl.Segments to get the property values.
+## for...of statement iterates over iterable objects including String, Array, TypedArray, Map, Set, and Intl. Segments to get the property values.
 ```js
 for (variable of object)
   statement
@@ -766,7 +779,7 @@ for (const value of Object.values(person)) {
 
 # Logical AND (&&)
 
-Logical AND (&&) evaluates operands from left to right. It returns value of the first falsy operand. If all values are truthy, it returns value of the last operand.
+Logical AND (&&) evaluates operands from left to the right. It returns the value of the first falsy operand. If all values are truthy, it returns the value of the last operand.
 
 Examples falsy:
 
@@ -789,7 +802,7 @@ result = "foo" && 4; // 4
 
 # Logical OR (||)
 
-Logical OR (||) evaluates operands from left to right. It returns value of the first truthy operand. If all values are falsy, it returns value of the last operand.
+Logical OR (||) evaluates operands from left to the right. It returns the value of the first truthy operand. If all values are falsy, it returns the value of the last operand.
 
 ```js
 result = "" || "foo"; //  'foo'
@@ -801,7 +814,7 @@ result = "foo" || 4; // 'foo'
 
 # JavaScript modules
 
-We can export functions, var, let, const, and classes. Exported items needs to be top-level items. We can't export items from a function.
+We can export functions, var, let, const, and classes. Exported items need to be top-level items. We can't export items from a function.
 
 1. We can use the `export` statement to give access to module features.
 
@@ -1015,7 +1028,7 @@ let {address: {unit, city, country} } = user;
 
 ## Object property shorthand
 
-We can use the object property shorthand, when property value has the same name as the property key.
+We can use the object property shorthand when the property value has the same name as the property key.
 
 ```js
 let user = {
@@ -1115,7 +1128,7 @@ class Person {
 
 class User extends Person {
 	static USER_COUNT = 0;
-	// default value for age and set address with an intial value
+	// default value for age and set address with an initial value
 	constructor(firstName, lastName, age = 0) {
 		super(firstName, lastName, age);
 		User.USER_COUNT++;
@@ -1142,6 +1155,12 @@ console.log(user.addresses); // ['15 160th Road, Wathena,ks, 66090  United State
 console.log(User.USER_COUNT); // 1
 ```
 
+# Debugging
+
+```js
+console.log("This is a test");
+```
+
 # Tools
 
 1. [Webpack](https://webpack.js.org/concepts/why-webpack/)
@@ -1155,3 +1174,4 @@ console.log(User.USER_COUNT); // 1
 3. [Learn JavaScript for free](https://scrimba.com/learn/learnjavascript)
 4. [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 5. [Javascript refresher](https://github.com/Asabeneh/30-Days-Of-React/blob/master/01_Day_JavaScript_Refresher/01_javascript_refresher.md)
+6. [ecma-international](https://www.ecma-international.org/about-ecma/history/)
