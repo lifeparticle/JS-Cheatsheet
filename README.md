@@ -62,13 +62,19 @@ comment;
 
 # JavaScript Variables
 
+Use camel case for naming variables.
+
+```js
+let firstName = 'Bob';
+```
+
 ```js
 var name = 'Bob';
 let id = 8765;
 const BIRTH_DAY = '1 Jan 2000';
 ```
 
-`let` and `const` behave the same, except `const` can not be changed later. So use `let` if the value will change over time and `const` for a constant value. On the other hand, 'let` and `var` cab be changed later.
+Use `let` and `var` if the value will change over time and `const` (can not be changed later, and you'll get an error if you try reassigning a new value) for a constant value. `var` has global and `let` has block scope.
 
 ## Scope
 
@@ -160,16 +166,17 @@ console.log(getName()); // Dariana Trahan
 
 # Data types
 
+
 | No  | Name      | Example                  | Doc                                                                 | Data Type          |
 | --- | --------- | ------------------------ | ------------------------------------------------------------------- | ------------------ |
-| 1   | Number    | let a = 17               | [link](https://developer.mozilla.org/en-US/docs/Glossary/Number)    | Primitive data     |
-| 2   | BigInt    | let a = 348378344239489n | [link](https://developer.mozilla.org/en-US/docs/Glossary/BigInt)    | Primitive data     |
-| 3   | String    | let a = "Hello universe" | [link](https://developer.mozilla.org/en-US/docs/Glossary/String)    | Primitive data     |
-| 4   | Boolean   | let a = true             | [link](https://developer.mozilla.org/en-US/docs/Glossary/Boolean)   | Primitive data     |
-| 5   | Symbol    | let sym = Symbol()       | [link](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)    | Primitive data     |
-| 6   | null      | let a = null             | [link](https://developer.mozilla.org/en-US/docs/Glossary/Null)      | Primitive data     |
-| 7   | undefined | let a = undefined        | [link](https://developer.mozilla.org/en-US/docs/Glossary/undefined) | Primitive data     |
-| 8   | Object    | let a = {a: 'test'}      | [link](https://developer.mozilla.org/en-US/docs/Glossary/Object)    | Non-primitive data |
+| 1   | Number    | let a = 17                                                                                     | [link](https://developer.mozilla.org/en-US/docs/Glossary/Number)    | Primitive data     |
+| 2   | BigInt    | let a = 348378344239489n                                                                       | [link](https://developer.mozilla.org/en-US/docs/Glossary/BigInt)    | Primitive data     |
+| 3   | String    | let a = "Hello universe" <br/> let a = 'Hello universe' <br/> let a = \`${Hello universe}\`    | [link](https://developer.mozilla.org/en-US/docs/Glossary/String)    | Primitive data     |
+| 4   | Boolean   | let a = true                                                                                   | [link](https://developer.mozilla.org/en-US/docs/Glossary/Boolean)   | Primitive data     |
+| 5   | Symbol    | let sym = Symbol()                                                                             | [link](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)    | Primitive data     |
+| 6   | null      | let a = null                                                                                   | [link](https://developer.mozilla.org/en-US/docs/Glossary/Null)      | Primitive data     |
+| 7   | undefined | let a = undefined                                                                              | [link](https://developer.mozilla.org/en-US/docs/Glossary/undefined) | Primitive data     |
+| 8   | Object    | let a = {a: 'test'}                                                                            | [link](https://developer.mozilla.org/en-US/docs/Glossary/Object)    | Non-primitive data |
 
 ## How to check the data type
 
