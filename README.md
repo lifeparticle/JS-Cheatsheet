@@ -60,6 +60,104 @@ comment;
 */
 ```
 
+# JavaScript Variables
+
+```js
+var name = 'Bob';
+let id = 8765;
+const BIRTH_DAY = '1 Jan 2000';
+```
+
+`let` and `const` behave the same, except `const` can not be changed later. So use `let` if the value will change over time and `const` for a constant value. On the other hand, 'let` and `var` cab be changed later.
+
+## Scope
+
+### Global scope
+
+```js
+let name = "Dariana Trahan"; // var name = "Dariana Trahan"; const name = "Dariana Trahan";
+console.log(name); // Dariana Trahan
+
+function getName() {
+	console.log(name); // Dariana Trahan
+}
+
+console.log(name); // Dariana Trahan
+```
+
+### Local scope
+
+Code in between two curly brackets `{}` is called a block.
+
+#### Function block
+
+```js
+// can't access it here
+console.log(name); // undefined
+
+function getName() {
+	let name = "Dariana Trahan";
+	console.log(name); // Dariana Trahan
+}
+
+// can't access it here
+console.log(name); // undefined
+```
+
+#### Block scope
+
+```js
+if (true) {
+	let name = "Dariana Trahan"; // const name = "Dariana Trahan";
+	console.log(name);
+}
+
+console.log(name); // undefined
+```
+
+```js
+if (true) {
+	var name = "Dariana Trahan";
+	console.log(name);
+}
+
+console.log(name); // Dariana Trahan
+```
+
+Prior to the execution of the code, the interpreter moves the definition of functions, variables, or classes to the top of their scope. This process is known as JavaScript hoisting. It does not take the value.
+
+```js
+name = "Dariana Trahan";
+console.log(name);
+var name;
+```
+
+```js
+console.log(getName());
+
+function getName() {
+	console.log(name); // Dariana Trahan
+}
+```
+
+We can avoid hoisting and save space using anonymous function expression.
+
+```js
+console.log(getName()); // Uncaught ReferenceError: getName is not defined
+
+const getName = () => {
+	console.log(name); // Dariana Trahan
+};
+```
+
+```js
+const getName = () => {
+	console.log(name); // Dariana Trahan
+};
+
+console.log(getName()); // Dariana Trahan
+```
+
 # Data types
 
 | No  | Name      | Example                  | Doc                                                                 | Data Type          |
@@ -481,104 +579,6 @@ let num = 89;
 
 let is89 = num === 89 ? true : false;
 console.log(is89);
-```
-
-# JavaScript Variables
-
-```js
-var
-let
-const
-```
-
-`let` and `const` behave the same, except `const` can not be changed later. So use `let` if the value will change over time and `const` for a constant value.
-
-## Scope
-
-### Global scope
-
-```js
-let name = "Dariana Trahan"; // var name = "Dariana Trahan"; const name = "Dariana Trahan";
-console.log(name); // Dariana Trahan
-
-function getName() {
-	console.log(name); // Dariana Trahan
-}
-
-console.log(name); // Dariana Trahan
-```
-
-### Local scope
-
-Code in between two curly brackets `{}` is called a block.
-
-#### Function block
-
-```js
-// can't access it here
-console.log(name); // undefined
-
-function getName() {
-	let name = "Dariana Trahan";
-	console.log(name); // Dariana Trahan
-}
-
-// can't access it here
-console.log(name); // undefined
-```
-
-#### Block scope
-
-```js
-if (true) {
-	let name = "Dariana Trahan"; // const name = "Dariana Trahan";
-	console.log(name);
-}
-
-console.log(name); // undefined
-```
-
-```js
-if (true) {
-	var name = "Dariana Trahan";
-	console.log(name);
-}
-
-console.log(name); // Dariana Trahan
-```
-
-Prior to the execution of the code, the interpreter moves the definition of functions, variables, or classes to the top of their scope. This process is known as JavaScript hoisting. It does not take the value.
-
-```js
-name = "Dariana Trahan";
-console.log(name);
-var name;
-```
-
-```js
-console.log(getName());
-
-function getName() {
-	console.log(name); // Dariana Trahan
-}
-```
-
-We can avoid hoisting and save space using anonymous function expression.
-
-```js
-console.log(getName()); // Uncaught ReferenceError: getName is not defined
-
-const getName = () => {
-	console.log(name); // Dariana Trahan
-};
-```
-
-```js
-const getName = () => {
-	console.log(name); // Dariana Trahan
-};
-
-console.log(getName()); // Dariana Trahan
 ```
 
 # Function
