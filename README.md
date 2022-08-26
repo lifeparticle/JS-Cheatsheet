@@ -194,6 +194,33 @@ Array.isArray([17, 18]); // true
 Array.isArray({ a: "test" }); // false
 ```
 
+## String
+
+### Escape charecters
+
+```js
+let description = '\"If you\'re going to do something, then do it properly.\"'
+```
+
+## Number
+
+The number data type can hold numbers between 2 <sup>53-1</sup> and -2 <sup>53-1</sup>.
+
+The `Number.MAX_SAFE_INTEGER` constant represents  2 <sup>53-1</sup> and `Number.MIN_SAFE_INTEGER` constant represents -2 <sup>53-1</sup>.
+
+```js
+let numInt = 710;
+let numDec = 710.0;
+let numExp = 7.1e2; // 7.1 * (10 ** 2)
+let numOct = 0c1306;
+let numHex = 0x2C6;
+let numBin = 0b1011000110;
+```
+
+## BigInt
+todo
+
+
 ## Array
 
 ```js
