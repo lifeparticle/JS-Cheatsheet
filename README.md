@@ -221,10 +221,13 @@ let numBin = 0b1011000110;
 todo
 
 ## Symbol
+todo
 
 ## Undefinde
+todo
 
 ## null
+todo
 
 ## Array
 
