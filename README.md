@@ -220,6 +220,11 @@ let numBin = 0b1011000110;
 ## BigInt
 todo
 
+## Symbol
+
+## Undefinde
+
+## null
 
 ## Array
 
