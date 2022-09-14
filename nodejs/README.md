@@ -1,7 +1,11 @@
 Installation
 ============
 
-TODO
+
+```shell
+node index.js
+```
+
 
 
 
