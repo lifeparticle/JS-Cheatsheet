@@ -47,6 +47,17 @@ JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, S
 </html>
 ```
 
+# Reserved words
+
+```
+break, case, catch, class, const, continue, debugger, default, delete, do,
+else, export, extends, false, finally, for, function, if, import, in,
+instanceof, new, null, return, static, super, switch, this, throw, true,
+try, typeof, var, void, while, with, yield
+```
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)
+
 # Comments
 
 ```js
