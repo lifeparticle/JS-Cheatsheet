@@ -75,6 +75,10 @@ function Button() {
 
 [Source](https://beta.reactjs.org/apis/react/useContext)
 
+# React router dom
+
+[Learn React Router v6 In 45 Minutes](https://www.youtube.com/watch?v=Ul3y1LXxzdU)
+
 # Important things
 1. [Bug: useEffect runs twice on component mount (StrictMode, NODE_ENV=development)](https://github.com/facebook/react/issues/24502)
 2. [Roadmap.sh/react](https://roadmap.sh/react)
