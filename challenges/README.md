@@ -7,15 +7,17 @@ let city = 'Melbourne';
 let country = 'Australia';
 let loc = city + ', ' + country;
 
-console.log(loc);
+console.log(loc); // Melbourne, Australia
 ```
 
-2.
+2. Calculate percentage
 
 ```js
+let studentScore = 18;
+let maxScore = 20;
+let percentage = (18 / 20) * 100;
 
-
-
+console.log(percentage); // 90
 ```
 
 3.
