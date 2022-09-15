@@ -20,7 +20,7 @@ let percentage = (18 / 20) * 100;
 console.log(percentage); // 90
 ```
 
-3. Temperature Converter
+3. Temperature converter
 
 ```js
 let fahrenheit = 32;
@@ -32,7 +32,7 @@ console.log(celsius+'c');
 console.log(kelvin+'k');
 ```
 
-4.
+4. Comparison operators
 
 ```js
 let age = 12;
@@ -44,23 +44,35 @@ console.log('isChild ' + isChild);
 console.log('isSenior ' + isSenior);
 ```
 
-5.
+5. If statements
 
 ```js
+let age = 65;
 
+if (age <= 7) {
+	console.log("Child discount");
+}
 
-
+if (age >= 65) {
+	console.log("Senior discount");
+}
 ```
 
-6.
+6. Advanced If statements
 
 ```js
+let temp = 45;
 
-
-
+if (temp <= 32) {
+	console.log("It is freezing outside");
+} else if (temp >= 110) {
+	console.log("it is hot outside");
+} else {
+	console.log("Go for it. It is pretty nice out.");
+}
 ```
 
-7.
+7. 
 
 ```js
 
