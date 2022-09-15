@@ -80,7 +80,7 @@ let firstName = 'Bob';
 ```
 
 ```js
-var name = 'Bob';
+var firstName = 'Bob';
 let id = 8765;
 const BIRTH_DAY = '1 Jan 2000';
 ```
@@ -94,14 +94,14 @@ Use `let` and `var` if the value will change over time and `const` (can not be c
 
 
 ```js
-let name = "Dariana Trahan"; // var name = "Dariana Trahan"; const name = "Dariana Trahan";
-console.log(name); // Dariana Trahan
+let firstName = "Dariana Trahan"; // var name = "Dariana Trahan"; const name = "Dariana Trahan";
+console.log(firstName); // Dariana Trahan
 
 function getName() {
-	console.log(name); // Dariana Trahan
+	console.log(firstName); // Dariana Trahan
 }
 
-console.log(name); // Dariana Trahan
+console.log(firstName); // Dariana Trahan
 ```
 
 ### Local scope
@@ -111,27 +111,32 @@ Code in between two curly brackets `{}` is called a block.
 #### Function block
 
 ```js
-// can't access it here
-console.log(name); // undefined
+// can't access it before the function
+console.log(firstName); // Uncaught ReferenceError: firstName is not defined
+```
 
+```js
 function getName() {
-	let name = "Dariana Trahan";
-	console.log(name); // Dariana Trahan
+	let firstName = "Dariana Trahan";
+	console.log(firstName); 
 }
+getName(); // Dariana Trahan
+```
 
-// can't access it here
-console.log(name); // undefined
+```js
+// can't access it after the function
+console.log(firstName); // Uncaught ReferenceError: firstName is not defined
 ```
 
 #### if block
 
 ```js
 if (true) {
-	let name = "Dariana Trahan"; // const name = "Dariana Trahan";
-	console.log(name); // Dariana Trahan
+	let fullName = "Dariana Trahan"; // const fullName = "Dariana Trahan";
+	console.log(fullName); // Dariana Trahan
 }
 
-console.log(name); // undefined
+console.log(fullName); // Uncaught ReferenceError: fullName is not defined
 ```
 
 #### Hoisting
@@ -140,28 +145,29 @@ Prior to the execution of the code, the interpreter moves the definition of func
 
 ```js
 if (true) {
-	var name = "Dariana Trahan";
-	console.log(name);
+	var fullName = "Dariana Trahan";
+	console.log(fullName);
 }
 
-console.log(name); // Dariana Trahan
+console.log(fullName); // Dariana Trahan
 ```
 
 ```js
-name = "Dariana Trahan";
-console.log(name); // Dariana Trahan
-var name;
+fullName = "Dariana Trahan";
+console.log(fullName); // Dariana Trahan
+var fullName;
 ```
 
 ```js
-console.log(getName());
+console.log(getName()); // undefined
 
 function getName() {
-	console.log(name); // Dariana Trahan
+	console.log(fullName); // undefined
+    return fullName;
 }
 
-name = "Dariana Trahan";
-var name;
+fullName = "Dariana Trahan";
+var fullName;
 ```
 
 We can avoid hoisting and save space using anonymous function expression.
@@ -170,19 +176,22 @@ We can avoid hoisting and save space using anonymous function expression.
 console.log(getName()); // Uncaught ReferenceError: getName is not defined
 
 const getName = () => {
-	console.log(name); // Dariana Trahan
+	console.log(fullName); // Dariana Trahan
 };
 
 name = "Dariana Trahan";
-var name;
+var fullName;
 ```
 
 ```js
 const getName = () => {
-	console.log(name); // Dariana Trahan
+	console.log(fullName); // undefined
 };
 
-console.log(getName()); // Dariana Trahan
+console.log(getName()); // undefined
+
+name = "Dariana Trahan";
+var fullName;
 ```
 
 # Data types
