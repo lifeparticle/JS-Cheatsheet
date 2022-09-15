@@ -13,19 +13,19 @@ JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, S
 ```js
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		Hello, World!
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        Hello, World!
+    </body>
 
-	<script type="text/javascript">
-		alert("Hello, World!");
-	</script>
+    <script type="text/javascript">
+        alert("Hello, World!");
+    </script>
 </html>
 ```
 
@@ -34,16 +34,16 @@ JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, S
 ```js
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<script type="text/javascript" src="index.js"></script>
-	</head>
-	<body>
-		Hello, World!
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+    <body>
+        Hello, World!
+    </body>
 </html>
 ```
 
@@ -295,12 +295,12 @@ let [first, second] = num;
 
 /*
 function firstNum(num) {
-  return num[0];
+    return num[0];
 }
 */
 
 function firstNum([first]) {
-	return first;
+    return first;
 }
 
 firstNum(num);
@@ -317,15 +317,15 @@ let [first, , ...others] = num;
 // others = [65]
 
 let nums = [
-	[1, 2, 3],
-	[4, 5, 6],
+    [1, 2, 3],
+    [4, 5, 6],
 ];
 
 let [row1, row2] = nums;
 console.log(row1 + " " + row2);
 
 for (const [first, second, third] of nums) {
-	console.log(first, second, third);
+    console.log(first, second, third);
 }
 ```
 
@@ -552,35 +552,35 @@ console.log(fruits + "/" + every); // Apple,Apple,Apple,Apple,Apple/true
 
 ```js
 forEach((element) => {
-	/* … */
+    /* … */
 });
 forEach((element, index) => {
-	/* … */
+    /* … */
 });
 forEach((element, index, array) => {
-	/* … */
+    /* … */
 });
 // element = The current element being processed in the array.
 // index = The index of element in the array.
 // array = The array forEach() was called upon.
 
 let names = [
-	"Dariana Trahan",
-	"Lillie Earl",
-	"Esther Yeager",
-	"Marianna Brownlee",
-	"Sara Tong",
-	"Clint Winslow",
-	"Efrain Popp",
-	"Anya Aiello",
-	"Sergio Truitt",
-	"Keyshawn Apodaca",
+    "Dariana Trahan",
+    "Lillie Earl",
+    "Esther Yeager",
+    "Marianna Brownlee",
+    "Sara Tong",
+    "Clint Winslow",
+    "Efrain Popp",
+    "Anya Aiello",
+    "Sergio Truitt",
+    "Keyshawn Apodaca",
 ];
 
 names.forEach((name) => console.log(name));
 names.forEach((name, index) => console.log(index, ":", name));
 names.forEach((name, index, array) =>
-	console.log(index, ":", name, "-", array[index])
+    console.log(index, ":", name, "-", array[index])
 );
 ```
 
@@ -588,8 +588,8 @@ names.forEach((name, index, array) =>
 
 ```js
 let nums = [
-	[1, 2, 3],
-	[4, 5, 6],
+    [1, 2, 3],
+    [4, 5, 6],
 ];
 
 console.log(nums[0]); // [1, 2, 3]
@@ -603,11 +603,11 @@ console.log(nums[0][1]); // 2
 let num = 89;
 
 if (num === 89) {
-	console.log("89");
+    console.log("89");
 } else if (num === 90) {
-	console.log("90");
+    console.log("90");
 } else {
-	console.log("Not 89 or 90");
+    console.log("Not 89 or 90");
 }
 ```
 
@@ -615,14 +615,14 @@ if (num === 89) {
 let num = 89;
 
 switch (num) {
-	case 89:
-		console.log("89");
-		break;
-	case 90:
-		console.log("90");
-		break;
-	default:
-		console.log("Not 89 or 90");
+    case 89:
+        console.log("89");
+        break;
+    case 90:
+        console.log("90");
+        break;
+    default:
+        console.log("Not 89 or 90");
 }
 ```
 
@@ -647,7 +647,7 @@ You can use functions before you create them because they are hoisted.
 
 ```js
 function hello() {
-	return "hello world";
+    return "hello world";
 }
 
 hello(); // 'hello world'
@@ -655,7 +655,7 @@ hello(); // 'hello world'
 
 ```js
 function hello(name) {
-	return name;
+    return name;
 }
 
 hello("hello world"); // 'hello world'
@@ -667,7 +667,7 @@ You can't use function expressions before you create them. So they are not hoist
 
 ```js
 const hello = function () {
-	return "hello world";
+    return "hello world";
 };
 
 hello(); // 'hello world'
@@ -697,15 +697,15 @@ hello(); // 'hello world'
 
 ```js
 (function () {
-	return "hello world";
+    return "hello world";
 })();
 
 (() => {
-	return "hello world";
+    return "hello world";
 })();
 
 (async () => {
-	return "hello world";
+    return "hello world";
 })();
 ```
 
@@ -713,7 +713,7 @@ Store the return value.
 
 ```js
 let result = (function () {
-	return "hello world";
+    return "hello world";
 })();
 console.log(result); // hello world
 ```
@@ -725,12 +725,12 @@ A callback function (A) is a function passed into another function (B) as an arg
 ```js
 // A
 const callBackThisFunction = (name) => {
-	return "Hello, " + name;
+    return "Hello, " + name;
 };
 
 // B
 const hello = (callback, name) => {
-	return callBackThisFunction(name);
+    return callBackThisFunction(name);
 };
 
 console.log(hello(callBackThisFunction, "Bob"));
@@ -742,7 +742,7 @@ console.log(hello(callBackThisFunction, "Bob"));
 
 ```js
 const callBackThisFunction = (name) => {
-	console.log("Hello, World");
+    console.log("Hello, World");
 };
 
 setInterval(callBackThisFunction, 1000);
@@ -752,7 +752,7 @@ setInterval(callBackThisFunction, 1000);
 
 ```js
 const callBackThisFunction = (name) => {
-	console.log("Hello, World");
+    console.log("Hello, World");
 };
 
 setTimeout(callBackThisFunction, 1000);
@@ -764,10 +764,10 @@ setTimeout(callBackThisFunction, 1000);
 
 ```js
 for ([initialExpression]; [conditionExpression]; [incrementExpression])
-	statement;
+    statement;
 
 for (let num = 1; num <= 10; num++) {
-	console.log("#", num);
+    console.log("#", num);
 }
 ```
 
@@ -781,8 +781,8 @@ while (condition);
 
 let num = 1;
 do {
-	console.log("#", num);
-	num += 1;
+    console.log("#", num);
+    num += 1;
 } while (num <= 10);
 ```
 
@@ -793,8 +793,8 @@ while (condition) statement;
 
 let num = 1;
 while (num <= 10) {
-	console.log("#", num);
-	num += 1;
+    console.log("#", num);
+    num += 1;
 }
 ```
 
@@ -808,23 +808,23 @@ break label;
 
 let theNum = 5;
 for (let num = 1; num <= 10; num++) {
-  if (num === theNum) {
-     console.log('Found the number', theNum);
-     break;
-  }
-   console.log('Looking at', num);
+    if (num === theNum) {
+        console.log('Found the number', theNum);
+        break;
+    }
+    console.log('Looking at', num);
 }
 
 // The following code will break the inner loop 10 times and print "Found the number 5" 10 times
 let theNum = 5;
 for (let outer = 1; outer <= 10; outer++) {
-	for (let inner = 1; inner <= 10; inner++) {
-	  if (inner === theNum) {
-	     console.log('Found the number', theNum);
-	     break;
-	  }
-	  console.log('Looking at', inner);
-	}
+    for (let inner = 1; inner <= 10; inner++) {
+        if (inner === theNum) {
+            console.log('Found the number', theNum);
+            break;
+        }
+        console.log('Looking at', inner);
+    }
 }
 
 
@@ -832,14 +832,14 @@ for (let outer = 1; outer <= 10; outer++) {
 let theNum = 5;
 outerLoop:
 for (let outer = 1; outer <= 10; outer++) {
-	innerLoop:
-	for (let inner = 1; inner <= 10; inner++) {
-	  if (inner === theNum) {
-	     console.log('Found the number', theNum);
-	     break outerLoop;
-	  }
-	  console.log('Looking at', inner);
-	}
+    innerLoop:
+    for (let inner = 1; inner <= 10; inner++) {
+        if (inner === theNum) {
+            console.log('Found the number', theNum);
+            break outerLoop;
+        }
+        console.log('Looking at', inner);
+    }
 }
 ```
 
@@ -854,11 +854,11 @@ continue label;
 // Look at all the numbers.
 let theNum = 5;
 for (let num = 1; num <= 10; num++) {
-  if (num === theNum) {
-     console.log('Found the number', theNum);
-     continue;
-  }
-  console.log('Looking at', num);
+    if (num === theNum) {
+        console.log('Found the number', theNum);
+        continue;
+    }
+    console.log('Looking at', num);
 }
 
 
@@ -881,30 +881,30 @@ label: statement;
 for (variable in object) statement;
 
 let names = [
-	"Dariana Trahan",
-	"Lillie Earl",
-	"Esther Yeager",
-	"Marianna Brownlee",
-	"Sara Tong",
-	"Clint Winslow",
-	"Efrain Popp",
-	"Anya Aiello",
-	"Sergio Truitt",
-	"Keyshawn Apodaca",
+    "Dariana Trahan",
+    "Lillie Earl",
+    "Esther Yeager",
+    "Marianna Brownlee",
+    "Sara Tong",
+    "Clint Winslow",
+    "Efrain Popp",
+    "Anya Aiello",
+    "Sergio Truitt",
+    "Keyshawn Apodaca",
 ];
 
 for (const i in names) {
-	console.log(names[i]);
+    console.log(names[i]);
 }
 
 let person = {
-	name: "Dariana Trahan",
-	age: 21,
-	address: "localhost",
+    name: "Dariana Trahan",
+    age: 21,
+    address: "localhost",
 };
 
 for (const key in person) {
-	console.log(key, ":", person[key]);
+    console.log(key, ":", person[key]);
 }
 ```
 
@@ -914,30 +914,30 @@ for (const key in person) {
 for (variable of object) statement;
 
 let names = [
-	"Dariana Trahan",
-	"Lillie Earl",
-	"Esther Yeager",
-	"Marianna Brownlee",
-	"Sara Tong",
-	"Clint Winslow",
-	"Efrain Popp",
-	"Anya Aiello",
-	"Sergio Truitt",
-	"Keyshawn Apodaca",
+    "Dariana Trahan",
+    "Lillie Earl",
+    "Esther Yeager",
+    "Marianna Brownlee",
+    "Sara Tong",
+    "Clint Winslow",
+    "Efrain Popp",
+    "Anya Aiello",
+    "Sergio Truitt",
+    "Keyshawn Apodaca",
 ];
 
 for (const name of names) {
-	console.log(name);
+    console.log(name);
 }
 
 let person = {
-	name: "Dariana Trahan",
-	age: 21,
-	address: "localhost",
+    name: "Dariana Trahan",
+    age: 21,
+    address: "localhost",
 };
 
 for (const value of Object.values(person)) {
-	console.log(value);
+    console.log(value);
 }
 ```
 
@@ -995,15 +995,15 @@ There is only zero or one default export allowed per module and zero or more Nam
 // ./modules/random.js
 
 function randomString() {
-  ...
+    ...
 }
 
 function randomFloat() {
-  ...
+    ...
 }
 
 function randomNum() {
-  ...
+    ...
 }
 
 export { randomString, randomFloat };
@@ -1014,15 +1014,15 @@ export default randomNum;
 // ./modules/random.js
 
 function randomString() {
-  ...
+    ...
 }
 
 function randomFloat() {
-  ...
+    ...
 }
 
 export default function() {
-  ...
+    ...
 }
 
 export { randomString, randomFloat };
@@ -1047,22 +1047,22 @@ import randomNum from "./modules/random.js";
 // ./modules/random.js
 
 function randomString() {
-  ...
+    ...
 }
 
 function randomFloat() {
-  ...
+    ...
 }
 
 function randomNum() {
-  ...
+    ...
 }
 
 
 export {
-  randomString as newRandomStringFunctionName,
-  randomFloat as newRandomFloatFunctionName
-  randomNum as newRandomNumFunctionName
+    randomString as newRandomStringFunctionName,
+    randomFloat as newRandomFloatFunctionName
+    randomNum as newRandomNumFunctionName
 };
 
 ```
@@ -1070,9 +1070,9 @@ export {
 ```js
 // main.js
 import {
-	newRandomStringFunctionName as randS,
-	newRandomFloatFunctionName as randF,
-	newRandomNumFunctionName as randN,
+    newRandomStringFunctionName as randS,
+    newRandomFloatFunctionName as randF,
+    newRandomNumFunctionName as randN,
 } from "./modules/random.js";
 ```
 
@@ -1108,12 +1108,12 @@ const user = {};
 
 ```js
 let user = {
-	id: 1,
-	firstName: "bob",
-	lastName: "rob",
-	getFullName: function () {
-		return `${this.firstName} ${this.lastName}`;
-	},
+    id: 1,
+    firstName: "bob",
+    lastName: "rob",
+    getFullName: function () {
+        return `${this.firstName} ${this.lastName}`;
+    },
 };
 ```
 
@@ -1154,17 +1154,17 @@ console.log(entries);
 
 ```js
 let user = {
-	id: 1,
-	firstName: "bob",
-	lastName: "rob",
-	address: {
-		unit: 2,
-		city: "The City",
-		country: "The Country",
-	},
-	getFullName: function () {
-		return `${this.firstName} ${this.lastName}`;
-	},
+    id: 1,
+    firstName: "bob",
+    lastName: "rob",
+    address: {
+        unit: 2,
+        city: "The City",
+        country: "The Country",
+    },
+    getFullName: function () {
+        return `${this.firstName} ${this.lastName}`;
+    },
 };
 
 let firstName = user.firstName;
@@ -1172,11 +1172,11 @@ let firstName = user.firstName;
 let { firstName } = user;
 
 function userId(user) {
-	return user.id;
+    return user.id;
 }
 
 function userId({ id }) {
-	return id;
+    return id;
 }
 
 userId(user);
@@ -1187,7 +1187,7 @@ let { firstName: fName } = user;
 // fName = 'bob'
 
 let {
-	address: { unit, city, country },
+    address: { unit, city, country },
 } = user;
 ```
 
@@ -1197,15 +1197,15 @@ We can use the object property shorthand when the property value has the same na
 
 ```js
 let user = {
-	id: id,
-	firstName: firstName,
-	lastName: lastName,
+    id: id,
+    firstName: firstName,
+    lastName: lastName,
 };
 
 let user = {
-	id,
-	firstName,
-	lastName,
+    id,
+    firstName,
+    lastName,
 };
 ```
 
@@ -1215,16 +1215,16 @@ TODO
 
 ```js
 let user = {
-	id: 1,
-	firstName: "bob",
-	lastName: "rob",
+    id: 1,
+    firstName: "bob",
+    lastName: "rob",
 };
 
 function userId({ id, ...rest }) {
-	return {
-		id: id + 1,
-		...rest,
-	};
+    return {
+        id: id + 1,
+        ...rest,
+    };
 }
 
 userId(user); // {id: 2, firstName: 'bob', lastName: 'rob'}
@@ -1236,14 +1236,14 @@ The rest parameter syntax (last parameter in a function) allows a function to ac
 
 ```js
 let user = {
-	id: 1,
-	firstName: "bob",
-	lastName: "rob",
+    id: 1,
+    firstName: "bob",
+    lastName: "rob",
 };
 
 function userId({ id, ...rest }) {
-	console.log(rest); // {firstName: 'bob', lastName: 'rob'}
-	return `${id} ${rest.firstName} ${rest.lastName}`;
+    console.log(rest); // {firstName: 'bob', lastName: 'rob'}
+    return `${id} ${rest.firstName} ${rest.lastName}`;
 }
 
 userId(user); // '1 bob rob'
@@ -1265,47 +1265,47 @@ todo;
 
 ```js
 class Person {
-	static #PRIVATE_STATIC_FIELD;
+    static #PRIVATE_STATIC_FIELD;
 
-	// private fields
-	#firstName;
-	#lastName;
-	constructor(firstName, lastName, age = 0) {
-		this.#firstName = firstName;
-		this.#lastName = lastName;
-		this.age = age;
-		this.addresses = [];
-	}
-	getFullName() {
-		return this.#firstName + " " + this.#lastName;
-	}
+    // private fields
+    #firstName;
+    #lastName;
+    constructor(firstName, lastName, age = 0) {
+        this.#firstName = firstName;
+        this.#lastName = lastName;
+        this.age = age;
+        this.addresses = [];
+    }
+    getFullName() {
+        return this.#firstName + " " + this.#lastName;
+    }
 
-	// private method
-	#privateMethod() {
-		return "hello world";
-	}
+    // private method
+    #privateMethod() {
+        return "hello world";
+    }
 
-	// private static method
-	static #privateStaticMethod() {
-		return "hello world";
-	}
+    // private static method
+    static #privateStaticMethod() {
+        return "hello world";
+    }
 }
 
 class User extends Person {
-	static USER_COUNT = 0;
-	// default value for age and set address with an initial value
-	constructor(firstName, lastName, age = 0) {
-		super(firstName, lastName, age);
-		User.USER_COUNT++;
-	}
+    static USER_COUNT = 0;
+    // default value for age and set address with an initial value
+    constructor(firstName, lastName, age = 0) {
+        super(firstName, lastName, age);
+        User.USER_COUNT++;
+    }
 
-	setAddress(address) {
-		this.addresses.push(address);
-	}
+    setAddress(address) {
+        this.addresses.push(address);
+    }
 
-	static getTotalUser() {
-		return this.USER_COUNT;
-	}
+    static getTotalUser() {
+        return this.USER_COUNT;
+    }
 }
 
 let user = new User("Bob", "Rob");
