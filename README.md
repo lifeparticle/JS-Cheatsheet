@@ -91,8 +91,6 @@ Use `let` and `var` if the value will change over time and `const` (can not be c
 
 ### Global scope
 
-
-
 ```js
 let firstName = "Dariana Trahan"; // var name = "Dariana Trahan"; const name = "Dariana Trahan";
 console.log(firstName); // Dariana Trahan
@@ -159,39 +157,21 @@ var fullName;
 ```
 
 ```js
-console.log(getName()); // undefined
+console.log(getFullName()); // Dariana Trahan
 
-function getName() {
-	console.log(fullName); // undefined
-    return fullName;
+function getFullName() {
+    return "Dariana Trahan";
 }
-
-fullName = "Dariana Trahan";
-var fullName;
 ```
 
 We can avoid hoisting and save space using anonymous function expression.
 
 ```js
-console.log(getName()); // Uncaught ReferenceError: getName is not defined
+console.log(getFullName()); // Uncaught ReferenceError: getName is not defined
 
-const getName = () => {
-	console.log(fullName); // Dariana Trahan
+const getFullName = () => {
+	return "Dariana Trahan";
 };
-
-name = "Dariana Trahan";
-var fullName;
-```
-
-```js
-const getName = () => {
-	console.log(fullName); // undefined
-};
-
-console.log(getName()); // undefined
-
-name = "Dariana Trahan";
-var fullName;
 ```
 
 # Data types
