@@ -50,11 +50,11 @@ console.log('isSenior ' + isSenior);
 let age = 65;
 
 if (age <= 7) {
-	console.log("Child discount");
+    console.log("Child discount");
 }
 
 if (age >= 65) {
-	console.log("Senior discount");
+    console.log("Senior discount");
 }
 ```
 
@@ -64,22 +64,29 @@ if (age >= 65) {
 let temp = 45;
 
 if (temp <= 32) {
-	console.log("It is freezing outside");
+    console.log("It is freezing outside");
 } else if (temp >= 110) {
-	console.log("it is hot outside");
+    console.log("it is hot outside");
 } else {
-	console.log("Go for it. It is pretty nice out.");
+    console.log("Go for it. It is pretty nice out.");
 }
 ```
 
-7. 
+7. Logical and (&&) and or (||)
 
 ```js
+let isGuestOneVegan = false;
+let isGuestTwoVegan = false;
 
-
-
+if (isGuestOneVegan && isGuestTwoVegan) {
+    console.log("Only offer vegan dishes.");
+} else if (isGuestOneVegan || isGuestTwoVegan) {
+    console.log("Offer vegan dishes.");
+} else {
+    console.log("Offer any dishes.");
+}
 ```
-
+	
 8.
 
 ```js
