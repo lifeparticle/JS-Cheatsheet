@@ -91,6 +91,8 @@ Use `let` and `var` if the value will change over time and `const` (can not be c
 
 ### Global scope
 
+
+
 ```js
 let name = "Dariana Trahan"; // var name = "Dariana Trahan"; const name = "Dariana Trahan";
 console.log(name); // Dariana Trahan
@@ -121,16 +123,20 @@ function getName() {
 console.log(name); // undefined
 ```
 
-#### Block scope
+#### if block
 
 ```js
 if (true) {
 	let name = "Dariana Trahan"; // const name = "Dariana Trahan";
-	console.log(name);
+	console.log(name); // Dariana Trahan
 }
 
 console.log(name); // undefined
 ```
+
+#### Hoisting
+
+Prior to the execution of the code, the interpreter moves the definition of functions, variables, or classes to the top of their scope. This process is known as JavaScript hoisting. It does not take the value.
 
 ```js
 if (true) {
@@ -141,11 +147,9 @@ if (true) {
 console.log(name); // Dariana Trahan
 ```
 
-Prior to the execution of the code, the interpreter moves the definition of functions, variables, or classes to the top of their scope. This process is known as JavaScript hoisting. It does not take the value.
-
 ```js
 name = "Dariana Trahan";
-console.log(name);
+console.log(name); // Dariana Trahan
 var name;
 ```
 
@@ -155,6 +159,9 @@ console.log(getName());
 function getName() {
 	console.log(name); // Dariana Trahan
 }
+
+name = "Dariana Trahan";
+var name;
 ```
 
 We can avoid hoisting and save space using anonymous function expression.
@@ -165,6 +172,9 @@ console.log(getName()); // Uncaught ReferenceError: getName is not defined
 const getName = () => {
 	console.log(name); // Dariana Trahan
 };
+
+name = "Dariana Trahan";
+var name;
 ```
 
 ```js
