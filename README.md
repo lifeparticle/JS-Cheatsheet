@@ -73,7 +73,7 @@ comment;
 
 # JavaScript Variables
 
-Use camel case for naming variables.
+Use camel case for naming variables. Variable names can start with letters, `_` and `$` sign. It can't be reserved words.
 
 ```js
 let firstName = 'Bob';
@@ -85,7 +85,21 @@ let id = 8765;
 const BIRTH_DAY = '1 Jan 2000';
 ```
 
-Use `let` and `var` if the value will change over time and `const` (can not be changed later, and you'll get an error if you try reassigning a new value) for a constant value. `var` has global and `let` has block scope.
+Use `let` and `var` if the value will change over time and `const` (can not be changed later, and you'll get an error if you try reassigning a new value) for a constant value. `var` has global and `let` has block scope. You can't define `let` and `const` variables more than once.
+
+
+```js
+var a = 'aaa';
+var a = 'aaa';
+
+
+let b = 'bbb';
+let b = 'bbb'; // 'b' has already been declared
+
+
+const C = 'ccc';
+const C = 'ccc'; // 'C' has already been declared
+```
 
 ## Scope
 
