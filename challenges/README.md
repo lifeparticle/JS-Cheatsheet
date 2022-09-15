@@ -20,12 +20,16 @@ let percentage = (18 / 20) * 100;
 console.log(percentage); // 90
 ```
 
-3.
+3. Temperature Converter
 
 ```js
+let fahrenheit = 32;
 
+let celsius = (fahrenheit - 32) * (5/9);
+let kelvin =  (fahrenheit + 459.67) * (5/9);
 
-
+console.log(celsius+'c');
+console.log(kelvin+'k');
 ```
 
 4.
