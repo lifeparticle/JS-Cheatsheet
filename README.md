@@ -96,7 +96,7 @@ let firstName = "Dariana Trahan"; // var name = "Dariana Trahan"; const name = "
 console.log(firstName); // Dariana Trahan
 
 function getName() {
-	console.log(firstName); // Dariana Trahan
+    console.log(firstName); // Dariana Trahan
 }
 
 console.log(firstName); // Dariana Trahan
@@ -115,8 +115,8 @@ console.log(firstName); // Uncaught ReferenceError: firstName is not defined
 
 ```js
 function getName() {
-	let firstName = "Dariana Trahan";
-	console.log(firstName); 
+    let firstName = "Dariana Trahan";
+    console.log(firstName); 
 }
 getName(); // Dariana Trahan
 ```
@@ -130,8 +130,8 @@ console.log(firstName); // Uncaught ReferenceError: firstName is not defined
 
 ```js
 if (true) {
-	let fullName = "Dariana Trahan"; // const fullName = "Dariana Trahan";
-	console.log(fullName); // Dariana Trahan
+    let fullName = "Dariana Trahan"; // const fullName = "Dariana Trahan";
+    console.log(fullName); // Dariana Trahan
 }
 
 console.log(fullName); // Uncaught ReferenceError: fullName is not defined
@@ -143,8 +143,8 @@ Prior to the execution of the code, the interpreter moves the definition of func
 
 ```js
 if (true) {
-	var fullName = "Dariana Trahan";
-	console.log(fullName);
+    var fullName = "Dariana Trahan";
+    console.log(fullName);
 }
 
 console.log(fullName); // Dariana Trahan
@@ -170,7 +170,7 @@ We can avoid hoisting and save space using anonymous function expression.
 console.log(getFullName()); // Uncaught ReferenceError: getName is not defined
 
 const getFullName = () => {
-	return "Dariana Trahan";
+    return "Dariana Trahan";
 };
 ```
 
