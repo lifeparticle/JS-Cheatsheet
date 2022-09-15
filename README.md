@@ -14,17 +14,17 @@ JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, S
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Document</title>
 	</head>
 	<body>
-		Hello, World!
+            Hello, World!
 	</body>
 
 	<script type="text/javascript">
-		alert("Hello, World!");
+            alert("Hello, World!");
 	</script>
 </html>
 ```
@@ -35,14 +35,14 @@ JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, S
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<script type="text/javascript" src="index.js"></script>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Document</title>
+            <script type="text/javascript" src="index.js"></script>
 	</head>
 	<body>
-		Hello, World!
+            Hello, World!
 	</body>
 </html>
 ```
