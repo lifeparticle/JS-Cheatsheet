@@ -253,6 +253,7 @@ console.log(fullName); // undefined
 ```
 
 ```js
+console.log(fullName); // undefined
 fullName = "Dariana Trahan";
 console.log(fullName); // Dariana Trahan
 var fullName;
