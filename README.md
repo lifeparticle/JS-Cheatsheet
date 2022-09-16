@@ -101,6 +101,16 @@ const C = 'ccc';
 const C = 'ccc'; // 'C' has already been declared
 ```
 
+## Leaked variables
+
+```js
+console.log(age);
+if (true) {
+    age = 22;
+    console.log(age); // 22
+}
+```
+
 ## Scope
 
 In a scope variables can be accessed defined in that scope or defined in parent scope.
