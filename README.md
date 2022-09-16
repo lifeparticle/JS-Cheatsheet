@@ -104,7 +104,6 @@ const C = 'ccc'; // 'C' has already been declared
 ## Leaked variables
 
 ```js
-console.log(age);
 if (true) {
     age = 22;
     console.log(age); // 22
