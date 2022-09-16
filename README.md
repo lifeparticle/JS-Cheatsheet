@@ -1453,3 +1453,4 @@ console.log("This is a test");
 5. [Javascript refresher](https://github.com/Asabeneh/30-Days-Of-React/blob/master/01_Day_JavaScript_Refresher/01_javascript_refresher.md)
 6. [ecma-international](https://www.ecma-international.org/about-ecma/history/)
 7. [Why-does-my-variable-show-its-deprecated](https://stackoverflow.com/questions/65379554/why-does-my-variable-show-its-deprecated)
+8. [You Don't Know JS Yet](https://github.com/getify/You-Dont-Know-JS)
