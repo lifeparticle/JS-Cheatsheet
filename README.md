@@ -204,10 +204,39 @@ Prior to the execution of the code, the interpreter moves the definition of func
 ```js
 if (true) {
     var fullName = "Dariana Trahan";
-    console.log(fullName);
+    console.log(fullName); // Dariana Trahan
 }
 
 console.log(fullName); // Dariana Trahan
+```
+
+```js
+if (true) {
+    var fullName;
+    console.log(fullName); // undefined
+}
+
+console.log(fullName); // undefined
+fullName = "Dariana Trahan";
+```
+
+```js
+function getFullName() {
+    var fullName = "Dariana Trahan";
+    console.log(fullName);
+}
+
+console.log(fullName); // fullName is not defined
+```
+
+```js
+let age = 20;
+if (age > 30) {
+    var fullName = "Dariana Trahan";
+    console.log(fullName);
+}
+
+console.log(fullName); // undefined
 ```
 
 ```js
