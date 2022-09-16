@@ -103,7 +103,51 @@ const C = 'ccc'; // 'C' has already been declared
 
 ## Scope
 
+In a scope variables can be accessed defined in that scope or defined in parent scope.
+
+
+
+```
+             fullName
+	     /   |  \
+            /    |   \
+          age   age  city
+	 /
+      country
+```
+
+
+```js
+let fullName = "Dariana Trahan";
+
+if (true) {
+    let age = 22;
+    console.log(fullName); // parent scope
+    console.log(age); // local scope
+    if (true) {
+        let country = 'Australia';
+        console.log(fullName); // parent scope
+        console.log(age); // parent scope
+        console.log(country); // local scope
+    }
+}
+
+if (true) {
+    let age = 22;
+    console.log(fullName); // parent scope
+    console.log(age); // local scope
+}
+
+if (true) {
+    let city = 'Melbourne';
+    console.log(fullName); // parent scope
+    console.log(city); // local scope
+}
+```
+
 ### Global scope
+
+The code is defined outside all code blocks.
 
 ```js
 let firstName = "Dariana Trahan"; // var name = "Dariana Trahan"; const name = "Dariana Trahan";
@@ -118,7 +162,7 @@ console.log(firstName); // Dariana Trahan
 
 ### Local scope
 
-Code in between two curly brackets `{}` is called a block.
+The code is defined inside a code blocks. Code in between two curly brackets `{}` is called a block.
 
 #### Function block
 
