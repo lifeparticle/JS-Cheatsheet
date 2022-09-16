@@ -105,18 +105,6 @@ const C = 'ccc'; // 'C' has already been declared
 
 In a scope variables can be accessed defined in that scope or defined in parent scope.
 
-
-
-```
-             fullName
-	     /   |  \
-            /    |   \
-          age   age  city
-	 /
-      country
-```
-
-
 ```js
 let fullName = "Dariana Trahan";
 
@@ -143,6 +131,20 @@ if (true) {
     console.log(fullName); // parent scope
     console.log(city); // local scope
 }
+```
+
+Tree view of scopes.
+
+```
+                 fullName
+	        (fullName)
+	     /       |       \
+            /        |        \
+         age        age        city
+(fullName, age) (fullName, age)  (fullName, city)
+	/
+    country
+(fullName, age, country)
 ```
 
 ### Global scope
