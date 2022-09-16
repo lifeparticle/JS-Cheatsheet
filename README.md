@@ -199,9 +199,22 @@ console.log(fullName); // Uncaught ReferenceError: fullName is not defined
 
 #### Hoisting
 
-Prior to the execution of the code, the interpreter moves the definition of functions, variables, or classes to the top of their scope. This process is known as JavaScript hoisting. It does not take the value.
+Prior to the execution of the code, the interpreter moves the definition of functions, variables, or classes to the top of their scope. This process is known as JavaScript hoisting. It does not take the value or initialization only declaration, `var`, `let`, `const` are hoisted and only var declarations are initialized with `undefined`. On the other hand `let` and `const` declarations are not initialized.
 
 ```js
+console.log(fullName); // ReferenceError: fullName is not defined
+
+if (true) {
+    let fullName = "Dariana Trahan";
+    console.log(fullName);
+}
+
+console.log(fullName);
+```
+
+```js
+console.log(fullName); // undefined
+
 if (true) {
     var fullName = "Dariana Trahan";
     console.log(fullName); // Dariana Trahan
@@ -226,7 +239,7 @@ function getFullName() {
     console.log(fullName);
 }
 
-console.log(fullName); // fullName is not defined
+console.log(fullName); // ReferenceError: fullName is not defined
 ```
 
 ```js
