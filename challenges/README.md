@@ -87,12 +87,15 @@ if (isGuestOneVegan && isGuestTwoVegan) {
 }
 ```
 	
-8.
+8. Temperature converter function
 
 ```js
+let convertFahrenheitToCelsius = function (fahrenheit) {
+    return (fahrenheit - 32) * (5/9);
+}
 
-
-
+console.log(convertFahrenheitToCelsius(32)); // 0
+console.log(convertFahrenheitToCelsius(68)); // 20
 ```
 
 9.
