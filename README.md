@@ -345,6 +345,19 @@ Array.isArray({ a: "test" }); // false
 
 ## String
 
+## Methods and properties
+
+```js
+let fullName = 'Bob Rob';
+console.log(fullName.length); // 7
+console.log(fullName.toUpperCase()); // BOB ROB
+console.log(fullName.toLowerCase()); // bob rob
+console.log(fullName.includes('bob')); // false
+console.log(fullName.includes('Bob')); // true
+```
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+
 ### Template strings
 
 ```js
