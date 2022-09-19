@@ -345,6 +345,15 @@ Array.isArray({ a: "test" }); // false
 
 ## String
 
+### Template strings
+
+```js
+let name = 'Bob';
+let score = 10;
+let result = `Name: ${name} - Score: ${score}`;
+console.log(result); // Name: Bob - Score: 10
+```
+
 ### Escape charecters
 
 ```js
