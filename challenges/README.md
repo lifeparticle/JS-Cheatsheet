@@ -207,12 +207,16 @@ resetAccount(myAccount)
 console.log(getAccountSummary(myAccount))
 ```
 
-15.
+15. String methods and properties
 
 ```js
+let isValidPassword = function (value) {
+    return value.length > 8 && !value.includes('password');
+}
 
-
-
+console.log(isValidPassword('asdfp')); // false
+console.log(isValidPassword('abc123!@#$%^&')); // true
+console.log(isValidPassword('asdfasdfpoijpassword')); // false
 ```
 
 16.
