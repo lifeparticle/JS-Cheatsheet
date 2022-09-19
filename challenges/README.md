@@ -109,12 +109,15 @@ console.log(calcTip(100)); // 20
 console.log(calcTip(200)); // 40
 ```
 
-10.
+10. Template strings
 
 ```js
+let calcTip = function (total, tipPercent=0.2) {
+    return `A ${0.2*100} tip on \$${total} would be \$${total * tipPercent}`;
+}
 
-
-
+console.log(calcTip(100)); // 20
+console.log(calcTip(200)); // 40
 ```
 
 11.
