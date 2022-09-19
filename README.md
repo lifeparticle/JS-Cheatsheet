@@ -345,7 +345,7 @@ Array.isArray({ a: "test" }); // false
 
 ## String
 
-## Methods and properties
+### Methods and properties
 
 ```js
 let fullName = 'Bob Rob';
@@ -387,6 +387,18 @@ let numOct = 0c1306;
 let numHex = 0x2C6;
 let numBin = 0b1011000110;
 ```
+
+### Methods and properties
+
+``js
+let num = 1220.4324345;
+console.log(num.toFixed(2)); // 1220.43
+console.log(Math.round(num)); // 1220
+console.log(Math.floor(num)); // 1220
+console.log(Math.ceil(num)); // 1221
+```
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 
 ## BigInt
 todo
