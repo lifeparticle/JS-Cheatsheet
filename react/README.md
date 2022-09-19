@@ -39,6 +39,19 @@ Higher order component us a function that takes a component and returns a new co
 
 ```
 
+# State
+
+```tsx
+const [isLoading, setIsloading] = useState(true);
+
+useEffect(() => {
+	const timer = setTimeout(() => {
+		setIsloading(false);
+	}, 100);
+	return () => clearTimeout(timer);
+});
+```
+
 # Context
 
 Data can be passed parent to child (top to down) components via props. But when the data is required by many child components such as UI theme then using props can be cumbersome. In this case we can use context to share data between components without passing props. When possible we need to avoid using context, because it makes more difficult to resue components. If you want to avoid passing props through many levels the pass down the component itself.
