@@ -157,12 +157,19 @@ person.age = person.age + 1;
 console.log(`${person.name} is ${person.age} and lives in ${person.location}`)
 ```
 
-13.
+13. Function and object
 
 ```js
+const calcTemp = function (fahrenheit) {
+    return {
+        fahrenheit: fahrenheit,
+        celsius: (fahrenheit - 32) * (5/9),
+        kelvin:  (fahrenheit + 459.67) * (5/9)
+    }
+}
 
-
-
+let result = calcTemp(32);
+console.log(`fahrenheit: ${result.fahrenheit} celsius: ${result.celsius} kelvin: ${result.kelvin}`);
 ```
 
 14.
