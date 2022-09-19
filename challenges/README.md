@@ -98,7 +98,18 @@ console.log(convertFahrenheitToCelsius(32)); // 0
 console.log(convertFahrenheitToCelsius(68)); // 20
 ```
 
-9.
+9. Default parameters
+
+```js
+let calcTip = function (total, tipPercent=0.2) {
+    return total * tipPercent;
+}
+
+console.log(calcTip(100)); // 20
+console.log(calcTip(200)); // 40
+```
+
+10.
 
 ```js
 
@@ -106,7 +117,82 @@ console.log(convertFahrenheitToCelsius(68)); // 20
 
 ```
 
-10.
+11.
+
+```js
+
+
+
+```
+
+12.
+
+```js
+
+
+
+```
+
+13.
+
+```js
+
+
+
+```
+
+14.
+
+```js
+
+
+
+```
+
+15.
+
+```js
+
+
+
+```
+
+16.
+
+```js
+
+
+
+```
+
+
+17.
+
+```js
+
+
+
+```
+
+
+18.
+
+```js
+
+
+
+```
+
+
+19.
+
+```js
+
+
+
+```
+
+20.
 
 ```js
 
