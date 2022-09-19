@@ -101,6 +101,33 @@ const C = 'ccc';
 const C = 'ccc'; // 'C' has already been declared
 ```
 
+## undefined and null
+
+```js
+let name;
+console.log(name);
+```
+
+
+```js
+let convertFahrenheitToCelsius = function (fahrenheit) {
+    console.log(fahrenheit); // undefined
+    return (fahrenheit - 32) * (5/9);
+}
+
+console.log(convertFahrenheitToCelsius()); // null
+```
+
+A function without a return statement will return a default value, in this case `undefined`.
+
+```js
+let convertFahrenheitToCelsius = function (fahrenheit) {
+    console.log(fahrenheit); // undefined
+}
+
+console.log(convertFahrenheitToCelsius()); // undefined
+```
+
 ## Leaked variables
 
 ```js
@@ -848,6 +875,16 @@ const hello = (callback, name) => {
 console.log(hello(callBackThisFunction, "Bob"));
 ```
 
+## Default parameters
+
+```js
+let getResult = function(name = 'Anonymous', score = 0) {
+    return `Name: ${name} - Score: ${score}`
+}
+
+console.log(getResult());
+```
+
 # Delay
 
 ## Print "Hello, World" every 1 second
@@ -869,6 +906,7 @@ const callBackThisFunction = (name) => {
 
 setTimeout(callBackThisFunction, 1000);
 ```
+
 
 # Loops
 
