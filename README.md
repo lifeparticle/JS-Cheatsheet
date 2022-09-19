@@ -1271,6 +1271,7 @@ let user = {
     firstName: "Bob",
     lastName: "Rob",
     getFullName: function () {
+        console.log(this); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
         return `${this.firstName} ${this.lastName}`;
     },
 };
