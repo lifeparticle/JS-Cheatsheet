@@ -1263,17 +1263,23 @@ import { Card } from "antd";
 const user = {};
 ```
 
-## Object with values and method.
+## Object with properties and values.
 
 ```js
 let user = {
     id: 1,
-    firstName: "bob",
-    lastName: "rob",
+    firstName: "Bob",
+    lastName: "Rob",
     getFullName: function () {
         return `${this.firstName} ${this.lastName}`;
     },
 };
+
+console.log(user); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+console.log(user.id); // 1
+console.log(user.firstName); // Bob
+console.log(user.lastName); // Rob
+console.log(user.getFullName()); // Bob Rob
 ```
 
 ## Get all the keys.
