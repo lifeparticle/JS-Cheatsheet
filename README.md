@@ -1282,6 +1282,52 @@ console.log(user.lastName); // Rob
 console.log(user.getFullName()); // Bob Rob
 ```
 
+## Object reference
+
+```js
+let user = {
+    id: 1,
+    firstName: "Bob",
+    lastName: "Rob",
+    getFullName: function () {
+        return `${this.firstName} ${this.lastName}`;
+    },
+};
+
+
+let changeId = function (u, newId) {
+    u.id = newId;
+    console.log(u);
+}
+
+console.log(user); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+changeId(user, 10); // {id: 10, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+console.log(user); // {id: 10, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+```
+
+```js
+let user = {
+    id: 1,
+    firstName: "Bob",
+    lastName: "Rob",
+    getFullName: function () {
+        return `${this.firstName} ${this.lastName}`;
+    },
+};
+
+
+let changeId = function (u, newId) {
+    u = {};
+    u.id = newId;
+    console.log(u);
+}
+
+console.log(user); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+changeId(user, 10); // {id: 10}
+console.log(user); // {id: 10, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+```
+
+
 ## Get all the keys.
 
 ```js
