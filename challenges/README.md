@@ -120,7 +120,7 @@ console.log(calcTip(100)); // 20
 console.log(calcTip(200)); // 40
 ```
 
-11.
+11. Function and Template strings
 
 ```js
 let calcScore = function (score, total) {
@@ -143,12 +143,18 @@ let calcScore = function (score, total) {
 console.log(calcScore(15, 20)); // You got a C (75%)
 ```
 
-12.
+12. Object
 
 ```js
+let person = {
+    name: 'Andrew',
+    age: 26,
+    location: 'Philadelphia'
+}
 
-
-
+console.log(`${person.name} is ${person.age} and lives in ${person.location}`)
+person.age = person.age + 1;
+console.log(`${person.name} is ${person.age} and lives in ${person.location}`)
 ```
 
 13.
