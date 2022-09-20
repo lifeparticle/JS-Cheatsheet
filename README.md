@@ -111,19 +111,19 @@ JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, S
 ```js
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		Hello, World!
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        Hello, World!
+    </body>
 
-	<script type="text/javascript">
-		alert("Hello, World!");
-	</script>
+    <script type="text/javascript">
+        alert("Hello, World!");
+    </script>
 </html>
 ```
 
@@ -132,16 +132,16 @@ JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, S
 ```js
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<script type="text/javascript" src="index.js"></script>
-	</head>
-	<body>
-		Hello, World!
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+    <body>
+        Hello, World!
+    </body>
 </html>
 ```
 
@@ -266,14 +266,14 @@ if (true) {
 Tree view of scopes.
 
 ```
-				 fullName
-			(fullName)
-		 /       |       \
-			/        |        \
-		 age        age        city
+                 fullName
+            (fullName)
+         /       |       \
+            /        |        \
+         age        age        city
 (fullName, age) (fullName, age)  (fullName, city)
-	/
-	country
+    /
+    country
 (fullName, age, country)
 ```
 
@@ -1245,7 +1245,7 @@ let [first, second] = num;
 
 /*
 function firstNum(num) {
-	return num[0];
+    return num[0];
 }
 */
 
@@ -1376,7 +1376,7 @@ With block body, we need explicit return.
 
 ```
 const hello = () => {
-	return "hello world";
+    return "hello world";
 };
 
 hello(); // 'hello world'
@@ -1515,23 +1515,23 @@ break label;
 
 let theNum = 5;
 for (let num = 1; num <= 10; num++) {
-	if (num === theNum) {
-		console.log('Found the number', theNum);
-		break;
-	}
-	console.log('Looking at', num);
+    if (num === theNum) {
+        console.log('Found the number', theNum);
+        break;
+    }
+    console.log('Looking at', num);
 }
 
 // The following code will break the inner loop 10 times and print "Found the number 5" 10 times
 let theNum = 5;
 for (let outer = 1; outer <= 10; outer++) {
-	for (let inner = 1; inner <= 10; inner++) {
-		if (inner === theNum) {
-			console.log('Found the number', theNum);
-			break;
-		}
-		console.log('Looking at', inner);
-	}
+    for (let inner = 1; inner <= 10; inner++) {
+        if (inner === theNum) {
+            console.log('Found the number', theNum);
+            break;
+        }
+        console.log('Looking at', inner);
+    }
 }
 
 
@@ -1539,14 +1539,14 @@ for (let outer = 1; outer <= 10; outer++) {
 let theNum = 5;
 outerLoop:
 for (let outer = 1; outer <= 10; outer++) {
-	innerLoop:
-	for (let inner = 1; inner <= 10; inner++) {
-		if (inner === theNum) {
-			console.log('Found the number', theNum);
-			break outerLoop;
-		}
-		console.log('Looking at', inner);
-	}
+    innerLoop:
+    for (let inner = 1; inner <= 10; inner++) {
+        if (inner === theNum) {
+            console.log('Found the number', theNum);
+            break outerLoop;
+        }
+        console.log('Looking at', inner);
+    }
 }
 ```
 
@@ -1561,11 +1561,11 @@ continue label;
 // Look at all the numbers.
 let theNum = 5;
 for (let num = 1; num <= 10; num++) {
-	if (num === theNum) {
-		console.log('Found the number', theNum);
-		continue;
-	}
-	console.log('Looking at', num);
+    if (num === theNum) {
+        console.log('Found the number', theNum);
+        continue;
+    }
+    console.log('Looking at', num);
 }
 
 
@@ -1706,15 +1706,15 @@ There is only zero or one default export allowed per module and zero or more Nam
 // ./modules/random.js
 
 function randomString() {
-	...
+    ...
 }
 
 function randomFloat() {
-	...
+    ...
 }
 
 function randomNum() {
-	...
+    ...
 }
 
 export { randomString, randomFloat };
@@ -1725,15 +1725,15 @@ export default randomNum;
 // ./modules/random.js
 
 function randomString() {
-	...
+    ...
 }
 
 function randomFloat() {
-	...
+    ...
 }
 
 export default function() {
-	...
+    ...
 }
 
 export { randomString, randomFloat };
@@ -1758,22 +1758,22 @@ import randomNum from "./modules/random.js";
 // ./modules/random.js
 
 function randomString() {
-	...
+    ...
 }
 
 function randomFloat() {
-	...
+    ...
 }
 
 function randomNum() {
-	...
+    ...
 }
 
 
 export {
-	randomString as newRandomStringFunctionName,
-	randomFloat as newRandomFloatFunctionName
-	randomNum as newRandomNumFunctionName
+    randomString as newRandomStringFunctionName,
+    randomFloat as newRandomFloatFunctionName
+    randomNum as newRandomNumFunctionName
 };
 
 ```
