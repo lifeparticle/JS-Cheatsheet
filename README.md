@@ -851,6 +851,8 @@ console.log(fruits + "/" + find); // Apple,Banana,Orange,Mango/Apple
 
 ### 12. forEach
 
+`forEach` function takes single argument (a function or a callback function), and this function gets called with some arguments.
+
 ```js
 forEach((element) => {
     /* … */
