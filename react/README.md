@@ -1,14 +1,15 @@
 # How to start - Pick as you like
 
-1. https://beta.reactjs.org/
-2. YouTube - Video Tutorials
-3. Scrimba - Video Tutorials and coding practise
-4. Books i.e. React road to enterprose
-5. Other blogs i.e. https://overreacted.io/
-6. Mentors i.e. https://www.codementor.io/
-7. Read other code i.e. GitHub
-8. Online course i.e https://epicreact.dev/
-9. Something else???
+1. JavaScript
+2. https://beta.reactjs.org/
+3. YouTube - Video Tutorials
+4. Scrimba - Video Tutorials and coding practise
+5. Books i.e. React road to enterprose
+6. Other blogs i.e. https://overreacted.io/
+7. Mentors i.e. https://www.codementor.io/
+8. Read other code i.e. GitHub
+9. Online course i.e https://epicreact.dev/
+10. Something else???
 
 # Introduction
 
