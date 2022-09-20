@@ -1321,7 +1321,7 @@ setTimeout(callBackThisFunction, 1000);
 
 # Loops
 
-## for statement
+## for
 
 ```js
 for ([initialExpression]; [conditionExpression]; [incrementExpression])
@@ -1332,7 +1332,7 @@ for (let num = 1; num <= 10; num++) {
 }
 ```
 
-## do...while statement
+## do...while
 
 ```js
 // do...while can be useful when you want to execute the statement at least once
@@ -1347,7 +1347,7 @@ do {
 } while (num <= 10);
 ```
 
-## while statement
+## while
 
 ```js
 while (condition) statement;
@@ -1359,7 +1359,7 @@ while (num <= 10) {
 }
 ```
 
-## break statement
+## break
 
 ```js
 // break without a label terminates the innermost enclosing while, do-while, for, or switch immediately and transfers control to the following statement
@@ -1404,7 +1404,7 @@ for (let outer = 1; outer <= 10; outer++) {
 }
 ```
 
-## continue statement
+## continue
 
 ```js
 // continue without a label terminates the innermost enclosing while, do-while, for, or switch immediately and continues execution of the loop with the next iteration.
@@ -1426,7 +1426,7 @@ for (let num = 1; num <= 10; num++) {
 // todo
 ```
 
-## labeled statement
+## labeled
 
 ```js
 // labeled statement is used with a break or continue statements.
