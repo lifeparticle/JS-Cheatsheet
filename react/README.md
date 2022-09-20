@@ -2,26 +2,26 @@
 1. JavaScript
 2. https://beta.reactjs.org/
 3. YouTube - Video Tutorials
-4. Scrimba - Video Tutorials and coding practise
-5. Books i.e. React road to enterprose
-6. Other blogs i.e. https://overreacted.io/
-7. Mentors i.e. https://www.codementor.io/
-8. Read other code i.e. GitHub
-9. Online course i.e https://epicreact.dev/
+4. Scrimba - Video Tutorials and coding practice
+5. Books i.e., React road to enterprise
+6. Other blogs i.e., https://overreacted.io/
+7. Mentors i.e., https://www.codementor.io/
+8. Read other code i.e., GitHub
+9. Online course i.e. https://epicreact.dev/
 10. Something else???
 
 ## Create a React project
 1. Idea -> Base64 converter
 2. Requirements -> Encode, Decode, Clear etc
-3. Mockups -> Low fildety design -> High fidelety
-4. Implemntaion
+3. Mockups -> Low fidelity design -> High fidelity
+4. Implementation
 4.1 Create a react app -> npm, yarn or pnpm
-4.2 Code the UI -> You may want to use a react component library i.e. mantine to speed the devlopment process
-4.3 Add logics - react hooks and custom functions 
-4.3.1 If stuck serach for specific react or javascript tutorials i.e. how to convert base64 in react
-4.3.2 Ask question on stackoverflow or github
+4.2 Code the UI -> You may want to use a react component library i.e., mantine, to speed the development process
+4.3 Add logic - react hooks and custom functions 
+4.3.1 If you're stuck, then search for specific react or javascript tutorials, i.e., how to convert base64 in react
+4.3.2 Ask questions on StackOverflow or GitHub
 4.3.3 Ask someone else
-4.4 Depoly i.e netlyfly via github
+4.4 Deploy i.e, On Netlify via GitHub
 
 # Introduction
 
