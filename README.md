@@ -48,7 +48,7 @@ Table of Contents
       * [7. filter](#7-filter)
       * [8. findIndex](#8-findindex)
       * [9. find](#9-find)
-      * [12. forEach function](#12-foreach-function)
+      * [12. forEach](#12-foreach)
       * [14. includes](#14-includes)
       * [15. indexOf](#15-indexof)
       * [17. join](#17-join)
