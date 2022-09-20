@@ -1,3 +1,15 @@
+# How to start - Pick as you like
+
+1. https://beta.reactjs.org/
+2. YouTube - Video Tutorials
+3. Scrimba - Video Tutorials and coding practise
+4. Books i.e. React road to enterprose
+5. Other blogs i.e. https://overreacted.io/
+6. Mentors i.e. https://www.codementor.io/
+7. Read other code i.e. GitHub
+8. Online course i.e https://epicreact.dev/
+9. Something else???
+
 # Introduction
 
 React is a JavaScript library for building composable user interfaces. React uses only one HTML file called `index.html` to load the entire application. That is why it's called a single page application. We can use [React Router](https://github.com/remix-run/react-router) to navigate between components.
@@ -99,3 +111,5 @@ function Button() {
 
 # Books
 1. [React the road to enterprise](https://theroadtoenterprise.com/books/react-the-road-to-enterprise)
+
+
