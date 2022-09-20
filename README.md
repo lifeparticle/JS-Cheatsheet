@@ -849,7 +849,7 @@ let find = fruits.find((fruit) => fruit.toLowerCase().includes("apple"));
 console.log(fruits + "/" + find); // Apple,Banana,Orange,Mango/Apple
 ```
 
-### 12. forEach function
+### 12. forEach
 
 ```js
 forEach((element) => {
@@ -864,7 +864,9 @@ forEach((element, index, array) => {
 // element = The current element being processed in the array.
 // index = The index of element in the array.
 // array = The array forEach() was called upon.
+```
 
+```js
 let names = [
     "Dariana Trahan",
     "Lillie Earl",
@@ -879,10 +881,55 @@ let names = [
 ];
 
 names.forEach((name) => console.log(name));
+
+/*
+Dariana Trahan
+Lillie Earl
+Esther Yeager
+Marianna Brownlee
+Sara Tong
+Clint Winslow
+Efrain Popp
+Anya Aiello
+Sergio Truitt
+Keyshawn Apodaca
+*/
+```
+
+```js
 names.forEach((name, index) => console.log(index, ":", name));
+
+/*
+0,":","Dariana Trahan"
+1,":","Lillie Earl"
+2,":","Esther Yeager"
+3,":","Marianna Brownlee"
+4,":","Sara Tong"
+5,":","Clint Winslow"
+6,":","Efrain Popp"
+7,":","Anya Aiello"
+8,":","Sergio Truitt"
+9,":","Keyshawn Apodaca"
+*/
+```
+
+```js
 names.forEach((name, index, array) =>
     console.log(index, ":", name, "-", array[index])
 );
+
+/*
+0,":","Dariana Trahan","-","Dariana Trahan"
+1,":","Lillie Earl","-","Lillie Earl"
+2,":","Esther Yeager","-","Esther Yeager"
+3,":","Marianna Brownlee","-","Marianna Brownlee"
+4,":","Sara Tong","-","Sara Tong"
+5,":","Clint Winslow","-","Clint Winslow"
+6,":","Efrain Popp","-","Efrain Popp"
+7,":","Anya Aiello","-","Anya Aiello"
+8,":","Sergio Truitt","-","Sergio Truitt"
+9,":","Keyshawn Apodaca","-","Keyshawn Apodaca"
+*/
 ```
 
 ### 14. includes
