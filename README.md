@@ -1094,6 +1094,8 @@ console.log(nums[1]); // [4, 5, 6]
 console.log(nums[0][1]); // 2
 ```
 
+[Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
 # Conditinal statements
 
 ```js
