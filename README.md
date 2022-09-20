@@ -1436,7 +1436,9 @@ label: statement;
 // todo
 ```
 
-## for...in statement iterates over object literals to get the index/keys of the object.
+## for...in
+
+`for...in` statement iterates over object literals to get the index/keys of the object.
 
 ```js
 for (variable in object) statement;
@@ -1469,7 +1471,9 @@ for (const key in person) {
 }
 ```
 
-## for...of statement iterates over iterable objects including String, Array, TypedArray, Map, Set, and Intl. Segments to get the property values.
+## for...of 
+
+`for...of` statement iterates over iterable objects including String, Array, TypedArray, Map, Set, and Intl. Segments to get the property values.
 
 ```js
 for (variable of object) statement;
