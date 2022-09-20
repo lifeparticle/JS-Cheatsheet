@@ -1,102 +1,100 @@
-Table of Contents
-=================
+# Table of Contents
 
-* [Introduction](#introduction)
-* [How to add JavaScript to a web page](#how-to-add-javascript-to-a-web-page)
-   * [Everything between script tags will be executed by the web browser](#everything-between-script-tags-will-be-executed-by-the-web-browser)
-   * [Link an external file to a web page](#link-an-external-file-to-a-web-page)
-* [Reserved words](#reserved-words)
-* [Comments](#comments)
-* [JavaScript Variables](#javascript-variables)
-   * [undefined and null](#undefined-and-null)
-   * [Leaked variables](#leaked-variables)
-   * [Scope](#scope)
-      * [Global scope](#global-scope)
-      * [Local scope](#local-scope)
-         * [Function block](#function-block)
-         * [if block](#if-block)
-         * [Hoisting](#hoisting)
-* [Data types](#data-types)
-   * [How to check the data type](#how-to-check-the-data-type)
-   * [String](#string)
-      * [Methods and properties](#methods-and-properties)
-      * [Template strings](#template-strings)
-      * [Escape charecters](#escape-charecters)
-   * [Number](#number)
-      * [Methods and properties](#methods-and-properties-1)
-   * [BigInt](#bigint)
-   * [Symbol](#symbol)
-   * [Undefind](#undefind)
-   * [null](#null)
-   * [Object](#object)
-      * [Empty object.](#empty-object)
-      * [Object with properties and values.](#object-with-properties-and-values)
-      * [Object reference](#object-reference)
-      * [Get all the keys.](#get-all-the-keys)
-      * [Get all the values.](#get-all-the-values)
-      * [Checking properties.](#checking-properties)
-      * [Get all the keys and values.](#get-all-the-keys-and-values)
-      * [Object destructuring](#object-destructuring)
-      * [Object property shorthand](#object-property-shorthand)
-      * [Spread syntax (...)](#spread-syntax-)
-      * [Rest syntax (parameters) (...)](#rest-syntax-parameters-)
-* [Array](#array)
-   * [Array methods](#array-methods)
-      * [2. concat](#2-concat)
-      * [5. every](#5-every)
-      * [6. fill](#6-fill)
-      * [7. filter](#7-filter)
-      * [8. findIndex](#8-findindex)
-      * [9. find](#9-find)
-      * [12. forEach](#12-foreach)
-      * [14. includes](#14-includes)
-      * [15. indexOf](#15-indexof)
-      * [17. join](#17-join)
-      * [19. lastIndexOf](#19-lastindexof)
-      * [20. map](#20-map)
-      * [22. pop](#22-pop)
-      * [23. push](#23-push)
-      * [24. reduce](#24-reduce)
-      * [26. reverse](#26-reverse)
-      * [27. shift](#27-shift)
-      * [28. slice](#28-slice)
-      * [29. some](#29-some)
-      * [30. sort](#30-sort)
-      * [31. splice](#31-splice)
-      * [34. toString](#34-tostring)
-      * [35. unshift](#35-unshift)
-   * [Array destructuring](#array-destructuring)
-   * [Two-dimensional array](#two-dimensional-array)
-* [Conditinal statements](#conditinal-statements)
-* [Function](#function)
-   * [Regular / Named function](#regular--named-function)
-   * [Function expression](#function-expression)
-   * [Arrow function](#arrow-function)
-   * [Immediately invoked function expression](#immediately-invoked-function-expression)
-   * [Callback functions](#callback-functions)
-   * [Default parameters](#default-parameters)
-* [Delay](#delay)
-   * [Print "Hello, World" every 1 second](#print-hello-world-every-1-second)
-   * [Print "Hello, World" after 1 second](#print-hello-world-after-1-second)
-* [Loops](#loops)
-   * [for](#for)
-   * [do...while](#dowhile)
-   * [while](#while)
-   * [break](#break)
-   * [continue](#continue)
-   * [labeled](#labeled)
-   * [for...in](#forin)
-   * [for...of](#forof)
-* [Logical AND (&amp;&amp;)](#logical-and-)
-* [Logical OR (||)](#logical-or-)
-* [JavaScript modules](#javascript-modules)
-* [Promises](#promises)
-* [Async &amp; Await](#async--await)
-* [Class](#class)
-* [Debugging](#debugging)
-* [Tools](#tools)
-* [Resources](#resources)
-
+- [Introduction](#introduction)
+- [How to add JavaScript to a web page](#how-to-add-javascript-to-a-web-page)
+  - [Everything between script tags will be executed by the web browser](#everything-between-script-tags-will-be-executed-by-the-web-browser)
+  - [Link an external file to a web page](#link-an-external-file-to-a-web-page)
+- [Reserved words](#reserved-words)
+- [Comments](#comments)
+- [JavaScript Variables](#javascript-variables)
+  - [undefined and null](#undefined-and-null)
+  - [Leaked variables](#leaked-variables)
+  - [Scope](#scope)
+  - [Global scope](#global-scope)
+  - [Local scope](#local-scope)
+    - [Function block](#function-block)
+    - [if block](#if-block)
+    - [Hoisting](#hoisting)
+- [Data types](#data-types)
+  - [How to check the data type](#how-to-check-the-data-type)
+  - [String](#string)
+  - [Methods and properties](#methods-and-properties)
+  - [Template strings](#template-strings)
+  - [Escape charecters](#escape-charecters)
+  - [Number](#number)
+  - [Methods and properties](#methods-and-properties-1)
+  - [BigInt](#bigint)
+  - [Symbol](#symbol)
+  - [Undefind](#undefind)
+  - [null](#null)
+  - [Object](#object)
+  - [Empty object.](#empty-object)
+  - [Object with properties and values.](#object-with-properties-and-values)
+  - [Object reference](#object-reference)
+  - [Get all the keys.](#get-all-the-keys)
+  - [Get all the values.](#get-all-the-values)
+  - [Checking properties.](#checking-properties)
+  - [Get all the keys and values.](#get-all-the-keys-and-values)
+  - [Object destructuring](#object-destructuring)
+  - [Object property shorthand](#object-property-shorthand)
+  - [Spread syntax (...)](#spread-syntax-)
+  - [Rest syntax (parameters) (...)](#rest-syntax-parameters-)
+- [Array](#array)
+  - [Array methods](#array-methods)
+  - [2. concat](#2-concat)
+  - [5. every](#5-every)
+  - [6. fill](#6-fill)
+  - [7. filter](#7-filter)
+  - [8. findIndex](#8-findindex)
+  - [9. find](#9-find)
+  - [12. forEach](#12-foreach)
+  - [14. includes](#14-includes)
+  - [15. indexOf](#15-indexof)
+  - [17. join](#17-join)
+  - [19. lastIndexOf](#19-lastindexof)
+  - [20. map](#20-map)
+  - [22. pop](#22-pop)
+  - [23. push](#23-push)
+  - [24. reduce](#24-reduce)
+  - [26. reverse](#26-reverse)
+  - [27. shift](#27-shift)
+  - [28. slice](#28-slice)
+  - [29. some](#29-some)
+  - [30. sort](#30-sort)
+  - [31. splice](#31-splice)
+  - [34. toString](#34-tostring)
+  - [35. unshift](#35-unshift)
+  - [Array destructuring](#array-destructuring)
+  - [Two-dimensional array](#two-dimensional-array)
+- [Conditinal statements](#conditinal-statements)
+- [Function](#function)
+  - [Regular / Named function](#regular--named-function)
+  - [Function expression](#function-expression)
+  - [Arrow function](#arrow-function)
+  - [Immediately invoked function expression](#immediately-invoked-function-expression)
+  - [Callback functions](#callback-functions)
+  - [Default parameters](#default-parameters)
+- [Delay](#delay)
+  - [Print "Hello, World" every 1 second](#print-hello-world-every-1-second)
+  - [Print "Hello, World" after 1 second](#print-hello-world-after-1-second)
+- [Loops](#loops)
+  - [for](#for)
+  - [do...while](#dowhile)
+  - [while](#while)
+  - [break](#break)
+  - [continue](#continue)
+  - [labeled](#labeled)
+  - [for...in](#forin)
+  - [for...of](#forof)
+- [Logical AND (&amp;&amp;)](#logical-and-)
+- [Logical OR (||)](#logical-or-)
+- [JavaScript modules](#javascript-modules)
+- [Promises](#promises)
+- [Async &amp; Await](#async--await)
+- [Class](#class)
+- [Debugging](#debugging)
+- [Tools](#tools)
+- [Resources](#resources)
 
 # Introduction
 
@@ -113,19 +111,19 @@ JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, S
 ```js
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        Hello, World!
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		Hello, World!
+	</body>
 
-    <script type="text/javascript">
-        alert("Hello, World!");
-    </script>
+	<script type="text/javascript">
+		alert("Hello, World!");
+	</script>
 </html>
 ```
 
@@ -134,16 +132,16 @@ JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, S
 ```js
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <script type="text/javascript" src="index.js"></script>
-    </head>
-    <body>
-        Hello, World!
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body>
+		Hello, World!
+	</body>
 </html>
 ```
 
@@ -176,29 +174,26 @@ comment;
 Use camel case for naming variables. Variable names can start with letters, `_` and `$` sign. It can't be reserved words.
 
 ```js
-let firstName = 'Bob';
+let firstName = "Bob";
 ```
 
 ```js
-var firstName = 'Bob';
+var firstName = "Bob";
 let id = 8765;
-const BIRTH_DAY = '1 Jan 2000';
+const BIRTH_DAY = "1 Jan 2000";
 ```
 
 Use `let` and `var` if the value will change over time and `const` (can not be changed later, and you'll get an error if you try reassigning a new value) for a constant value. `var` has global and `let` has block scope. You can't define `let` and `const` variables more than once.
 
-
 ```js
-var a = 'aaa';
-var a = 'aaa';
+var a = "aaa";
+var a = "aaa";
 
+let b = "bbb";
+let b = "bbb"; // 'b' has already been declared
 
-let b = 'bbb';
-let b = 'bbb'; // 'b' has already been declared
-
-
-const C = 'ccc';
-const C = 'ccc'; // 'C' has already been declared
+const C = "ccc";
+const C = "ccc"; // 'C' has already been declared
 ```
 
 ## undefined and null
@@ -208,12 +203,11 @@ let name;
 console.log(name);
 ```
 
-
 ```js
 let convertFahrenheitToCelsius = function (fahrenheit) {
-    console.log(fahrenheit); // undefined
-    return (fahrenheit - 32) * (5/9);
-}
+	console.log(fahrenheit); // undefined
+	return (fahrenheit - 32) * (5 / 9);
+};
 
 console.log(convertFahrenheitToCelsius()); // null
 ```
@@ -222,8 +216,8 @@ A function without a return statement will return a default value, in this case 
 
 ```js
 let convertFahrenheitToCelsius = function (fahrenheit) {
-    console.log(fahrenheit); // undefined
-}
+	console.log(fahrenheit); // undefined
+};
 
 console.log(convertFahrenheitToCelsius()); // undefined
 ```
@@ -232,8 +226,8 @@ console.log(convertFahrenheitToCelsius()); // undefined
 
 ```js
 if (true) {
-    age = 22;
-    console.log(age); // 22
+	age = 22;
+	console.log(age); // 22
 }
 ```
 
@@ -245,41 +239,41 @@ In a scope variables can be accessed defined in that scope or defined in parent 
 let fullName = "Dariana Trahan";
 
 if (true) {
-    let age = 22;
-    console.log(fullName); // parent scope
-    console.log(age); // local scope
-    if (true) {
-        let country = 'Australia';
-        console.log(fullName); // parent scope
-        console.log(age); // parent scope
-        console.log(country); // local scope
-    }
+	let age = 22;
+	console.log(fullName); // parent scope
+	console.log(age); // local scope
+	if (true) {
+		let country = "Australia";
+		console.log(fullName); // parent scope
+		console.log(age); // parent scope
+		console.log(country); // local scope
+	}
 }
 
 if (true) {
-    let age = 22;
-    console.log(fullName); // parent scope
-    console.log(age); // local scope
+	let age = 22;
+	console.log(fullName); // parent scope
+	console.log(age); // local scope
 }
 
 if (true) {
-    let city = 'Melbourne';
-    console.log(fullName); // parent scope
-    console.log(city); // local scope
+	let city = "Melbourne";
+	console.log(fullName); // parent scope
+	console.log(city); // local scope
 }
 ```
 
 Tree view of scopes.
 
 ```
-                 fullName
-	        (fullName)
-	     /       |       \
-            /        |        \
-         age        age        city
+				 fullName
+			(fullName)
+		 /       |       \
+			/        |        \
+		 age        age        city
 (fullName, age) (fullName, age)  (fullName, city)
 	/
-    country
+	country
 (fullName, age, country)
 ```
 
@@ -292,7 +286,7 @@ let firstName = "Dariana Trahan"; // var name = "Dariana Trahan"; const name = "
 console.log(firstName); // Dariana Trahan
 
 function getName() {
-    console.log(firstName); // Dariana Trahan
+	console.log(firstName); // Dariana Trahan
 }
 
 console.log(firstName); // Dariana Trahan
@@ -311,8 +305,8 @@ console.log(firstName); // Uncaught ReferenceError: firstName is not defined
 
 ```js
 function getName() {
-    let firstName = "Dariana Trahan";
-    console.log(firstName); 
+	let firstName = "Dariana Trahan";
+	console.log(firstName);
 }
 getName(); // Dariana Trahan
 ```
@@ -326,8 +320,8 @@ console.log(firstName); // Uncaught ReferenceError: firstName is not defined
 
 ```js
 if (true) {
-    let fullName = "Dariana Trahan"; // const fullName = "Dariana Trahan";
-    console.log(fullName); // Dariana Trahan
+	let fullName = "Dariana Trahan"; // const fullName = "Dariana Trahan";
+	console.log(fullName); // Dariana Trahan
 }
 
 console.log(fullName); // Uncaught ReferenceError: fullName is not defined
@@ -341,8 +335,8 @@ Prior to the execution of the code, the interpreter moves the definition of func
 console.log(fullName); // ReferenceError: fullName is not defined
 
 if (true) {
-    let fullName = "Dariana Trahan";
-    console.log(fullName);
+	let fullName = "Dariana Trahan";
+	console.log(fullName);
 }
 
 console.log(fullName);
@@ -352,8 +346,8 @@ console.log(fullName);
 console.log(fullName); // undefined
 
 if (true) {
-    var fullName = "Dariana Trahan";
-    console.log(fullName); // Dariana Trahan
+	var fullName = "Dariana Trahan";
+	console.log(fullName); // Dariana Trahan
 }
 
 console.log(fullName); // Dariana Trahan
@@ -361,8 +355,8 @@ console.log(fullName); // Dariana Trahan
 
 ```js
 if (true) {
-    var fullName;
-    console.log(fullName); // undefined
+	var fullName;
+	console.log(fullName); // undefined
 }
 
 console.log(fullName); // undefined
@@ -371,8 +365,8 @@ fullName = "Dariana Trahan";
 
 ```js
 function getFullName() {
-    var fullName = "Dariana Trahan";
-    console.log(fullName);
+	var fullName = "Dariana Trahan";
+	console.log(fullName);
 }
 
 console.log(fullName); // ReferenceError: fullName is not defined
@@ -381,8 +375,8 @@ console.log(fullName); // ReferenceError: fullName is not defined
 ```js
 let age = 20;
 if (age > 30) {
-    var fullName = "Dariana Trahan";
-    console.log(fullName);
+	var fullName = "Dariana Trahan";
+	console.log(fullName);
 }
 
 console.log(fullName); // undefined
@@ -417,7 +411,7 @@ console.log(fullName); // Dariana Trahan
 console.log(getFullName()); // Dariana Trahan
 
 function getFullName() {
-    return "Dariana Trahan";
+	return "Dariana Trahan";
 }
 ```
 
@@ -427,23 +421,22 @@ We can avoid hoisting and save space using anonymous function expression.
 console.log(getFullName()); // Uncaught ReferenceError: getName is not defined
 
 const getFullName = () => {
-    return "Dariana Trahan";
+	return "Dariana Trahan";
 };
 ```
 
 # Data types
 
-
-| No  | Name      | Example                  | Doc                                                                 | Data Type          |
-| --- | --------- | ------------------------ | ------------------------------------------------------------------- | ------------------ |
-| 1   | Number    | let a = 17                                                                                     | [link](https://developer.mozilla.org/en-US/docs/Glossary/Number)    | Primitive data     |
-| 2   | BigInt    | let a = 348378344239489n                                                                       | [link](https://developer.mozilla.org/en-US/docs/Glossary/BigInt)    | Primitive data     |
-| 3   | String    | let a = "Hello universe" <br/> let a = 'Hello universe' <br/> let a = \`${Hello universe}\`    | [link](https://developer.mozilla.org/en-US/docs/Glossary/String)    | Primitive data     |
-| 4   | Boolean   | let a = true                                                                                   | [link](https://developer.mozilla.org/en-US/docs/Glossary/Boolean)   | Primitive data     |
-| 5   | Symbol    | let sym = Symbol()                                                                             | [link](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)    | Primitive data     |
-| 6   | null      | let a = null                                                                                   | [link](https://developer.mozilla.org/en-US/docs/Glossary/Null)      | Primitive data     |
-| 7   | undefined | let a = undefined                                                                              | [link](https://developer.mozilla.org/en-US/docs/Glossary/undefined) | Primitive data     |
-| 8   | Object    | let a = {a: 'test'}                                                                            | [link](https://developer.mozilla.org/en-US/docs/Glossary/Object)    | Non-primitive data |
+| No  | Name      | Example                                                                                                        | Doc                                                                 | Data Type          |
+| --- | --------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------ |
+| 1   | Number    | `let a = 17`                                                                                                   | [link](https://developer.mozilla.org/en-US/docs/Glossary/Number)    | Primitive data     |
+| 2   | BigInt    | `let a = 348378344239489n`                                                                                     | [link](https://developer.mozilla.org/en-US/docs/Glossary/BigInt)    | Primitive data     |
+| 3   | String    | `let a = "Hello universe"` <br/> `let a = 'Hello universe'` <br/> <code> let a = \`${Hello universe}\` </code> | [link](https://developer.mozilla.org/en-US/docs/Glossary/String)    | Primitive data     |
+| 4   | Boolean   | `let a = true`                                                                                                 | [link](https://developer.mozilla.org/en-US/docs/Glossary/Boolean)   | Primitive data     |
+| 5   | Symbol    | `let sym = Symbol()`                                                                                           | [link](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)    | Primitive data     |
+| 6   | null      | `let a = null`                                                                                                 | [link](https://developer.mozilla.org/en-US/docs/Glossary/Null)      | Primitive data     |
+| 7   | undefined | `let a = undefined`                                                                                            | [link](https://developer.mozilla.org/en-US/docs/Glossary/undefined) | Primitive data     |
+| 8   | Object    | `let a = {a: 'test'}`                                                                                          | [link](https://developer.mozilla.org/en-US/docs/Glossary/Object)    | Non-primitive data |
 
 ## How to check the data type
 
@@ -466,12 +459,12 @@ Array.isArray({ a: "test" }); // false
 ### Methods and properties
 
 ```js
-let fullName = 'Bob Rob';
+let fullName = "Bob Rob";
 console.log(fullName.length); // 7
 console.log(fullName.toUpperCase()); // BOB ROB
 console.log(fullName.toLowerCase()); // bob rob
-console.log(fullName.includes('bob')); // false
-console.log(fullName.includes('Bob')); // true
+console.log(fullName.includes("bob")); // false
+console.log(fullName.includes("Bob")); // true
 
 let sentence = "ThereIsNoSpoon";
 let words = sentence.split(/(?=[A-Z])/);
@@ -483,7 +476,7 @@ console.log(words); // ['There', 'Is', 'No', 'Spoon']
 ### Template strings
 
 ```js
-let name = 'Bob';
+let name = "Bob";
 let score = 10;
 let result = `Name: ${name} - Score: ${score}`;
 console.log(result); // Name: Bob - Score: 10
@@ -492,14 +485,14 @@ console.log(result); // Name: Bob - Score: 10
 ### Escape charecters
 
 ```js
-let description = '\"If you\'re going to do something, then do it properly.\"'
+let description = '"If you\'re going to do something, then do it properly."';
 ```
 
 ## Number
 
 The number data type can hold numbers between 2 <sup>53-1</sup> and -2 <sup>53-1</sup>.
 
-The `Number.MAX_SAFE_INTEGER` constant represents  2 <sup>53-1</sup> and `Number.MIN_SAFE_INTEGER` constant represents -2 <sup>53-1</sup>.
+The `Number.MAX_SAFE_INTEGER` constant represents 2 <sup>53-1</sup> and `Number.MIN_SAFE_INTEGER` constant represents -2 <sup>53-1</sup>.
 
 ```js
 let numInt = 710;
@@ -523,15 +516,19 @@ console.log(Math.ceil(num)); // 1221
 [Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 
 ## BigInt
+
 todo
 
 ## Symbol
+
 todo
 
 ## Undefind
+
 todo
 
 ## null
+
 todo
 
 ## Object
@@ -542,17 +539,33 @@ todo
 const user = {};
 ```
 
+### Equality
+
+Points to two different memory locations.
+
+```js
+console.log({} === {}); // false
+```
+
+Points to the same memory location.
+
+```js
+let someObject = {};
+let otherObject = someObject;
+console.log(someObject === otherObject); // true
+```
+
 ### Object with properties and values.
 
 ```js
 let user = {
-    id: 1,
-    firstName: "Bob",
-    lastName: "Rob",
-    getFullName: function () {
-        console.log(this); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
-        return `${this.firstName} ${this.lastName}`;
-    },
+	id: 1,
+	firstName: "Bob",
+	lastName: "Rob",
+	getFullName: function () {
+		console.log(this); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+		return `${this.firstName} ${this.lastName}`;
+	},
 };
 
 console.log(user); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
@@ -566,19 +579,18 @@ console.log(user.getFullName()); // Bob Rob
 
 ```js
 let user = {
-    id: 1,
-    firstName: "Bob",
-    lastName: "Rob",
-    getFullName: function () {
-        return `${this.firstName} ${this.lastName}`;
-    },
+	id: 1,
+	firstName: "Bob",
+	lastName: "Rob",
+	getFullName: function () {
+		return `${this.firstName} ${this.lastName}`;
+	},
 };
 
-
 let changeId = function (u, newId) {
-    u.id = newId;
-    console.log(u);
-}
+	u.id = newId;
+	console.log(u);
+};
 
 console.log(user); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
 changeId(user, 10); // {id: 10, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
@@ -587,26 +599,24 @@ console.log(user); // {id: 10, firstName: "Bob", lastName: "Rob", getFullName: �
 
 ```js
 let user = {
-    id: 1,
-    firstName: "Bob",
-    lastName: "Rob",
-    getFullName: function () {
-        return `${this.firstName} ${this.lastName}`;
-    },
+	id: 1,
+	firstName: "Bob",
+	lastName: "Rob",
+	getFullName: function () {
+		return `${this.firstName} ${this.lastName}`;
+	},
 };
 
-
 let changeId = function (u, newId) {
-    u = {};
-    u.id = newId;
-    console.log(u);
-}
+	u = {};
+	u.id = newId;
+	console.log(u);
+};
 
 console.log(user); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
 changeId(user, 10); // {id: 10}
 console.log(user); // {id: 10, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
 ```
-
 
 ### Get all the keys.
 
@@ -645,17 +655,17 @@ console.log(entries);
 
 ```js
 let user = {
-    id: 1,
-    firstName: "bob",
-    lastName: "rob",
-    address: {
-        unit: 2,
-        city: "The City",
-        country: "The Country",
-    },
-    getFullName: function () {
-        return `${this.firstName} ${this.lastName}`;
-    },
+	id: 1,
+	firstName: "bob",
+	lastName: "rob",
+	address: {
+		unit: 2,
+		city: "The City",
+		country: "The Country",
+	},
+	getFullName: function () {
+		return `${this.firstName} ${this.lastName}`;
+	},
 };
 
 let firstName = user.firstName;
@@ -663,11 +673,11 @@ let firstName = user.firstName;
 let { firstName } = user;
 
 function userId(user) {
-    return user.id;
+	return user.id;
 }
 
 function userId({ id }) {
-    return id;
+	return id;
 }
 
 userId(user);
@@ -678,7 +688,7 @@ let { firstName: fName } = user;
 // fName = 'bob'
 
 let {
-    address: { unit, city, country },
+	address: { unit, city, country },
 } = user;
 ```
 
@@ -688,15 +698,15 @@ We can use the object property shorthand when the property value has the same na
 
 ```js
 let user = {
-    id: id,
-    firstName: firstName,
-    lastName: lastName,
+	id: id,
+	firstName: firstName,
+	lastName: lastName,
 };
 
 let user = {
-    id,
-    firstName,
-    lastName,
+	id,
+	firstName,
+	lastName,
 };
 ```
 
@@ -706,16 +716,16 @@ TODO
 
 ```js
 let user = {
-    id: 1,
-    firstName: "bob",
-    lastName: "rob",
+	id: 1,
+	firstName: "bob",
+	lastName: "rob",
 };
 
 function userId({ id, ...rest }) {
-    return {
-        id: id + 1,
-        ...rest,
-    };
+	return {
+		id: id + 1,
+		...rest,
+	};
 }
 
 userId(user); // {id: 2, firstName: 'bob', lastName: 'rob'}
@@ -727,14 +737,14 @@ The rest parameter syntax (last parameter in a function) allows a function to ac
 
 ```js
 let user = {
-    id: 1,
-    firstName: "bob",
-    lastName: "rob",
+	id: 1,
+	firstName: "bob",
+	lastName: "rob",
 };
 
 function userId({ id, ...rest }) {
-    console.log(rest); // {firstName: 'bob', lastName: 'rob'}
-    return `${id} ${rest.firstName} ${rest.lastName}`;
+	console.log(rest); // {firstName: 'bob', lastName: 'rob'}
+	return `${id} ${rest.firstName} ${rest.lastName}`;
 }
 
 userId(user); // '1 bob rob'
@@ -789,7 +799,6 @@ console.log(arr.length); // 0
 | 35  | unshift()        |             |
 | 36  | values()         |             |
 
-
 ### 2. concat
 
 ```js
@@ -829,14 +838,89 @@ let filter = fruits.filter((fruit) => fruit.toLowerCase().includes("apple"));
 console.log(fruits + "/" + filter); // Apple,Banana,Orange,Mango/Apple,Apple
 ```
 
+```js
+let notes = [
+	{
+		title: "First title",
+		body: "First body",
+	},
+	{
+		title: "Second title",
+		body: "Second body",
+	},
+	{
+		title: "Third title",
+		body: "Third body",
+	},
+];
+
+let filterdNotes = notes.filter((note, index) => {
+	const isTitleMatch = note.title.toLowerCase().includes("rs");
+	const isBodyMatch = note.body.toLowerCase().includes("rs");
+	return isTitleMatch || isBodyMatch;
+});
+
+console.log(JSON.stringify(filterdNotes)); // [{"title":"First title","body":"First body"}]
+```
+
 ### 8. findIndex
 
 ```js
 let fruits = ["Apple", "Banana", "Orange", "Mango", "Apple"];
-let findIndex = fruits.findIndex((fruit) =>
-	fruit.toLowerCase().includes("apple")
-);
-console.log(fruits + "/" + findIndex); // Apple,Banana,Orange,Mango/0
+let index = fruits.findIndex((fruit) => {
+	return fruit.toLowerCase().includes("apple");
+});
+console.log(fruits + "/" + index); // Apple,Banana,Orange,Mango/0
+```
+
+```js
+let notes = [
+	{
+		title: "First title",
+		body: "First body",
+	},
+	{
+		title: "Second title",
+		body: "Second body",
+	},
+	{
+		title: "Third title",
+		body: "Third body",
+	},
+];
+
+let index = notes.findIndex((note, index) => {
+	return note.title === "Second title";
+});
+
+console.log(JSON.stringify(notes) + "/" + index); // [{"title":"First title","body":"First body"},{"title":"Second title","body":"Second body"},{"title":"Third title","body":"Third body"}]/1
+```
+
+```js
+let notes = [
+	{
+		title: "First title",
+		body: "First body",
+	},
+	{
+		title: "Second title",
+		body: "Second body",
+	},
+	{
+		title: "Third title",
+		body: "Third body",
+	},
+];
+
+const findNote = (notes, title) => {
+	let index = notes.findIndex((note, index) => {
+		return note.title.toLowerCase() === title.toLowerCase();
+	});
+	return notes[index];
+};
+
+let note = findNote(notes, "second title");
+console.log(note); // {title: "Second title", body: "Second body"}
 ```
 
 ### 9. find
@@ -849,19 +933,45 @@ let find = fruits.find((fruit) => fruit.toLowerCase().includes("apple"));
 console.log(fruits + "/" + find); // Apple,Banana,Orange,Mango/Apple
 ```
 
+```js
+let notes = [
+	{
+		title: "First title",
+		body: "First body",
+	},
+	{
+		title: "Second title",
+		body: "Second body",
+	},
+	{
+		title: "Third title",
+		body: "Third body",
+	},
+];
+
+const findNote = (notes, title) => {
+	return notes.find((note, index) => {
+		return note.title.toLowerCase() === title.toLowerCase();
+	});
+};
+
+let note = findNote(notes, "second title");
+console.log(note); // {title: "Second title", body: "Second body"}
+```
+
 ### 12. forEach
 
 `forEach` function takes single argument (a function or a callback function), and this function gets called with some arguments.
 
 ```js
 forEach((element) => {
-    /* … */
+	/* … */
 });
 forEach((element, index) => {
-    /* … */
+	/* … */
 });
 forEach((element, index, array) => {
-    /* … */
+	/* … */
 });
 // element = The current element being processed in the array.
 // index = The index of element in the array.
@@ -870,16 +980,16 @@ forEach((element, index, array) => {
 
 ```js
 let names = [
-    "Dariana Trahan",
-    "Lillie Earl",
-    "Esther Yeager",
-    "Marianna Brownlee",
-    "Sara Tong",
-    "Clint Winslow",
-    "Efrain Popp",
-    "Anya Aiello",
-    "Sergio Truitt",
-    "Keyshawn Apodaca",
+	"Dariana Trahan",
+	"Lillie Earl",
+	"Esther Yeager",
+	"Marianna Brownlee",
+	"Sara Tong",
+	"Clint Winslow",
+	"Efrain Popp",
+	"Anya Aiello",
+	"Sergio Truitt",
+	"Keyshawn Apodaca",
 ];
 
 names.forEach((name) => console.log(name));
@@ -917,7 +1027,7 @@ names.forEach((name, index) => console.log(index, ":", name));
 
 ```js
 names.forEach((name, index, array) =>
-    console.log(index, ":", name, "-", array[index])
+	console.log(index, ":", name, "-", array[index])
 );
 
 /*
@@ -937,17 +1047,21 @@ names.forEach((name, index, array) =>
 ### 14. includes
 
 ```js
-console.log(arr3.includes(1)); // true
-console.log(arr3.includes(6)); // false
-console.log(arr3.includes(5)); // true
+let arr = [1, 1, 23, , 5];
+
+console.log(arr.includes(1)); // true
+console.log(arr.includes(6)); // false
+console.log(arr.includes(5)); // true
 ```
 
 ### 15. indexOf
 
 ```js
-console.log(arr3.indexOf(1)); // 0
-console.log(arr3.indexOf(6)); // -1
-console.log(arr3.indexOf(5)); // 5
+let arr = [1, 1, 23, , 5];
+
+console.log(arr.indexOf(1)); // 0
+console.log(arr.indexOf(6)); // -1
+console.log(arr.indexOf(5)); // 4
 ```
 
 ### 17. join
@@ -1027,6 +1141,7 @@ console.log(rmItem); // 1234
 let num = [1, 2, 3, 1, 4, 5];
 console.log(num.slice(3, 4)); // [1]
 console.log(num); // [1, 2, 3, 1, 4, 5]
+
 // other variations
 console.log(num.slice()); // [1, 2, 3, 1, 4, 5]
 console.log(num.slice(3)); // [1, 4, 5]
@@ -1043,9 +1158,41 @@ console.log(fruits + "/" + some); // Apple,Banana,Orange,Mango/true
 ### 30. sort
 
 ```js
-let num = [1, 2, 5666, 22, 45, 7, 0];
-num.sort();
-console.log(num); // [0, 1, 2, 22, 45, 5666, 7]
+let nums = [1, 2, 5666, 22, 45, 7, 0];
+nums.sort();
+console.log(nums); // [0, 1, 2, 22, 45, 5666, 7]
+```
+
+```js
+let notes = [
+	{
+		title: "Second title",
+		body: "Second body",
+	},
+	{
+		title: "Third title",
+		body: "Third body",
+	},
+	{
+		title: "First title",
+		body: "First body",
+	},
+];
+
+const sortNotes = (notes) => {
+	return notes.sort((a, b) => {
+		if (a.title.toLowerCase() < b.title.toLowerCase()) {
+			return -1;
+		} else if (b.title.toLowerCase() < b.title.toLowerCase()) {
+			return 1;
+		} else {
+			return 0;
+		}
+	});
+};
+
+sortNotes(notes);
+console.log(notes); // [{title: "First title", body: "First body"}, {title: "Second title", body: "Second body"}, {title: "Third title", body: "Third body"}]
 ```
 
 ### 31. splice
@@ -1070,7 +1217,7 @@ let num = [1, 2, 3, 1, 4, 5];
 console.log(num.splice(0, 2, 4566)); // [1, 2]
 console.log(num); // [4566, 3, 1, 4, 5]
 
-let num = [1, 3, 4]
+let num = [1, 3, 4];
 console.log(num.splice(1, 0, 2)); // []
 console.log(num); // [1, 2, 3, 4]
 ```
@@ -1098,12 +1245,12 @@ let [first, second] = num;
 
 /*
 function firstNum(num) {
-    return num[0];
+	return num[0];
 }
 */
 
 function firstNum([first]) {
-    return first;
+	return first;
 }
 
 firstNum(num);
@@ -1120,15 +1267,15 @@ let [first, , ...others] = num;
 // others = [65]
 
 let nums = [
-    [1, 2, 3],
-    [4, 5, 6],
+	[1, 2, 3],
+	[4, 5, 6],
 ];
 
 let [row1, row2] = nums;
 console.log(row1 + " " + row2);
 
 for (const [first, second, third] of nums) {
-    console.log(first, second, third);
+	console.log(first, second, third);
 }
 ```
 
@@ -1136,8 +1283,8 @@ for (const [first, second, third] of nums) {
 
 ```js
 let nums = [
-    [1, 2, 3],
-    [4, 5, 6],
+	[1, 2, 3],
+	[4, 5, 6],
 ];
 
 console.log(nums[0]); // [1, 2, 3]
@@ -1153,11 +1300,11 @@ console.log(nums[0][1]); // 2
 let num = 89;
 
 if (num === 89) {
-    console.log("89");
+	console.log("89");
 } else if (num === 90) {
-    console.log("90");
+	console.log("90");
 } else {
-    console.log("Not 89 or 90");
+	console.log("Not 89 or 90");
 }
 ```
 
@@ -1165,14 +1312,14 @@ if (num === 89) {
 let num = 89;
 
 switch (num) {
-    case 89:
-        console.log("89");
-        break;
-    case 90:
-        console.log("90");
-        break;
-    default:
-        console.log("Not 89 or 90");
+	case 89:
+		console.log("89");
+		break;
+	case 90:
+		console.log("90");
+		break;
+	default:
+		console.log("Not 89 or 90");
 }
 ```
 
@@ -1197,7 +1344,7 @@ You can use functions before you create them because they are hoisted.
 
 ```js
 function hello() {
-    return "hello world";
+	return "hello world";
 }
 
 hello(); // 'hello world'
@@ -1205,7 +1352,7 @@ hello(); // 'hello world'
 
 ```js
 function hello(name) {
-    return name;
+	return name;
 }
 
 hello("hello world"); // 'hello world'
@@ -1217,7 +1364,7 @@ You can't use function expressions before you create them. So they are not hoist
 
 ```js
 const hello = function () {
-    return "hello world";
+	return "hello world";
 };
 
 hello(); // 'hello world'
@@ -1229,7 +1376,7 @@ With block body, we need explicit return.
 
 ```
 const hello = () => {
-    return "hello world";
+	return "hello world";
 };
 
 hello(); // 'hello world'
@@ -1247,15 +1394,15 @@ hello(); // 'hello world'
 
 ```js
 (function () {
-    return "hello world";
+	return "hello world";
 })();
 
 (() => {
-    return "hello world";
+	return "hello world";
 })();
 
 (async () => {
-    return "hello world";
+	return "hello world";
 })();
 ```
 
@@ -1263,7 +1410,7 @@ Store the return value.
 
 ```js
 let result = (function () {
-    return "hello world";
+	return "hello world";
 })();
 console.log(result); // hello world
 ```
@@ -1275,12 +1422,12 @@ A callback function (A) is a function passed into another function (B) as an arg
 ```js
 // A
 const callBackThisFunction = (name) => {
-    return "Hello, " + name;
+	return "Hello, " + name;
 };
 
 // B
 const hello = (callback, name) => {
-    return callBackThisFunction(name);
+	return callBackThisFunction(name);
 };
 
 console.log(hello(callBackThisFunction, "Bob"));
@@ -1289,9 +1436,9 @@ console.log(hello(callBackThisFunction, "Bob"));
 ## Default parameters
 
 ```js
-let getResult = function(name = 'Anonymous', score = 0) {
-    return `Name: ${name} - Score: ${score}`
-}
+let getResult = function (name = "Anonymous", score = 0) {
+	return `Name: ${name} - Score: ${score}`;
+};
 
 console.log(getResult());
 ```
@@ -1302,7 +1449,7 @@ console.log(getResult());
 
 ```js
 const callBackThisFunction = (name) => {
-    console.log("Hello, World");
+	console.log("Hello, World");
 };
 
 setInterval(callBackThisFunction, 1000);
@@ -1312,12 +1459,11 @@ setInterval(callBackThisFunction, 1000);
 
 ```js
 const callBackThisFunction = (name) => {
-    console.log("Hello, World");
+	console.log("Hello, World");
 };
 
 setTimeout(callBackThisFunction, 1000);
 ```
-
 
 # Loops
 
@@ -1325,10 +1471,10 @@ setTimeout(callBackThisFunction, 1000);
 
 ```js
 for ([initialExpression]; [conditionExpression]; [incrementExpression])
-    statement;
+	statement;
 
 for (let num = 1; num <= 10; num++) {
-    console.log("#", num);
+	console.log("#", num);
 }
 ```
 
@@ -1342,8 +1488,8 @@ while (condition);
 
 let num = 1;
 do {
-    console.log("#", num);
-    num += 1;
+	console.log("#", num);
+	num += 1;
 } while (num <= 10);
 ```
 
@@ -1354,8 +1500,8 @@ while (condition) statement;
 
 let num = 1;
 while (num <= 10) {
-    console.log("#", num);
-    num += 1;
+	console.log("#", num);
+	num += 1;
 }
 ```
 
@@ -1369,23 +1515,23 @@ break label;
 
 let theNum = 5;
 for (let num = 1; num <= 10; num++) {
-    if (num === theNum) {
-        console.log('Found the number', theNum);
-        break;
-    }
-    console.log('Looking at', num);
+	if (num === theNum) {
+		console.log('Found the number', theNum);
+		break;
+	}
+	console.log('Looking at', num);
 }
 
 // The following code will break the inner loop 10 times and print "Found the number 5" 10 times
 let theNum = 5;
 for (let outer = 1; outer <= 10; outer++) {
-    for (let inner = 1; inner <= 10; inner++) {
-        if (inner === theNum) {
-            console.log('Found the number', theNum);
-            break;
-        }
-        console.log('Looking at', inner);
-    }
+	for (let inner = 1; inner <= 10; inner++) {
+		if (inner === theNum) {
+			console.log('Found the number', theNum);
+			break;
+		}
+		console.log('Looking at', inner);
+	}
 }
 
 
@@ -1393,14 +1539,14 @@ for (let outer = 1; outer <= 10; outer++) {
 let theNum = 5;
 outerLoop:
 for (let outer = 1; outer <= 10; outer++) {
-    innerLoop:
-    for (let inner = 1; inner <= 10; inner++) {
-        if (inner === theNum) {
-            console.log('Found the number', theNum);
-            break outerLoop;
-        }
-        console.log('Looking at', inner);
-    }
+	innerLoop:
+	for (let inner = 1; inner <= 10; inner++) {
+		if (inner === theNum) {
+			console.log('Found the number', theNum);
+			break outerLoop;
+		}
+		console.log('Looking at', inner);
+	}
 }
 ```
 
@@ -1415,11 +1561,11 @@ continue label;
 // Look at all the numbers.
 let theNum = 5;
 for (let num = 1; num <= 10; num++) {
-    if (num === theNum) {
-        console.log('Found the number', theNum);
-        continue;
-    }
-    console.log('Looking at', num);
+	if (num === theNum) {
+		console.log('Found the number', theNum);
+		continue;
+	}
+	console.log('Looking at', num);
 }
 
 
@@ -1444,34 +1590,34 @@ label: statement;
 for (variable in object) statement;
 
 let names = [
-    "Dariana Trahan",
-    "Lillie Earl",
-    "Esther Yeager",
-    "Marianna Brownlee",
-    "Sara Tong",
-    "Clint Winslow",
-    "Efrain Popp",
-    "Anya Aiello",
-    "Sergio Truitt",
-    "Keyshawn Apodaca",
+	"Dariana Trahan",
+	"Lillie Earl",
+	"Esther Yeager",
+	"Marianna Brownlee",
+	"Sara Tong",
+	"Clint Winslow",
+	"Efrain Popp",
+	"Anya Aiello",
+	"Sergio Truitt",
+	"Keyshawn Apodaca",
 ];
 
 for (const i in names) {
-    console.log(names[i]);
+	console.log(names[i]);
 }
 
 let person = {
-    name: "Dariana Trahan",
-    age: 21,
-    address: "localhost",
+	name: "Dariana Trahan",
+	age: 21,
+	address: "localhost",
 };
 
 for (const key in person) {
-    console.log(key, ":", person[key]);
+	console.log(key, ":", person[key]);
 }
 ```
 
-## for...of 
+## for...of
 
 `for...of` statement iterates over iterable objects including String, Array, TypedArray, Map, Set, and Intl. Segments to get the property values.
 
@@ -1479,30 +1625,30 @@ for (const key in person) {
 for (variable of object) statement;
 
 let names = [
-    "Dariana Trahan",
-    "Lillie Earl",
-    "Esther Yeager",
-    "Marianna Brownlee",
-    "Sara Tong",
-    "Clint Winslow",
-    "Efrain Popp",
-    "Anya Aiello",
-    "Sergio Truitt",
-    "Keyshawn Apodaca",
+	"Dariana Trahan",
+	"Lillie Earl",
+	"Esther Yeager",
+	"Marianna Brownlee",
+	"Sara Tong",
+	"Clint Winslow",
+	"Efrain Popp",
+	"Anya Aiello",
+	"Sergio Truitt",
+	"Keyshawn Apodaca",
 ];
 
 for (const name of names) {
-    console.log(name);
+	console.log(name);
 }
 
 let person = {
-    name: "Dariana Trahan",
-    age: 21,
-    address: "localhost",
+	name: "Dariana Trahan",
+	age: 21,
+	address: "localhost",
 };
 
 for (const value of Object.values(person)) {
-    console.log(value);
+	console.log(value);
 }
 ```
 
@@ -1560,15 +1706,15 @@ There is only zero or one default export allowed per module and zero or more Nam
 // ./modules/random.js
 
 function randomString() {
-    ...
+	...
 }
 
 function randomFloat() {
-    ...
+	...
 }
 
 function randomNum() {
-    ...
+	...
 }
 
 export { randomString, randomFloat };
@@ -1579,15 +1725,15 @@ export default randomNum;
 // ./modules/random.js
 
 function randomString() {
-    ...
+	...
 }
 
 function randomFloat() {
-    ...
+	...
 }
 
 export default function() {
-    ...
+	...
 }
 
 export { randomString, randomFloat };
@@ -1612,22 +1758,22 @@ import randomNum from "./modules/random.js";
 // ./modules/random.js
 
 function randomString() {
-    ...
+	...
 }
 
 function randomFloat() {
-    ...
+	...
 }
 
 function randomNum() {
-    ...
+	...
 }
 
 
 export {
-    randomString as newRandomStringFunctionName,
-    randomFloat as newRandomFloatFunctionName
-    randomNum as newRandomNumFunctionName
+	randomString as newRandomStringFunctionName,
+	randomFloat as newRandomFloatFunctionName
+	randomNum as newRandomNumFunctionName
 };
 
 ```
@@ -1635,9 +1781,9 @@ export {
 ```js
 // main.js
 import {
-    newRandomStringFunctionName as randS,
-    newRandomFloatFunctionName as randF,
-    newRandomNumFunctionName as randN,
+	newRandomStringFunctionName as randS,
+	newRandomFloatFunctionName as randF,
+	newRandomNumFunctionName as randN,
 } from "./modules/random.js";
 ```
 
@@ -1661,7 +1807,6 @@ import { Card } from "antd";
 
 [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
-
 # Promises
 
 ```js
@@ -1678,47 +1823,47 @@ todo;
 
 ```js
 class Person {
-    static #PRIVATE_STATIC_FIELD;
+	static #PRIVATE_STATIC_FIELD;
 
-    // private fields
-    #firstName;
-    #lastName;
-    constructor(firstName, lastName, age = 0) {
-        this.#firstName = firstName;
-        this.#lastName = lastName;
-        this.age = age;
-        this.addresses = [];
-    }
-    getFullName() {
-        return this.#firstName + " " + this.#lastName;
-    }
+	// private fields
+	#firstName;
+	#lastName;
+	constructor(firstName, lastName, age = 0) {
+		this.#firstName = firstName;
+		this.#lastName = lastName;
+		this.age = age;
+		this.addresses = [];
+	}
+	getFullName() {
+		return this.#firstName + " " + this.#lastName;
+	}
 
-    // private method
-    #privateMethod() {
-        return "hello world";
-    }
+	// private method
+	#privateMethod() {
+		return "hello world";
+	}
 
-    // private static method
-    static #privateStaticMethod() {
-        return "hello world";
-    }
+	// private static method
+	static #privateStaticMethod() {
+		return "hello world";
+	}
 }
 
 class User extends Person {
-    static USER_COUNT = 0;
-    // default value for age and set address with an initial value
-    constructor(firstName, lastName, age = 0) {
-        super(firstName, lastName, age);
-        User.USER_COUNT++;
-    }
+	static USER_COUNT = 0;
+	// default value for age and set address with an initial value
+	constructor(firstName, lastName, age = 0) {
+		super(firstName, lastName, age);
+		User.USER_COUNT++;
+	}
 
-    setAddress(address) {
-        this.addresses.push(address);
-    }
+	setAddress(address) {
+		this.addresses.push(address);
+	}
 
-    static getTotalUser() {
-        return this.USER_COUNT;
-    }
+	static getTotalUser() {
+		return this.USER_COUNT;
+	}
 }
 
 let user = new User("Bob", "Rob");
