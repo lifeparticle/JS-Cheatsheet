@@ -502,7 +502,7 @@ let numBin = 0b1011000110;
 
 ### Methods and properties
 
-``js
+```js
 let num = 1220.4324345;
 console.log(num.toFixed(2)); // 1220.43
 console.log(Math.round(num)); // 1220
@@ -518,20 +518,226 @@ todo
 ## Symbol
 todo
 
-## Undefinde
+## Undefind
 todo
 
 ## null
 todo
 
-## Array
+## Object
+
+### Empty object.
+
+```js
+const user = {};
+```
+
+### Object with properties and values.
+
+```js
+let user = {
+    id: 1,
+    firstName: "Bob",
+    lastName: "Rob",
+    getFullName: function () {
+        console.log(this); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+        return `${this.firstName} ${this.lastName}`;
+    },
+};
+
+console.log(user); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+console.log(user.id); // 1
+console.log(user.firstName); // Bob
+console.log(user.lastName); // Rob
+console.log(user.getFullName()); // Bob Rob
+```
+
+### Object reference
+
+```js
+let user = {
+    id: 1,
+    firstName: "Bob",
+    lastName: "Rob",
+    getFullName: function () {
+        return `${this.firstName} ${this.lastName}`;
+    },
+};
+
+
+let changeId = function (u, newId) {
+    u.id = newId;
+    console.log(u);
+}
+
+console.log(user); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+changeId(user, 10); // {id: 10, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+console.log(user); // {id: 10, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+```
+
+```js
+let user = {
+    id: 1,
+    firstName: "Bob",
+    lastName: "Rob",
+    getFullName: function () {
+        return `${this.firstName} ${this.lastName}`;
+    },
+};
+
+
+let changeId = function (u, newId) {
+    u = {};
+    u.id = newId;
+    console.log(u);
+}
+
+console.log(user); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+changeId(user, 10); // {id: 10}
+console.log(user); // {id: 10, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+```
+
+
+### Get all the keys.
+
+```js
+const keys = Object.keys(user);
+console.log(keys); // ['id', 'firstName', 'lastName', 'getFullName']
+```
+
+### Get all the values.
+
+```js
+const values = Object.values(user);
+console.log(values); // [1, 'bob', 'rob', ƒ]
+```
+
+### Checking properties.
+
+```js
+console.log(user.hasOwnProperty("id")); // true
+console.log(user.hasOwnProperty("age")); // false
+```
+
+### Get all the keys and values.
+
+```js
+const entries = Object.entries(user);
+console.log(entries);
+
+// 0: (2) ['id', 1]
+// 1: (2) ['firstName', 'bob']
+// 2: (2) ['lastName', 'rob']
+// 3: (2) ['getFullName', ƒ]
+```
+
+### Object destructuring
+
+```js
+let user = {
+    id: 1,
+    firstName: "bob",
+    lastName: "rob",
+    address: {
+        unit: 2,
+        city: "The City",
+        country: "The Country",
+    },
+    getFullName: function () {
+        return `${this.firstName} ${this.lastName}`;
+    },
+};
+
+let firstName = user.firstName;
+
+let { firstName } = user;
+
+function userId(user) {
+    return user.id;
+}
+
+function userId({ id }) {
+    return id;
+}
+
+userId(user);
+
+// Rename
+
+let { firstName: fName } = user;
+// fName = 'bob'
+
+let {
+    address: { unit, city, country },
+} = user;
+```
+
+### Object property shorthand
+
+We can use the object property shorthand when the property value has the same name as the property key.
+
+```js
+let user = {
+    id: id,
+    firstName: firstName,
+    lastName: lastName,
+};
+
+let user = {
+    id,
+    firstName,
+    lastName,
+};
+```
+
+### Spread syntax (...)
+
+TODO
+
+```js
+let user = {
+    id: 1,
+    firstName: "bob",
+    lastName: "rob",
+};
+
+function userId({ id, ...rest }) {
+    return {
+        id: id + 1,
+        ...rest,
+    };
+}
+
+userId(user); // {id: 2, firstName: 'bob', lastName: 'rob'}
+```
+
+### Rest syntax (parameters) (...)
+
+The rest parameter syntax (last parameter in a function) allows a function to accept an indefinite number of arguments.
+
+```js
+let user = {
+    id: 1,
+    firstName: "bob",
+    lastName: "rob",
+};
+
+function userId({ id, ...rest }) {
+    console.log(rest); // {firstName: 'bob', lastName: 'rob'}
+    return `${id} ${rest.firstName} ${rest.lastName}`;
+}
+
+userId(user); // '1 bob rob'
+```
+
+# Array
 
 ```js
 const arr = Array();
 const arr = [];
 ```
 
-### Array methods
+## Array methods
 
 | No  | Name             | When to use |
 | --- | ---------------- | ----------- |
@@ -572,47 +778,6 @@ const arr = [];
 | 35  | unshift()        |             |
 | 36  | values()         |             |
 
-### Array destructuring
-
-```js
-let num = [123, 44, 65];
-let [first, second] = num;
-
-/*
-function firstNum(num) {
-    return num[0];
-}
-*/
-
-function firstNum([first]) {
-    return first;
-}
-
-firstNum(num);
-
-// Skip
-let [first, , third] = num;
-
-// Rest of the array
-let [first, ...others] = num;
-// others = [44, 65]
-
-// Skip and rest of the array
-let [first, , ...others] = num;
-// others = [65]
-
-let nums = [
-    [1, 2, 3],
-    [4, 5, 6],
-];
-
-let [row1, row2] = nums;
-console.log(row1 + " " + row2);
-
-for (const [first, second, third] of nums) {
-    console.log(first, second, third);
-}
-```
 
 ### split
 
@@ -869,7 +1034,49 @@ names.forEach((name, index, array) =>
 );
 ```
 
-### Two-dimensional array
+## Array destructuring
+
+```js
+let num = [123, 44, 65];
+let [first, second] = num;
+
+/*
+function firstNum(num) {
+    return num[0];
+}
+*/
+
+function firstNum([first]) {
+    return first;
+}
+
+firstNum(num);
+
+// Skip
+let [first, , third] = num;
+
+// Rest of the array
+let [first, ...others] = num;
+// others = [44, 65]
+
+// Skip and rest of the array
+let [first, , ...others] = num;
+// others = [65]
+
+let nums = [
+    [1, 2, 3],
+    [4, 5, 6],
+];
+
+let [row1, row2] = nums;
+console.log(row1 + " " + row2);
+
+for (const [first, second, third] of nums) {
+    console.log(first, second, third);
+}
+```
+
+## Two-dimensional array
 
 ```js
 let nums = [
@@ -1392,211 +1599,6 @@ import { Card } from "antd";
 
 [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
-# Object
-
-## Empty object.
-
-```js
-const user = {};
-```
-
-## Object with properties and values.
-
-```js
-let user = {
-    id: 1,
-    firstName: "Bob",
-    lastName: "Rob",
-    getFullName: function () {
-        console.log(this); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
-        return `${this.firstName} ${this.lastName}`;
-    },
-};
-
-console.log(user); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
-console.log(user.id); // 1
-console.log(user.firstName); // Bob
-console.log(user.lastName); // Rob
-console.log(user.getFullName()); // Bob Rob
-```
-
-## Object reference
-
-```js
-let user = {
-    id: 1,
-    firstName: "Bob",
-    lastName: "Rob",
-    getFullName: function () {
-        return `${this.firstName} ${this.lastName}`;
-    },
-};
-
-
-let changeId = function (u, newId) {
-    u.id = newId;
-    console.log(u);
-}
-
-console.log(user); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
-changeId(user, 10); // {id: 10, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
-console.log(user); // {id: 10, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
-```
-
-```js
-let user = {
-    id: 1,
-    firstName: "Bob",
-    lastName: "Rob",
-    getFullName: function () {
-        return `${this.firstName} ${this.lastName}`;
-    },
-};
-
-
-let changeId = function (u, newId) {
-    u = {};
-    u.id = newId;
-    console.log(u);
-}
-
-console.log(user); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
-changeId(user, 10); // {id: 10}
-console.log(user); // {id: 10, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
-```
-
-
-## Get all the keys.
-
-```js
-const keys = Object.keys(user);
-console.log(keys); // ['id', 'firstName', 'lastName', 'getFullName']
-```
-
-## Get all the values.
-
-```js
-const values = Object.values(user);
-console.log(values); // [1, 'bob', 'rob', ƒ]
-```
-
-## Checking properties.
-
-```js
-console.log(user.hasOwnProperty("id")); // true
-console.log(user.hasOwnProperty("age")); // false
-```
-
-## Get all the keys and values.
-
-```js
-const entries = Object.entries(user);
-console.log(entries);
-
-// 0: (2) ['id', 1]
-// 1: (2) ['firstName', 'bob']
-// 2: (2) ['lastName', 'rob']
-// 3: (2) ['getFullName', ƒ]
-```
-
-## Object destructuring
-
-```js
-let user = {
-    id: 1,
-    firstName: "bob",
-    lastName: "rob",
-    address: {
-        unit: 2,
-        city: "The City",
-        country: "The Country",
-    },
-    getFullName: function () {
-        return `${this.firstName} ${this.lastName}`;
-    },
-};
-
-let firstName = user.firstName;
-
-let { firstName } = user;
-
-function userId(user) {
-    return user.id;
-}
-
-function userId({ id }) {
-    return id;
-}
-
-userId(user);
-
-// Rename
-
-let { firstName: fName } = user;
-// fName = 'bob'
-
-let {
-    address: { unit, city, country },
-} = user;
-```
-
-## Object property shorthand
-
-We can use the object property shorthand when the property value has the same name as the property key.
-
-```js
-let user = {
-    id: id,
-    firstName: firstName,
-    lastName: lastName,
-};
-
-let user = {
-    id,
-    firstName,
-    lastName,
-};
-```
-
-## Spread syntax (...)
-
-TODO
-
-```js
-let user = {
-    id: 1,
-    firstName: "bob",
-    lastName: "rob",
-};
-
-function userId({ id, ...rest }) {
-    return {
-        id: id + 1,
-        ...rest,
-    };
-}
-
-userId(user); // {id: 2, firstName: 'bob', lastName: 'rob'}
-```
-
-## Rest syntax (parameters) (...)
-
-The rest parameter syntax (last parameter in a function) allows a function to accept an indefinite number of arguments.
-
-```js
-let user = {
-    id: 1,
-    firstName: "bob",
-    lastName: "rob",
-};
-
-function userId({ id, ...rest }) {
-    console.log(rest); // {firstName: 'bob', lastName: 'rob'}
-    return `${id} ${rest.firstName} ${rest.lastName}`;
-}
-
-userId(user); // '1 bob rob'
-```
 
 # Promises
 
