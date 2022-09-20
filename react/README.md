@@ -11,17 +11,17 @@
 10. Something else???
 
 ## Create a React project
-1. Idea -> Base64 converter
-2. Requirements -> Encode, Decode, Clear etc
-3. Mockups -> Low fidelity design -> High fidelity
-4. Implementation
-4.1 Create a react app -> npm, yarn or pnpm
-4.2 Code the UI -> You may want to use a react component library i.e., mantine, to speed the development process
-4.3 Add logic - react hooks and custom functions 
-4.3.1 If you're stuck, then search for specific react or javascript tutorials, i.e., how to convert base64 in react
-4.3.2 Ask questions on StackOverflow or GitHub
-4.3.3 Ask someone else
-4.4 Deploy i.e, On Netlify via GitHub
+- Idea -> Base64 converter
+- Requirements -> Encode, Decode, Clear etc
+- Mockups -> Low fidelity design -> High fidelity
+- Implementation
+  - Create a react app -> npm, yarn or pnpm
+  - Code the UI -> You may want to use a react component library i.e., mantine, to speed the development process
+  - Add logic - react hooks and custom functions 
+    - If you're stuck, then search for specific react or javascript tutorials, i.e., how to convert base64 in react
+    - Ask questions on StackOverflow or GitHub
+    - Ask someone else
+   - Deploy i.e, On Netlify via GitHub
 
 # Introduction
 
