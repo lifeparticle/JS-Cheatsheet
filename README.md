@@ -266,8 +266,8 @@ if (true) {
 Tree view of scopes.
 
 ```
-             fullName
-            (fullName)
+                  fullName
+                 (fullName)
              /       |       \
             /        |        \
          age        age        city
@@ -1374,7 +1374,7 @@ hello(); // 'hello world'
 
 With block body, we need explicit return.
 
-```
+```js
 const hello = () => {
     return "hello world";
 };
