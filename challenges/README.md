@@ -261,12 +261,34 @@ console.log(todos.shift()); // todo 1
 console.log(todos); // ["todo 2", "todo 4", "todo 5", "todo 6"]
 ```
 
-19.
+19. forEach method
 
 ```js
+let todos = ['todo 1', 'todo 2', 'todo 3', 'todo 4', 'todo 5'];
+
+// delete the third item
+console.log(todos.splice(2, 1)); // ["todo 3"]
+console.log(todos); // ["todo 1", "todo 2", "todo 4", "todo 5"]
+
+// add a new item onto the end
+console.log(todos.push('todo 6')); // 5
+console.log(todos); // ["todo 1", "todo 2", "todo 4", "todo 5", "todo 6"]
+
+// remove the first item from the list
+console.log(todos.shift()); // todo 1
+console.log(todos); // ["todo 2", "todo 4", "todo 5", "todo 6"]
 
 
+todos.forEach((todo, index) => {
+    console.log(`${index+1}: ${todo}`)
+})
 
+/*
+1: todo 2
+2: todo 4
+3: todo 5
+4: todo 6
+*/
 ```
 
 20.
