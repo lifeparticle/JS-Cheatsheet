@@ -108,91 +108,6 @@ JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, S
 
 Install Node.js.
 
-# HTML with live server
-
-```shell
-npm install -g live-server
-live-server --version
-// live-server 1.2.2
-
-mkdir folder_name
-cd folder_name
-```
-
-Now create a file called `index.html` inside the folder `folder_name` with the following content.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		Hello World
-	</body>
-</html>
-```
-
-Start the live server.
-
-```shell
-live-server folder_name
-// Serving "folder_name" at http://127.0.0.1:8080
-// Ready for changes
-```
-
-Alernatively you can use this [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
-
-[Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-
-# How to add JavaScript to a web page
-
-## Everything between script tags will be executed by the web browser
-
-```js
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        Hello, World!
-    </body>
-
-    <script type="text/javascript">
-        alert("Hello, World!");
-    </script>
-</html>
-```
-
-Get the code from [here](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/examples/example-1).
-
-## Link an external file to a web page
-
-```js
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <script type="text/javascript" src="index.js"></script>
-    </head>
-    <body>
-        Hello, World!
-    </body>
-</html>
-```
-
-Get the code from [here](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/examples/example-2).
-
 # Reserved words
 
 ```
@@ -1930,6 +1845,141 @@ console.log(User.USER_COUNT); // 1
 
 ```js
 console.log("This is a test");
+```
+
+# HTML with live server
+
+```shell
+npm install -g live-server
+live-server --version
+// live-server 1.2.2
+
+mkdir folder_name
+cd folder_name
+```
+
+Now create a file called `index.html` inside the folder `folder_name` with the following content.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		Hello World
+	</body>
+</html>
+```
+
+Start the live server.
+
+```shell
+live-server folder_name
+// Serving "folder_name" at http://127.0.0.1:8080
+// Ready for changes
+```
+
+Alernatively you can use this [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+
+# How to add JavaScript to a web page
+
+## Everything between script tags will be executed by the web browser
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        Hello, World!
+    </body>
+
+    <script type="text/javascript">
+        alert("Hello, World!");
+    </script>
+</html>
+```
+
+Get the code from [here](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/examples/example-1).
+
+## Link an external file to a web page
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        Hello, World!
+	<script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
+```
+
+Get the code from [here](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/examples/example-2).
+
+# DOM - Document Object Model manipulation
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<p>Hello World</p>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+</html>
+```
+
+```js
+const p = document.querySelector("p");
+console.log(p);
+p.remove(); 
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<p>Hello World</p>
+		<p>Hello Universe</p>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+</html>
+```
+
+```js
+const ps = document.querySelectorAll("p");
+console.log(ps);
+
+ps.forEach((p) => {
+   p.remove(); 
+});
 ```
 
 # Tools
