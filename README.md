@@ -217,7 +217,7 @@ comment;
 */
 ```
 
-# JavaScript Variables
+# Variables
 
 Use camel case for naming variables. Variable names can start with letters, `_` and `$` sign. It can't be reserved words.
 
