@@ -104,6 +104,47 @@ ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES201
 
 JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, Safari) and server-side (Node.js).
 
+# HTML with live server
+
+```shell
+npm install -g live-server
+live-server --version
+// live-server 1.2.2
+
+mkdir folder_name
+cd folder_name
+```
+
+Now create a file called `index.html` inside the folder `folder_name` with the following content.
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		Hello World
+	</body>
+</html>
+```
+
+Start the live server.
+
+```shell
+live-server folder_name
+// Serving "folder_name" at http://127.0.0.1:8080
+// Ready for changes
+```
+
+Alernatively you can use this [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+
 # How to add JavaScript to a web page
 
 ## Everything between script tags will be executed by the web browser
@@ -144,45 +185,6 @@ JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, S
     </body>
 </html>
 ```
-
-# Live server
-
-```shell
-npm install -g live-server
-live-server --version
-// live-server 1.2.2
-
-mkdir folder_name
-cd folder_name
-```
-
-Now create a file called `index.html` inside the folder `folder_name` with the following content.
-
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		Hello World
-	</body>
-</html>
-```
-
-Start the live server.
-
-```shell
-live-server folder_name
-// Serving "folder_name" at http://127.0.0.1:8080
-// Ready for changes
-```
-
-Alernatively you can use this [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
 # Reserved words
 
