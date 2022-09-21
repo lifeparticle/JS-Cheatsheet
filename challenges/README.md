@@ -487,13 +487,9 @@ console.log(account.getAccountSummary()); // Andrew Mead has a balance of $48. $
 
 26. [Add items to DOM](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/26)
 
-27. [Event handling](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/27)
+27. [Event handling - Button](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/27)
 
-28.
-
-```js
-
-```
+28. [Event handling - Input](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/28)
 
 29.
 
