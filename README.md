@@ -2027,6 +2027,56 @@ document.querySelector("button").addEventListener("click", (e) => {
 });
 ```
 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Notes</h1>
+		<p class="note">Note 1</p>
+		<p class="note">Note 2</p>
+		<p class="note">Note 3</p>
+		<button id="create-note">Create note</button>
+		<button id="remove-all">Remove all notes</button>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+</html>
+```
+
+```js
+let notes = [
+	{
+		title: "First title",
+		body: "First body",
+	},
+	{
+		title: "Second title",
+		body: "Second body",
+	},
+	{
+		title: "Third title",
+		body: "Third body",
+	},
+];
+
+document.getElementById("create-note").addEventListener("click", (e) => {
+	console.log(`${e.target.textContent} Button is clicked`);
+});
+
+document.getElementById("remove-all").addEventListener("click", (e) => {
+	console.log(`Delete all notes`);
+	[...document.getElementsByClassName("note")].forEach((note) => {
+		note.remove();
+	});
+});
+```
+
 # Tools
 
 1. [Webpack](https://webpack.js.org/concepts/why-webpack/)
