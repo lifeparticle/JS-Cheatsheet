@@ -104,6 +104,10 @@ ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES201
 
 JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, Safari) and server-side (Node.js).
 
+# Setup
+
+Install Node.js.
+
 # HTML with live server
 
 ```shell
@@ -116,7 +120,6 @@ cd folder_name
 ```
 
 Now create a file called `index.html` inside the folder `folder_name` with the following content.
-
 
 ```html
 <!DOCTYPE html>
@@ -168,6 +171,8 @@ Alernatively you can use this [VSCode Extension](https://marketplace.visualstudi
 </html>
 ```
 
+Get the code from [here](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/examples/example-1).
+
 ## Link an external file to a web page
 
 ```js
@@ -185,6 +190,8 @@ Alernatively you can use this [VSCode Extension](https://marketplace.visualstudi
     </body>
 </html>
 ```
+
+Get the code from [here](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/examples/example-2).
 
 # Reserved words
 
