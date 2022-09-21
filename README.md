@@ -1978,8 +1978,12 @@ const ps = document.querySelectorAll("p");
 console.log(ps);
 
 ps.forEach((p) => {
-   p.remove(); 
+	p.remove();
 });
+
+const newParagraph = document.createElement("p");
+newParagraph.textContent = "This is a new element from JavaScript";
+document.querySelector("body").appendChild(newParagraph);
 ```
 
 # Tools
