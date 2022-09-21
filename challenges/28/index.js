@@ -37,6 +37,10 @@ todos.forEach((todo) => {
 	document.querySelector("body").appendChild(p);
 });
 
-document.querySelector("button").addEventListener("click", (e) => {
+document.getElementById("add-todo").addEventListener("click", (e) => {
 	console.log(`Add todo button is clicked`);
+});
+
+document.getElementById("new-todo").addEventListener("input", (e) => {
+	console.log(`${e.target.value}`);
 });
