@@ -1932,7 +1932,9 @@ Get the code from [here](https://github.com/lifeparticle/JS-Cheatsheet/tree/main
 
 Get the code from [here](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/examples/example-2).
 
-# DOM - Document Object Model manipulation
+# DOM - Document Object Model
+
+## DOM manipulation
 
 ```html
 <!DOCTYPE html>
@@ -1984,6 +1986,45 @@ ps.forEach((p) => {
 const newParagraph = document.createElement("p");
 newParagraph.textContent = "This is a new element from JavaScript";
 document.querySelector("body").appendChild(newParagraph);
+```
+## Event handling
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Notes</h1>
+		<button>Create note</button>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+</html>
+```
+
+```js
+let notes = [
+	{
+		title: "First title",
+		body: "First body",
+	},
+	{
+		title: "Second title",
+		body: "Second body",
+	},
+	{
+		title: "Third title",
+		body: "Third body",
+	},
+];
+
+document.querySelector("button").addEventListener("click", (e) => {
+	console.log(`${e.target.textContent} Button is clicked`);
+});
 ```
 
 # Tools
