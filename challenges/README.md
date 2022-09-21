@@ -483,11 +483,8 @@ account.addIncome("Job", 1000);
 console.log(account.getAccountSummary()); // Andrew Mead has a balance of $48. $1000 in income. $952 in expenses.
 ```
 
-25.
+25. [Remove items from DOM](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/25)
 
-```js
-
-```
 
 26.
 
