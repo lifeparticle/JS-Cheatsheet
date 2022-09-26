@@ -499,3 +499,4 @@ console.log(account.getAccountSummary()); // Andrew Mead has a balance of $48. $
 
 32. [Local Storage](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/32)
 
+33. [JS Refactor](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/33)
