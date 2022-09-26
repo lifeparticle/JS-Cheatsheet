@@ -2157,7 +2157,6 @@ localStorage.getItem(JSON.parse("your_key"));
 
 ```js
 debugger;
-
 ```
 
 [source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
