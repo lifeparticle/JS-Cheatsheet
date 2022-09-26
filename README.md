@@ -2153,6 +2153,15 @@ localStorage.setItem("your_key", JSON.stringify("your_value"))
 localStorage.getItem(JSON.parse("your_key"));
 ```
 
+# Debugger
+
+```js
+debugger;
+
+```
+
+[source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
+
 # Tools
 
 1. [Webpack](https://webpack.js.org/concepts/why-webpack/)
