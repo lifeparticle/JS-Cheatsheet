@@ -2130,8 +2130,21 @@ document.getElementById("search-note").addEventListener("input", (e) => {
 });
 ```
 
-
 [Source](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element)
+
+# Local Storage
+
+```js
+localStorage.setItem("your_key", "your_value");
+localStorage.getItem("your_key");
+localStorage.localStorage.removeItem("your_key");
+localStorage.clear();
+```
+
+```js
+localStorage.setItem("your_key", JSON.stringify("your_value"))
+localStorage.getItem(JSON.parse("your_key"));
+```
 
 # Tools
 
