@@ -1854,6 +1854,14 @@ console.log(User.USER_COUNT); // 1
 console.log("This is a test");
 ```
 
+## Debugger
+
+```js
+debugger;
+```
+
+[source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
+
 # HTML with live server
 
 ```shell
@@ -2152,14 +2160,6 @@ localStorage.clear();
 localStorage.setItem("your_key", JSON.stringify("your_value"))
 localStorage.getItem(JSON.parse("your_key"));
 ```
-
-# Debugger
-
-```js
-debugger;
-```
-
-[source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
 
 # Tools
 
