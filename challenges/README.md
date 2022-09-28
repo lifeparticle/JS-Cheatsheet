@@ -521,28 +521,42 @@ account.addIncome("Job", 1000);
 console.log(account.getAccountSummary()); // Andrew Mead has a balance of $48. $1000 in income. $952 in expenses.
 ```
 
-### 25. [Remove items from DOM](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/25)
+### 25. Remove items from DOM
+[Remove items from DOM](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/25)
 
-### 26. [Add items to DOM](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/26)
+### 26. Add items to DOM
+[Add items to DOM](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/26)
 
-### 27. [Event handling - Button](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/27)
+### 27. Event handling - Button
+[Event handling - Button](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/27)
 
-### 28. [Event handling - Input](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/28)
+### 28. Event handling - Input
+[Event handling - Input](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/28)
 
-### 29. [Event handling - Input and Filtering](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/29)
+### 29. Event handling - Input and Filtering
+[Event handling - Input and Filtering](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/29)
 
-### 30. [Event handling - Form](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/30)
+### 30. Event handling - Form
+[Event handling - Form](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/30)
 
-### 31. [Event handling - Checkbox](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/31)
+### 31. Event handling - Checkbox
+ [Event handling - Checkbox](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/31)
 
-### 32. [Local Storage](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/32)
+### 32. Local Storage
+[Local Storage](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/32)
 
-### 33. [JS Refactor](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/33)
+### 33. JS Refactor
+[JS Refactor](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/33)
 
-### 34. [Complex DOM rendering](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/34)
+### 34. Complex DOM rendering
+[Complex DOM rendering](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/34)
 
-### 35. [UUID](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/35)
+### 35. UUID
+[UUID](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/35)
 
-### 36. [Location](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/36)
+### 36. Location
+[Location](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/36)
 
-### 37. [Sync Localstorage](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/37)
+### 37. Sync Localstorage
+[Sync Localstorage](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/37)
+
