@@ -1,6 +1,6 @@
 The following challenges are from the [Modern-Javascript](https://www.udemy.com/course/modern-javascript/) course.
 
-1. String concatenation
+### 1. String concatenation
 
 ```js
 let city = "Melbourne";
@@ -10,7 +10,7 @@ let loc = city + ", " + country;
 console.log(loc); // Melbourne, Australia
 ```
 
-2. Calculate percentage
+### 2. Calculate percentage
 
 ```js
 let studentScore = 18;
@@ -20,7 +20,7 @@ let percentage = (18 / 20) * 100;
 console.log(percentage); // 90
 ```
 
-3. Temperature converter
+### 3. Temperature converter
 
 ```js
 let fahrenheit = 32;
@@ -32,7 +32,7 @@ console.log(celsius + "c");
 console.log(kelvin + "k");
 ```
 
-4. Comparison operators
+### 4. Comparison operators
 
 ```js
 let age = 12;
@@ -44,7 +44,7 @@ console.log("isChild " + isChild);
 console.log("isSenior " + isSenior);
 ```
 
-5. If statements
+### 5. If statements
 
 ```js
 let age = 65;
@@ -58,7 +58,7 @@ if (age >= 65) {
 }
 ```
 
-6. Advanced If statements
+### 6. Advanced If statements
 
 ```js
 let temp = 45;
@@ -72,7 +72,7 @@ if (temp <= 32) {
 }
 ```
 
-7. Logical and (&&) and or (||)
+### 7. Logical and (&&) and or (||)
 
 ```js
 let isGuestOneVegan = false;
@@ -87,7 +87,7 @@ if (isGuestOneVegan && isGuestTwoVegan) {
 }
 ```
 
-8. Temperature converter function
+### 8. Temperature converter function
 
 ```js
 let convertFahrenheitToCelsius = function (fahrenheit) {
@@ -98,7 +98,7 @@ console.log(convertFahrenheitToCelsius(32)); // 0
 console.log(convertFahrenheitToCelsius(68)); // 20
 ```
 
-9. Default parameters
+### 9. Default parameters
 
 ```js
 let calcTip = function (total, tipPercent = 0.2) {
@@ -109,7 +109,7 @@ console.log(calcTip(100)); // 20
 console.log(calcTip(200)); // 40
 ```
 
-10. Template strings
+### 10. Template strings
 
 ```js
 let calcTip = function (total, tipPercent = 0.2) {
@@ -120,7 +120,7 @@ console.log(calcTip(100)); // 20
 console.log(calcTip(200)); // 40
 ```
 
-11. Function and Template strings
+### 11. Function and Template strings
 
 ```js
 let calcScore = function (score, total) {
@@ -143,7 +143,7 @@ let calcScore = function (score, total) {
 console.log(calcScore(15, 20)); // You got a C (75%)
 ```
 
-12. Object
+### 12. Object
 
 ```js
 let person = {
@@ -157,7 +157,7 @@ person.age = person.age + 1;
 console.log(`${person.name} is ${person.age} and lives in ${person.location}`);
 ```
 
-13. Function and object
+### 13. Function and object
 
 ```js
 const calcTemp = function (fahrenheit) {
@@ -174,7 +174,7 @@ console.log(
 );
 ```
 
-14. Object reference
+### 14. Object reference
 
 ```js
 let myAccount = {
@@ -209,7 +209,7 @@ resetAccount(myAccount);
 console.log(getAccountSummary(myAccount));
 ```
 
-15. String methods and properties
+### 15. String methods and properties
 
 ```js
 let isValidPassword = function (value) {
@@ -221,7 +221,7 @@ console.log(isValidPassword("abc123!@#$%^&")); // true
 console.log(isValidPassword("asdfasdfpoijpassword")); // false
 ```
 
-16. Random numbers
+### 16. Random numbers
 
 ```js
 let makeGuess = function (guess) {
@@ -235,7 +235,7 @@ let makeGuess = function (guess) {
 console.log(makeGuess(1));
 ```
 
-17. Array
+### 17. Array
 
 ```js
 let todos = ["todo 1", "todo 2", "todo 3", "todo 4", "todo 5"];
@@ -244,7 +244,7 @@ console.log(`Todo: ${todos[0]}`);
 console.log(`Todo: ${todos[todos.length - 2]}`);
 ```
 
-18. Array methods
+### 18. Array methods
 
 ```js
 let todos = ["todo 1", "todo 2", "todo 3", "todo 4", "todo 5"];
@@ -262,7 +262,7 @@ console.log(todos.shift()); // todo 1
 console.log(todos); // ["todo 2", "todo 4", "todo 5", "todo 6"]
 ```
 
-19. forEach method
+### 19. forEach method
 
 ```js
 let todos = ["todo 1", "todo 2", "todo 3", "todo 4", "todo 5"];
@@ -291,7 +291,7 @@ todos.forEach((todo, index) => {
 */
 ```
 
-20. For loop
+### 20. For loop
 
 ```js
 let todos = ["todo 1", "todo 2", "todo 3", "todo 4", "todo 5"];
@@ -320,7 +320,7 @@ for (let index = 0; index < todos.length; index++) {
 */
 ```
 
-21. findIndex and splice method
+### 21. findIndex and splice method
 
 ```js
 let todos = [
@@ -362,7 +362,7 @@ deleteTodo(todos, "todo 1");
 console.log(todos); // [{text: "todo 2", completed: true}, {text: "todo 3", completed: true}, {text: "todo 4", completed: true}, {text: "todo 5", completed: true}]
 ```
 
-22. Filtering Array of objects
+### 22. Filtering Array of objects
 
 ```js
 let todos = [
@@ -397,7 +397,7 @@ const getThingsToDo = (todos) => {
 console.log(getThingsToDo(todos)); // [{text: "todo 3", completed: false}, {text: "todo 5", completed: false}]
 ```
 
-23. Sorting Array of objects
+### 23. Sorting Array of objects
 
 ```js
 let todos = [
@@ -439,7 +439,7 @@ sortTodos(todos);
 console.log(todos); // [{text: "todo 3", completed: false}, {text: "todo 5", completed: false}, {text: "todo 1", completed: true}, {text: "todo 2", completed: true}, {text: "todo 4", completed: true}]
 ```
 
-24. Array of objects manipulation
+### 24. Array of objects manipulation
 
 ```js
 const account = {
@@ -483,28 +483,28 @@ account.addIncome("Job", 1000);
 console.log(account.getAccountSummary()); // Andrew Mead has a balance of $48. $1000 in income. $952 in expenses.
 ```
 
-25. [Remove items from DOM](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/25)
+### 25. [Remove items from DOM](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/25)
 
-26. [Add items to DOM](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/26)
+### 26. [Add items to DOM](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/26)
 
-27. [Event handling - Button](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/27)
+### 27. [Event handling - Button](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/27)
 
-28. [Event handling - Input](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/28)
+### 28. [Event handling - Input](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/28)
 
-29. [Event handling - Input and Filtering](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/29)
+### 29. [Event handling - Input and Filtering](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/29)
 
-30. [Event handling - Form](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/30)
+### 30. [Event handling - Form](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/30)
 
-31. [Event handling - Checkbox](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/31)
+### 31. [Event handling - Checkbox](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/31)
 
-32. [Local Storage](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/32)
+### 32. [Local Storage](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/32)
 
-33. [JS Refactor](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/33)
+### 33. [JS Refactor](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/33)
 
-34. [Complex DOM rendering](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/34)
+### 34. [Complex DOM rendering](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/34)
 
-35. [UUID](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/35)
+### 35. [UUID](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/35)
 
-36. [Location](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/36)
+### 36. [Location](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/36)
 
-37. [Sync Localstorage](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/37)
+### 37. [Sync Localstorage](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/37)
