@@ -2161,6 +2161,25 @@ localStorage.setItem("your_key", JSON.stringify("your_value"))
 localStorage.getItem(JSON.parse("your_key"));
 ```
 
+# Window interface
+
+```js
+window.console.log("Hello");
+window.document === document;
+```
+
+```js
+window.addEventListener('click', () => {
+	console.log("Clicked");
+})
+```
+
+```js
+window.addEventListener('storage', () => {
+	console.log("Clicked");
+})
+```
+
 # Tools
 
 1. [Webpack](https://webpack.js.org/concepts/why-webpack/)
