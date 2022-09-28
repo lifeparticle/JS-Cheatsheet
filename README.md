@@ -264,7 +264,7 @@ console.log(firstName); // Dariana Trahan
 
 ### Local scope
 
-The code is defined inside a code blocks. Code in between two curly brackets `{}` is called a block.
+The code is defined inside a code block. Code in between two curly brackets `{}` is called a block.
 
 #### Function block
 
@@ -299,7 +299,7 @@ console.log(fullName); // Uncaught ReferenceError: fullName is not defined
 
 #### Hoisting
 
-Prior to the execution of the code, the interpreter moves the definition of functions, variables, or classes to the top of their scope. This process is known as JavaScript hoisting. It does not take the value or initialization only declaration, `var`, `let`, `const` are hoisted and only var declarations are initialized with `undefined`. On the other hand `let` and `const` declarations are not initialized.
+Prior to the execution of the code, the interpreter moves the definition of functions, variables, or classes to the top of their scope. This process is known as JavaScript hoisting. It does not take the value or initialization only declaration, `var`, `let`, `const` are hoisted, and only var declarations are initialized with `undefined`. On the other hand `let` and `const` declarations are not initialized.
 
 ```js
 console.log(fullName); // ReferenceError: fullName is not defined
@@ -2173,6 +2173,8 @@ window.addEventListener('click', () => {
 	console.log("Clicked");
 })
 ```
+
+localStorage Sync across pages: The storage event of the Window interface fires when a localStorage is changed in the context of another document. So the storage event does not fire for the document that is responsible for the localStorage changes; it will fire the storage event for the other documents. In simple words if we have 3 tabs open, and if tab1 changes the localStorage then only tab2 and tab3 will fire storage event.
 
 ```js
 window.addEventListener('storage', () => {
