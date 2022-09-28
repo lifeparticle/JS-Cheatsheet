@@ -92,6 +92,7 @@
 - [Async & Await](#async--await)
 - [Class](#class)
 - [Debugging](#debugging)
+  * [Debugger](#debugger)
 - [HTML with live server](#html-with-live-server)
 - [How to add JavaScript to a web page](#how-to-add-javascript-to-a-web-page)
   * [Everything between script tags will be executed by the web browser](#everything-between-script-tags-will-be-executed-by-the-web-browser)
@@ -100,6 +101,7 @@
   * [DOM manipulation](#dom-manipulation)
   * [Event handling](#event-handling)
 - [Local Storage](#local-storage)
+- [Window interface](#window-interface)
 - [Tools](#tools)
 - [Resources](#resources)
 
