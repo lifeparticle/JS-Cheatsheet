@@ -106,6 +106,7 @@
   * [Event handling](#event-handling)
 - [Local Storage](#local-storage)
 - [Window interface](#window-interface)
+- [Strict mode](#strict-mode)
 - [Tools](#tools)
 - [Resources](#resources)
 
