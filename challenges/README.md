@@ -598,7 +598,8 @@ console.log(message); // Too many poeple on your team
 ### 43. Ternary operator
 [Ternary operator](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/43)
 
-### 44. 
+### 44. Truty and Falsy values
+[Truty and Falsy values](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/44)
 
 ### 45. 
 
