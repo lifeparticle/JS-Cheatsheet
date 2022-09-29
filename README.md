@@ -430,6 +430,31 @@ Array.isArray([17, 18]); // true
 Array.isArray({ a: "test" }); // false
 ```
 
+## Type coercion
+
+```js
+// String concatanation
+let num1 = '2' + 3;
+console.log(num1); // 23
+console.log(typeof num1); // string
+
+// Subtracting integers
+let num2 = '3' - 2;
+console.log(num2); // 1
+console.log(typeof num2); // number
+```
+
+```js
+// Check equality and type
+console.log(2 === 2); // true
+console.log('2' === 2); // false
+
+// Check equality without type
+console.log(2 == 2); // true
+console.log('2' == 2); // true
+console.log('3' == 2); // false
+```
+
 ## String
 
 ### Methods and properties
@@ -513,31 +538,6 @@ todo
 
 ```js
 const user = {};
-```
-
-## Type coercion
-
-```js
-// String concatanation
-let num1 = '2' + 3;
-console.log(num1); // 23
-console.log(typeof num1); // string
-
-// Subtracting integers
-let num2 = '3' - 2;
-console.log(num2); // 1
-console.log(typeof num2); // number
-```
-
-```js
-// Check equality and type
-console.log(2 === 2); // true
-console.log('2' === 2); // false
-
-// Check equality without type
-console.log(2 == 2); // true
-console.log('2' == 2); // true
-console.log('3' == 2); // false
 ```
 
 ### Equality
