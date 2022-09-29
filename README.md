@@ -1354,7 +1354,7 @@ const hello = () => {
 hello(); // 'hello world'
 ```
 
-With a concise body, we can have an implicit return.
+With a concise body, we can have an implicit return using the shorthand syntax.
 
 ```js
 const hello = () => "hello world";
