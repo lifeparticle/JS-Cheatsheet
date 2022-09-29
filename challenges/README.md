@@ -583,3 +583,55 @@ const people = [{
 const age = people.filter((person) => person.age === 22);
 console.log(age);
 ```
+
+### 41. Arrow Functions
+[ Arrow Functions](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/41)
+
+### 42. Ternary operator
+
+```js
+let teamSize = 4;
+let message = teamSize <= 3 ? "Team size: 3" : "Too many poeple on your team";
+console.log(message); // Too many poeple on your team
+```
+
+### 43. Ternary operator
+[Ternary operator](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/43)
+
+### 44. 
+
+### 45. 
+
+### 46. 
+
+
+### 47. 
+
+### 48. 
+
+
+### 49. 
+
+### 50. 
+
+### 51. 
+
+### 52. 
+
+### 53. 
+
+### 54. 
+
+
+### 55. 
+
+### 56. 
+
+
+### 57. 
+
+### 58. 
+
+### 59. 
+
+### 60. 
