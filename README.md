@@ -1698,20 +1698,69 @@ for (const value of Object.values(person)) {
 }
 ```
 
+
+# Falsy and truthy values
+
+```js
+false;
+0;
+empty string ("" or '' or ``);
+null;
+NaN;
+undefined;
+```
+
+```js
+let nums = [false, 0, '', "", ``, null, NaN, undefined];
+
+nums.map((num) => {
+    if (num) {
+        console.log(`${num} is truthy`);
+    } else {
+        console.log(`${num} is falsy`);
+    }
+})
+
+// false is falsy
+// 0 is falsy
+// is falsy
+// is falsy
+// is falsy
+// null is falsy
+// NaN is falsy
+// undefined is falsy
+```
+
+```js
+let nums = [true, {}, [], 22, "0", "false", new Date(), -22, 3.14, -3.14, Infinity, -Infinity];
+
+nums.map((num) => {
+    if (num) {
+        console.log(`${num} is truthy`);
+    } else {
+        console.log(`${num} is falsy`);
+    }
+})
+
+// true is truthy
+// [object Object] is truthy
+// is truthy
+// 22 is truthy
+// 0 is truthy
+// false is truthy
+// Thu Sep 29 2022 15:34:49 GMT+1000 (Australian Eastern Standard Time) is truthy
+// -22 is truthy
+// 3.14 is truthy
+// -3.14 is truthy
+// Infinity is truthy
+// -Infinity is truthy
+```
+
+
+
 # Logical AND (&&)
 
 Logical AND (&&) evaluates operands from left to the right. It returns the value of the first falsy operand. If all values are truthy, it returns the value of the last operand.
-
-Examples falsy:
-
-```
-false;
-null;
-NaN;
-0;
-empty string ("" or '' or ``);
-undefined.
-```
 
 ```js
 result = "" && "foo"; // ""
