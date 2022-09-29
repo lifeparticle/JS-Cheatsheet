@@ -1698,17 +1698,7 @@ for (const value of Object.values(person)) {
 }
 ```
 
-
-# Falsy and truthy values
-
-```js
-false;
-0;
-empty string ("" or '' or ``);
-null;
-NaN;
-undefined;
-```
+# Falsy and Truthy values
 
 ```js
 let nums = [false, 0, '', "", ``, null, NaN, undefined];
