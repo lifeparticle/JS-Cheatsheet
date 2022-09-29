@@ -603,6 +603,38 @@ console.log(message); // Too many poeple on your team
 
 ### 45. 
 
+```js
+let calcScore = function (score, total) {
+
+    if (typeof score !== 'number' || typeof total !== 'number') {
+        throw Error("Not a number");
+    }
+    
+    let percentage = (score / total) * 100;
+    let grade = "";
+    if (percentage >= 90 && percentage <= 100) {
+        grade = "A";
+    } else if (percentage >= 80 && percentage <= 89) {
+        grade = "B";
+    } else if (percentage >= 70 && percentage <= 79) {
+        grade = "C";
+    } else if (percentage >= 60 && percentage <= 69) {
+        grade = "D";
+    } else {
+        grade = "F";
+    }
+    return `You got a ${grade} (${percentage}%)`;
+};
+
+
+try {
+    console.log(calcScore(15, 20)); // You got a C (75%)
+    console.log(calcScore('', 20));
+} catch (e) {
+    console.log(e); // Error: Not a number
+}
+```
+
 ### 46. 
 
 
