@@ -1330,6 +1330,47 @@ function hello(name) {
 hello("hello world"); // 'hello world'
 ```
 
+The `arguments` object (local variable) accessible inside functions that contains the values of the arguments passed to that function. It is available within all non-arrow functions.
+
+```js
+function hello() {
+    console.log(arguments); // {0: "1", 1: "2", 2: "3"}
+    return "hello world";
+}
+
+hello("1", "2", "3")
+```
+
+```js
+let user = {
+    id: 1,
+    firstName: "Bob",
+    lastName: "Rob",
+    getFullName: function () {
+        console.log(this); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+        return `${this.firstName} ${this.lastName}`;
+    },
+};
+
+console.log(user.getFullName());
+```
+
+```js
+let user = {
+    id: 1,
+    firstName: "Bob",
+    lastName: "Rob",
+    getFullName() {
+        console.log(this); // {id: 1, firstName: "Bob", lastName: "Rob", getFullName: ƒ()}
+        return `${this.firstName} ${this.lastName}`;
+    },
+};
+
+console.log(user.getFullName());
+```
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+
 ## Function expression
 
 You can't use function expressions before you create them. So they are not hoisted.
@@ -1360,6 +1401,31 @@ With a concise body, we can have an implicit return using the shorthand syntax.
 const hello = () => "hello world";
 
 hello(); // 'hello world'
+```
+
+Arrow functions don't have `this` and `arguments` binding.
+
+```js
+const hello = () => {
+    console.log(arguments); // Uncaught ReferenceError: arguments is not defined
+    return "hello world";
+}
+
+hello("1", "2", "3")
+```
+
+```js
+let user = {
+    id: 1,
+    firstName: "Bob",
+    lastName: "Rob",
+    getFullName: () => {
+        console.log(this); // undefined
+        return `${this.firstName} ${this.lastName}`; // TypeError: Cannot read properties of undefined (reading 'firstName')
+    },
+};
+
+console.log(user.getFullName()); 
 ```
 
 ## Immediately invoked function expression
