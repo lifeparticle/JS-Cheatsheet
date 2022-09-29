@@ -635,8 +635,8 @@ try {
 }
 ```
 
-### 46. 
-
+### 46. Try Catch
+[Try Catch](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/46)
 
 ### 47. 
 
