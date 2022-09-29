@@ -1988,6 +1988,38 @@ console.log(user.addresses); // ['15 160th Road, Wathena,ks, 66090  United State
 console.log(User.USER_COUNT); // 1
 ```
 
+# Try Catch
+
+```js
+const getTotalAmount = (amount) => {
+    if (typeof amount === 'number') {
+        return amount + 100;
+    } else {
+    	throw Error("Not a number"); 
+    }
+}
+
+console.log(getTotalAmount(12)); // 112
+console.log(getTotalAmount('12')); // Error: Not a number
+```
+
+```js
+const getTotalAmount = (amount) => {
+    if (typeof amount === 'number') {
+        return amount + 100;
+    } else {
+    	throw Error("Not a number"); 
+    }
+}
+
+try {
+    console.log(getTotalAmount(12)); // 112
+    console.log(getTotalAmount('12')); // Error: Not a number
+} catch (e) {
+    console.log(e);
+}
+```
+
 # Debugging
 
 ```js
