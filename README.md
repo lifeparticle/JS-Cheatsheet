@@ -1302,6 +1302,14 @@ let is89 = num === 89 ? true : false;
 console.log(is89);
 ```
 
+## Ternary operator
+
+```js
+const age = 22;
+let message = age >= 18 ? "You're over 18" : "You're under 18"; 
+console.log(message); // You're over 18
+```
+
 # Function
 
 -   Regular / Named function
