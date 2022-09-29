@@ -2358,6 +2358,29 @@ window.addEventListener('storage', () => {
 })
 ```
 
+# Strict mode
+
+```js
+const getNumber = () => {
+    data = '112122';
+}
+
+getNumber();
+console.log(data); // 112122
+```
+
+
+```js
+'use strict'
+
+const getNumber = () => {
+    data = '112122';
+}
+
+getNumber();
+console.log(data); // Uncaught ReferenceError: data is not defined
+```
+
 # Tools
 
 1. [Webpack](https://webpack.js.org/concepts/why-webpack/)
