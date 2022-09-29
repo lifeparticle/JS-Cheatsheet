@@ -565,3 +565,21 @@ console.log(account.getAccountSummary()); // Andrew Mead has a balance of $48. $
 
 ### 39. Moment JS
 [Moment JS](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/39)
+
+### 40. Arrow Functions
+
+```js
+const people = [{
+    name: "Tom",
+    age: 22
+}, {
+    name: "Bob",
+    age: 44
+}, {
+    name: "Rob",
+    age: 20
+}]
+
+const age = people.filter((person) => person.age === 22);
+console.log(age);
+```
