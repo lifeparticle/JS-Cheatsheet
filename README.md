@@ -112,11 +112,13 @@
 
 # Introduction
 
-Ecma (European Computer Manufacturers Association) International creates standardization of information and communication systems. You can find all the standards over [here](https://www.ecma-international.org/publications-and-standards/standards/). One of the standards is called [ecma-262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/). This refers to the specification for [ECMAScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources) programming language. On the other hand, JavaScript is an implementation of that specification. Below we have a list of ECMAScript language specifications.
+Ecma (European Computer Manufacturers Association) International creates standardization of information and communication systems. You can find all the standards over [here](https://www.ecma-international.org/publications-and-standards/standards/). One of the standards is called [ecma-262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/). This refers to the specification for [ECMAScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources) programming language.
+
+Below we have a list of ECMAScript language specifications.
 
 ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES2016, ES2017, ES2018, ES2019, ES2020, ES2022
 
-JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, Safari) and server-side (Node.js).
+[Brendan Eich](https://brendaneich.com/) created JavaScript at Netscape, and it was later revised to comply with ECMA-262 Edition 5 and subsequent versions. JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, Safari) and server-side (Node.js).
 
 # Setup
 
@@ -636,9 +638,12 @@ console.log(values); // [1, 'bob', 'rob', ƒ]
 
 ### Checking properties.
 
+Coming from `Object.prototype.hasOwnProperty()`
+
 ```js
 console.log(user.hasOwnProperty("id")); // true
 console.log(user.hasOwnProperty("age")); // false
+console.log(user.hasOwnProperty("hasOwnProperty")); // false
 ```
 
 ### Get all the keys and values.
@@ -1336,7 +1341,7 @@ console.log(is89);
 
 ```js
 const age = 22;
-let message = age >= 18 ? "You're over 18" : "You're under 18"; 
+let message = age >= 18 ? "You're over 18" : "You're under 18";
 console.log(message); // You're over 18
 ```
 
@@ -1463,7 +1468,7 @@ let user = {
     },
 };
 
-console.log(user.getFullName()); 
+console.log(user.getFullName());
 ```
 
 ## Immediately invoked function expression
@@ -1934,6 +1939,46 @@ todo;
 todo;
 ```
 
+# Constructor Functions
+
+```js
+const Person = function (firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+}
+
+const person = new Person('Bob', 'Rob', 22);
+person.age = person.age + 1;
+console.log(person); // Person {firstName: "Bob", lastName: "Rob", age: 23}
+```
+
+# Prototype Inheritance
+
+```js
+const Person = function (firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+}
+
+Person.prototype.getBio = function () {
+    return `${this.firstName} is ${this.age}`
+}
+
+Person.prototype.setName = function (fullName) {
+    const names = fullName.split(" ");
+    this.firstName = names[0];
+    this.lastName = names[1];
+}
+
+const person = new Person('Bob', 'Rob', 22);
+person.age = person.age + 1;
+person.setName("Larry Tom");
+console.log(person); // Person {firstName: "Larry", lastName: "Tom", age: 23}
+console.log(person.getBio()); // Larry is 23
+```
+
 # Class
 
 ```js
@@ -2000,7 +2045,7 @@ const getTotalAmount = (amount) => {
     if (typeof amount === 'number') {
         return amount + 100;
     } else {
-    	throw Error("Not a number"); 
+        throw Error("Not a number");
     }
 }
 
@@ -2013,7 +2058,7 @@ const getTotalAmount = (amount) => {
     if (typeof amount === 'number') {
         return amount + 100;
     } else {
-    	throw Error("Not a number"); 
+        throw Error("Not a number");
     }
 }
 
@@ -2055,15 +2100,15 @@ Now create a file called `index.html` inside the folder `folder_name` with the f
 ```html
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		Hello World
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        Hello World
+    </body>
 </html>
 ```
 
@@ -2117,7 +2162,7 @@ Get the code from [here](https://github.com/lifeparticle/JS-Cheatsheet/tree/main
     </head>
     <body>
         Hello, World!
-	<script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
 ```
@@ -2131,39 +2176,39 @@ Get the code from [here](https://github.com/lifeparticle/JS-Cheatsheet/tree/main
 ```html
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<p>Hello World</p>
-		<script type="text/javascript" src="index.js"></script>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p>Hello World</p>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
 </html>
 ```
 
 ```js
 const p = document.querySelector("p");
 console.log(p);
-p.remove(); 
+p.remove();
 ```
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<p>Hello World</p>
-		<p>Hello Universe</p>
-		<script type="text/javascript" src="index.js"></script>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p>Hello World</p>
+        <p>Hello Universe</p>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
 </html>
 ```
 
@@ -2172,7 +2217,7 @@ const ps = document.querySelectorAll("p");
 console.log(ps);
 
 ps.forEach((p) => {
-	p.remove();
+    p.remove();
 });
 
 const newParagraph = document.createElement("p");
@@ -2184,141 +2229,141 @@ document.querySelector("body").appendChild(newParagraph);
 ```html
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<h1>Notes</h1>
-		<button>Create note</button>
-		<script type="text/javascript" src="index.js"></script>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Notes</h1>
+        <button>Create note</button>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
 </html>
 ```
 
 ```js
 let notes = [
-	{
-		title: "First title",
-		body: "First body",
-	},
-	{
-		title: "Second title",
-		body: "Second body",
-	},
-	{
-		title: "Third title",
-		body: "Third body",
-	},
+    {
+        title: "First title",
+        body: "First body",
+    },
+    {
+        title: "Second title",
+        body: "Second body",
+    },
+    {
+        title: "Third title",
+        body: "Third body",
+    },
 ];
 
 document.querySelector("button").addEventListener("click", (e) => {
-	console.log(`${e.target.textContent} Button is clicked`);
+    console.log(`${e.target.textContent} Button is clicked`);
 });
 ```
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<h1>Notes</h1>
-		<p class="note">Note 1</p>
-		<p class="note">Note 2</p>
-		<p class="note">Note 3</p>
-		<button id="create-note">Create note</button>
-		<button id="remove-all">Remove all notes</button>
-		<script type="text/javascript" src="index.js"></script>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Notes</h1>
+        <p class="note">Note 1</p>
+        <p class="note">Note 2</p>
+        <p class="note">Note 3</p>
+        <button id="create-note">Create note</button>
+        <button id="remove-all">Remove all notes</button>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
 </html>
 ```
 
 ```js
 let notes = [
-	{
-		title: "First title",
-		body: "First body",
-	},
-	{
-		title: "Second title",
-		body: "Second body",
-	},
-	{
-		title: "Third title",
-		body: "Third body",
-	},
+    {
+        title: "First title",
+        body: "First body",
+    },
+    {
+        title: "Second title",
+        body: "Second body",
+    },
+    {
+        title: "Third title",
+        body: "Third body",
+    },
 ];
 
 document.getElementById("create-note").addEventListener("click", (e) => {
-	console.log(`${e.target.textContent} Button is clicked`);
+    console.log(`${e.target.textContent} Button is clicked`);
 });
 
 document.getElementById("remove-all").addEventListener("click", (e) => {
-	console.log(`Delete all notes`);
-	[...document.getElementsByClassName("note")].forEach((note) => {
-		note.remove();
-	});
+    console.log(`Delete all notes`);
+    [...document.getElementsByClassName("note")].forEach((note) => {
+        note.remove();
+    });
 });
 ```
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<h1>Notes</h1>
-		<p class="note">Note 1</p>
-		<p class="note">Note 2</p>
-		<p class="note">Note 3</p>
-		<input id="search-note" type="text" />
-		<button id="create-note">Create note</button>
-		<button id="remove-all">Remove all notes</button>
-		<script type="text/javascript" src="index.js"></script>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Notes</h1>
+        <p class="note">Note 1</p>
+        <p class="note">Note 2</p>
+        <p class="note">Note 3</p>
+        <input id="search-note" type="text" />
+        <button id="create-note">Create note</button>
+        <button id="remove-all">Remove all notes</button>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
 </html>
 ```
 
 ```js
 let notes = [
-	{
-		title: "First title",
-		body: "First body",
-	},
-	{
-		title: "Second title",
-		body: "Second body",
-	},
-	{
-		title: "Third title",
-		body: "Third body",
-	},
+    {
+        title: "First title",
+        body: "First body",
+    },
+    {
+        title: "Second title",
+        body: "Second body",
+    },
+    {
+        title: "Third title",
+        body: "Third body",
+    },
 ];
 
 document.getElementById("create-note").addEventListener("click", (e) => {
-	console.log(`${e.target.textContent} Button is clicked`);
+    console.log(`${e.target.textContent} Button is clicked`);
 });
 
 document.getElementById("remove-all").addEventListener("click", (e) => {
-	console.log(`Delete all notes`);
-	[...document.getElementsByClassName("note")].forEach((note) => {
-		note.remove();
-	});
+    console.log(`Delete all notes`);
+    [...document.getElementsByClassName("note")].forEach((note) => {
+        note.remove();
+    });
 });
 
 document.getElementById("search-note").addEventListener("input", (e) => {
-	console.log(`${e.target.value}`);
+    console.log(`${e.target.value}`);
 });
 ```
 
@@ -2347,7 +2392,7 @@ window.document === document;
 
 ```js
 window.addEventListener('click', () => {
-	console.log("Clicked");
+    console.log("Clicked");
 })
 ```
 
@@ -2355,7 +2400,7 @@ localStorage Sync across pages: The storage event of the Window interface fires 
 
 ```js
 window.addEventListener('storage', () => {
-	console.log("Clicked");
+    console.log("Clicked");
 })
 ```
 

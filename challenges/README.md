@@ -638,10 +638,45 @@ try {
 ### 46. Try Catch
 [Try Catch](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/46)
 
-### 47. 
+### 47. Constructor Functions
 
-### 48. 
+```js
+const Hangman = function(word, remainingGuesses) {
+    this.word = word;
+    this.remainingGuesses = remainingGuesses;
+}
 
+const game1 = new Hangman('Cat', 2);
+console.log(game1); // Hangman {word: "Cat", remainingGuesses: 2}
+```
+
+### 48. Prototype Inheritance
+
+```js
+const Hangman = function(word, remainingGuesses) {
+    this.word = word.toLowerCase().split('');
+    this.remainingGuesses = remainingGuesses;
+    this.guessedLetters = [];
+}
+
+Hangman.prototype.getPuzzle = function () {
+    let puzzle = '';
+
+    this.word.forEach((letter) => {
+        if (this.guessedLetters.includes(letter) || letter === ' ') {
+            puzzle += letter;
+        } else {
+            puzzle += '*';
+        }
+    })
+
+    return puzzle;
+}
+
+const game1 = new Hangman('Cat', 2);
+console.log(game1); // Hangman {word: "Cat", remainingGuesses: 2}
+console.log(game1.getPuzzle()); // ***
+```
 
 ### 49. 
 
