@@ -443,10 +443,20 @@ let num1 = '2' + 3;
 console.log(num1); // 23
 console.log(typeof num1); // string
 
+// String concatanation
+let num2 = 3 + '2';
+console.log(num2); // 32
+console.log(typeof num2); // string
+
 // Subtracting integers
-let num2 = '3' - 2;
-console.log(num2); // 1
-console.log(typeof num2); // number
+let num3 = '3' - 2;
+console.log(num3); // 1
+console.log(typeof num3); // number
+
+// Subtracting integers
+let num4 = 2 - '3';
+console.log(num4); // -1
+console.log(typeof num4); // number
 ```
 
 ```js
@@ -1510,7 +1520,7 @@ const callBackThisFunction = (name) => {
 
 // B
 const hello = (callback, name) => {
-    return callBackThisFunction(name);
+    return callback(name);
 };
 
 console.log(hello(callBackThisFunction, "Bob"));
@@ -1782,8 +1792,6 @@ nums.map((num) => {
 // Infinity is truthy
 // -Infinity is truthy
 ```
-
-
 
 # Logical AND (&&)
 
