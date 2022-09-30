@@ -93,6 +93,8 @@
 - [JavaScript modules](#javascript-modules)
 - [Promises](#promises)
 - [Async & Await](#async--await)
+- [Constructor Functions](#constructor-functions)
+- [Prototype Inheritance](#prototype-inheritance)
 - [Class](#class)
 - [Try Catch](#try-catch)
 - [Debugging](#debugging)
