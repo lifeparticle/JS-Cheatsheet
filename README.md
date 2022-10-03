@@ -474,6 +474,11 @@ console.log('3' == 2); // false
 
 Although string is a primitive data type, when we access methods and properties on a string it converts to an object, which is also true for a number and boolean. On the other hand `null` and `undefined` will never be an object.
 
+```js
+const fullName = new String("Bob Rob");
+console.log(fullName);
+```
+
 ### Methods and properties
 
 ```js
@@ -487,11 +492,6 @@ console.log(fullName.includes("Bob")); // true
 let sentence = "ThereIsNoSpoon";
 let words = sentence.split(/(?=[A-Z])/);
 console.log(words); // ['There', 'Is', 'No', 'Spoon']
-```
-
-```js
-const fullName = new String("Bob Rob");
-console.log(fullName);
 ```
 
 [Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
