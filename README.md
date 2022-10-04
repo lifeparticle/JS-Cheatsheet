@@ -2529,6 +2529,13 @@ getNumber();
 console.log(data); // Uncaught ReferenceError: data is not defined
 ```
 
+# HTTP requests
+
+```js
+
+
+```
+
 # Tools
 
 1. [Webpack](https://webpack.js.org/concepts/why-webpack/)
