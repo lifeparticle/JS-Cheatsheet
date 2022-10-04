@@ -96,6 +96,8 @@
 - [Constructor Functions](#constructor-functions)
 - [Prototype Inheritance](#prototype-inheritance)
 - [Class](#class)
+  * [Subclass](#subclass)
+  * [Getters and Setters](#getters-and-setters)
 - [Try Catch](#try-catch)
 - [Debugging](#debugging)
   * [Debugger](#debugger)
