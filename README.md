@@ -2025,7 +2025,11 @@ class Person {
         return "hello world";
     }
 }
+```
 
+## Subclass
+
+```js
 class User extends Person {
     static USER_COUNT = 0;
     // default value for age and set address with an initial value
