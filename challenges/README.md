@@ -624,7 +624,7 @@ console.log(message); // Too many poeple on your team
 ### 44. Truty and Falsy values
 [Truty and Falsy values](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/44)
 
-### 45. 
+### 45. Type checking
 
 ```js
 let calcScore = function (score, total) {
