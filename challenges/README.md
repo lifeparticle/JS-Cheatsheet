@@ -733,10 +733,11 @@ window.addEventListener('keypress', (e) => {
 ### 52. Hangman game with status UI
 [Hangman game](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/52)
 
-### 53. Class
-[Class](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/53)
+### 53. Hangman Class
+[Hangman Class](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/53)
 
-### 54. 
+### 54. Class and Subclass
+[Class](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/54)
 
 
 ### 55. 
