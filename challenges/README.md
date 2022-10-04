@@ -765,8 +765,24 @@ window.addEventListener('keypress', (e) => {
 ### 55. Hangman getters and setters
 [Hangman getters and setters](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/55)
 
-### 56. 
+### 56. HTTP requests
 
+```js
+const countryCode = "US";
+
+const countryRequest = new XMLHttpRequest();
+countryRequest.addEventListener("readystatechange", (e) => {
+	if (e.target.readyState === 4 && e.target.status === 200) {
+		const data = JSON.parse(e.target.responseText);
+		const country = data.find((country) => country.cca2 == countryCode);
+		console.log(country.name.official); // United States of America
+	} else if (e.target.readyState === 4) {
+		console.log("error");
+	}
+});
+countryRequest.open("GET", "https://restcountries.com/v3.1/all");
+countryRequest.send();
+```
 
 ### 57. 
 
