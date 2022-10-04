@@ -737,7 +737,7 @@ window.addEventListener('keypress', (e) => {
 [Hangman Class](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/53)
 
 ### 54. Class and Subclass
-[Class](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/54)
+[Class and Subclass](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/54)
 
 
 ### 55. 
