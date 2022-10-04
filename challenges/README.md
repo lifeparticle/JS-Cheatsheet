@@ -724,11 +724,8 @@ window.addEventListener('keypress', (e) => {
 })
 ```
 
-### 50.
-
-```js
-
-```
+### 50. Hangman game
+[Hangman game](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/50)
 
 ### 51. 
 
