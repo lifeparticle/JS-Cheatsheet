@@ -739,8 +739,8 @@ window.addEventListener('keypress', (e) => {
 ### 54. Class and Subclass
 [Class and Subclass](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/54)
 
-
-### 55. 
+### 55. Hangman getters and setters
+[Hangman getters and setters](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/55)
 
 ### 56. 
 
