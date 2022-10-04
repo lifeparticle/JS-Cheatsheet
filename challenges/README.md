@@ -733,7 +733,8 @@ window.addEventListener('keypress', (e) => {
 ### 52. Hangman game with game over
 [Hangman game](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/52)
 
-### 53. 
+### 53. Class
+[Hangman game](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/53)
 
 ### 54. 
 
