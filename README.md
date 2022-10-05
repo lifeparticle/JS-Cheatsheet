@@ -2592,6 +2592,44 @@ const getPuzzleSync = () => {
 console.log(getPuzzleSync());
 ```
 
+# Closure
+
+```js
+const getPrint = () => {
+    const print = (message) => {
+        console.log(message)
+    }
+    return print;
+}
+
+const value = getPrint();
+value("Closure");
+```
+
+```js
+const createCounter = () => {
+    let count = 0;
+    
+    return {
+        increment() {
+            count++;
+        },
+        decrement() {
+            count--;
+        },
+        get() {
+            return count;
+        }
+    }
+}
+
+const counter = createCounter();
+counter.increment();
+counter.decrement();
+counter.decrement();
+console.log(counter.get()); // -1
+```
+
 # Tools
 
 1. [Webpack](https://webpack.js.org/concepts/why-webpack/)
