@@ -1949,7 +1949,19 @@ import { Card } from "antd";
 # Promises
 
 ```js
-todo;
+const myPromise = new Promise((resolve, reject) => {
+	setTimeout(() => {
+	// resolve('This is the promise data');
+        reject('Something bad happened');
+	}, 2000)
+})
+
+
+myPromise.then((data) => {
+	console.log(data);
+}, (err) => {
+    console.log(err); // Something bad happened
+})
 ```
 
 # Async & Await
