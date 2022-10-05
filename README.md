@@ -2545,6 +2545,34 @@ request.open("GET", "https://puzzle.mead.io/puzzle");
 request.send();
 ```
 
+## Callback pattern
+
+```js
+const getPuzzle = (callback) => {
+	const request = new XMLHttpRequest();
+	request.addEventListener("readystatechange", (e) => {
+		if (e.target.readyState === 4 && e.target.status === 200) {
+			const data = JSON.parse(e.target.responseText);
+			callback(undefined, data);
+		} else if (e.target.readyState === 4) {
+			callback("An error has taken place", undefined);
+			console.log("error");
+		}
+	});
+	request.open("GET", "https://puzzle.mead.io/puzzle");
+	request.send();
+};
+
+getPuzzle((error, puzzle) => {
+	if (error) {
+		console.log(`Error: ${error}`);
+	} else {
+		console.log(puzzle);
+	}
+});
+```
+
+
 # Tools
 
 1. [Webpack](https://webpack.js.org/concepts/why-webpack/)
