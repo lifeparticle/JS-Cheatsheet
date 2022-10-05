@@ -878,10 +878,10 @@ getCountry('MX').then((country) => {
 [HTTP requests - promises](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/62)
 
 ### 63. HTTP requests - async/await
-[HTTP requests - promises](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/63)
+[HTTP requests - async/await](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/63)
 
 ### 64. HTTP requests - async/await
-[HTTP requests - promises](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/64)
+[HTTP requests - async/await](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/64)
 
 ### 65. 
 
