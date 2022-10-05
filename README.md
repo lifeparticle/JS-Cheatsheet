@@ -1521,6 +1521,8 @@ console.log(result); // hello world
 
 A callback function (A) is a function passed into another function (B) as an argument, which can be called by that function (B).
 
+Here function `hello` will call the function `B` at some point.
+
 ```js
 // A
 const callBackThisFunction = (name) => {
@@ -1533,6 +1535,18 @@ const hello = (callback, name) => {
 };
 
 console.log(hello(callBackThisFunction, "Bob"));
+```
+
+Alos can be written as:
+
+```js
+const hello = (callback, name) => {
+    return callback(name);
+};
+
+console.log(hello((name) => {
+    return "Hello, " + name;
+}, "Bob"));
 ```
 
 ## Default parameters
