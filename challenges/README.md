@@ -883,7 +883,8 @@ getCountry('MX').then((country) => {
 ### 64. HTTP requests - async/await
 [HTTP requests - async/await](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/64)
 
-### 65. 
+### 65. Hangman - reset option
+[Hangman - reset option](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/65)
 
 ### 66. 
 
