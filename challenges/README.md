@@ -871,7 +871,8 @@ getCountry('MX').then((country) => {
 ### 60. HTTP requests - Fecth API
 [HTTP requests - Fecth API](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/60)
 
-### 61. 
+### 61. HTTP requests - Fecth API
+[HTTP requests - Fecth API](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/61)
 
 ### 62. 
 
