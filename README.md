@@ -2545,7 +2545,7 @@ request.open("GET", "https://puzzle.mead.io/puzzle");
 request.send();
 ```
 
-## Callback pattern
+## Callback pattern - Asynchronous execution
 
 ```js
 const getPuzzle = (callback) => {
@@ -2572,6 +2572,25 @@ getPuzzle((error, puzzle) => {
 });
 ```
 
+## Synchronous execution 
+
+```js
+const getPuzzleSync = () => {
+	const request = new XMLHttpRequest();
+	request.open("GET", "https://puzzle.mead.io/puzzle", false);
+	request.send();
+
+	if (request.readyState === 4 && request.status === 200) {
+		const data = JSON.parse(request.responseText);
+		return data;
+	} else if (request.readyState === 4) {
+		console.log("error");
+		throw new Error("Something bad happend");
+	}
+};
+
+console.log(getPuzzleSync());
+```
 
 # Tools
 
