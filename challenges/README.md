@@ -886,7 +886,8 @@ getCountry('MX').then((country) => {
 ### 65. Hangman - reset option
 [Hangman - reset option](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/65)
 
-### 66. 
+### 66. Hangman - CSS
+[Hangman - CSS](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/66)
 
 ### 67. 
 
