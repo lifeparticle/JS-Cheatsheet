@@ -27,5 +27,5 @@ function greet(input) {
 ```shell
 npm install -g babel-cli
 babel --version
-// 6.26.0 (babel-core 6.26.3)
+# 6.26.0 (babel-core 6.26.3)
 ```
