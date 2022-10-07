@@ -2714,12 +2714,6 @@ counter.decrement();
 console.log(counter.get()); // -1
 ```
 
-# Tools
-
-1. [Webpack](https://webpack.js.org/concepts/why-webpack/)
-2. [Polyfill](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill)
-3. [Babel-polyfill](https://babeljs.io/docs/en/babel-polyfill/)
-
 # Resources
 
 1. [Javascript The React Parts](https://reacttraining.com/blog/javascript-the-react-parts/)
@@ -2731,3 +2725,6 @@ console.log(counter.get()); // -1
 7. [Why-does-my-variable-show-its-deprecated](https://stackoverflow.com/questions/65379554/why-does-my-variable-show-its-deprecated)
 8. [You Don't Know JS Yet](https://github.com/getify/You-Dont-Know-JS)
 9. [JavaScript](https://github.com/Asabeneh/30-Days-Of-JavaScript)
+10. [Webpack](https://webpack.js.org/concepts/why-webpack/)
+11. [Polyfill](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill)
+12. [Babel-polyfill](https://babeljs.io/docs/en/babel-polyfill/)
