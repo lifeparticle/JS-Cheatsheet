@@ -28,4 +28,7 @@ function greet(input) {
 npm install -g babel-cli
 babel --version
 # 6.26.0 (babel-core 6.26.3)
+cd babel
+npm init
+npm install babel-preset-env
 ```
