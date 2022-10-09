@@ -2,6 +2,11 @@
 
 We can use the Babel tool to write code in the most recent JavaScript version. Babel will compile our code to a supported version for wider Browser compatibility.
 
+```mermaid
+flowchart LR
+    index.js --> Babel --> bundle.js
+```
+
 In
 
 ```js
