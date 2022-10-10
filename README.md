@@ -130,6 +130,8 @@ ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES201
 
 [Brendan Eich](https://brendaneich.com/) created JavaScript at Netscape, and it was later revised to comply with ECMA-262 Edition 5 and subsequent versions. JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, Safari) and server-side (Node.js).
 
+[Ecma International, Technical Committee 39 - ECMAScript](https://github.com/tc39/proposals)
+
 # Setup
 
 Install Node.js.
