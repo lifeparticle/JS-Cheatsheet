@@ -1170,14 +1170,22 @@ console.log(rmItem); // 1234
 
 ### 28. slice
 
-```js
-// The slice(start, end) method where the end is exclusive returns a shallow copy of a part of an array and returns a new array. It does not change the original array.
+The slice(start, end) method where the end is exclusive returns a shallow copy of a part of an array and returns a new array. It does not change the original array.
+
+```js 
 let num = [1, 2, 3, 1, 4, 5];
+// [1, 2, 3, 1, 4, 5]
+//           ^
 console.log(num.slice(3, 4)); // [1]
+
 console.log(num); // [1, 2, 3, 1, 4, 5]
 
 // other variations
+// [1, 2, 3, 1, 4, 5]
+//  ^  ^  ^  ^  ^  ^
 console.log(num.slice()); // [1, 2, 3, 1, 4, 5]
+// [1, 2, 3, 1, 4, 5]
+//           ^  ^  ^
 console.log(num.slice(3)); // [1, 4, 5]
 ```
 
@@ -1231,27 +1239,38 @@ console.log(notes); // [{title: "First title", body: "First body"}, {title: "Sec
 
 ### 31. splice
 
+The splice(start, deleteCount, item1, item2, itemN) returns an array containing the deleted element. It modifies the original array by removing or adding additional items.
+
 ```js
-// The splice(start, deleteCount, item1, item2, itemN) returns an array containing the deleted element. It modifies the original array by removing or adding additional items.
 let num = [1, 2, 3, 1, 4, 5];
+// [1, 2, 3, 1, 4, 5]
+//     ^  ^  ^  ^
 let delItems = num.splice(1, 4, 20, 21, 22, 23);
 console.log(delItems); // [2, 3, 1, 4]
 console.log(num); // [1, 20, 21, 22, 23, 5]
 
 // other variations
 let num = [1, 2, 3, 1, 4, 5];
+// [1, 2, 3, 1, 4, 5]
+//        ^  ^  ^  ^      
 console.log(num.splice(2)); // [3, 1, 4, 5]
 console.log(num); // [1, 2]
 
 let num = [1, 2, 3, 1, 4, 5];
+// [1, 2, 3, 1, 4, 5]
+//     ^ 
 console.log(num.splice(1, 1)); // [2]
 console.log(num); // [1, 3, 1, 4, 5]
 
 let num = [1, 2, 3, 1, 4, 5];
+// [1, 2, 3, 1, 4, 5]
+//  ^  ^   
 console.log(num.splice(0, 2, 4566)); // [1, 2]
 console.log(num); // [4566, 3, 1, 4, 5]
 
 let num = [1, 3, 4];
+// [1, 3, 4]
+//     <- insert here
 console.log(num.splice(1, 0, 2)); // []
 console.log(num); // [1, 2, 3, 4]
 ```
