@@ -888,11 +888,3 @@ getCountry('MX').then((country) => {
 
 ### 66. Hangman - CSS
 [Hangman - CSS](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/challenges/66)
-
-### 67. 
-
-### 68. 
-
-### 69. 
-
-### 70. 
