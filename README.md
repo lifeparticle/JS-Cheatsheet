@@ -746,23 +746,30 @@ let user = {
 
 ### Spread syntax (...)
 
-TODO
-
 ```js
 let user = {
     id: 1,
     firstName: "bob",
     lastName: "rob",
+    addresses: ["56596 Yolanda Garden", "438 Cayla Island", "060 Christophe Flat"]
 };
 
-function userId({ id, ...rest }) {
-    return {
-        id: id + 1,
-        ...rest,
-    };
+function printUser(id, firstName, lastName, firstAddress, secondAddress) {
+    console.log(id); // 1
+    console.log(firstName); // bob
+    console.log(lastName); // rob
+    console.log(firstAddress); // 56596 Yolanda Garden
+    console.log(secondAddress); // 438 Cayla Island
 }
 
-userId(user); // {id: 2, firstName: 'bob', lastName: 'rob'}
+printUser(user.id, user.firstName, user.lastName, ...user.addresses);
+```
+
+```js
+let addresses = ["56596 Yolanda Garden", "438 Cayla Island", "060 Christophe Flat"];
+let newAddresses = ["'897 Koby Square", ...addresses];
+console.log(addresses); // ["56596 Yolanda Garden", "438 Cayla Island", "060 Christophe Flat"]
+console.log(newAddresses); // ["'897 Koby Square", "56596 Yolanda Garden", "438 Cayla Island", "060 Christophe Flat"]
 ```
 
 ### Rest syntax (parameters) (...)
@@ -782,6 +789,28 @@ function userId({ id, ...rest }) {
 }
 
 userId(user); // '1 bob rob'
+```
+
+### Object Spread syntax
+
+Here order matters. Whatever comes last will take precedence.
+
+```js
+let user = {
+    id: 1,
+    firstName: "bob",
+    lastName: "rob",
+};
+
+function userId({...rest}) {
+    return {
+        id: 40,
+        ...rest,
+        id: rest.id + 1
+    };
+}
+
+console.log(userId(user)); // {id: 2, firstName: 'bob', lastName: 'rob'}
 ```
 
 # Array
