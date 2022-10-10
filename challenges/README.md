@@ -1,9 +1,9 @@
 The following challenges are from the [Modern-Javascript](https://www.udemy.com/course/modern-javascript/) course.
 
-- [1. String concatenation](#1-string-concatenation)  
-- [2. Calculate percentage](#2-calculate-percentage)  
+- [1. String concatenation](#1-string-concatenation)
+- [2. Calculate percentage](#2-calculate-percentage)
 - [3. Temperature converter](#3-temperature-converter)
-- [4. Comparison operators](#4-comparison-operators)  
+- [4. Comparison operators](#4-comparison-operators)
 - [5. If statements](#5-if-statements)
 - [6. Advanced If statements](#6-advanced-if-statements)
 - [7. Logical and (&&) and or (||)](#7-logical-and--and-or-)
@@ -60,16 +60,12 @@ The following challenges are from the [Modern-Javascript](https://www.udemy.com/
 - [58. Closures](#58-closures)
 - [59. HTTP requests - promises](#59-http-requests---promises)
 - [60. HTTP requests - Fecth API](#60-http-requests---fecth-api)
-- [61.](#61)
-- [62.](#62)
-- [63.](#63)
-- [64.](#64)
-- [65.](#65)
-- [66.](#66)
-- [67.](#67)
-- [68.](#68)
-- [69.](#69)
-- [70.](#70)
+- [61. HTTP requests - Fecth API](#61-http-requests---fecth-api)
+- [62. HTTP requests - promises](#62-http-requests---promises)
+- [63. HTTP requests - async/await](#63-http-requests---asyncawait)
+- [64. HTTP requests - async/await](#64-http-requests---asyncawait)
+- [65. Hangman - reset option](#65-hangman---reset-option)
+- [66. Hangman - CSS](#66-hangman---css)
 
 ### 1. String concatenation
 
