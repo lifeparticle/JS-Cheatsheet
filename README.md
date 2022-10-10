@@ -39,6 +39,7 @@
     + [Object property shorthand](#object-property-shorthand)
     + [Spread syntax (...)](#spread-syntax-)
     + [Rest syntax (parameters) (...)](#rest-syntax-parameters-)
+    + [Object Spread syntax](#object-spread-syntax)
 - [Array](#array)
   * [Array methods](#array-methods)
     + [2. concat](#2-concat)
@@ -117,7 +118,6 @@
   * [Synchronous execution](#synchronous-execution)
   * [Fetch API](#fetch-api)
 - [Closure](#closure)
-- [Tools](#tools)
 - [Resources](#resources)
 
 # Introduction
