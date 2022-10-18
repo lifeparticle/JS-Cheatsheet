@@ -189,10 +189,14 @@ const C = "ccc"; // 'C' has already been declared
 
 ## undefined and null
 
+**undefined:** It means a variable has been declared without assigning a value.
+
 ```js
 let name;
-console.log(name);
+console.log(name); // undefined
 ```
+
+
 
 ```js
 let convertFahrenheitToCelsius = function (fahrenheit) {
