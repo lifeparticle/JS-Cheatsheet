@@ -118,6 +118,16 @@ function Button() {
 
 [Source](https://beta.reactjs.org/apis/react/useContext)
 
+# React performance
+
+## Memo
+
+[Source](https://reactjs.org/docs/react-api.html#reactmemo)
+
+## Code spliting
+
+[Source](https://reactjs.org/docs/code-splitting.html)
+
 # React router dom
 
 [Learn React Router v6 In 45 Minutes](https://www.youtube.com/watch?v=Ul3y1LXxzdU)
@@ -125,6 +135,7 @@ function Button() {
 # Important things
 1. [Bug: useEffect runs twice on component mount (StrictMode, NODE_ENV=development)](https://github.com/facebook/react/issues/24502)
 2. [Roadmap.sh/react](https://roadmap.sh/react)
+3. [before-you-memo](https://overreacted.io/before-you-memo/)
 
 
 # Books
