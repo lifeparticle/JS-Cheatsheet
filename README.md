@@ -196,7 +196,22 @@ let name;
 console.log(name); // undefined
 ```
 
+A function without a return statement will return a default value, in this case `undefined`.
 
+```js
+let convertFahrenheitToCelsius = function (fahrenheit) {
+    console.log(fahrenheit); // undefined
+};
+
+console.log(convertFahrenheitToCelsius()); // undefined
+```
+
+**null:** null is set explicitly to describe nothing or void.
+
+```js
+let name = null;
+console.log(name); // null
+```
 
 ```js
 let convertFahrenheitToCelsius = function (fahrenheit) {
@@ -207,14 +222,11 @@ let convertFahrenheitToCelsius = function (fahrenheit) {
 console.log(convertFahrenheitToCelsius()); // null
 ```
 
-A function without a return statement will return a default value, in this case `undefined`.
+**undefined vs null:**
 
 ```js
-let convertFahrenheitToCelsius = function (fahrenheit) {
-    console.log(fahrenheit); // undefined
-};
-
-console.log(convertFahrenheitToCelsius()); // undefined
+console.log(undefined == null); // true
+console.log(undefined === null); // false
 ```
 
 ## Leaked variables
