@@ -2780,6 +2780,22 @@ counter.decrement();
 console.log(counter.get()); // -1
 ```
 
+# Sleep
+
+```js
+const sleep = (time) => {
+  const date = Date.now();
+  let currentDate;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < time);
+}
+
+console.log("Before sleep");
+sleep(2000);
+console.log("After sleep");
+```
+
 # Resources
 
 1. [Javascript The React Parts](https://reacttraining.com/blog/javascript-the-react-parts/)
