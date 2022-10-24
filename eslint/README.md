@@ -3,7 +3,7 @@
 # Installation
 
 ```shell
-yarn add --dev lint-staged
+yarn add --dev eslint
 ```
 
 # Resources
