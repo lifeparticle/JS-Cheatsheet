@@ -1,4 +1,4 @@
-# How to lean React - Pick as you like
+# How to learn React - Pick as you like
 1. JavaScript
 2. https://beta.reactjs.org/
 3. YouTube - Video Tutorials
