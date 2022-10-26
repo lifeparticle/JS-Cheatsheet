@@ -27,10 +27,12 @@
 
 React is a JavaScript library for building composable user interfaces. React uses only one HTML file called `index.html` to load the entire application. That is why it's called a single page application. We can use [React Router](https://github.com/remix-run/react-router) to navigate between components.
 
+# Virtual DOM
+
 
 # Lifecycle
 
-TODO
+[Lifecycle](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/react-lifecycle)
 
 # JSX
 
