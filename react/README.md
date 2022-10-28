@@ -1,3 +1,22 @@
+- [How to learn React - Pick as you like](#how-to-learn-react---pick-as-you-like)
+  * [Create a React project](#create-a-react-project)
+- [Introduction](#introduction)
+- [Virtual DOM](#virtual-dom)
+- [Lifecycle](#lifecycle)
+- [JSX](#jsx)
+- [Props](#props)
+- [Fragment](#fragment)
+- [Higher order component](#higher-order-component)
+- [Hooks](#hooks)
+- [State](#state)
+- [Context](#context)
+- [React performance](#react-performance)
+  * [Memo](#memo)
+  * [Code spliting](#code-spliting)
+- [React router dom](#react-router-dom)
+- [Important things](#important-things)
+- [Books](#books)
+
 # How to learn React - Pick as you like
 1. JavaScript
 2. https://beta.reactjs.org/
