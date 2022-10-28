@@ -16,7 +16,7 @@
 - Mockups -> Low fidelity design -> High fidelity
 - Implementation
   - Create a react app -> npm, yarn or pnpm
-  - Code the UI -> You may want to use a react component library i.e., mantine, to speed the development process
+  - Code the UI -> You may want to use a react component library i.e., mantine, to fast track the development process
   - Add logic - react hooks and custom functions 
     - If you're stuck, then search for specific react or javascript tutorials, i.e., how to convert base64 in react
     - Ask questions on StackOverflow or GitHub
