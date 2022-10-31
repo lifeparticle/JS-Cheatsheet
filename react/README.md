@@ -14,8 +14,8 @@
   * [Memo](#memo)
   * [Code spliting](#code-spliting)
 - [React router dom](#react-router-dom)
-- [Important things](#important-things)
 - [Books](#books)
+- [Resources](#resources)
 
 # How to learn React - Pick as you like
 1. JavaScript
@@ -154,13 +154,11 @@ function Button() {
 
 [Learn React Router v6 In 45 Minutes](https://www.youtube.com/watch?v=Ul3y1LXxzdU)
 
-# Important things
-1. [Bug: useEffect runs twice on component mount (StrictMode, NODE_ENV=development)](https://github.com/facebook/react/issues/24502)
-2. [Roadmap.sh/react](https://roadmap.sh/react)
-3. [before-you-memo](https://overreacted.io/before-you-memo/)
-
-
 # Books
 1. [React the road to enterprise](https://theroadtoenterprise.com/books/react-the-road-to-enterprise)
 
+# Resources
+1. [Bug: useEffect runs twice on component mount (StrictMode, NODE_ENV=development)](https://github.com/facebook/react/issues/24502)
+2. [Roadmap.sh/react](https://roadmap.sh/react)
+3. [before-you-memo](https://overreacted.io/before-you-memo/)
 
