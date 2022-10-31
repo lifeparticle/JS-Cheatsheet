@@ -48,7 +48,16 @@ React is a JavaScript library for building composable user interfaces. React use
 
 # Virtual DOM
 
-React creates a copy of the actual DOM called a virtual dom (in-memory representation of the real DOM). When there is a change (state change), React creates a new virtual dom, compares it with the previous virtual dom by runing the diffing algorithm, and finally updates a specific part of the actual DOM rather than updating the whole. This process makes rendering faster and more efficent.
+React creates a copy of the actual DOM called a virtual dom (in-memory representation of the real DOM). When there is a change (state change), React creates a new virtual dom (second virtual DOM), compares it with the previous virtual dom by runing the diffing algorithm, and finally updates a specific part of the actual DOM rather than updating the whole. This process makes rendering faster and more efficent.
+
+```
+Second virtual DOM  <==== Diff algo =====> First virtual DOM = Changes (if any) -----> Updates the actual DOM (specific parts only)
+```
+
+Rendering option in the browser.
+
+![image](https://user-images.githubusercontent.com/1612112/198919716-14d0132b-c77b-497b-840d-72f30fd39e22.png)
+
 
 # Lifecycle
 
