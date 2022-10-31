@@ -73,10 +73,18 @@ const element = <h1>Hello, world!</h1>;
 ```
 
 
-# Props
+# Components and Props
+
+In React components are like JavaScript functions and they takes any number of inputs (properties or props in short). A component returns React elements which appear on the screen.
 
 ```tsx
+function Hello(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+const element = <Hello name="Bob" />;
+root.render(element);
 ```
 
 # Fragment
