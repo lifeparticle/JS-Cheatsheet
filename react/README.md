@@ -72,7 +72,6 @@ JSX (JavaScript XML) is used to describe the UI using React. It creates React el
 const element = <h1>Hello, world!</h1>;
 ```
 
-
 # Components and Props
 
 In React components are like JavaScript functions and they takes any number of inputs (properties or props in short). A component returns React elements which appear on the screen.
@@ -89,9 +88,18 @@ root.render(element);
 
 # Fragment
 
+We can use a Fragment to wrap a list of children without adding extra nodes to the DOM.
+
 ```tsx
-<>
-</>
+function Hello(props) {
+	return (
+		<>
+			<h1>Hello, {props.name}</h1>
+			<h1>Hello, {props.name}</h1>
+			<h1>Hello, {props.name}</h1>
+		</>
+	);
+}
 ```
 
 # Higher order component
