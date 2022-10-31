@@ -104,7 +104,7 @@ function Hello(props) {
 
 # Higher order component
 
-Higher order component us a function that takes a component and returns a new component
+Higher order component is a function that takes a component and returns a new component.
 
 ```tsx
 
