@@ -112,8 +112,20 @@ Higher order component us a function that takes a component and returns a new co
 
 # Hooks
 
-```tsx
+In 16.8 hooks were introduced. We can use state and other React features without writing a class.
 
+```tsx
+const App = () => {
+	const [count, setCount] = useState(0);
+
+	return (
+		<>
+			App1
+			<h1>{count}</h1>
+			<button onClick={() => setCount((c) => c + 1)}>Count</button>
+		</>
+	);
+};
 ```
 
 # State
