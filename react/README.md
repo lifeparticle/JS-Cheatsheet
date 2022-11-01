@@ -4,7 +4,7 @@
 - [Virtual DOM](#virtual-dom)
 - [Lifecycle](#lifecycle)
 - [JSX](#jsx)
-- [Props](#props)
+- [Components and Props](#components-and-props)
 - [Fragment](#fragment)
 - [Higher order component](#higher-order-component)
 - [Hooks](#hooks)
