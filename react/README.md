@@ -107,7 +107,31 @@ function Hello(props) {
 Higher order component is a function that takes a component and returns a new component. This way we can reuse component logic
 
 ```tsx
+function HocBox({title, message, children}) {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <p>{message}</p>
+      {children}
+    </div>
+  )
+}
 
+function Button() {
+  return <button>Submit</button>
+}
+
+
+function App() {
+  return (
+    <>
+      <h1>Hello world!</h1>
+      <HocBox title={"Title 1"} message={"Message 1"}> <Button/> </HocBox>
+      <HocBox title={"Title 1"} message={"Message 1"}> <Button/> </HocBox>
+      <HocBox title={"Title 1"} message={"Message 1"}> <Button/> </HocBox>
+    </>
+  )
+}
 ```
 
 # Hooks
