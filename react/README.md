@@ -86,6 +86,10 @@ const element = <Hello name="Bob" />;
 root.render(element);
 ```
 
+## Controlled vs UnControlled Components
+
+[Source](https://stackoverflow.com/questions/42522515/what-are-react-controlled-components-and-uncontrolled-components)
+
 # Fragment
 
 We can use a Fragment to wrap a list of children without adding extra nodes to the DOM.
