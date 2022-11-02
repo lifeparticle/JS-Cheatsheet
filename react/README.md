@@ -219,6 +219,12 @@ function Button() {
 
 [Learn React Router v6 In 45 Minutes](https://www.youtube.com/watch?v=Ul3y1LXxzdU)
 
+# Miscellaneous
+
+1. public/manifest.json
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/Manifest)
+
 # Books
 1. [React the road to enterprise](https://theroadtoenterprise.com/books/react-the-road-to-enterprise)
 
