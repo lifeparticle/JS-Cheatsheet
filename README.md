@@ -2606,9 +2606,12 @@ document.getElementById("search-note").addEventListener("input", (e) => {
 
 [Source](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element)
 
+
+There are two types of event propagation: Event bubbling and Event capturing. 
+
 ### Event bubbling
 
-Event captured upwards.
+Event is captured by the inner clciked element and propagated to outer elements. Also, we can stop propagation.
 
 ```html
 <html>
@@ -2750,7 +2753,7 @@ addGlobalEventListener('click', 'div', 'parent', (e) => {
 
 ### Event capturing
 
-Event captured inwards.
+Event is captured by the outer clciked element and propagated to inner elements. Also, we can stop propagation.
 
 ```js
 const parent = document.getElementById("parent");
