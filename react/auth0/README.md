@@ -64,3 +64,4 @@ export default Auth0ProviderWithHistory;
 # Resources
 1. [complete-guide-to-react-user-authentication](https://auth0.com/blog/complete-guide-to-react-user-authentication/)
 2. [React Authentication in 5 Minutes](https://www.youtube.com/watch?v=aRBgA8N0ioM)
+3. [cra-react-router](https://github.com/auth0/auth0-react/tree/master/examples/cra-react-router)
