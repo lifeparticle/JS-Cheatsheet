@@ -110,6 +110,8 @@
 - [DOM - Document Object Model](#dom---document-object-model)
   * [DOM manipulation](#dom-manipulation)
   * [Event handling](#event-handling)
+    + [Event bubbling](#event-bubbling)
+    + [Event capturing](#event-capturing)
 - [Local Storage](#local-storage)
 - [Window interface](#window-interface)
 - [Strict mode](#strict-mode)
@@ -118,6 +120,7 @@
   * [Synchronous execution](#synchronous-execution)
   * [Fetch API](#fetch-api)
 - [Closure](#closure)
+- [Sleep](#sleep)
 - [Resources](#resources)
 
 # Introduction
