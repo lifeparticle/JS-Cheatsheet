@@ -19,13 +19,46 @@ REACT_APP_AUTH0_DOMAIN=
 REACT_APP_AUTH0_CLIENT_ID=
 ```
 
-5. Install the follwing auth0 SDK
+5. Install the follwing auth0 SDK and react router
 
-```
+```shell
 npm install @auth0/auth0-react
 yarn add @auth0/auth0-react
+
+yarn add react-router-dom
 ```
 
+6. Create the file `src/auth/auth0-provider-with-history.js` and populate with the following:
+
+```tsx
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Auth0Provider } from "@auth0/auth0-react";
+
+const Auth0ProviderWithHistory = ({ children }) => {
+	const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+	const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+
+	const history = useNavigate();
+
+	const onRedirectCallback = (appState) => {
+		history.push(appState?.returnTo || window.location.pathname);
+	};
+
+	return (
+		<Auth0Provider
+			domain={domain}
+			clientId={clientId}
+			redirectUri={window.location.origin}
+			onRedirectCallback={onRedirectCallback}
+		>
+			{children}
+		</Auth0Provider>
+	);
+};
+
+export default Auth0ProviderWithHistory;
+```
 
 # Resources
 1. [complete-guide-to-react-user-authentication](https://auth0.com/blog/complete-guide-to-react-user-authentication/)
