@@ -1634,6 +1634,39 @@ let getResult = function (name = "Anonymous", score = 0) {
 console.log(getResult());
 ```
 
+## bind method
+
+We can create a new function using the bind() method and it takes the value for `this` keyword as an argument.
+
+```js
+let person = {
+    firstName: "Bob",
+    lastName: "Rob",
+    fullName: function (type) {
+        return `${type}: ${this.firstName} ${this.lastName}`
+    }
+}
+
+console.log(person.fullName('Person')); // Person: Bob Rob
+
+let student = {
+    firstName: "Tom",
+    lastName: "Jon",
+}
+
+
+let teacher = {
+    firstName: "Ron",
+    lastName: "Von",
+}
+
+let studentFullName = person.fullName.bind(student, 'Student');
+console.log(studentFullName()); // Student: Tom Jon
+
+let teacherFullName = person.fullName.bind(teacher, 'Teacher');
+console.log(teacherFullName()); // Teacher: Ron Von
+```
+
 # Delay
 
 ## Print "Hello, World" every 1 second
