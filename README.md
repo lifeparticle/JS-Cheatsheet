@@ -2606,6 +2606,201 @@ document.getElementById("search-note").addEventListener("input", (e) => {
 
 [Source](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element)
 
+### Event bubbling
+
+Event captured upwards.
+
+```html
+<html>
+    <head>
+        <script src="index.pack.js"></script>
+    </head>
+    <body>
+        <div id="parent">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas lectus id massa convallis fermentum. Aenean pulvinar interdum viverra. Maecenas porttitor lorem in velit placerat, et blandit ex pellentesque. Nunc convallis fermentum ullamcorper. Suspendisse malesuada euismod quam et dapibus. Mauris eget ligula urna. Sed lacinia ex a libero interdum, ac pellentesque lectus posuere. Nunc tristique mattis mollis. Mauris suscipit augue ante, efficitur consectetur nulla pulvinar at. Curabitur vitae placerat tortor.
+
+            Ut vitae neque sit amet turpis tempor fermentum. Proin a velit tellus. Sed vitae tincidunt ex, vel varius ante. Mauris at est arcu. Proin a suscipit lacus, sed venenatis metus. Donec efficitur quis mi nec porttitor. Nulla luctus nisi erat. Praesent id nibh congue, placerat magna non, lacinia tortor. Quisque dignissim in ante quis euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis eget enim imperdiet, maximus ante vitae, bibendum tortor. Morbi molestie lacus rhoncus, tempor magna sit amet, semper libero. Nam ipsum ipsum, ultricies vel dignissim id, molestie quis nisl. Pellentesque et quam elementum, rhoncus ipsum a, suscipit nulla.
+            </br> 
+            <button id="bt1">Submit</button>
+        </div>
+    </body>
+</html>
+```
+
+```js
+const parent = document.getElementById("parent");
+const bt1 = document.getElementById("bt1");
+
+parent.addEventListener("click", (e) => {
+    console.log("Parent is clicked");
+})
+
+bt1.addEventListener("click", (e) => {
+    console.log("bt1 is clicked");
+})
+
+document.addEventListener("click", (e) => {
+    console.log("document is clicked");
+})
+```
+
+// When bt1 is clicked
+
+```
+bt1 is clicked
+Parent is clicked
+document is clicked
+```
+
+```js
+const parent = document.getElementById("parent");
+const bt1 = document.getElementById("bt1");
+
+parent.addEventListener("click", (e) => {
+    console.log("Parent is clicked");
+})
+
+bt1.addEventListener("click", (e) => {
+    console.log("bt1 is clicked");
+    e.stopPropagation();
+})
+
+document.addEventListener("click", (e) => {
+    console.log("document is clicked");
+})
+```
+
+// When bt1 is clicked
+
+```
+bt1 is clicked
+```
+
+```js
+const parent = document.getElementById("parent");
+const bt1 = document.getElementById("bt1");
+
+parent.addEventListener("click", (e) => {
+    console.log("Parent is clicked");
+})
+
+bt1.addEventListener("click", (e) => {
+    console.log("bt1 is clicked");
+})
+
+document.addEventListener("click", (e) => {
+    console.log("document is clicked");
+})
+```
+
+// When bt1 is clicked
+
+```
+bt1 is clicked
+Parent is clicked
+document is clicked
+```
+
+// When bt1 is clicked
+
+```
+Parent is clicked
+document is clicked
+```
+
+```html
+<html>
+    <head>
+        <script src="index.pack.js"></script>
+    </head>
+    <body>
+        <div id="super-parent">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas lectus id massa convallis fermentum. Aenean pulvinar interdum viverra. Maecenas porttitor lorem in velit placerat, et blandit ex pellentesque. Nunc convallis fermentum ullamcorper. Suspendisse malesuada euismod quam et dapibus. Mauris eget ligula urna. Sed lacinia ex a libero interdum, ac pellentesque lectus posuere. Nunc tristique mattis mollis. Mauris suscipit augue ante, efficitur consectetur nulla pulvinar at. Curabitur vitae placerat tortor.
+            </br> 
+            </br> 
+            </br>
+            <div id="parent">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas lectus id massa convallis fermentum. Aenean pulvinar interdum viverra. Maecenas porttitor lorem in velit placerat, et blandit ex pellentesque. Nunc convallis fermentum ullamcorper. Suspendisse malesuada euismod quam et dapibus. Mauris eget ligula urna. Sed lacinia ex a libero interdum, ac pellentesque lectus posuere. Nunc tristique mattis mollis. Mauris suscipit augue ante, efficitur consectetur nulla pulvinar at. Curabitur vitae placerat tortor.
+
+                Ut vitae neque sit amet turpis tempor fermentum. Proin a velit tellus. Sed vitae tincidunt ex, vel varius ante. Mauris at est arcu. Proin a suscipit lacus, sed venenatis metus. Donec efficitur quis mi nec porttitor. Nulla luctus nisi erat. Praesent id nibh congue, placerat magna non, lacinia tortor. Quisque dignissim in ante quis euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis eget enim imperdiet, maximus ante vitae, bibendum tortor. Morbi molestie lacus rhoncus, tempor magna sit amet, semper libero. Nam ipsum ipsum, ultricies vel dignissim id, molestie quis nisl. Pellentesque et quam elementum, rhoncus ipsum a, suscipit nulla.
+                </br> 
+                <button id="bt1">Submit</button>
+            </div>
+        </div>
+    </body>
+</html>
+```
+
+```js
+const parent = document.getElementById("parent");
+const bt1 = document.getElementById("bt1");
+
+const addGlobalEventListener = (eventType, cssSelector, id, callback) => {
+    document.addEventListener(eventType, (e) => {
+        if(e.target.matches(cssSelector) && event.target.id === id)
+            callback(e);
+    })
+}
+
+addGlobalEventListener('click', 'div', 'parent', (e) => {
+    console.log("parent is clicked");
+})
+
+```
+
+### Event capturing
+
+Event captured inwards.
+
+```js
+const parent = document.getElementById("parent");
+const bt1 = document.getElementById("bt1");
+
+parent.addEventListener("click", (e) => {
+    console.log("Parent is clicked");
+} , {capture: true})
+
+bt1.addEventListener("click", (e) => {
+    console.log("bt1 is clicked");
+})
+
+document.addEventListener("click", (e) => {
+    console.log("document is clicked");
+})
+```
+
+// When bt1 is clicked
+
+```
+Parent is clicked
+bt1 is clicked
+document is clicked
+```
+
+```js
+const parent = document.getElementById("parent");
+const bt1 = document.getElementById("bt1");
+
+parent.addEventListener("click", (e) => {
+    console.log("Parent is clicked");
+    e.stopPropagation();
+} , {capture: true})
+
+bt1.addEventListener("click", (e) => {
+    console.log("bt1 is clicked");
+})
+
+document.addEventListener("click", (e) => {
+    console.log("document is clicked");
+})
+```
+
+// When bt1 is clicked
+
+```
+Parent is clicked
+```
+
 # Local Storage
 
 ```js
