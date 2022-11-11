@@ -5,6 +5,7 @@
 - [Lifecycle](#lifecycle)
 - [JSX](#jsx)
 - [Components and Props](#components-and-props)
+  * [Controlled vs UnControlled Components](#controlled-vs-uncontrolled-components)
 - [Fragment](#fragment)
 - [Higher order component](#higher-order-component)
 - [Hooks](#hooks)
@@ -13,7 +14,9 @@
 - [React performance](#react-performance)
   * [Memo](#memo)
   * [Code spliting](#code-spliting)
+  * [Error Boundaries](#error-boundaries)
 - [React router dom](#react-router-dom)
+- [Miscellaneous](#miscellaneous)
 - [Books](#books)
 - [Resources](#resources)
 
