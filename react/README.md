@@ -217,7 +217,7 @@ function Button() {
 
 ## Error Boundaries
  
-TODO
+[Error Boundaries](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/react-error-boundaries)
 
 # React router dom
 
