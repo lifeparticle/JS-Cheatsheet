@@ -215,6 +215,10 @@ function Button() {
 
 [Source](https://reactjs.org/docs/code-splitting.html)
 
+## Error Boundaries
+ 
+TODO
+
 # React router dom
 
 [Learn React Router v6 In 45 Minutes](https://www.youtube.com/watch?v=Ul3y1LXxzdU)
