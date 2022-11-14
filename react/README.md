@@ -14,7 +14,7 @@
 - [React performance](#react-performance)
   * [Memo](#memo)
   * [Code spliting](#code-spliting)
-- [Error Boundaries](#error-boundaries)
+- [Suspense and Error Boundaries](#suspense-and-error-boundaries)
 - [React router dom](#react-router-dom)
 - [Miscellaneous](#miscellaneous)
 - [Books](#books)
@@ -218,9 +218,9 @@ function Button() {
 
 [Source](https://reactjs.org/docs/code-splitting.html)
 
-# Error Boundaries
+# Suspense and Error Boundaries
  
-[Error Boundaries](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/react-error-boundaries)
+[Suspense and Error Boundaries](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/react-error-boundaries)
 
 # React router dom
 
