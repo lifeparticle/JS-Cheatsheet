@@ -37,3 +37,7 @@ cd babel
 npm init
 npm install babel-preset-env
 ```
+
+# Resources
+
+1. [Minimal Babel Setup](https://kheohyeewei.medium.com/minimal-babel-setup-b12b563ee2ca)
