@@ -241,4 +241,5 @@ function Button() {
 3. [before-you-memo](https://overreacted.io/before-you-memo/)
 4. [spa-fatigue](https://macwright.com/2020/05/10/spa-fatigue.html)
 5. [how-to-build-your-first-saas](https://www.freecodecamp.org/news/how-to-build-your-first-saas/)
+6. [awesome-react](https://github.com/enaqx/awesome-react)
 
