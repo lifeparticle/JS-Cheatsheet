@@ -6,7 +6,13 @@ React mounts components twice (in development only!) when Strict Mode is enabled
 
 # Hooks
 
-## 1. useEffect
+## 1. useState
+
+
+
+
+
+## 2. useEffect
 
 The `useEffect` hook run as a result of rendering and we can use this hook to synchronize a component with an external system (side effects) with the state of the component. For example:
 
@@ -69,8 +75,6 @@ useEffect(() => {
   setCount(count + 1);
 });
 ```
-
-## 2. useState
 
 ## 3. useLayoutEffect
 
