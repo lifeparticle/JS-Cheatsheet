@@ -32,7 +32,7 @@ useEffect(() => {
 Amazing, we know how to write a `useEffect` hook. Now we need to understand when React calls the setup and cleanup functions.
 
 - #### 1. The setup code inside the setup function runs when the component is added to the page (mounts)
-- #### 2. After every re-render (due to the dependencies changed) of the component the setup and cleanup functions are called.
+- #### 2. After every re-render (due to the dependencies changes) of the component the setup and cleanup functions are called.
   - 2.1 First, the cleanup code runs with the old props and state
   - 2.2 Second, the setup code runs with the new props and state
 - #### 3. Finally, the cleanup code inside the cleanup function runs after the component is removed from the page (unmounts)
