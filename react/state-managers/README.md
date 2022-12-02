@@ -1,8 +1,11 @@
 # Introduction
 
-The only time react re-renders when there is a state change.
+The only time react re-renders when there is a state change. Third party libraries that manage state redux, jotai, zustand.
 
-Third party libraries that manage state redux, jotai, zustand.
+# useState
+
+
+
 
 # Resources
 
