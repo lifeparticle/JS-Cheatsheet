@@ -2,11 +2,15 @@
 
 The only time react re-renders when there is a state change. Third party libraries that manage state redux, jotai, zustand.
 
-# useState
+# Native
+
+## useState
 https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/usestate
 
-# useReducer
+## useReducer
 https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/usereducer
+
+# Third party
 
 # redux
 
