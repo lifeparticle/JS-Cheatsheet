@@ -4,7 +4,11 @@ The only time react re-renders when there is a state change. Third party librari
 
 # useState
 
+# useReducer
 
+# redux
+
+# zustand
 
 
 # Resources
