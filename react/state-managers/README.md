@@ -4,19 +4,19 @@ The only time react re-renders when there is a state change. Third party librari
 
 # Manage states
 
-# Native
+## Native
 
-## useState
+### useState
 https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/usestate
 
-## useReducer
+### useReducer
 https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/usereducer
 
-# Third party
+## Third party
 
-# redux
+### redux
 
-# zustand
+### zustand
 
 # Monitor states
 
