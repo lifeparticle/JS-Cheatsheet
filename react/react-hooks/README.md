@@ -84,9 +84,17 @@ useEffect(() => {
 
 ### 5. useCallback
 
-## 6. useLayoutEffect
 
-## 7. todo
+
+Both `useMemo` and `useCallback` takes two arguments, an array of dependencies and a function. When dependencies change, `useCallback` returns its function, however `useMemo` calls its function and returns the output. 
+
+
+
+
+
+### 6. useLayoutEffect
+
+### 7. todo
 
 
 # Resources
