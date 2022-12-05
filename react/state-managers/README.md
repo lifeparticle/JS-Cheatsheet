@@ -27,6 +27,7 @@ https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/use
 https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/usecallback
 
 ## useEffect
+https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/useeffect
 
 # Resources
 
