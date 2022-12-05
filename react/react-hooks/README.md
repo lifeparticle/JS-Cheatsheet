@@ -1,6 +1,6 @@
 # Introduction
 
-React mounts components twice (in development only!) when Strict Mode is enabled to stress-test your Effects.
+TODO
 
 # Rules of Hooks
 
