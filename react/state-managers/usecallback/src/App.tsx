@@ -18,6 +18,7 @@ const SortedList = ({ list, sortFunction }: any) => {
 function App() {
 	const [names, setNames] = useState(["Bob", "Rob", "Tom"]);
 
+	// Use useCallback when we are passing down a callback function like onClick, onChange, etc to a nested component as a prop
 	const sortFunction = useCallback(
 		(a: string, b: string) => a.localeCompare(b) * -1,
 		[]
