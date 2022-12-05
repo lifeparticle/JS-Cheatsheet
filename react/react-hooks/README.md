@@ -6,7 +6,7 @@ React mounts components twice (in development only!) when Strict Mode is enabled
 
 # Hooks
 
-## State managment
+## A) State managment
 
 ### 1. useState
 
@@ -14,7 +14,7 @@ React mounts components twice (in development only!) when Strict Mode is enabled
 ### 2. useReducer
 
 
-## State monitoring
+## B) State monitoring
 
 ### 3. useEffect
 
