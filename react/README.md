@@ -50,6 +50,15 @@
 
 React is a JavaScript library for building composable user interfaces. React uses only one HTML file called `index.html` to load the entire application. That is why it's called a single page application (SPA). We can use [React Router](https://github.com/remix-run/react-router) to navigate between components.
 
+
+React mounts components twice (in development only!) when Strict Mode is enabled to stress-test your Effects.
+
+```
+Mounts
+Unmounts
+Mounts
+```
+
 # Virtual DOM
 
 React creates a copy of the actual DOM called a virtual dom (in-memory representation of the real DOM). When there is a change (state change), React creates a new virtual dom (second virtual DOM), compares it with the previous virtual dom by runing the diffing algorithm, and finally updates a specific part of the actual DOM rather than updating the whole. This process makes rendering faster and more efficent.
