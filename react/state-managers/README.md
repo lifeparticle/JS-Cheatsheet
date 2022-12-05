@@ -21,8 +21,10 @@ https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/use
 # Monitor states
 
 ## useMemo
+https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/usememo
 
 ## useCallback
+https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/usecallback
 
 ## useEffect
 
