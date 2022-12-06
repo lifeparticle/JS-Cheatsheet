@@ -18,13 +18,24 @@ TODO
 
 ### 3. useEffect
 
-The `useEffect` hook run as a result of rendering and we can use this hook to synchronize a component with an external system (side effects) with the state of the component. For example:
+The `useEffect` hook run as a result of rendering and we can use this hook to synchronize a component with an external system (side effects) with the state of the component and it's not a lifecycle hook. For example:
 
 - Based on the state, control a non-React component
 - Establish connection to a chat server
 - Send analytics logs
   
-Therefore, the `useEffect` hook should synchronise your components with an external system. However, in other cases, such as when you need to change one state based on another and there is no external system, you may not need an Effect. The `useEffect` hook takes two arguments, **a setup function** and **a list of dependencies**. For example, if we want to connect to a chatroom we need to provide the following two arguments:
+Therefore, the `useEffect` hook should synchronise your components with an external system. However, in other cases, such as when you need to change one state based on another and there is no external system, you may not need an Effect. The `useEffect` hook takes two arguments, **a setup function** and **a list of dependencies**.
+
+```jsx
+useEffect(() => {
+   /* setup function */
+  return () => {
+    /* cleanup function */
+  };
+}, [/* dependencies */]);
+```
+
+For example, if we want to connect to a chatroom we need to provide the following two arguments:
 
 - A setup function with setup code that connects to a chat server. Also, it should return a cleanup function with a cleanup code that disconnects from the chat server
 - A list of dependencies (`[serverUrl, roomId]`). It should include all the values from your component used inside the setup and cleanup functions
@@ -51,17 +62,23 @@ So it is clear that React will call the cleanup function each time before the se
 
 There are three ways we can write a `useEffect` hook
 
+All state
+
 ```jsx
 useEffect(() => {
-  // This runs after every render for every state changes
+  // This runs after every render for all state changes
 });
 ```
+
+No state
 
 ```jsx
 useEffect(() => {
   // This runs only on mount
 }, []);
 ```
+
+Particuler states
 
 ```jsx
 useEffect(() => {
