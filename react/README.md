@@ -254,6 +254,10 @@ function Button() {
 6. [How to Deploy a React Application to Netlify](https://javascript.plainenglish.io/how-to-deploy-a-react-application-to-netlify-e120d2de2654)
 7. [How to Deploy a React Application to Cloudflare Pages](https://javascript.plainenglish.io/how-to-deploy-a-react-application-to-cloudflare-pages-e334466109c3)
 
+# Tools
+
+1. https://www.codux.com/
+
 # Resources
 1. [Bug: useEffect runs twice on component mount (StrictMode, NODE_ENV=development)](https://github.com/facebook/react/issues/24502)
 2. [Roadmap.sh/react](https://roadmap.sh/react)
