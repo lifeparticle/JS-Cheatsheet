@@ -4,6 +4,10 @@ TODO
 
 # Rules of Hooks
 
+- We can call Hooks at the Top Level (Don’t call Hooks inside loops, conditions, or nested functions)
+- We can call Hooks from React function components (Don't call Hooks from regular JavaScript functions)
+- We can create a custom Hook (a JavaScript function). The name starts with `use` and that may call other Hooks
+
 # Hooks
 
 ## A) State managment
