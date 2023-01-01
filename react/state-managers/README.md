@@ -14,6 +14,10 @@ https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/use
 
 https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/usereducer
 
+### context
+
+https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/context
+
 ## Third party
 
 ### redux
