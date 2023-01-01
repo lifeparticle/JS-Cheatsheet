@@ -7,9 +7,11 @@ The only time react re-renders when there is a state change. Third party librari
 ## Native
 
 ### useState
+
 https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/usestate
 
 ### useReducer
+
 https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/usereducer
 
 ## Third party
@@ -21,12 +23,15 @@ https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/use
 # Monitor states
 
 ## useMemo
+
 https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/usememo
 
 ## useCallback
+
 https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/usecallback
 
 ## useEffect
+
 https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/useeffect
 
 # Resources
