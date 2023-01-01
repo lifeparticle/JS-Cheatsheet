@@ -24,9 +24,17 @@ https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/nat
 
 ## Third party
 
+### React query + React location
+
+https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/react-query
+
 ### redux
 
+https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/redux
+
 ### zustand
+
+https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/zustand
 
 # Monitor states
 
