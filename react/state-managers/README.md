@@ -18,6 +18,10 @@ https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/use
 
 https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/context
 
+### context + useMemo + useCallback + useReducer
+
+https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/state-managers/native-data
+
 ## Third party
 
 ### redux
