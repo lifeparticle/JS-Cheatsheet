@@ -1,20 +1,22 @@
 import "./App.css";
-import { useData } from "./store";
+import { useSelector, useDispatch, Provider } from "react-redux";
+
+import { store, selectSearch, setSearch, selectData } from "./store";
 
 const SearchBox = () => {
-    const search = useData((state) => state.search);
-    const setSearch = useData((state) => state.setSearch);
+    const search = useSelector(selectSearch);
+    const dispatch = useDispatch();
     return (
         <input
             placeholder="Search"
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(evt) => setSearch(evt.target.value)}
         />
     );
 };
 
 const DataList: React.FC = () => {
-    const data = useData((state) => state.data);
+    const data = useSelector(selectData);
     return (
         <div>
             {data.map((d) => {
@@ -26,10 +28,10 @@ const DataList: React.FC = () => {
 
 function App() {
     return (
-        <>
+        <Provider store={store}>
             <SearchBox />
             <DataList />
-        </>
+        </Provider>
     );
 }
 

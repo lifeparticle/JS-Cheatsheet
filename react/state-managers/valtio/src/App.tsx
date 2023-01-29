@@ -1,23 +1,26 @@
 import "./App.css";
-import { useData } from "./store";
+import { useSnapshot } from "valtio";
+
+import { search, data } from "./store";
 
 const SearchBox = () => {
-    const search = useData((state) => state.search);
-    const setSearch = useData((state) => state.setSearch);
+    const snap = useSnapshot(search);
     return (
         <input
             placeholder="Search"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            value={snap.query}
+            onChange={(evt) => {
+                search.query = evt.target.value;
+            }}
         />
     );
 };
 
 const DataList: React.FC = () => {
-    const data = useData((state) => state.data);
+    const snap = useSnapshot(data);
     return (
         <div>
-            {data.map((d) => {
+            {snap.list.map((d) => {
                 return <div key={d.id}>{d.name}</div>;
             })}
         </div>
