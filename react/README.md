@@ -19,6 +19,7 @@
 - [Miscellaneous](#miscellaneous)
 - [Books](#books)
 - [My React Articles](#my-react-articles)
+- [Blogs](#blogs)
 - [Resources](#resources)
 
 # How to learn React - Pick as you like
