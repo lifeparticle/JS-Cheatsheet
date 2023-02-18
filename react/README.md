@@ -258,13 +258,17 @@ function Button() {
 
 1. https://www.codux.com/
 
+# Blogs
+
+1. [taniarascia](https://www.taniarascia.com/blog)
+2. [Overreacted](https://overreacted.io/)
+
 # Resources
 1. [Bug: useEffect runs twice on component mount (StrictMode, NODE_ENV=development)](https://github.com/facebook/react/issues/24502)
 2. [Roadmap.sh/react](https://roadmap.sh/react)
-3. [before-you-memo](https://overreacted.io/before-you-memo/)
-4. [spa-fatigue](https://macwright.com/2020/05/10/spa-fatigue.html)
-5. [how-to-build-your-first-saas](https://www.freecodecamp.org/news/how-to-build-your-first-saas/)
-6. [awesome-react](https://github.com/enaqx/awesome-react)
-7. [storybook](https://storybook.js.org/)
-8. [React statuscode](https://react.statuscode.com/)
-9. https://useeffect.dev/
+3. [spa-fatigue](https://macwright.com/2020/05/10/spa-fatigue.html)
+4. [how-to-build-your-first-saas](https://www.freecodecamp.org/news/how-to-build-your-first-saas/)
+5. [awesome-react](https://github.com/enaqx/awesome-react)
+6. [storybook](https://storybook.js.org/)
+7. [React statuscode](https://react.statuscode.com/)
+8. https://useeffect.dev/
