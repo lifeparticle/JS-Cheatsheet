@@ -273,3 +273,4 @@ function Button() {
 6. [storybook](https://storybook.js.org/)
 7. [React statuscode](https://react.statuscode.com/)
 8. https://useeffect.dev/
+9. [React.js: The Documentary](https://www.youtube.com/watch?v=8pDqJVdNa44)
