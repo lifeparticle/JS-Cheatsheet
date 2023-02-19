@@ -274,3 +274,4 @@ function Button() {
 7. [React statuscode](https://react.statuscode.com/)
 8. https://useeffect.dev/
 9. [React.js: The Documentary](https://www.youtube.com/watch?v=8pDqJVdNa44)
+10. http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs/
