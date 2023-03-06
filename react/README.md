@@ -258,6 +258,9 @@ function Button() {
 # Netlify
 1. https://create-react-app.dev/docs/deployment/#netlify
 
+# Render
+1. https://render.com/docs/deploy-create-react-app#using-client-side-routing
+
 # Tools
 
 1. https://www.codux.com/
