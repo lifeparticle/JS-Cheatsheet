@@ -22,6 +22,10 @@
 - [Blogs](#blogs)
 - [Resources](#resources)
 
+# Latest news
+
+1. https://react.dev/blog/2023/03/16/introducing-react-dev
+
 # How to learn React - Pick as you like
 1. JavaScript
 2. https://beta.reactjs.org/
