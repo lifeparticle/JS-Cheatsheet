@@ -20,6 +20,7 @@
 - [Books](#books)
 - [My React Articles](#my-react-articles)
 - [Blogs](#blogs)
+- [Courses](#courses)
 - [Resources](#resources)
 
 # Latest news
@@ -274,6 +275,12 @@ function Button() {
 1. [taniarascia](https://www.taniarascia.com/blog)
 2. [Overreacted](https://overreacted.io/)
 
+# Courses
+
+1. [Reactsimplified](https://reactsimplified.com/)
+2. [Useeffect](https://useeffect.dev/)
+3. [Epicreact](https://epicreact.dev/)
+
 # Resources
 1. [Bug: useEffect runs twice on component mount (StrictMode, NODE_ENV=development)](https://github.com/facebook/react/issues/24502)
 2. [Roadmap.sh/react](https://roadmap.sh/react)
@@ -282,7 +289,6 @@ function Button() {
 5. [awesome-react](https://github.com/enaqx/awesome-react)
 6. [storybook](https://storybook.js.org/)
 7. [React statuscode](https://react.statuscode.com/)
-8. https://useeffect.dev/
-9. [React.js: The Documentary](https://www.youtube.com/watch?v=8pDqJVdNa44)
-10. http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs/
-11. https://archive.jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome
+8. [React.js: The Documentary](https://www.youtube.com/watch?v=8pDqJVdNa44)
+9. http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs/
+10. https://archive.jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome
