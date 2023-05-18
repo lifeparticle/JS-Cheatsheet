@@ -25,7 +25,8 @@
 
 # Latest news
 
-1. https://react.dev/blog/2023/03/16/introducing-react-dev
+1. [Introducing-react-dev](https://react.dev/blog/2023/03/16/introducing-react-dev)
+2. ["React from Another Dimension" by Dan Abramov at #RemixConf 2023](https://www.youtube.com/watch?v=zMf_xeGPn6s&ab_channel=Remix)
 
 # How to learn React - Pick as you like
 1. JavaScript
