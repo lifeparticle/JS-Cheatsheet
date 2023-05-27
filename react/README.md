@@ -251,6 +251,7 @@ function Button() {
 
 # Books
 1. [React the road to enterprise](https://theroadtoenterprise.com/books/react-the-road-to-enterprise)
+2. https://www.patterns.dev/
 
 # My React Articles
 1. [How to Deploy a React Application to Render](https://javascript.plainenglish.io/how-to-deploy-a-react-application-to-render-611ef3aca84a)
