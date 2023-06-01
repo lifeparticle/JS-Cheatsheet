@@ -282,6 +282,7 @@ function Button() {
 1. [Reactsimplified](https://reactsimplified.com/)
 2. [Useeffect](https://useeffect.dev/)
 3. [Epicreact](https://epicreact.dev/)
+4. [Fireship](https://fireship.io/pro)
 
 # Resources
 1. [Bug: useEffect runs twice on component mount (StrictMode, NODE_ENV=development)](https://github.com/facebook/react/issues/24502)
