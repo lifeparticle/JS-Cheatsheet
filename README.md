@@ -883,6 +883,12 @@ console.log(arr.length); // 0
 | 34  | toString()       |             |
 | 35  | unshift()        |             |
 | 36  | values()         |             |
+| 37  | with()           |             |
+| 38  | toSorted()       |             |
+| 39  | toReveresed()    |             |
+| 40  | toSpliced()      |             |
+
+### 1. at
 
 ### 2. concat
 
@@ -1339,6 +1345,45 @@ console.log(arr3.toString()); // 1,2,3,1,4,5
 let num = [1, 2, 3, 1, 4, 5];
 num.unshift(1234);
 console.log(num); // [1234, 1, 2, 3, 1, 4, 5]
+```
+
+### 37. with
+
+ 
+```js
+let num = [1, 2, 3, 1, 4, 5];
+let newNum = num.with(0, 8);
+console.log("num", num); // [1, 2, 3, 1, 4, 5]
+console.log("newNum", newNum); // [8, 2, 3, 1, 4, 5]
+```
+
+### 38. toSorted
+
+```js
+let num = [1, 2, 3, 1, 4, 5];
+let newNum = num.toSorted();
+console.log("num", num); // [1, 2, 3, 1, 4, 5]
+console.log("newNum", newNum); // [1, 1, 2, 3, 4, 5]
+```
+
+### 39. toReveresed
+
+// not working
+
+```js
+let num = [1, 2, 3, 1, 4, 5];
+let newNum = num.toReveresed();
+console.log("num", num); // [1, 2, 3, 1, 4, 5]
+console.log("newNum", newNum); // [1, 1, 2, 3, 4, 5]
+```
+
+### 40. toSpliced
+
+```js
+let num = [1, 2, 3, 1, 4, 5];
+let newNum = num.toSpliced(0, 3);
+console.log("num", num); // [1, 2, 3, 1, 4, 5]
+console.log("newNum", newNum); // [1, 4, 5]
 ```
 
 ## Array destructuring
