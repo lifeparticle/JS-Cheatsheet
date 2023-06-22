@@ -1,0 +1,20 @@
+{
+	"manifest_version": 3,
+	"name": "Extension name",
+	"version": "1.0.0",
+	"description": "This is an Extension",
+	"icons": {
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"action": {
+		"default_title": "Extension Title",
+		"default_popup": "index.html"
+	},
+	"options_page": "options.html",
+	"permissions": ["storage", "alarms"],
+	"background": {
+		"service_worker": "background.js"
+	}
+}
