@@ -129,6 +129,7 @@
 - [Closure](#closure)
 - [Sleep](#sleep)
 - [Resources](#resources)
+- [Performance](#performance)
 
 # Introduction
 
@@ -3080,6 +3081,13 @@ const sleep = (time) => {
 console.log("Before sleep");
 sleep(2000);
 console.log("After sleep");
+```
+
+# Performance
+
+```js
+console.time("name")
+console.timeEnd("name")
 ```
 
 # Resources
