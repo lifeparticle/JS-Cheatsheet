@@ -269,7 +269,7 @@ function Button() {
 	- https://github.com/lifeparticle/netlify_react
 7. [How to Deploy a React Application to Cloudflare Pages](https://javascript.plainenglish.io/how-to-deploy-a-react-application-to-cloudflare-pages-e334466109c3)
 	- https://github.com/lifeparticle/cloudflare-pages-react
-8. TODO
+8. [How To Deploy a React Application to GitHub Pages](https://medium.com/javascript-in-plain-english/how-to-deploy-a-react-application-to-github-pages-e4f8890e1213)
 	- https://github.com/lifeparticle/react-gh-pages
 # Netlify
 1. https://create-react-app.dev/docs/deployment/#netlify
