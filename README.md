@@ -2159,6 +2159,10 @@ getDataPromise(10).then((data) => {
 })
 ```
 
+## Promise.allSettled()
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled
+
 # Async & Await
 
 ```js
