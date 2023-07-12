@@ -1,21 +1,22 @@
-[TypeScript](https://www.typescriptlang.org/) is a superset of JavaScript. TypeScript additionally supports static typing. On the other hand, JavaScript supports only dynamic typing. So, by using TypeScript we can avoid runtime errors. 
+[TypeScript](https://www.typescriptlang.org/) is a superset of JavaScript. TypeScript additionally supports static typing. On the other hand, JavaScript supports only dynamic typing. So, by using TypeScript we can avoid runtime errors.
 
-It transpiles to plain JavaScript. The difference between transpiling and compiling is transpiling converts one language to another and compiling converts a language 
+It transpiles to plain JavaScript. The difference between transpiling and compiling is transpiling converts one language to another and compiling converts a language
 into machine code.
 
 Once the transpile is compelte, we can run the JavaScript code in the browser (Gogole Chrome) or using a JavaScript engine (V8).
 
-
 TypeScript
+
 ```tsx
 let name: string;
-name = 999;  // compile-time error
+name = 999; // compile-time error
 ```
 
 JavaScript
+
 ```js
 let name;
-name = 999;  // no error
+name = 999; // no error
 ```
 
 ## Install TypeScript globally using npm
@@ -24,7 +25,7 @@ name = 999;  // no error
 npm install -g typescript
 ```
 
-## Check version 
+## Check version
 
 ```sh
 tsc -v
@@ -36,7 +37,7 @@ main.ts
 
 ```tsx
 function sum(a: number, b: number) {
-	return a + b;
+    return a + b;
 }
 
 console.log(sum(10, 3));
@@ -63,7 +64,7 @@ console.log(sum(10, 3));
 
 ```tsx
 function sum(a: number, b: number) {
-	return a + b;
+    return a + b;
 }
 
 console.log(sum(10, "3"));
@@ -88,16 +89,17 @@ Found 1 error.
 ## Using a config file
 
 tsconfig.json
+
 ```json
 {
-	"compilerOptions": {
-		"baseUrl": ".", //transpile .ts files in the currebt folder
-		"outDir": "./dist", // save the .js generated file in the dist folder
-		"noEmitOnError": true, // if there are any compilaton error then don't generate .js files
-		"target": "es5", // transfile into es5 syntax
-		"watch": true, // on every file change new .js files will be generated automatically
-		"lib": ["dom"] // other libraries
-	}
+    "compilerOptions": {
+        "baseUrl": ".", //transpile .ts files in the currebt folder
+        "outDir": "./dist", // save the .js generated file in the dist folder
+        "noEmitOnError": true, // if there are any compilaton error then don't generate .js files
+        "target": "es5", // transfile into es5 syntax
+        "watch": true, // on every file change new .js files will be generated automatically
+        "lib": ["dom"] // other libraries
+    }
 }
 ```
 
@@ -111,19 +113,17 @@ tsc
 tsc --init
 ```
 
-
-
 ## Function
 
 ```tsx
 function sum(a: number, b: number): number {
-	return a + b;
+    return a + b;
 }
 ```
 
 ```tsx
 function sum(a: number, b: number): void {
-	print(a + b);
+    print(a + b);
 }
 ```
 
@@ -135,17 +135,16 @@ const person: Person[] = [];
 
 ## Type annotations
 
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| string      | text                                    |
-| boolean     | true/false                              |
-| number      | number                                  |
-| symbol      |                                         |
-| any         | can hold different types of data        |
-| unknown     |                                         |
-| never       |                                         |
-| void        |                                         |
+| Syntax  | Description                      |
+| ------- | -------------------------------- |
+| string  | text                             |
+| boolean | true/false                       |
+| number  | number                           |
+| symbol  |                                  |
+| any     | can hold different types of data |
+| unknown |                                  |
+| never   |                                  |
+| void    |                                  |
 
 ### Union type
 
@@ -158,7 +157,7 @@ let id = string | number;
 ```tsx
 type TileType = "Mr" | "Mrs" | "Miss";
 
-let title : TileType;
+let title: TileType;
 ```
 
 ```tsx
@@ -179,51 +178,50 @@ let p1 : Person = {
 
 ```tsx
 interface Person {
-  title: TileType;
-  first: string;
-  last: string;
+    title: TileType;
+    first: string;
+    last: string;
 }
 
-const p1 : Person = {
-  title: "Mr",
-  first: "Mahbub",
-  last: "Zaman"
-}
+const p1: Person = {
+    title: "Mr",
+    first: "Mahbub",
+    last: "Zaman",
+};
 ```
 
 ### Optional property
 
 ```tsx
 interface Person {
-	title: TileType;
-	first: string;
-	last: string;
-	age?: number;
+    title: TileType;
+    first: string;
+    last: string;
+    age?: number;
 }
 
 const p1: Person = {
-	title: "Mr",
-	first: "Mahbub",
-	last: "Zaman"
+    title: "Mr",
+    first: "Mahbub",
+    last: "Zaman",
 };
 ```
-
 
 ### Add aditinal property
 
 ```tsx
 interface Person {
-	title: TileType;
-	first: string;
-	last: string;
-	[key: string]: any;
+    title: TileType;
+    first: string;
+    last: string;
+    [key: string]: any;
 }
 
 const p1: Person = {
-	title: "Mr",
-	first: "Mahbub",
-	last: "Zaman",
-	id: 10,
-	dob: "1 Jan 2000",
+    title: "Mr",
+    first: "Mahbub",
+    last: "Zaman",
+    id: 10,
+    dob: "1 Jan 2000",
 };
 ```
