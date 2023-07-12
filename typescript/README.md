@@ -227,3 +227,17 @@ const p1: Person = {
 	dob: "1 Jan 2000",
 };
 ```
+
+### Satisfies
+
+todo
+
+
+### Generics
+
+todo
+
+
+
+# Resources
+1. https://www.totaltypescript.com/
