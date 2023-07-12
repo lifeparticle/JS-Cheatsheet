@@ -230,12 +230,84 @@ const p1: Person = {
 
 todo
 
-
 ### Generics
 
 todo
 
+### Tips
 
+#### Tip 1
+
+Table
+
+```jsx
+interface TableProps<TItem> {
+    items: TItem[];
+    renderItem: (item: TItem) => React.ReactNode;
+}
+
+export const Table = <TItem>(props: TableProps<TItem>) => {
+    return null;
+};
+
+export const Component = () => {
+    return (
+        <>
+            <Table
+                items={[{ id: "1", firstName: "Tom" }]}
+                renderItem={(item) => {
+                    return null;
+                }}
+            ></Table>
+            <Table
+                items={[{ id: "1", name: "Bob" }]}
+                renderItem={(item) => {
+                    return null;
+                }}
+            ></Table>
+        </>
+    );
+};
+```
+
+#### Tip 2
+
+You can have more than one genereic and one generic can rely on another generic.
+
+```ts
+export const getDeepValue = <
+    TObj,
+    TFirstKey extends keyof TObj,
+    TSecondKey extends keyof TObj[TFirstKey]
+>(
+    obj: TObj,
+    firstKey: TFirstKey,
+    secondKey: TSecondKey
+) => {
+    return obj[firstKey][secondKey];
+};
+
+const obj = {
+    foo: {
+        a: true,
+        b: 2,
+    },
+    bar: {
+        a: "12",
+        d: 18,
+    },
+};
+
+const valueFoo = getDeepValue(obj, "foo", "a");
+
+console.log(valueFoo); // true
+
+const valueBar = getDeepValue(obj, "bar", "a");
+
+console.log(valueBar); // 12
+```
 
 # Resources
+
 1. https://www.totaltypescript.com/
+2. https://www.youtube.com/watch?v=hBk4nV7q6-w
