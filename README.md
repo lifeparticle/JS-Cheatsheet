@@ -129,6 +129,7 @@
 - [Closure](#closure)
 - [Sleep](#sleep)
 - [Resources](#resources)
+- [Performance](#performance)
 
 # Introduction
 
@@ -2158,6 +2159,10 @@ getDataPromise(10).then((data) => {
 })
 ```
 
+## Promise.allSettled()
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled
+
 # Async & Await
 
 ```js
@@ -3082,6 +3087,13 @@ sleep(2000);
 console.log("After sleep");
 ```
 
+# Performance
+
+```js
+console.time("name")
+console.timeEnd("name")
+```
+
 # Resources
 
 1. [Javascript The React Parts](https://reacttraining.com/blog/javascript-the-react-parts/)
@@ -3096,3 +3108,5 @@ console.log("After sleep");
 10. [Webpack](https://webpack.js.org/concepts/why-webpack/)
 11. [Polyfill](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill)
 12. [Babel-polyfill](https://babeljs.io/docs/en/babel-polyfill/)
+13. [javascript-visualized-the-javascript-engine](https://dev.to/lydiahallie/javascript-visualized-the-javascript-engine-4cdf)
+14. [epicweb](https://www.epicweb.dev/)
