@@ -18,3 +18,8 @@ yarn remove typescript --dev && yarn add typescript
 ```
 
 
+
+
+
+# Resources
+1. https://stackoverflow.com/questions/73673624/cannot-activate-yarn
