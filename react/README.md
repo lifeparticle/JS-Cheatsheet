@@ -1,27 +1,27 @@
-- [How to learn React - Pick as you like](#how-to-learn-react---pick-as-you-like)
-  * [Create a React project](#create-a-react-project)
-- [Introduction](#introduction)
-- [Virtual DOM](#virtual-dom)
-- [Lifecycle](#lifecycle)
-- [JSX](#jsx)
-- [Components and Props](#components-and-props)
-  * [Controlled vs UnControlled Components](#controlled-vs-uncontrolled-components)
-- [Fragment](#fragment)
-- [Higher order component](#higher-order-component)
-- [Hooks](#hooks)
-- [State](#state)
-- [Context](#context)
-- [React performance](#react-performance)
-  * [Memo](#memo)
-  * [Code spliting](#code-spliting)
-- [Suspense and Error Boundaries](#suspense-and-error-boundaries)
-- [React router dom](#react-router-dom)
-- [Miscellaneous](#miscellaneous)
-- [Books](#books)
-- [My React Articles](#my-react-articles)
-- [Blogs](#blogs)
-- [Courses](#courses)
-- [Resources](#resources)
+-   [How to learn React - Pick as you like](#how-to-learn-react---pick-as-you-like)
+    -   [Create a React project](#create-a-react-project)
+-   [Introduction](#introduction)
+-   [Virtual DOM](#virtual-dom)
+-   [Lifecycle](#lifecycle)
+-   [JSX](#jsx)
+-   [Components and Props](#components-and-props)
+    -   [Controlled vs UnControlled Components](#controlled-vs-uncontrolled-components)
+-   [Fragment](#fragment)
+-   [Higher order component](#higher-order-component)
+-   [Hooks](#hooks)
+-   [State](#state)
+-   [Context](#context)
+-   [React performance](#react-performance)
+    -   [Memo](#memo)
+    -   [Code spliting](#code-spliting)
+-   [Suspense and Error Boundaries](#suspense-and-error-boundaries)
+-   [React router dom](#react-router-dom)
+-   [Miscellaneous](#miscellaneous)
+-   [Books](#books)
+-   [My React Articles](#my-react-articles)
+-   [Blogs](#blogs)
+-   [Courses](#courses)
+-   [Resources](#resources)
 
 # Latest news
 
@@ -30,6 +30,7 @@
 3. [The Virtual DOM Replacement for React](https://github.com/aidenybai/million)
 
 # How to learn React - Pick as you like
+
 1. JavaScript
 2. https://beta.reactjs.org/
 3. YouTube - Video Tutorials
@@ -42,22 +43,22 @@
 10. Something else???
 
 ## Create a React project
-- Idea -> Base64 converter
-- Requirements -> Encode, Decode, Clear etc
-- Mockups -> Low fidelity design -> High fidelity
-- Implementation
-  - Create a react app -> npm, yarn or pnpm
-  - Code the UI -> You may want to use a react component library i.e., mantine, to fast track the development process
-  - Add logic - react hooks and custom functions 
-    - If you're stuck, then search for specific react or javascript tutorials, i.e., how to convert base64 in react
-    - Ask questions on StackOverflow or GitHub
-    - Ask someone else
-   - Deploy i.e, On Netlify via GitHub
+
+-   Idea -> Base64 converter
+-   Requirements -> Encode, Decode, Clear etc
+-   Mockups -> Low fidelity design -> High fidelity
+-   Implementation
+    -   Create a react app -> npm, yarn or pnpm
+    -   Code the UI -> You may want to use a react component library i.e., mantine, to fast track the development process
+    -   Add logic - react hooks and custom functions
+        -   If you're stuck, then search for specific react or javascript tutorials, i.e., how to convert base64 in react
+        -   Ask questions on StackOverflow or GitHub
+        -   Ask someone else
+    -   Deploy i.e, On Netlify via GitHub
 
 # Introduction
 
 React is a JavaScript library for building composable user interfaces. React uses only one HTML file called `index.html` to load the entire application. That is why it's called a single page application (SPA). We can use [React Router](https://github.com/remix-run/react-router) to navigate between components.
-
 
 React mounts components twice (in development only!) when Strict Mode is enabled to stress-test your Effects.
 
@@ -79,7 +80,6 @@ Rendering option in the browser.
 
 ![image](https://user-images.githubusercontent.com/1612112/198919716-14d0132b-c77b-497b-840d-72f30fd39e22.png)
 
-
 # Lifecycle
 
 [Lifecycle](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/react-lifecycle)
@@ -87,7 +87,6 @@ Rendering option in the browser.
 # JSX
 
 JSX (JavaScript XML) is used to describe the UI using React. It creates React elements.
-
 
 ```tsx
 const element = <h1>Hello, world!</h1>;
@@ -99,10 +98,10 @@ In React components are like JavaScript functions and they takes any number of i
 
 ```tsx
 function Hello(props) {
-  return <h1>Hello, {props.name}</h1>;
+    return <h1>Hello, {props.name}</h1>;
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 const element = <Hello name="Bob" />;
 root.render(element);
 ```
@@ -117,13 +116,13 @@ We can use a Fragment to wrap a list of children without adding extra nodes to t
 
 ```tsx
 function Hello(props) {
-	return (
-		<>
-			<h1>Hello, {props.name}</h1>
-			<h1>Hello, {props.name}</h1>
-			<h1>Hello, {props.name}</h1>
-		</>
-	);
+    return (
+        <>
+            <h1>Hello, {props.name}</h1>
+            <h1>Hello, {props.name}</h1>
+            <h1>Hello, {props.name}</h1>
+        </>
+    );
 }
 ```
 
@@ -132,30 +131,38 @@ function Hello(props) {
 Higher order component is a function that takes a component and returns a new component. This way we can reuse component logic
 
 ```tsx
-function HocBox({title, message, children}) {
-  return (
-    <div>
-      <h1>{title}</h1>
-      <p>{message}</p>
-      {children}
-    </div>
-  )
+function HocBox({ title, message, children }) {
+    return (
+        <div>
+            <h1>{title}</h1>
+            <p>{message}</p>
+            {children}
+        </div>
+    );
 }
 
 function Button() {
-  return <button>Submit</button>
+    return <button>Submit</button>;
 }
 
-
 function App() {
-  return (
-    <>
-      <h1>Hello world!</h1>
-      <HocBox title={"Title 1"} message={"Message 1"}> <Button/> </HocBox>
-      <HocBox title={"Title 1"} message={"Message 1"}> <Button/> </HocBox>
-      <HocBox title={"Title 1"} message={"Message 1"}> <Button/> </HocBox>
-    </>
-  )
+    return (
+        <>
+            <h1>Hello world!</h1>
+            <HocBox title={"Title 1"} message={"Message 1"}>
+                {" "}
+                <Button />{" "}
+            </HocBox>
+            <HocBox title={"Title 1"} message={"Message 1"}>
+                {" "}
+                <Button />{" "}
+            </HocBox>
+            <HocBox title={"Title 1"} message={"Message 1"}>
+                {" "}
+                <Button />{" "}
+            </HocBox>
+        </>
+    );
 }
 ```
 
@@ -165,15 +172,15 @@ In 16.8 hooks were introduced. We can use state and other React features without
 
 ```tsx
 const App = () => {
-	const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0);
 
-	return (
-		<>
-			App1
-			<h1>{count}</h1>
-			<button onClick={() => setCount((c) => c + 1)}>Count</button>
-		</>
-	);
+    return (
+        <>
+            App1
+            <h1>{count}</h1>
+            <button onClick={() => setCount((c) => c + 1)}>Count</button>
+        </>
+    );
 };
 ```
 
@@ -183,10 +190,10 @@ const App = () => {
 const [isLoading, setIsloading] = useState(true);
 
 useEffect(() => {
-	const timer = setTimeout(() => {
-		setIsloading(false);
-	}, 100);
-	return () => clearTimeout(timer);
+    const timer = setTimeout(() => {
+        setIsloading(false);
+    }, 100);
+    return () => clearTimeout(timer);
 });
 ```
 
@@ -194,33 +201,32 @@ useEffect(() => {
 
 Data can be passed parent to child (top to down) components via props. But when the data is required by many child components such as UI theme then using props can be cumbersome. In this case we can use context to share data between components without passing props. When possible we need to avoid using context, because it makes more difficult to resue components. If you want to avoid passing props through many levels the pass down the component itself.
 
-
 ```tsx
 const ThemeContext = createContext(null);
 
 const App = () => {
-	const [theme, setTheme] = useState("#f0eded");
-	return (
-		<div>
-			<ThemeContext.Provider value={theme}>
-				<Button />
-				<br />
-				<br />
-				<input
-					type="checkbox"
-					checked={theme === "#7d7d7d"}
-					onChange={(e) => {
-						setTheme(e.target.checked ? "#7d7d7d" : "#f0eded");
-					}}
-				/>
-			</ThemeContext.Provider>
-		</div>
-	);
+    const [theme, setTheme] = useState("#f0eded");
+    return (
+        <div>
+            <ThemeContext.Provider value={theme}>
+                <Button />
+                <br />
+                <br />
+                <input
+                    type="checkbox"
+                    checked={theme === "#7d7d7d"}
+                    onChange={(e) => {
+                        setTheme(e.target.checked ? "#7d7d7d" : "#f0eded");
+                    }}
+                />
+            </ThemeContext.Provider>
+        </div>
+    );
 };
 
 function Button() {
-	const theme = useContext(ThemeContext);
-	return <button style={{ backgroundColor: theme }}>Log In</button>;
+    const theme = useContext(ThemeContext);
+    return <button style={{ backgroundColor: theme }}>Log In</button>;
 }
 ```
 
@@ -237,12 +243,16 @@ function Button() {
 [Source](https://reactjs.org/docs/code-splitting.html)
 
 # Suspense and Error Boundaries
- 
+
 [Suspense and Error Boundaries](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/react-error-boundaries)
 
 # React router dom
 
 [Learn React Router v6 In 45 Minutes](https://www.youtube.com/watch?v=Ul3y1LXxzdU)
+
+# Projects
+
+1. Tiny MCE
 
 # Miscellaneous
 
@@ -251,30 +261,35 @@ function Button() {
 [Source](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 
 # Books
+
 1. [React the road to enterprise](https://theroadtoenterprise.com/books/react-the-road-to-enterprise)
 2. https://www.patterns.dev/
 
 # My React Articles
+
 1. [How to Deploy a React Application to Render](https://javascript.plainenglish.io/how-to-deploy-a-react-application-to-render-611ef3aca84a)
-	- https://github.com/lifeparticle/react-render-static-sites
+    - https://github.com/lifeparticle/react-render-static-sites
 2. [How to Create a React Application With Deno](https://medium.com/geekculture/how-to-create-a-react-application-with-deno-4518db39c5ab)
-	- https://github.com/lifeparticle/react-deno
+    - https://github.com/lifeparticle/react-deno
 3. [How to Create a React Application Using Vite](https://javascript.plainenglish.io/how-to-create-a-react-application-using-vite-cc3e9910a3f3)
-	- https://github.com/lifeparticle/react-vite
+    - https://github.com/lifeparticle/react-vite
 4. [How To Create Tauri Desktop Applications Using React](https://medium.com/geekculture/how-to-create-tauri-desktop-applications-using-react-8541e42b1f22)
-	- TODO
+    - TODO
 5. [How To Show Data Using Infinite Scroll in React](https://towardsdatascience.com/how-to-show-data-using-infinite-scroll-in-react-7c7c8540d5b4)
-	- https://github.com/lifeparticle/react-infinite-scroll
+    - https://github.com/lifeparticle/react-infinite-scroll
 6. [How to Deploy a React Application to Netlify](https://javascript.plainenglish.io/how-to-deploy-a-react-application-to-netlify-e120d2de2654)
-	- https://github.com/lifeparticle/netlify_react
+    - https://github.com/lifeparticle/netlify_react
 7. [How to Deploy a React Application to Cloudflare Pages](https://javascript.plainenglish.io/how-to-deploy-a-react-application-to-cloudflare-pages-e334466109c3)
-	- https://github.com/lifeparticle/cloudflare-pages-react
+    - https://github.com/lifeparticle/cloudflare-pages-react
 8. [How To Deploy a React Application to GitHub Pages](https://medium.com/javascript-in-plain-english/how-to-deploy-a-react-application-to-github-pages-e4f8890e1213)
-	- https://github.com/lifeparticle/react-gh-pages
+    - https://github.com/lifeparticle/react-gh-pages
+
 # Netlify
+
 1. https://create-react-app.dev/docs/deployment/#netlify
 
 # Render
+
 1. https://render.com/docs/deploy-create-react-app#using-client-side-routing
 
 # Tools
@@ -294,6 +309,7 @@ function Button() {
 4. [Fireship](https://fireship.io/pro)
 
 # Resources
+
 1. [Bug: useEffect runs twice on component mount (StrictMode, NODE_ENV=development)](https://github.com/facebook/react/issues/24502)
 2. [Roadmap.sh/react](https://roadmap.sh/react)
 3. [spa-fatigue](https://macwright.com/2020/05/10/spa-fatigue.html)
