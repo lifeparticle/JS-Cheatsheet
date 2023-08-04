@@ -2,3 +2,4 @@
 2. [Ant Design](https://ant.design/)
 3. [Shadcn](https://ui.shadcn.com/)
 4. [Mantine](https://mantine.dev/)
+5. [Tremor](https://www.tremor.so/)
