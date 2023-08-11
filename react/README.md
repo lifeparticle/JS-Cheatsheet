@@ -19,7 +19,6 @@
 -   [Miscellaneous](#miscellaneous)
 -   [Books](#books)
 -   [My React Articles](#my-react-articles)
--   [Blogs](#blogs)
 -   [Courses](#courses)
 -   [Resources](#resources)
 
@@ -291,15 +290,6 @@ function Button() {
 # Render
 
 1. https://render.com/docs/deploy-create-react-app#using-client-side-routing
-
-# Tools
-
-1. https://www.codux.com/
-
-# Blogs
-
-1. [taniarascia](https://www.taniarascia.com/blog)
-2. [Overreacted](https://overreacted.io/)
 
 # Courses
 
