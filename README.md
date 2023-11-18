@@ -1,6 +1,5 @@
 # Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Setup](#setup)
 - [Reserved words](#reserved-words)
@@ -86,6 +85,8 @@
 - [Delay](#delay)
 	* [Print "Hello, World" every 1 second](#print-hello-world-every-1-second)
 	* [Print "Hello, World" after 1 second](#print-hello-world-after-1-second)
+- [Set](#set)
+- [Map](#map)
 - [Loops](#loops)
 	* [for](#for)
 	* [do...while](#dowhile)
@@ -101,6 +102,7 @@
 - [JavaScript modules](#javascript-modules)
 - [Promises](#promises)
 	* [Promise chaining](#promise-chaining)
+	* [Promise.allSettled()](#promiseallsettled)
 - [Async & Await](#async--await)
 - [Constructor Functions](#constructor-functions)
 - [Prototype Inheritance](#prototype-inheritance)
@@ -110,6 +112,8 @@
 - [Try Catch](#try-catch)
 - [Debugging](#debugging)
 	* [Debugger](#debugger)
+	* [Console](#console)
+ 	* [Breakpoints](#breakpoints)
 - [HTML with live server](#html-with-live-server)
 - [How to add JavaScript to a web page](#how-to-add-javascript-to-a-web-page)
 	* [Everything between script tags will be executed by the web browser](#everything-between-script-tags-will-be-executed-by-the-web-browser)
@@ -128,8 +132,8 @@
 	* [Fetch API](#fetch-api)
 - [Closure](#closure)
 - [Sleep](#sleep)
-- [Resources](#resources)
 - [Performance](#performance)
+- [Resources](#resources)
 
 # Introduction
 
@@ -2444,7 +2448,7 @@ console.warn("message"); // Outputs a warning message to the console in yellow c
 console.time("label"); /* the code you want to measure for performance */ console.timeEnd("label"); // Starts/ends a timer you can use to track how long an operation takes
 ```
 
-# Breakpoints
+## Breakpoints
 
 At each breakpoint, JavaScript will stop executing, and let you examine JavaScript values
 
