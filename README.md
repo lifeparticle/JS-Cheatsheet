@@ -1742,6 +1742,22 @@ const callBackThisFunction = (name) => {
 setTimeout(callBackThisFunction, 1000);
 ```
 
+# Set
+
+```js
+const numbers = new Set([1, 2, 3]);
+```
+
+# Map
+
+```js
+const digtiMap = new Map([
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
+]);
+```
+
 # Loops
 
 ## for
@@ -2411,6 +2427,27 @@ console.log("This is a test");
 ```js
 debugger;
 ```
+
+## Console
+
+```js
+console.log(); // Outputs information to the console. Useful for general logging
+console.dir(input); // Displays an interactive list of the properties of the specified DOM element
+console.log("input", input); /* or */ console.log({input});
+console.table(data); // Displays tabular data, suitable for array or objects
+console.error("message"); // Outputs an error message to the console
+console.assert(condition, "message"); // Logs a message if the condition is false
+if(data === undefined)
+    console.error("This should not happen"); // Red color
+console.assert(data !== undefined, "This should not happen");
+console.warn("message"); // Outputs a warning message to the console in yellow color
+console.time("label"); /* the code you want to measure for performance */ console.timeEnd("label"); // Starts/ends a timer you can use to track how long an operation takes
+```
+
+# Breakpoints
+
+At each breakpoint, JavaScript will stop executing, and let you examine JavaScript values
+
 
 [source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
 
