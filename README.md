@@ -170,8 +170,8 @@ try, typeof, var, void, while, with, yield
 
 ```js
 /*
-multiline;
-comment;
+multiline
+comment
 */
 ```
 
@@ -189,7 +189,7 @@ let id = 8765;
 const BIRTH_DAY = "1 Jan 2000";
 ```
 
-Use `let` and `var` if the value will change over time and `const` (can not be changed later, and you'll get an error if you try reassigning a new value) for a constant value. `var` has global and `let` has block scope. You can't define `let` and `const` variables more than once.
+Use `let` and `var` if the value will change over time and `const` (can not be changed later, and you'll get an error if you try reassigning a new value) for a constant value. `var` has global and `let` has block scope. With `var` you can define same variables more than once. You can't define `let` and `const` same variables more than once.
 
 ```js
 var a = "aaa";
@@ -208,7 +208,7 @@ const C = "ccc"; // 'C' has already been declared
 
 ```js
 let name;
-console.log(name); // undefined
+console.log(name); // here undefined is the intial value for name
 ```
 
 A function without a return statement will return a default value, in this case `undefined`.
@@ -451,14 +451,14 @@ const getFullName = () => {
 
 | No  | Name      | Example                                                                                                        | Doc                                                                 | Data Type          |
 | --- | --------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------ |
-| 1   | Number    | `let a = 17`                                                                                                   | [link](https://developer.mozilla.org/en-US/docs/Glossary/Number)    | Primitive data     |
-| 2   | BigInt    | `let a = 348378344239489n`                                                                                     | [link](https://developer.mozilla.org/en-US/docs/Glossary/BigInt)    | Primitive data     |
-| 3   | String    | `let a = "Hello universe"` <br/> `let a = 'Hello universe'` <br/> <code> let a = \`${Hello universe}\` </code> | [link](https://developer.mozilla.org/en-US/docs/Glossary/String)    | Primitive data     |
-| 4   | Boolean   | `let a = true`                                                                                                 | [link](https://developer.mozilla.org/en-US/docs/Glossary/Boolean)   | Primitive data     |
-| 5   | Symbol    | `let sym = Symbol()`                                                                                           | [link](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)    | Primitive data     |
+| 1   | number    | `let a = 17`                                                                                                   | [link](https://developer.mozilla.org/en-US/docs/Glossary/Number)    | Primitive data     |
+| 2   | bigint    | `let a = 348378344239489n`                                                                                     | [link](https://developer.mozilla.org/en-US/docs/Glossary/BigInt)    | Primitive data     |
+| 3   | string    | `let a = "Hello universe"` <br/> `let a = 'Hello universe'` <br/> <code> let a = \`${Hello universe}\` </code> | [link](https://developer.mozilla.org/en-US/docs/Glossary/String)    | Primitive data     |
+| 4   | B=boolean   | `let a = true`                                                                                                 | [link](https://developer.mozilla.org/en-US/docs/Glossary/Boolean)   | Primitive data     |
+| 5   | symbol    | `let sym = Symbol()`                                                                                           | [link](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)    | Primitive data     |
 | 6   | null      | `let a = null`                                                                                                 | [link](https://developer.mozilla.org/en-US/docs/Glossary/Null)      | Primitive data     |
 | 7   | undefined | `let a = undefined`                                                                                            | [link](https://developer.mozilla.org/en-US/docs/Glossary/undefined) | Primitive data     |
-| 8   | Object    | `let a = {a: 'test'}`                                                                                          | [link](https://developer.mozilla.org/en-US/docs/Glossary/Object)    | Non-primitive data |
+| 8   | object    | `let a = {a: 'test'}`                                                                                          | [link](https://developer.mozilla.org/en-US/docs/Glossary/Object)    | Non-primitive data |
 
 ## How to check the data type
 
@@ -511,7 +511,15 @@ console.log('2' == 2); // true
 console.log('3' == 2); // false
 ```
 
-## String
+## string
+
+
+We can use either single or double quotes for string values. The important thing is to start and end the string with the same type of quote.
+
+```js
+let singleQuoteString = 'This is a string with single quotes.';
+let doubleQuoteString = "This is a string with double quotes.";
+```
 
 Although string is a primitive data type, when we access methods and properties on a string it converts to an object, which is also true for a number and boolean. On the other hand `null` and `undefined` will never be an object.
 
@@ -548,11 +556,13 @@ console.log(result); // Name: Bob - Score: 10
 
 ### Escape charecters
 
+Place a backslash (\) before the quotes to point that they are not the end of the string.
+
 ```js
 let description = '"If you\'re going to do something, then do it properly."';
 ```
 
-## Number
+## number
 
 The number data type can hold numbers between 2 <sup>53-1</sup> and -2 <sup>53-1</sup>.
 
@@ -579,15 +589,15 @@ console.log(Math.ceil(num)); // 1221
 
 [Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 
-## BigInt
+## bigint
 
 todo
 
-## Symbol
+## symbol
 
 todo
 
-## Undefind
+## undefind
 
 todo
 
@@ -595,7 +605,7 @@ todo
 
 todo
 
-## Object
+## object
 
 ### Empty object.
 
@@ -1240,7 +1250,7 @@ console.log(rmItem); // 1234
 
 The slice(start, end) method where the end is exclusive returns a shallow copy of a part of an array and returns a new array. It does not change the original array.
 
-```js 
+```js
 let num = [1, 2, 3, 1, 4, 5];
 // [1, 2, 3, 1, 4, 5]
 //           ^
@@ -1320,19 +1330,19 @@ console.log(num); // [1, 20, 21, 22, 23, 5]
 // other variations
 let num = [1, 2, 3, 1, 4, 5];
 // [1, 2, 3, 1, 4, 5]
-//        ^  ^  ^  ^      
+//        ^  ^  ^  ^
 console.log(num.splice(2)); // [3, 1, 4, 5]
 console.log(num); // [1, 2]
 
 let num = [1, 2, 3, 1, 4, 5];
 // [1, 2, 3, 1, 4, 5]
-//     ^ 
+//     ^
 console.log(num.splice(1, 1)); // [2]
 console.log(num); // [1, 3, 1, 4, 5]
 
 let num = [1, 2, 3, 1, 4, 5];
 // [1, 2, 3, 1, 4, 5]
-//  ^  ^   
+//  ^  ^
 console.log(num.splice(0, 2, 4566)); // [1, 2]
 console.log(num); // [4566, 3, 1, 4, 5]
 
@@ -1360,7 +1370,7 @@ console.log(num); // [1234, 1, 2, 3, 1, 4, 5]
 
 ### 37. with
 
- 
+
 ```js
 let num = [1, 2, 3, 1, 4, 5];
 let newNum = num.with(0, 8);
@@ -2376,7 +2386,7 @@ const data = {
     get location() {
         return this._location;
     },
-    
+
     set location(value) {
         this._location = value.trim();
         this.locations.push(this._location);
@@ -2741,7 +2751,7 @@ document.getElementById("search-note").addEventListener("input", (e) => {
 [Source](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element)
 
 
-There are two types of event propagation: Event bubbling and Event capturing. 
+There are two types of event propagation: Event bubbling and Event capturing.
 
 ### Event bubbling
 
@@ -2757,7 +2767,7 @@ Event is captured by the inner clciked element and propagated to outer elements.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas lectus id massa convallis fermentum. Aenean pulvinar interdum viverra. Maecenas porttitor lorem in velit placerat, et blandit ex pellentesque. Nunc convallis fermentum ullamcorper. Suspendisse malesuada euismod quam et dapibus. Mauris eget ligula urna. Sed lacinia ex a libero interdum, ac pellentesque lectus posuere. Nunc tristique mattis mollis. Mauris suscipit augue ante, efficitur consectetur nulla pulvinar at. Curabitur vitae placerat tortor.
 
             Ut vitae neque sit amet turpis tempor fermentum. Proin a velit tellus. Sed vitae tincidunt ex, vel varius ante. Mauris at est arcu. Proin a suscipit lacus, sed venenatis metus. Donec efficitur quis mi nec porttitor. Nulla luctus nisi erat. Praesent id nibh congue, placerat magna non, lacinia tortor. Quisque dignissim in ante quis euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis eget enim imperdiet, maximus ante vitae, bibendum tortor. Morbi molestie lacus rhoncus, tempor magna sit amet, semper libero. Nam ipsum ipsum, ultricies vel dignissim id, molestie quis nisl. Pellentesque et quam elementum, rhoncus ipsum a, suscipit nulla.
-            </br> 
+            </br>
             <button id="bt1">Submit</button>
         </div>
     </body>
@@ -2853,14 +2863,14 @@ document is clicked
     <body>
         <div id="super-parent">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas lectus id massa convallis fermentum. Aenean pulvinar interdum viverra. Maecenas porttitor lorem in velit placerat, et blandit ex pellentesque. Nunc convallis fermentum ullamcorper. Suspendisse malesuada euismod quam et dapibus. Mauris eget ligula urna. Sed lacinia ex a libero interdum, ac pellentesque lectus posuere. Nunc tristique mattis mollis. Mauris suscipit augue ante, efficitur consectetur nulla pulvinar at. Curabitur vitae placerat tortor.
-            </br> 
-            </br> 
+            </br>
+            </br>
             </br>
             <div id="parent">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas lectus id massa convallis fermentum. Aenean pulvinar interdum viverra. Maecenas porttitor lorem in velit placerat, et blandit ex pellentesque. Nunc convallis fermentum ullamcorper. Suspendisse malesuada euismod quam et dapibus. Mauris eget ligula urna. Sed lacinia ex a libero interdum, ac pellentesque lectus posuere. Nunc tristique mattis mollis. Mauris suscipit augue ante, efficitur consectetur nulla pulvinar at. Curabitur vitae placerat tortor.
 
                 Ut vitae neque sit amet turpis tempor fermentum. Proin a velit tellus. Sed vitae tincidunt ex, vel varius ante. Mauris at est arcu. Proin a suscipit lacus, sed venenatis metus. Donec efficitur quis mi nec porttitor. Nulla luctus nisi erat. Praesent id nibh congue, placerat magna non, lacinia tortor. Quisque dignissim in ante quis euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis eget enim imperdiet, maximus ante vitae, bibendum tortor. Morbi molestie lacus rhoncus, tempor magna sit amet, semper libero. Nam ipsum ipsum, ultricies vel dignissim id, molestie quis nisl. Pellentesque et quam elementum, rhoncus ipsum a, suscipit nulla.
-                </br> 
+                </br>
                 <button id="bt1">Submit</button>
             </div>
         </div>
@@ -3039,7 +3049,7 @@ getPuzzle((error, puzzle) => {
 });
 ```
 
-## Synchronous execution 
+## Synchronous execution
 
 ```js
 const getPuzzleSync = () => {
@@ -3063,7 +3073,7 @@ console.log(getPuzzleSync());
 ```js
 fetch('http://puzzle.mead.io/puzzle', {}).then((response) => {
     if (response.status === 200) {
-        return response.json() 
+        return response.json()
     } else {
         throw new Error('Unable to fetch the puzzle')
     }
@@ -3091,7 +3101,7 @@ value("Closure");
 ```js
 const createCounter = () => {
     let count = 0;
-    
+
     return {
         increment() {
             count++;
