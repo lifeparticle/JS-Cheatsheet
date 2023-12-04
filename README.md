@@ -886,6 +886,20 @@ function userId({...rest}) {
 console.log(userId(user)); // {id: 2, firstName: 'bob', lastName: 'rob'}
 ```
 
+### Delete properties
+
+```js
+let user = {
+    id: 1,
+    firstName: "bob",
+    lastName: "rob",
+};
+
+console.log(user); // {id: 1, firstName: 'bob', lastName: 'rob'}
+delete user.id;
+console.log(user); // {firstName: 'bob', lastName: 'rob'}
+```
+
 # Array
 
 ```js
