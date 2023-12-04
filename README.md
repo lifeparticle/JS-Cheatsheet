@@ -189,7 +189,7 @@ let id = 8765;
 const BIRTH_DAY = "1 Jan 2000";
 ```
 
-Use `let` and `var` if the value will change over time and `const` (can not be changed later, and you'll get an error if you try reassigning a new value) for a constant value. `var` has global and `let` has block scope. With `var` you can define same variables more than once. You can't define `let` and `const` same variables more than once.
+Use `let` and `var` if the value will change over time and `const` (can not be changed later, and you'll get an error if you try reassigning a new value) for a constant value. `var` has global and `let` has block scope. With `var` you can define same variables more than once. You can't define same `let` and `const` variables more than once.
 
 ```js
 var a = "aaa";
@@ -513,7 +513,6 @@ console.log('3' == 2); // false
 
 ## string
 
-
 We can use either single or double quotes for string values. The important thing is to start and end the string with the same type of quote.
 
 ```js
@@ -525,7 +524,38 @@ Although string is a primitive data type, when we access methods and properties 
 
 ```js
 const fullName = new String("Bob Rob");
-console.log(fullName);
+console.log(fullName); // Bob Rob
+```
+
+Bracket notation lets you access a string's character by its index, starting at 0 and ending at the string's length minus one.
+
+```js
+const fullName = "Bob Rob";
+const initialLetter = fullName[0];
+console.log(initialLetter); // B
+
+
+const nthLetter = fullName[1]; // where n = 1
+console.log(nthLetter); // o
+
+const lastLetter = fullName[fullName.length - 1];
+console.log(lastLetter); // b
+```
+
+In JavaScript, once a string value is created, it cannot be changed. This property is known as immutability.
+
+```js
+let fullName = "Bob Rob";
+fullName[0] = 'b';
+console.log(fullName); // Bob Rob
+```
+
+We can reassign a new value
+
+```js
+let fullName = "Bob Rob";
+fullName = "bob Rob";
+console.log(fullName); // bob Rob
 ```
 
 ### Methods and properties
@@ -859,9 +889,23 @@ console.log(userId(user)); // {id: 2, firstName: 'bob', lastName: 'rob'}
 # Array
 
 ```js
-const arr = Array();
-const arr = [];
-console.log(arr.length); // 0
+const arr1 = Array(1, 2, 3, 4, 5, 6, 7, 8, 9);
+const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(arr1[4]);
+console.log(arr2[4]);
+```
+
+A 2D array, also known as a two-dimensional array, consists of an array containing other arrays.
+
+```js
+const arr3 = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+console.log(arr3[1][1]);
 ```
 
 ## Array methods
