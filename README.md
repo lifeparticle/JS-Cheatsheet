@@ -16,17 +16,17 @@
 - [Data types](#data-types)
 	* [How to check the data type](#how-to-check-the-data-type)
 	* [Type coercion](#type-coercion)
-	* [String](#string)
+	* [string](#string)
 		+ [Methods and properties](#methods-and-properties)
 		+ [Template strings](#template-strings)
 		+ [Escape charecters](#escape-charecters)
-	* [Number](#number)
+	* [number](#number)
 		+ [Methods and properties](#methods-and-properties-1)
-	* [BigInt](#bigint)
-	* [Symbol](#symbol)
-	* [Undefind](#undefind)
+	* [bigint](#bigint)
+	* [symbol](#symbol)
+	* [undefind](#undefind)
 	* [null](#null)
-	* [Object](#object)
+	* [object](#object)
 		+ [Empty object.](#empty-object)
 		+ [Equality](#equality)
 		+ [Object with properties and values.](#object-with-properties-and-values)
@@ -40,6 +40,7 @@
 		+ [Spread syntax (...)](#spread-syntax-)
 		+ [Rest syntax (parameters) (...)](#rest-syntax-parameters-)
 		+ [Object Spread syntax](#object-spread-syntax)
+		+ [Delete properties](#delete-properties)
 - [Array](#array)
 	* [Array methods](#array-methods)
 		+ [1. at](#1-at)
@@ -113,7 +114,7 @@
 - [Debugging](#debugging)
 	* [Debugger](#debugger)
 	* [Console](#console)
- 	* [Breakpoints](#breakpoints)
+	* [Breakpoints](#breakpoints)
 - [HTML with live server](#html-with-live-server)
 - [How to add JavaScript to a web page](#how-to-add-javascript-to-a-web-page)
 	* [Everything between script tags will be executed by the web browser](#everything-between-script-tags-will-be-executed-by-the-web-browser)
@@ -133,6 +134,7 @@
 - [Closure](#closure)
 - [Sleep](#sleep)
 - [Performance](#performance)
+- [Math](#math)
 - [Resources](#resources)
 
 # Introduction
@@ -556,6 +558,20 @@ We can reassign a new value
 let fullName = "Bob Rob";
 fullName = "bob Rob";
 console.log(fullName); // bob Rob
+```
+
+Parse string to number
+
+```js
+// parseInt(string)
+parseInt("10"); // 10
+```
+
+Parse binary string to decimal
+
+```js
+// parseInt(string, radix) here radix = An integer between 2 and 36
+parseInt("11", 2); // 3
 ```
 
 ### Methods and properties
@@ -3201,6 +3217,21 @@ console.log("After sleep");
 ```js
 console.time("name")
 console.timeEnd("name")
+```
+
+# Math
+
+`Math.random()` generates a random floating-point number between 0 (inclusive) and 1 (exclusive).
+
+
+```js
+Math.random();
+```
+
+```js
+function randomRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 ```
 
 # Resources
