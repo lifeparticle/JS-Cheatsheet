@@ -880,7 +880,7 @@ function userId({ id, ...rest }) {
 userId(user); // '1 bob rob'
 ```
 
-### Object Spread syntax
+### object Spread syntax
 
 Here order matters. Whatever comes last will take precedence.
 
@@ -914,6 +914,76 @@ let user = {
 console.log(user); // {id: 1, firstName: 'bob', lastName: 'rob'}
 delete user.id;
 console.log(user); // {firstName: 'bob', lastName: 'rob'}
+```
+
+### Group by
+
+
+```js
+const data = [
+  {"name": "Carter, Smith and Tanner", "category": "Finance", "price": 288.63},
+  {"name": "Porter Inc", "category": "Healthcare", "price": 117.84},
+  {"name": "Liu, Collins and Martinez", "category": "Finance", "price": 332.91},
+  {"name": "Mcmahon-White", "category": "Technology", "price": 490.14},
+  {"name": "Goodman, Rosario and Wilcox", "category": "Finance", "price": 66.88},
+  {"name": "Anderson Inc", "category": "Finance", "price": 389.29},
+  {"name": "Bright Group", "category": "Healthcare", "price": 149.5},
+  {"name": "Brown Inc", "category": "Entertainment", "price": 276.45},
+  {"name": "Patton, Edwards and Rodriguez", "category": "Entertainment", "price": 107.06},
+  {"name": "Parker, Lam and Gonzalez", "category": "Education", "price": 351.79}
+]
+
+const result = Object.groupBy(data, ({ category }) => category);
+
+/*
+{
+	"Finance": [{
+		"name": "Carter, Smith and Tanner",
+		"category": "Finance",
+		"price": 288.63
+	}, {
+		"name": "Liu, Collins and Martinez",
+		"category": "Finance",
+		"price": 332.91
+	}, {
+		"name": "Goodman, Rosario and Wilcox",
+		"category": "Finance",
+		"price": 66.88
+	}, {
+		"name": "Anderson Inc",
+		"category": "Finance",
+		"price": 389.29
+	}],
+	"Healthcare": [{
+		"name": "Porter Inc",
+		"category": "Healthcare",
+		"price": 117.84
+	}, {
+		"name": "Bright Group",
+		"category": "Healthcare",
+		"price": 149.5
+	}],
+	"Technology": [{
+		"name": "Mcmahon-White",
+		"category": "Technology",
+		"price": 490.14
+	}],
+	"Entertainment": [{
+		"name": "Brown Inc",
+		"category": "Entertainment",
+		"price": 276.45
+	}, {
+		"name": "Patton, Edwards and Rodriguez",
+		"category": "Entertainment",
+		"price": 107.06
+	}],
+	"Education": [{
+		"name": "Parker, Lam and Gonzalez",
+		"category": "Education",
+		"price": 351.79
+	}]
+}
+*/
 ```
 
 # Array
@@ -1444,7 +1514,6 @@ console.log(num); // [1234, 1, 2, 3, 1, 4, 5]
 
 ### 37. with
 
-
 ```js
 let num = [1, 2, 3, 1, 4, 5];
 let newNum = num.with(0, 8);
@@ -1454,6 +1523,8 @@ console.log("newNum", newNum); // [8, 2, 3, 1, 4, 5]
 
 ### 38. toSorted
 
+Does not mutate the original array.
+
 ```js
 let num = [1, 2, 3, 1, 4, 5];
 let newNum = num.toSorted();
@@ -1462,6 +1533,8 @@ console.log("newNum", newNum); // [1, 1, 2, 3, 4, 5]
 ```
 
 ### 39. toReveresed
+
+Does not mutate the original array.
 
 // not working
 
@@ -1473,6 +1546,8 @@ console.log("newNum", newNum); // [1, 1, 2, 3, 4, 5]
 ```
 
 ### 40. toSpliced
+
+Does not mutate the original array.
 
 ```js
 let num = [1, 2, 3, 1, 4, 5];
