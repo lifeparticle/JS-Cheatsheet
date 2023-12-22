@@ -39,8 +39,9 @@
 		+ [Object property shorthand](#object-property-shorthand)
 		+ [Spread syntax (...)](#spread-syntax-)
 		+ [Rest syntax (parameters) (...)](#rest-syntax-parameters-)
-		+ [Object Spread syntax](#object-spread-syntax)
+		+ [object Spread syntax](#object-spread-syntax)
 		+ [Delete properties](#delete-properties)
+		+ [Group by](#group-by)
 - [Array](#array)
 	* [Array methods](#array-methods)
 		+ [1. at](#1-at)
@@ -69,7 +70,7 @@
 		+ [35. unshift](#35-unshift)
 		+ [37. with](#37-with)
 		+ [38. toSorted](#38-tosorted)
-		+ [39. toReveresed](#39-toreveresed)
+		+ [39. toReversed](#39-toreversed)
 		+ [40. toSpliced](#40-tospliced)
 	* [Array destructuring](#array-destructuring)
 	* [Two-dimensional array](#two-dimensional-array)
@@ -135,6 +136,7 @@
 - [Sleep](#sleep)
 - [Performance](#performance)
 - [Math](#math)
+- [Feature detection](#feature-detection)
 - [Resources](#resources)
 
 # Introduction
@@ -1532,17 +1534,16 @@ console.log("num", num); // [1, 2, 3, 1, 4, 5]
 console.log("newNum", newNum); // [1, 1, 2, 3, 4, 5]
 ```
 
-### 39. toReveresed
+### 39. toReversed
 
 Does not mutate the original array.
 
-// not working
 
 ```js
 let num = [1, 2, 3, 1, 4, 5];
-let newNum = num.toReveresed();
+let newNum = num.toReversed();
 console.log("num", num); // [1, 2, 3, 1, 4, 5]
-console.log("newNum", newNum); // [1, 1, 2, 3, 4, 5]
+console.log("newNum", newNum); // [5, 4, 1, 3, 2, 1]
 ```
 
 ### 40. toSpliced
@@ -3306,6 +3307,14 @@ Math.random();
 ```js
 function randomRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+```
+
+# Feature detection
+
+```js
+if ('localStorage' in window) {
+    console.log("Have localStorage support");
 }
 ```
 
