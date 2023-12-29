@@ -1,6 +1,5 @@
 # Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [History of JavaScript](#history-of-javascript)
 - [Introduction](#introduction)
 - [Setup](#setup)
@@ -113,6 +112,8 @@
 - [Class](#class)
 	* [Subclass](#subclass)
 	* [Getters and Setters](#getters-and-setters)
+- [Errors](#errors)
+	* [Examples](#examples)
 - [Try Catch](#try-catch)
 - [Debugging](#debugging)
 	* [Debugger](#debugger)
@@ -140,7 +141,6 @@
 - [Math](#math)
 - [Feature detection](#feature-detection)
 - [Resources](#resources)
-
 # History of JavaScript
 
 Ecma (European Computer Manufacturers Association) International creates standardization of information and communication systems. You can find all the standards over [here](https://www.ecma-international.org/publications-and-standards/standards/). One of the standards is called [ecma-262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/). This refers to the specification for [ECMAScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources) programming language.
@@ -2553,6 +2553,27 @@ data.location = '   Earth    ';
 data.location = '   Mars            ';
 console.log(data.locations);
 ```
+
+# Errors
+
+[List of errors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors#list_of_errors)
+
+## Examples
+
+1. Error
+
+2. InternalError
+
+3. RangeError
+
+4. ReferenceError
+
+5. SyntaxError
+
+6. TypeError
+
+7. URIError
+
 
 # Try Catch
 
