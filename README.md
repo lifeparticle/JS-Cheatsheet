@@ -1,5 +1,7 @@
 # Table of Contents
 
+- [Table of Contents](#table-of-contents)
+- [History of JavaScript](#history-of-javascript)
 - [Introduction](#introduction)
 - [Setup](#setup)
 - [Reserved words](#reserved-words)
@@ -21,7 +23,7 @@
 		+ [Template strings](#template-strings)
 		+ [Escape charecters](#escape-charecters)
 	* [number](#number)
-		+ [Methods and properties](#methods-and-properties-1)
+		+ [Methods and properties](#methods-and-properties)
 	* [bigint](#bigint)
 	* [symbol](#symbol)
 	* [undefind](#undefind)
@@ -139,7 +141,7 @@
 - [Feature detection](#feature-detection)
 - [Resources](#resources)
 
-# Introduction
+# History of JavaScript
 
 Ecma (European Computer Manufacturers Association) International creates standardization of information and communication systems. You can find all the standards over [here](https://www.ecma-international.org/publications-and-standards/standards/). One of the standards is called [ecma-262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/). This refers to the specification for [ECMAScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources) programming language.
 
@@ -150,6 +152,10 @@ ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES201
 [Brendan Eich](https://brendaneich.com/) created JavaScript at Netscape, and it was later revised to comply with ECMA-262 Edition 5 and subsequent versions. JavaScript can run on the client side (Chrome, Firefox, Microsoft Edge, Opera, Safari) and server-side (Node.js).
 
 [Ecma International, Technical Committee 39 - ECMAScript](https://github.com/tc39/proposals)
+
+# Introduction
+
+JavaScript is a prototype-based, single-threaded, dynamically-typed language.
 
 # Setup
 
