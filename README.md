@@ -2,7 +2,7 @@
 
 - [History of JavaScript](#history-of-javascript)
 - [Introduction](#introduction)
-- [Setup](#setup)
+- [JavaScript runtimes](#javascript-runtimes)
 - [Reserved words](#reserved-words)
 - [Comments](#comments)
 - [Variables](#variables)
@@ -141,6 +141,7 @@
 - [Math](#math)
 - [Feature detection](#feature-detection)
 - [Resources](#resources)
+
 # History of JavaScript
 
 Ecma (European Computer Manufacturers Association) International creates standardization of information and communication systems. You can find all the standards over [here](https://www.ecma-international.org/publications-and-standards/standards/). One of the standards is called [ecma-262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/). This refers to the specification for [ECMAScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources) programming language.
@@ -157,9 +158,13 @@ ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES201
 
 JavaScript is a prototype-based, single-threaded, dynamically-typed language.
 
-# Setup
+# JavaScript runtimes
 
-Install Node.js.
+| Runtime                             |
+|-------------------------------------|
+| [Node.js](https://nodejs.org/en)    |
+| [Deno](https://deno.com/)           |
+| [Bun](https://bun.sh/)              |
 
 # Reserved words
 
