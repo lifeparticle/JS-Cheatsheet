@@ -158,6 +158,12 @@ ES1 (1997), ES2 (1998), ES3 (1999), ES4, ES5 (2009), ES6 or ES2015 (2015), ES201
 
 JavaScript is a prototype-based, single-threaded, dynamically-typed language.
 
+- [Call stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack)
+- [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API)
+- [Tasks](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide#tasks)
+- [Microtasks](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide#microtasks)
+- [Event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop)
+
 # JavaScript runtimes
 
 | Runtime                             |
