@@ -24,9 +24,10 @@
 
 # Latest news
 
-1. [Introducing-react-dev](https://react.dev/blog/2023/03/16/introducing-react-dev)
-2. ["React from Another Dimension" by Dan Abramov at #RemixConf 2023](https://www.youtube.com/watch?v=zMf_xeGPn6s&ab_channel=Remix)
-3. [The Virtual DOM Replacement for React](https://github.com/aidenybai/million)
+1. [React 19 Beta](https://react.dev/blog/2024/04/25/react-19)
+2. [Introducing-react-dev](https://react.dev/blog/2023/03/16/introducing-react-dev)
+3. ["React from Another Dimension" by Dan Abramov at #RemixConf 2023](https://www.youtube.com/watch?v=zMf_xeGPn6s&ab_channel=Remix)
+4. [The Virtual DOM Replacement for React](https://github.com/aidenybai/million)
 
 # How to learn React - Pick as you like
 
