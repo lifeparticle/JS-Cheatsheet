@@ -136,6 +136,7 @@
 	* [Synchronous execution](#synchronous-execution)
 	* [Fetch API](#fetch-api)
 - [Closure](#closure)
+- [Currying](#currying)
 - [Sleep](#sleep)
 - [Performance](#performance)
 - [Math](#math)
@@ -3283,7 +3284,7 @@ const getPrint = () => {
 }
 
 const value = getPrint();
-value("Closure");
+value("Closure"); // Closure
 ```
 
 ```js
@@ -3309,6 +3310,33 @@ counter.decrement();
 counter.decrement();
 console.log(counter.get()); // -1
 ```
+
+# Currying
+
+```js
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(3 + 4)); // 7
+
+
+function add(a) {
+    return function(b) {
+        return a + b;
+    }
+}
+
+const fnB = add(3);
+console.log(fnB(4)); // 7
+
+// or
+console.log(add(3)(4));
+
+
+const add = a => b => a + b;
+
+console.log(add(3)(4)); // 7
 
 # Sleep
 
