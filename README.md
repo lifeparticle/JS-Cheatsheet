@@ -137,6 +137,7 @@
 	* [Fetch API](#fetch-api)
 - [Closure](#closure)
 - [Currying](#currying)
+- [Pure function](pure-function)
 - [Sleep](#sleep)
 - [Performance](#performance)
 - [Math](#math)
@@ -3337,6 +3338,16 @@ console.log(add(3)(4));
 const add = a => b => a + b;
 
 console.log(add(3)(4)); // 7
+```
+
+# Pure function
+
+```js
+
+
+
+```
+
 
 # Sleep
 
