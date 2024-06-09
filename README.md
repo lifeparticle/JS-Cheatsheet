@@ -3342,12 +3342,33 @@ console.log(add(3)(4)); // 7
 
 # Pure function
 
+A pure function is a function that, given the same input, will always return the same output, and does not have any side effects (such as modifying external state or interacting with the outside world). Pure functions are predictable and easier to test.
+
 ```js
+//        same arguments
+function add(a, b) {
+//   same result
+  return a + b;
+}
 
-
-
+console.log(add(2, 3)); // Always returns 5
+console.log(add(2, 3)); // Always returns 5
 ```
 
+## A non-pure function
+
+```js
+let counter = 0;
+
+function incrementCounter() {
+  counter += 1;
+  return counter;
+}
+
+console.log(incrementCounter()); // Output: 1
+console.log(incrementCounter()); // Output: 2
+console.log(incrementCounter()); // Output: 3
+```
 
 # Sleep
 
