@@ -1,27 +1,3 @@
--   [How to learn React - Pick as you like](#how-to-learn-react---pick-as-you-like)
-    -   [Create a React project](#create-a-react-project)
--   [Introduction](#introduction)
--   [Virtual DOM](#virtual-dom)
--   [Lifecycle](#lifecycle)
--   [JSX](#jsx)
--   [Components and Props](#components-and-props)
-    -   [Controlled vs UnControlled Components](#controlled-vs-uncontrolled-components)
--   [Fragment](#fragment)
--   [Higher order component](#higher-order-component)
--   [Hooks](#hooks)
--   [State](#state)
--   [Context](#context)
--   [React performance](#react-performance)
-    -   [Memo](#memo)
-    -   [Code spliting](#code-spliting)
--   [Suspense and Error Boundaries](#suspense-and-error-boundaries)
--   [React router dom](#react-router-dom)
--   [Miscellaneous](#miscellaneous)
--   [Books](#books)
--   [My React Articles](#my-react-articles)
--   [Courses](#courses)
--   [Resources](#resources)
-
 # Latest news
 
 1. [React 19 Beta](https://react.dev/blog/2024/04/25/react-19)
@@ -55,41 +31,6 @@
         -   Ask questions on StackOverflow or GitHub
         -   Ask someone else
     -   Deploy i.e, On Netlify via GitHub
-
-
-## Controlled vs UnControlled Components
-
-[Source](https://stackoverflow.com/questions/42522515/what-are-react-controlled-components-and-uncontrolled-components)
-
-[Source](https://beta.reactjs.org/apis/react/useContext)
-
-# React performance
-
-## Memo
-
-[Source](https://reactjs.org/docs/react-api.html#reactmemo)
-
-## Code spliting
-
-[Source](https://reactjs.org/docs/code-splitting.html)
-
-# Suspense and Error Boundaries
-
-[Suspense and Error Boundaries](https://github.com/lifeparticle/JS-Cheatsheet/tree/main/react/react-error-boundaries)
-
-# React router dom
-
-[Learn React Router v6 In 45 Minutes](https://www.youtube.com/watch?v=Ul3y1LXxzdU)
-
-# Projects
-
-1. Tiny MCE
-
-# Miscellaneous
-
-1. public/manifest.json
-
-[Source](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 
 # Books
 
